@@ -1,0 +1,215 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99b93107d7bc31740838a156d99e161c, type: 3}
+  m_Name: ResourceRuleEditor
+  m_EditorClassIdentifier: 
+  rules:
+  - valid: 1
+    name: BaseAssets/GameConfigs
+    variant: 
+    fileSystem: 
+    groups: BaseAssets
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/GameConfigs
+    loadType: 0
+    packed: 0
+    filterType: 0
+    searchPatterns: '*.*'
+  - valid: 1
+    name: BaseAssets/GF
+    variant: 
+    fileSystem: 
+    groups: BaseAssets
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/GF
+    loadType: 0
+    packed: 0
+    filterType: 0
+    searchPatterns: '*.*'
+  - valid: 1
+    name: BaseAssets/Sounds/Music
+    variant: 
+    fileSystem: 
+    groups: BaseAssets
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/Sounds/Music
+    loadType: 0
+    packed: 0
+    filterType: 1
+    searchPatterns: '*.*'
+  - valid: 1
+    name: BaseAssets/Sounds/UISound
+    variant: 
+    fileSystem: 
+    groups: BaseAssets
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/Sounds/UISound
+    loadType: 0
+    packed: 0
+    filterType: 1
+    searchPatterns: '*.*'
+  - valid: 1
+    name: BaseAssets/Font
+    variant: 
+    fileSystem: 
+    groups: BaseAssets
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/Font
+    loadType: 0
+    packed: 0
+    filterType: 0
+    searchPatterns: '*.*'
+  - valid: 1
+    name: BaseAssets/UI/UIForms
+    variant: 
+    fileSystem: 
+    groups: BaseAssets
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/UI/UIForms
+    loadType: 0
+    packed: 0
+    filterType: 1
+    searchPatterns: '*.*'
+  - valid: 1
+    name: BaseAssets/UI/UIPrefabs
+    variant: 
+    fileSystem: 
+    groups: BaseAssets
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/UI/UIPrefabs
+    loadType: 0
+    packed: 0
+    filterType: 0
+    searchPatterns: '*.*'
+  - valid: 1
+    name: BaseAssets/UI/UIArt/AtlasCollection
+    variant: 
+    fileSystem: 
+    groups: BaseAssets
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/UI/UIArt/AtlasCollection
+    loadType: 0
+    packed: 0
+    filterType: 1
+    searchPatterns: '*.*'
+  - valid: 1
+    name: BaseAssets/UI/UIArt/Texture
+    variant: 
+    fileSystem: 
+    groups: BaseAssets
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/UI/UIArt/Texture
+    loadType: 0
+    packed: 0
+    filterType: 1
+    searchPatterns: '*.*'
+  - valid: 1
+    name: BaseAssets/UI/UIArt/UISprites
+    variant: 
+    fileSystem: 
+    groups: BaseAssets
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/UI/UIArt/UISprites
+    loadType: 0
+    packed: 0
+    filterType: 2
+    searchPatterns: '*.*'
+  - valid: 1
+    name: BaseAssets/UITemplate
+    variant: 
+    fileSystem: 
+    groups: BaseAssets
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/UITemplate
+    loadType: 0
+    packed: 0
+    filterType: 1
+    searchPatterns: '*.*'
+  - valid: 1
+    name: ADeerExample/EntityPrefabs
+    variant: 
+    fileSystem: 
+    groups: ADeerExample
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/ADeerExample/EntityPrefabs
+    loadType: 0
+    packed: 0
+    filterType: 0
+    searchPatterns: '*.*'
+  - valid: 1
+    name: ADeerExample/EntityResources
+    variant: 
+    fileSystem: 
+    groups: ADeerExample
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/ADeerExample/EntityResources
+    loadType: 0
+    packed: 0
+    filterType: 0
+    searchPatterns: '*.*'
+  - valid: 1
+    name: ADeerExample/Scenes
+    variant: 
+    fileSystem: 
+    groups: ADeerExample
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/ADeerExample/Scenes
+    loadType: 0
+    packed: 0
+    filterType: 0
+    searchPatterns: '*.*'
+  - valid: 1
+    name: ADeerExample/UI
+    variant: 
+    fileSystem: 
+    groups: ADeerExample
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/ADeerExample/UI
+    loadType: 0
+    packed: 0
+    filterType: 1
+    searchPatterns: '*.*'
+  - valid: 1
+    name: AGameExample/EntityPrefabs
+    variant: 
+    fileSystem: 
+    groups: AGameExample
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/AGameExample/EntityPrefabs
+    loadType: 0
+    packed: 0
+    filterType: 0
+    searchPatterns: '*.*'
+  - valid: 1
+    name: AGameExample/EntityResources
+    variant: 
+    fileSystem: 
+    groups: AGameExample
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/AGameExample/EntityResources
+    loadType: 0
+    packed: 0
+    filterType: 0
+    searchPatterns: '*.*'
+  - valid: 1
+    name: AGameExample/Scenes
+    variant: 
+    fileSystem: 
+    groups: AGameExample
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/AGameExample/Scenes
+    loadType: 0
+    packed: 0
+    filterType: 0
+    searchPatterns: '*.*'
+  - valid: 1
+    name: AGameExample/Sounds
+    variant: 
+    fileSystem: 
+    groups: AGameExample
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/AGameExample/Sounds
+    loadType: 0
+    packed: 0
+    filterType: 0
+    searchPatterns: '*.*'
+  - valid: 1
+    name: AGameExample/UI
+    variant: 
+    fileSystem: 
+    groups: AGameExample
+    assetsDirectoryPath: Assets/Deer/AssetsHotfix/AGameExample/UI
+    loadType: 0
+    packed: 0
+    filterType: 0
+    searchPatterns: '*.*'
