@@ -114,6 +114,7 @@ public partial class AssembliesManager
         AssemblyInfo mergedInfo = FindAssemblyInfoByName(AssemblyFileData.GetMergedFileName());
         if (mergedInfo != null)
         {
+            // todo zh
             List<AssemblyFileData> assemblyInfos = mergedInfo.IsLoadReadOnly ? m_AotReadOnlyAssemblyFileDatas : m_AotReadWriteAssemblyFileDatas;
             foreach (var assemblyInfo in assemblyInfos)
             {

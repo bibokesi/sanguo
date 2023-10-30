@@ -1,12 +1,4 @@
-﻿// ================================================
-//描 述 :  
-//作 者 : 杜鑫 
-//创建时间 : 2021-08-28 23-29-17  
-//修改作者 : 杜鑫 
-//修改时间 : 2021-08-28 23-29-17  
-//版 本 : 0.1 
-// ===============================================
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 public static class GameObjectUtils

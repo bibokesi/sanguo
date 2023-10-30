@@ -1,21 +1,10 @@
-﻿// ================================================
-//描 述:
-//作 者:杜鑫
-//创建时间:2022-06-17 17-43-23
-//修改作者:AlanDu
-//修改时间:2023-01-03 17-48-02
-//版 本:0.1 
-// ===============================================
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
 namespace Main.Runtime.UI 
 {
-    /// <summary>
-    /// Please modify the description.
-    /// </summary>
     public partial class UILoadingForm : UIBaseForm
     {
 		protected override void OnInit(object userData) {

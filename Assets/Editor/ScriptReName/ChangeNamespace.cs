@@ -1,11 +1,3 @@
-// ================================================
-//描 述:
-//作 者:杜鑫
-//创建时间:2022-06-19 19-21-15
-//修改作者:杜鑫
-//修改时间:2022-06-19 19-21-15
-//版 本:0.1 
-// ===============================================
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -13,9 +5,6 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
-/// <summary>
-/// Please modify the description.
-/// </summary>
 public class ChangeNamespace : EditorWindow
 {
     public static List<string> assetsPaths = new List<string>();

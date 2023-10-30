@@ -1,11 +1,3 @@
-// ================================================
-//描 述:
-//作 者:杜鑫
-//创建时间:2022-06-05 23-28-07
-//修改作者:杜鑫
-//修改时间:2022-06-05 23-28-07
-//版 本:0.1 
-// ===============================================
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -15,9 +7,6 @@ using UnityEditor;
 #endif
 using UnityEngine;
 
-/// <summary>
-/// Please modify the description.
-/// </summary>
 public static class DeerSettingsUtils
 {
     private static readonly string DeerGlobalSettingsPath = $"Settings/DeerGlobalSettings";

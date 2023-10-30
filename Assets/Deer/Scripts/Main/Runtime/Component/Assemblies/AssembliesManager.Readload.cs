@@ -214,6 +214,7 @@ public partial class AssembliesManager
 
         foreach (var assemblyName in list)
         {
+            // todo zh
             AssemblyFileData assemblyFileData = FindAssemblyFileDataByName(assemblyName);
             if (assemblyFileData != null)
             {

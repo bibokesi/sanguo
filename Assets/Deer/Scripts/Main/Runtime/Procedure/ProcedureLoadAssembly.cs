@@ -1,12 +1,3 @@
-// ================================================
-//描 述:
-//作 者:杜鑫
-//创建时间:2022-06-09 00-55-01
-//修改作者:杜鑫
-//修改时间:2022-06-09 00-55-01
-//版 本:0.1 
-// ===============================================
-
 using GameFramework.Resource;
 using System;
 using System.Collections;
@@ -65,7 +56,7 @@ namespace Main.Runtime.Procedure
                 {
                     isLoadHotfix = !Application.isEditor;
                 }
-                if (isLoadHotfix)
+                if (!isLoadHotfix)
                 {
                     GameEntryMain.Assemblies.LoadHotUpdateAssembliesByGroupName(DeerSettingsUtils.DeerGlobalSettings.BaseAssetsRootName,
                         delegate(Dictionary<string, byte[]> assemblies)

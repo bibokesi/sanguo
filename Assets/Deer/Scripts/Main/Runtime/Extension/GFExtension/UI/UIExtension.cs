@@ -1,11 +1,3 @@
-// ================================================
-//描 述:
-//作 者:杜鑫
-//创建时间:2022-06-16 19-26-59
-//修改作者:杜鑫
-//修改时间:2022-06-16 19-26-59
-//版 本:0.1 
-// ===============================================
 using GameFramework;
 using GameFramework.UI;
 using Main.Runtime.Procedure;
@@ -17,9 +9,6 @@ using UnityGameFramework.Runtime;
 
 namespace Main.Runtime
 {
-    /// <summary>
-    /// Please modify the description.
-    /// </summary>
     public static class UIExtension
     {
         private static Transform m_InstanceRoot;

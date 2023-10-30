@@ -1,12 +1,4 @@
-﻿// ================================================
-//描 述 :  
-//作 者 : 杜鑫 
-//创建时间 : 2021-07-13 23-39-43  
-//修改作者 : 杜鑫 
-//修改时间 : 2021-07-13 23-39-43  
-//版 本 : 0.1 
-// ===============================================
-using GameFramework;
+﻿using GameFramework;
 using GameFramework.ObjectPool;
 using System.Collections;
 using System.Collections.Generic;

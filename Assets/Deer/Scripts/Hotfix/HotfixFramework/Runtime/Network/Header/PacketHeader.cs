@@ -1,12 +1,4 @@
-﻿// ================================================
-//描 述 :  
-//作 者 : 杜鑫 
-//创建时间 : 2021-09-04 20-07-31  
-//修改作者 : 杜鑫 
-//修改时间 : 2021-09-04 20-07-31  
-//版 本 : 0.1 
-// ===============================================
-using GameFramework;
+﻿using GameFramework;
 using GameFramework.Network;
 public class PacketHeader : IPacketHeader, IReference
 {

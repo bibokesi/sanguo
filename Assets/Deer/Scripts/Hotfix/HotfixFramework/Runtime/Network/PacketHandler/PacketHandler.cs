@@ -1,13 +1,4 @@
-﻿// ================================================
-//描 述 :  
-//作 者 : 杜鑫 
-//创建时间 : 2021-09-04 20-00-03  
-//修改作者 : 杜鑫 
-//修改时间 : 2021-09-04 20-00-03  
-//版 本 : 0.1 
-// ===============================================
-
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Pb.Message;
 using Deer;
 using GameFramework;

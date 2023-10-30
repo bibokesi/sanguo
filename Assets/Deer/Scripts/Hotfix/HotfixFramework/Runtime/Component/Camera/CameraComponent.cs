@@ -1,12 +1,4 @@
-﻿// ================================================
-//描 述 :  
-//作 者 : 杜鑫 
-//创建时间 : 2021-08-28 13-57-10  
-//修改作者 : 杜鑫 
-//修改时间 : 2021-08-28 13-57-10  
-//版 本 : 0.1 
-// ===============================================
-using Cinemachine;
+﻿using Cinemachine;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityGameFramework.Runtime;

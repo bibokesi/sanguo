@@ -1,12 +1,4 @@
-﻿// ================================================
-//描 述 :  
-//作 者 : 杜鑫 
-//创建时间 : 2021-08-15 20-56-53  
-//修改作者 : 杜鑫 
-//修改时间 : 2021-08-15 20-56-53  
-//版 本 : 0.1 
-// ===============================================
-using System;
+﻿using System;
 using UnityGameFramework.Runtime;
 
 public static class EntityComponentExtension

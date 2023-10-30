@@ -1,9 +1,3 @@
-/* ================================================
- * Introduction：xxx 
- * Creator：杜鑫 
- * CreationTime：2022-03-18 17-16-14
- * CreateVersion：0.1
- *  =============================================== */
 using GameFramework;
 using Pathfinding;
 using System;

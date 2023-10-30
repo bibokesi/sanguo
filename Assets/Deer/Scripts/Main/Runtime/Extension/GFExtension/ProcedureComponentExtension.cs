@@ -1,13 +1,4 @@
-﻿// ================================================
-//描 述 :  
-//作 者 : 杜鑫 
-//创建时间 : 2021-08-13 23-10-59  
-//修改作者 : 杜鑫 
-//修改时间 : 2021-08-13 23-10-59  
-//版 本 : 0.1 
-// ===============================================
-
-using System;
+﻿using System;
 using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 

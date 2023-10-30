@@ -1,9 +1,3 @@
-/* ================================================
- * Introduction：xxx 
- * Creator：杜鑫 
- * CreationTime：2022-03-18 16-57-29
- * CreateVersion：0.1
- *  =============================================== */
 using UnityEngine;
 
 namespace HotfixBusiness.Entity

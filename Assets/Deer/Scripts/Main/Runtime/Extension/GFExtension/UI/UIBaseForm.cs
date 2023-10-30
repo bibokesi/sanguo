@@ -1,12 +1,3 @@
-// ================================================
-//描 述:
-//作 者:杜鑫
-//创建时间:2022-06-17 15-41-52
-//修改作者:杜鑫
-//修改时间:2022-06-17 15-41-52
-//版 本:0.1 
-// ===============================================
-
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,9 +7,6 @@ using UnityGameFramework.Runtime;
 
 namespace Main.Runtime 
 {
-    /// <summary>
-    /// Please modify the description.
-    /// </summary>
     public class UIBaseForm : UIFormLogic,IMessenger
     {
         public const int DepthFactor = 100;
