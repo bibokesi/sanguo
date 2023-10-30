@@ -73,15 +73,14 @@ MonoBehaviour:
   - UniTask.Linq.dll
   - UniTask.TextMeshPro.dll
   - Unity.Burst.dll
-  - Unity.Burst.Unsafe.dll
   - Unity.InputSystem.dll
   - Unity.Mathematics.dll
-  - Unity.Networking.BackgroundDownload.dll
   - Unity.RenderPipeline.Universal.ShaderLibrary.dll
   - Unity.RenderPipelines.Core.Runtime.dll
   - Unity.RenderPipelines.Universal.Runtime.dll
   - Unity.TextMeshPro.dll
   - Unity.Timeline.dll
+  - UnityEngine.AIModule.dll
   - UnityEngine.AndroidJNIModule.dll
   - UnityEngine.AnimationModule.dll
   - UnityEngine.AssetBundleModule.dll
@@ -113,6 +112,8 @@ MonoBehaviour:
   - UnityEngine.UnityAnalyticsModule.dll
   - UnityEngine.UnityWebRequestAudioModule.dll
   - UnityEngine.UnityWebRequestModule.dll
+  - UnityEngine.VFXModule.dll
+  - UnityEngine.VideoModule.dll
   - UnityEngine.VRModule.dll
   - UnityEngine.XRModule.dll
   - UnityGameFramework.Runtime.dll
