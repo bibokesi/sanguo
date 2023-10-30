@@ -12,30 +12,12 @@ public partial class GameEntry
     public static BaseComponent Base => _base ??= UnityGameFramework.Runtime.GameEntry.GetComponent<BaseComponent>();
     private static BaseComponent _base;
 
-    /*/// <summary>
-    /// 获取配置组件。
-    /// </summary>
-    public static ConfigComponent Config
-    {
-        get;
-        private set;
-    }*/
-
     /// <summary>
     /// 获取数据结点组件。
     /// </summary>
     public static DataNodeComponent DataNode => _dataNode ??= UnityGameFramework.Runtime.GameEntry.GetComponent<DataNodeComponent>();
     private static DataNodeComponent _dataNode;
 
-
-    /*/// <summary>
-    /// 获取数据表组件。
-    /// </summary>
-    public static DataTableComponent DataTable
-    {
-        get;
-        private set;
-    }*/
 
     /// <summary>
     /// 获取调试组件。

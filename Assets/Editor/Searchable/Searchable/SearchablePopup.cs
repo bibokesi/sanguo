@@ -1,9 +1,4 @@
-﻿// ---------------------------------------------------------------------------- 
-// Author: Ryan Hipple
-// Date:   05/01/2018
-// ----------------------------------------------------------------------------
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;

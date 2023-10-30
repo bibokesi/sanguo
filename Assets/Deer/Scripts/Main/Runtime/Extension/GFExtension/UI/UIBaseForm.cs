@@ -196,10 +196,12 @@ namespace Main.Runtime
         {
             GameEntryMain.Messenger.SendEvent(eventName,pSender);
         }
+
         public void RegisterEvent(uint eventName, RegistFunction pFunction)
         {
             GameEntryMain.Messenger.RegisterEvent(eventName, pFunction);
         }
+
         public void UnRegisterEvent(uint eventName, RegistFunction pFunction)
         {
             GameEntryMain.Messenger.UnRegisterEvent(eventName, pFunction);

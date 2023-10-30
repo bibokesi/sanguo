@@ -41,14 +41,17 @@ public static class WebRequestComponentExtension
 	{
 		return webRequestComponent.AddWebRequestWithHeader(webRequestUri,"",0,header);
 	}
+
 	public static int AddWebRequestWithHeader(this WebRequestComponent webRequestComponent,string webRequestUri, string tag, Dictionary<string,string> header)
 	{
 		return webRequestComponent.AddWebRequestWithHeader(webRequestUri,tag,0,header);
 	}
+
 	public static int AddWebRequestWithHeader(this WebRequestComponent webRequestComponent,string webRequestUri, int priority, Dictionary<string,string> header)
 	{
 		return webRequestComponent.AddWebRequestWithHeader(webRequestUri,"",priority,header);
 	}
+
 	public static int AddWebRequestWithHeader(this WebRequestComponent webRequestComponent,string webRequestUri, string tag, int priority, Dictionary<string,string> header)
 	{
 		return webRequestComponent.AddWebRequest(webRequestUri,tag,priority,header);

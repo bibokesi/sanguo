@@ -5,7 +5,6 @@ using GameFramework;
 /// </summary>
 public class DeerLogHelper : GameFrameworkLog.ILogHelper
 {
-
 	public void Log(GameFrameworkLogLevel level, object message)
 	{
 		switch (level)

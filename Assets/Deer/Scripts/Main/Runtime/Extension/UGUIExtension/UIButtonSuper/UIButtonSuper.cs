@@ -55,7 +55,6 @@ public class UIButtonSuperEditor : ButtonEditor
         serializedObject.ApplyModifiedProperties();
     }
 }
-
 #endif
 
 public enum ButtonSoundType
@@ -67,11 +66,13 @@ public enum ButtonSoundType
     Exit,
     Drag
 }
+
 public enum ButtonSoundAssetType
 {
     Hotfix,
     Packed,
 }
+
 [Serializable]
 public class ButtonSoundCell
 {

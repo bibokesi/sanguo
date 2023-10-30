@@ -14,6 +14,4 @@ public partial class CameraComponent
         m_UICamera.GetComponent<UniversalAdditionalCameraData>().renderType = CameraRenderType.Overlay;
         MainCamera.GetComponent<UniversalAdditionalCameraData>().cameraStack.Add(m_UICamera);
     }
-
-
 }

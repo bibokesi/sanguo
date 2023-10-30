@@ -19,6 +19,7 @@ public class DeerWebRequestAgentHelper : WebRequestAgentHelperBase, IDisposable
 
     private EventHandler<WebRequestAgentHelperCompleteEventArgs> m_WebRequestAgentHelperCompleteEventHandler = null;
     private EventHandler<WebRequestAgentHelperErrorEventArgs> m_WebRequestAgentHelperErrorEventHandler = null;
+
     /// <summary>
     /// Web 请求代理辅助器完成事件。
     /// </summary>
@@ -48,6 +49,7 @@ public class DeerWebRequestAgentHelper : WebRequestAgentHelperBase, IDisposable
             m_WebRequestAgentHelperErrorEventHandler -= value;
         }
     }
+
     /// <summary>
     /// 通过 Web 请求代理辅助器发送请求。
     /// </summary>
@@ -81,6 +83,7 @@ public class DeerWebRequestAgentHelper : WebRequestAgentHelperBase, IDisposable
             Logger.Debug(head);
         }
         m_UnityWebRequest.certificateHandler = new WebRequestCert();
+
 #if UNITY_2017_2_OR_NEWER
         m_UnityWebRequest.SendWebRequest();
 #else
@@ -101,6 +104,7 @@ public class DeerWebRequestAgentHelper : WebRequestAgentHelperBase, IDisposable
             Log.Fatal("Web request agent helper handler is invalid.");
             return;
         }
+
         string jsonData = GameFramework.Utility.Converter.GetString(postData);
         m_UnityWebRequest = UnityWebRequest.Post(webRequestUri, jsonData);
         WWWFormInfo wwwFormInfo = (WWWFormInfo)userData;
@@ -114,8 +118,10 @@ public class DeerWebRequestAgentHelper : WebRequestAgentHelperBase, IDisposable
             }
             Logger.Debug(head);
         }
+
         byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonData);
         m_UnityWebRequest.uploadHandler = new UploadHandlerRaw(bodyRaw);
+
 #if UNITY_2017_2_OR_NEWER
         m_UnityWebRequest.SendWebRequest();
 #else
@@ -178,10 +184,11 @@ public class DeerWebRequestAgentHelper : WebRequestAgentHelperBase, IDisposable
 #if UNITY_2020_2_OR_NEWER
         isError = m_UnityWebRequest.result != UnityWebRequest.Result.Success;
 #elif UNITY_2017_1_OR_NEWER
-            isError = m_UnityWebRequest.isNetworkError || m_UnityWebRequest.isHttpError;
+        isError = m_UnityWebRequest.isNetworkError || m_UnityWebRequest.isHttpError;
 #else
-            isError = m_UnityWebRequest.isError;
+        isError = m_UnityWebRequest.isError;
 #endif
+
         string errorStr = m_UnityWebRequest.error;
         if (!isError)
         {
@@ -219,7 +226,9 @@ public class DeerWebRequestAgentHelper : WebRequestAgentHelperBase, IDisposable
 public class NetData
 {
     public int code { get; set; }
-   // public string data { get; set; }
+
     public string msg { get; set; }
+
+    // public string data { get; set; }
 }
 

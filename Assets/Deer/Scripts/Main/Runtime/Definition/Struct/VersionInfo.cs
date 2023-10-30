@@ -17,12 +17,9 @@ namespace Main.Runtime
 
         public int VersionListLength;
 
-
         public int VersionListHashCode;
 
-
         public int VersionListZipLength;
-
 
         public int VersionListZipHashCode;
     }

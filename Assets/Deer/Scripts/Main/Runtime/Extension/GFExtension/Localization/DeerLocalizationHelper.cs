@@ -11,12 +11,12 @@ public struct LanguageData
     public string Key;
     public string Value;
 }
+
 /// <summary>
 /// 本地化辅助器。
 /// </summary>
 public class DeerLocalizationHelper : DefaultLocalizationHelper
 {
-
     /// <summary>
     /// 解析字典。
     /// </summary>

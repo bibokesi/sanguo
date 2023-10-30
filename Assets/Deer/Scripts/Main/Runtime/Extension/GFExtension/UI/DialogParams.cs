@@ -16,6 +16,7 @@ namespace Main.Runtime
             get;
             set;
         }
+
         /// <summary>
         /// 是否打开关闭按钮
         /// </summary>
@@ -24,6 +25,7 @@ namespace Main.Runtime
             get; 
             set; 
         }
+
         /// <summary>
         /// 是否SureNoCanCloseView
         /// </summary>
@@ -32,6 +34,7 @@ namespace Main.Runtime
             get; 
             set; 
         }
+
         /// <summary>
         /// 是否BgCanCloseView
         /// </summary>
@@ -40,6 +43,7 @@ namespace Main.Runtime
             get; 
             set; 
         }
+
         /// <summary>
         /// 标题。
         /// </summary>
@@ -111,6 +115,7 @@ namespace Main.Runtime
             get;
             set;
         }
+
         /// <summary>
         /// 背景按钮回调。
         /// </summary>
@@ -119,6 +124,7 @@ namespace Main.Runtime
             get;
             set;
         }
+
         /// <summary>
         /// 背景按钮回调。
         /// </summary>
@@ -127,6 +133,7 @@ namespace Main.Runtime
             get;
             set;
         }
+
         /// <summary>
         /// 用户自定义数据。
         /// </summary>
@@ -136,6 +143,9 @@ namespace Main.Runtime
             set;
         }
 
+        /// <summary>
+        /// 清理数据。
+        /// </summary>
         public void Clear()
         {
             Mode = 0;

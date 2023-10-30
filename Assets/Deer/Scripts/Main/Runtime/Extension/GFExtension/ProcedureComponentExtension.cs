@@ -8,6 +8,7 @@ namespace Deer
     {
         private static Type m_LastProcedure;
         private static ProcedureOwner m_ProcedureOwner;
+
         /// <summary>
         /// 设置上一个流程
         /// </summary>
@@ -18,10 +19,12 @@ namespace Deer
             m_ProcedureOwner = procedureOwner;
             m_LastProcedure = procedureBase;
         }
+
         public static Type GetLastProcedure(this ProcedureComponent procedureComponent)
         {
             return m_LastProcedure;
         }
+
         public static ProcedureOwner GetLastProcedureFsm(this ProcedureComponent procedureComponent)
         {
             return m_ProcedureOwner;

@@ -63,6 +63,7 @@ namespace Main.Runtime
         {
             return UICamera;
         }
+
         /// <summary>
         /// 获取InstanceRoot上CanvasScalar组件
         /// </summary>
@@ -76,6 +77,7 @@ namespace Main.Runtime
             }
             return m_CanvasScalar;
         }
+
         /// <summary>
         /// 重新设置分辨率
         /// </summary>
@@ -142,7 +144,6 @@ namespace Main.Runtime
             slider.value = value;
         }
 
-
         public static void CloseUIForm(this UIComponent uiComponent, UIBaseForm uiForm)
         {
             uiComponent.CloseUIForm(uiForm.UIForm);
@@ -170,7 +171,5 @@ namespace Main.Runtime
         {
             return UIInitRootForm.Instance;
         }
-
-
     }
 }

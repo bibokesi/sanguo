@@ -1,14 +1,3 @@
-/* 
- * ================================================
- * Describe:      This script is used to set the path config.
- * Author:        Xiaohei.Wang(Wenhao)
- * CreationTime:  2023-04-20 19:31:17
- * ModifyAuthor:  Xiaohei.Wang(Wenhao)
- * ModifyTime:    2023-04-20 19:31:17
- * ScriptVersion: 0.1
- * ===============================================
-*/
-
 using System.Collections.Generic;
 using System.IO;
 using UnityEditor;

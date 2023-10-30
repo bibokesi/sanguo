@@ -11,16 +11,25 @@ public class ConfigInfo
         get;
         set;
     }
+
+    /// <summary>
+    /// 配置文件名不带后缀
+    /// </summary>
     public string NameWithoutExtension
     {
         get;
         set;
     }
+
+    /// <summary>
+    /// 配置文件名后缀
+    /// </summary>
     public string Extension
     {
         get;
         set;
     }
+
     /// <summary>
     /// 路径
     /// </summary>
@@ -47,11 +56,7 @@ public class ConfigInfo
         get;
         set;
     }
-    
-    public bool IsLoadReadOnly = true;
 
-    
-    
     /// <summary>
     /// 重试次数
     /// </summary>
@@ -60,4 +65,9 @@ public class ConfigInfo
         get;
         set;
     }
+
+    /// <summary>
+    /// 是否为只读文件
+    /// </summary>
+    public bool IsLoadReadOnly = true;
 }

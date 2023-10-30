@@ -10,18 +10,22 @@ using UnityGameFramework.Runtime;
 public class ConfigComponent : GameFrameworkComponent
 {
     private ConfigManager m_ConfigManager;
+
     public Tables Tables { get; set; }
+
     protected override void Awake()
     {
         base.Awake();
         m_ConfigManager = gameObject.GetOrAddComponent<ConfigManager>();
     }
+
     public async void LoadAllUserConfig(OnLoadConfigCompleteCallback loadConfigCompleteCallback)
     {
         Tables = await m_ConfigManager.LoadAllUserConfig();
         LocalizationParseData();
         loadConfigCompleteCallback(true);
     }
+
     public void LocalizationParseData()
     {
         JsonParser parser = new JsonParser();

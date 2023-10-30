@@ -32,7 +32,6 @@ namespace Main.Runtime
             m_CachedCanvas = gameObject.GetOrAddComponent<Canvas>();
             gameObject.GetOrAddComponent<GraphicRaycaster>();
         }
-
         private void Start()
         {
             m_CachedCanvas.overrideSorting = true;

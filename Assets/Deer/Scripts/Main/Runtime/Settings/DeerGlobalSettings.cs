@@ -74,7 +74,7 @@ public class ServerChannelInfo
     public ServerChannelInfo(string channelName,string curUseServerName,List<ServerIpAndPort> serverIpAndPorts = null)
     {
         ChannelName = channelName;
-        curUseServerName = curUseServerName;
+        CurUseServerName = curUseServerName;
         ServerIpAndPorts = serverIpAndPorts;
     }
 }

@@ -12,6 +12,7 @@ using UGFExtensions.SpriteCollection;
 using UGFExtensions.Texture;
 using UnityEngine;
 using UnityGameFramework.Runtime;
+
 /// <summary>
 /// 游戏入口。
 /// </summary>
@@ -49,6 +50,7 @@ public partial class GameEntry
     
     public static CrossPlatformComponent CrossPlatform => _crossPlatform ??= UnityGameFramework.Runtime.GameEntry.GetComponent<CrossPlatformComponent>();
     private static CrossPlatformComponent _crossPlatform;
+
     /// <summary>
     /// 获取热更程序集
     /// </summary>
@@ -62,6 +64,7 @@ public partial class GameEntry
 
         return null;
     }
+
     /// <summary>
     /// 获取热更程序集
     /// </summary>
@@ -95,8 +98,8 @@ public partial class GameEntry
                 m_HotfixAssemblys.Add(hotFixAssembly);
             }
         }
-
     }
+
     public static ProcedureBase GetProcedureByName(string procedureName)
     {
         if (GetHotfixAssemblys() == null ||  procedureName == null)
@@ -127,6 +130,7 @@ public partial class GameEntry
         }
         return null;
     }
+
     public static ProcedureBase[] GetProcedures()
     {
         if (GetHotfixAssemblys() == null)
@@ -162,6 +166,7 @@ public partial class GameEntry
         CustomSettingsWindow customSettingWindow = new CustomSettingsWindow();
         Debugger.SetCustomSettingWindowHelper(customSettingWindow);
     }
+
     /// <summary>
     /// 初始化组件一些设置
     /// </summary>
@@ -169,6 +174,7 @@ public partial class GameEntry
     {
 
     }
+
     /// <summary>
     /// 加载自定义组件
     /// </summary>
@@ -198,12 +204,15 @@ public partial class GameEntry
         GameEntryMain.UI.DeerUIInitRootForm().OnCloseLaunchView();
         GameEntryMain.UI.DeerUIInitRootForm().OnOpenLoadingForm(false);
     }
+
     private static List<Assembly> m_HotfixAssemblys = new List<Assembly>();
     private static string m_EntranceProcedureTypeName = "HotfixBusiness.Procedure.ProcedurePreload";
+
     private static void ResetProcedure()
     {
         ResetProcedure(m_EntranceProcedureTypeName);
     }
+
     public static void ResetProcedure(string procedureName) 
     {
 #if UNITY_EDITOR
@@ -232,6 +241,7 @@ public partial class GameEntry
         procedureManager.Initialize(GameFramework.GameFrameworkEntry.GetModule<GameFramework.Fsm.IFsmManager>(), procedures);
         procedureManager.StartProcedure(_EntranceProcedureBase.GetType());
     }
+
     private static string m_UIFormHelperTypeName = "Main.Runtime.DeerUIFormHelper";
     private static UIFormHelperBase m_CustomUIFormHelper = null;
     private static void ResetUIFormHelper() 
@@ -265,6 +275,7 @@ public partial class GameEntry
     public static void Entrance(object[] objects) 
     {
         m_HotfixAssemblys = (List<Assembly>)objects[0];
+
         //初始化自定义调试器
         InitCustomDebuggers();
         InitComponentsSet();
