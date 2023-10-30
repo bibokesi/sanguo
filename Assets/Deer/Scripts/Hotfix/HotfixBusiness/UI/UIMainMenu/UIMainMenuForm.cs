@@ -1,13 +1,4 @@
-﻿// ================================================
-//描 述:
-//作 者:Xiaohei.Wang(Wenhao)
-//创建时间:2023-05-31 18-05-45
-//修改作者:Xiaohei.Wang(Wenhao)
-//修改时间:2023-05-31 18-05-45
-//版 本:0.1 
-// ===============================================
-
-using HotfixFramework.Runtime;
+﻿using HotfixFramework.Runtime;
 using System.Collections;
 using System.Collections.Generic;
 using HotfixBusiness.Procedure;

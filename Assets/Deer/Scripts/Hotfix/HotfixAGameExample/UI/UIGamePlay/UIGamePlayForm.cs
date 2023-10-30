@@ -1,13 +1,4 @@
-﻿// ================================================
-//描 述:
-//作 者:AlanDu
-//创建时间:2022-11-11 10-24-40
-//修改作者:AlanDu
-//修改时间:2022-11-22 12-27-30
-//版 本:0.1 
-// ===============================================
-
-using HotfixBusiness.Procedure;
+﻿using HotfixBusiness.Procedure;
 using HotfixFramework.Runtime;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,9 +8,6 @@ using UnityEngine.EventSystems;
 
 namespace HotfixBusiness.UI
 {
-	/// <summary>
-	/// Please modify the description.
-	/// </summary>
 	public partial class UIGamePlayForm : UIFixBaseForm
 	{
 		ProcedureGamePlay m_Procedure;

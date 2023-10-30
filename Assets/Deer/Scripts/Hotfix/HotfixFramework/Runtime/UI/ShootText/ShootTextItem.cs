@@ -1,19 +1,8 @@
-// ================================================
-//描 述:
-//作 者:AlanDu
-//创建时间:2022-09-23 16-18-58
-//修改作者:AlanDu
-//修改时间:2022-09-23 16-18-58
-//版 本:0.1 
-// ===============================================
 using System.Collections.Generic;
 using System.Linq;
 using DG.Tweening;
 using UnityEngine;
 
-/// <summary>
-/// Please modify the description.
-/// </summary>
 public class ShootTextItem : MonoBehaviour
 {
     public CanvasGroup canvasGroup = null;

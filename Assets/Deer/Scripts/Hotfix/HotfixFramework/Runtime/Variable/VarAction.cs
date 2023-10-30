@@ -1,18 +1,6 @@
-// ================================================
-//描 述:
-//作 者:AlanDu
-//创建时间:2023-05-31 21-52-42
-//修改作者:AlanDu
-//修改时间:2023-05-31 21-52-42
-//版 本:0.1 
-// ===============================================
-
 using System;
 using GameFramework;
 
-/// <summary>
-/// Action
-/// </summary>
 public class VarAction : Variable<Action>
 {
 	/// <summary>

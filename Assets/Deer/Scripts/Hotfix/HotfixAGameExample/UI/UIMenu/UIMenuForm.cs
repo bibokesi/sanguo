@@ -1,13 +1,4 @@
-﻿// ================================================
-//描 述:
-//作 者:AlanDu
-//创建时间:2022-11-11 10-02-27
-//修改作者:AlanDu
-//修改时间:2023-06-01 21-42-34
-//版 本:0.1 
-// ===============================================
-
-using HotfixFramework.Runtime;
+﻿using HotfixFramework.Runtime;
 using Main.Runtime;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,9 +10,6 @@ using UnityGameFramework.Runtime;
 
 namespace HotfixBusiness.UI
 {
-	/// <summary>
-	/// Please modify the description.
-	/// </summary>
 	public partial class UIMenuForm : UIFixBaseForm
 	{
 		public bool IsSolo;

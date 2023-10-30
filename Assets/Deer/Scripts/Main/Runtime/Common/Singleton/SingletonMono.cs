@@ -1,11 +1,3 @@
-/* ================================================
- * Introduction：xxx 
- * Creator：AlanDu 
- * CreationTime：2022-03-25 16-39-57
- * ChangeCreator：AlanDu 
- * ChangeTime：2022-03-25 16-39-57
- * CreateVersion：0.1
- *  =============================================== */
 using UnityEngine;
 
 /// <summary>

@@ -1,13 +1,4 @@
-﻿// ================================================
-//描 述:
-//作 者:AlanDu
-//创建时间:2022-11-11 10-32-46
-//修改作者:AlanDu
-//修改时间:2022-11-22 17-00-49
-//版 本:0.1 
-// ===============================================
-
-using HotfixBusiness.Procedure;
+﻿using HotfixBusiness.Procedure;
 using HotfixFramework.Runtime;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,9 +7,6 @@ using UnityEngine;
 
 namespace HotfixBusiness.UI
 {
-	/// <summary>
-	/// Please modify the description.
-	/// </summary>
 	public partial class UIGameStopForm : UIFixBaseForm
 	{
 		protected override void OnInit(object userData) {

@@ -489,7 +489,7 @@ namespace UnityGameFramework.Editor.ResourceTools
             }
             EditorGUILayout.EndScrollView();
         }
-        #region Extend by AlanDu.
+        #region Extend by Lcl.
         public enum AssetsPackedType
         {
             PackedDefault,
@@ -558,7 +558,7 @@ namespace UnityGameFramework.Editor.ResourceTools
 
             GUILayout.Label(string.Empty);
 
-            #region Extend by AlanDu.
+            #region Extend by Lcl.
 
             if (!m_IsResetResourceList)
             {
@@ -625,7 +625,7 @@ namespace UnityGameFramework.Editor.ResourceTools
                 EditorUtility.ClearProgressBar();
             }
         }
-        #region Extend by AlanDu.
+        #region Extend by Lcl.
         private void PackedNativeResource(bool bPacked)
         {
             m_Controller.SetNativeResourcePacked(bPacked);
@@ -673,7 +673,7 @@ namespace UnityGameFramework.Editor.ResourceTools
 #endif
                 EditorGUILayout.LabelField(sourceFolder.Name);
 
-                #region Extend by AlanDu.
+                #region Extend by Lcl.
                 if (GUILayout.Button($"Add an [{sourceFolder.Name}] as Bundle",GUILayout.Width(300f),GUILayout.Height(18f)))
                 {
                     string resourceName = sourceFolder.FromRootPath;

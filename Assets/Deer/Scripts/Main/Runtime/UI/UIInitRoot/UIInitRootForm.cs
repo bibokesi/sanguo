@@ -1,18 +1,6 @@
-﻿// ================================================
-//描 述:
-//作 者:AlanDu
-//创建时间:2023-01-03 14-28-34
-//修改作者:AlanDu
-//修改时间:2023-01-03 18-15-04
-//版 本:0.1 
-// ===============================================
-
-using Main.Runtime;
+﻿using Main.Runtime;
 namespace Main.Runtime.UI
 {
-	/// <summary>
-	/// Please modify the description.
-	/// </summary>
 	public partial class UIInitRootForm : UIBaseForm
 	{
 		private static UIInitRootForm instance;

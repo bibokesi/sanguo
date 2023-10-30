@@ -1,12 +1,3 @@
-// ================================================
-//描 述:This script is used to show the user need to do list
-//作 者:Xiaohei.Wang(Wenhao)
-//创建时间:2023-05-14 15-03-23
-//修改作者:Xiaohei.Wang(Wenhao)
-//修改时间:2023-05-14 15-03-23
-//版 本:0.1 
-// ===============================================
-
 using UnityEditor;
 using UnityEngine;
 

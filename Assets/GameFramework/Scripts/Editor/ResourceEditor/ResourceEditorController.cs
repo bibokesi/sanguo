@@ -416,7 +416,7 @@ namespace UnityGameFramework.Editor.ResourceTools
 
             return false;
         }
-        #region Extend by AlanDu.
+        #region Extend by Lcl.
         public bool RemoveAllResource()
         {
             Asset[] assetsToRemove = m_ResourceCollection.GetAssets();
@@ -700,7 +700,7 @@ namespace UnityGameFramework.Editor.ResourceTools
             return 0;
         }
 
-        #region Extend by AlanDu.
+        #region Extend by Lcl.
         public void SetNativeResourcePacked(bool bPacked)
         {
             m_ResourceCollection.SetNativeResourcesPacked(bPacked);

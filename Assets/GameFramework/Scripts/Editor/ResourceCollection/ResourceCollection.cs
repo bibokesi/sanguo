@@ -381,7 +381,7 @@ namespace UnityGameFramework.Editor.ResourceTools
 
             return true;
         }
-        #region Extend by AlanDu.
+        #region Extend by Lcl.
         public bool RemoveAllResource()
         {
             List<Resource> allResources = new List<Resource>();
@@ -658,7 +658,7 @@ namespace UnityGameFramework.Editor.ResourceTools
 
             return true;
         }
-        #region Extend by AlanDu.
+        #region Extend by Lcl.
         public void SetNativeResourcesPacked(bool bPacked)
         {
             EditorUtility.DisplayProgressBar("Packing...", Utility.Text.Format("Packing assetsNative resources, {0}/{1} packed.", 0, 0), 0);

@@ -1,21 +1,9 @@
-// ================================================
-//描 述:
-//作 者:Xiaohei.Wang(Wenhao)
-//创建时间:2023-04-24 19-00-42
-//修改作者:Xiaohei.Wang(Wenhao)
-//修改时间:2023-04-24 19-00-42
-//版 本:0.1 
-// ===============================================
-
 using Main.Runtime.UI;
 using UnityEditor;
 using UnityEngine;
 
 namespace Deer.Editor
 {
-    /// <summary>
-    /// Please modify the description。
-    /// </summary>
     [CustomEditor(typeof(RadarMap), true)]
     [CanEditMultipleObjects]
     public class RadarMapEdit : UnityEditor.UI.ImageEditor

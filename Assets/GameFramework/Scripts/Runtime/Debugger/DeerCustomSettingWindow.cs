@@ -1,17 +1,6 @@
-// ================================================
-//描 述:
-//作 者:XinDu
-//创建时间:2022-05-30 15-33-04
-//修改作者:XinDu
-//修改时间:2022-05-30 15-33-04
-//版 本:0.1 
-// ===============================================
 using GameFramework.Debugger;
 using UnityEngine;
 
-/// <summary>
-/// Please modify the description.
-/// </summary>
 public class DeerCustomSettingWindow : IDebuggerWindow
 {
     private Vector2 m_ScrollPosition = Vector2.zero;

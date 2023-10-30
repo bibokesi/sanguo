@@ -1,19 +1,8 @@
-// ================================================
-//描 述:
-//作 者:LX
-//创建时间:2022-05-10 11-53-31
-//修改作者:LX
-//修改时间:2022-05-10 11-53-31
-//版 本:0.1 
-// ===============================================
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-/// <summary>
-/// Please modify the description.
-/// </summary>
 public class AutoSetModleFormat : AssetPostprocessor
 {
     //模型导入之前调用
