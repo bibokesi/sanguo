@@ -24,7 +24,7 @@ public class CopyAssembliesEditorWindow : EditorWindow
     private void OnEnable()
     {
         var buildTarget= EditorUserBuildSettings.activeBuildTarget;
-        foreach (var item in BuildEventHandlerWolong.Platform2BuildTargetDic)
+        foreach (var item in BuildEventHandlerHybridCLR.Platform2BuildTargetDic)
         {
             if(item.Value== buildTarget)
             {
@@ -95,11 +95,11 @@ public class CopyAssembliesEditorWindow : EditorWindow
             {
                 if (GUILayout.Button("复制AOT程序集"))
                 {
-                    CopyAssemblies.DoCopyAOTAssemblies(BuildEventHandlerWolong.Platform2BuildTargetDic[m_SelectPlatform]);
+                    CopyAssemblies.DoCopyAOTAssemblies(BuildEventHandlerHybridCLR.Platform2BuildTargetDic[m_SelectPlatform]);
                 }
                 if (GUILayout.Button("复制Hotfix程序集"))
                 {
-                    CopyAssemblies.DoCopyHotfixAssemblies(BuildEventHandlerWolong.Platform2BuildTargetDic[m_SelectPlatform]);
+                    CopyAssemblies.DoCopyHotfixAssemblies(BuildEventHandlerHybridCLR.Platform2BuildTargetDic[m_SelectPlatform]);
                 }
             }
             GUILayout.EndHorizontal();*/
@@ -109,7 +109,7 @@ public class CopyAssembliesEditorWindow : EditorWindow
             GUILayout.Space(10);
             if (GUILayout.Button("构建所有程序集"))
             {
-                CopyAssemblies.DoCopyAllAssemblies(BuildEventHandlerWolong.Platform2BuildTargetDic[m_SelectPlatform]);
+                CopyAssemblies.DoCopyAllAssemblies(BuildEventHandlerHybridCLR.Platform2BuildTargetDic[m_SelectPlatform]);
                 OpenFolder.OpenAssemblies();
             }
         }

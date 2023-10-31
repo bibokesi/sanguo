@@ -81,7 +81,7 @@ public class BuildEventHandler : IBuildEventHandler
         }
         BuildEventHandlerLuban.OnPreprocessAllPlatforms(platforms, outputFullSelected);
 #if ENABLE_HYBRID_CLR_UNITY
-        BuildEventHandlerWolong.OnPreprocessAllPlatforms(platforms);
+        BuildEventHandlerHybridCLR.OnPreprocessAllPlatforms(platforms);
 #endif
     }
 
@@ -102,7 +102,7 @@ public class BuildEventHandler : IBuildEventHandler
         bool outputFullSelected, string outputFullPath, bool outputPackedSelected, string outputPackedPath)
     {
 #if ENABLE_HYBRID_CLR_UNITY
-        BuildEventHandlerWolong.OnPreprocessPlatform(platform);
+        BuildEventHandlerHybridCLR.OnPreprocessPlatform(platform);
 #endif
     }
     /// <summary>
@@ -269,7 +269,7 @@ public class BuildEventHandler : IBuildEventHandler
         if (isCopyOther)
         {
 #if ENABLE_HYBRID_CLR_UNITY
-            BuildEventHandlerWolong.OnPostprocessPlatform(platform, outputPackageSelected, outputFullSelected, outputPackedSelected, CommitResourcesPath);
+            BuildEventHandlerHybridCLR.OnPostprocessPlatform(platform, outputPackageSelected, outputFullSelected, outputPackedSelected, CommitResourcesPath);
 #endif
             BuildEventHandlerLuban.OnPostprocessPlatform(platform, outputPackageSelected, outputFullSelected, outputPackedSelected, CommitResourcesPath);
             AssetDatabase.Refresh();
