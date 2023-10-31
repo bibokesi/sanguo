@@ -24,14 +24,14 @@ MonoBehaviour:
     m_WhetherCopyResToCommitPath: 1
     m_CleanCommitPathRes: 1
     m_ServerType: 1
-    m_InnerResourceSourceUrl: http://192.168.110.107:8080/
-    m_ExtraResourceSourceUrl: http://192.168.110.107:8080/
-    m_FormalResourceSourceUrl: http://192.168.110.107:8080/
+    m_InnerResourceSourceUrl: http://26.26.26.1:8080/
+    m_ExtraResourceSourceUrl: http://26.26.26.1:8080/
+    m_FormalResourceSourceUrl: http://26.26.26.1:8080/
   m_ResourceVersionFileName: ResourceVersion.txt
-  WindowsAppUrl: http://192.168.110.107:8080/
-  MacOSAppUrl: http://192.168.110.107:8080/
-  IOSAppUrl: http://192.168.110.107:8080/
-  AndroidAppUrl: http://192.168.110.107:8080/
+  WindowsAppUrl: http://26.26.26.1:8080/
+  MacOSAppUrl: http://26.26.26.1:8080/
+  IOSAppUrl: http://26.26.26.1:8080/
+  AndroidAppUrl: http://26.26.26.1:8080/
   m_CurUseServerChannel: 
   m_ServerChannelInfos:
   - ChannelName: 
