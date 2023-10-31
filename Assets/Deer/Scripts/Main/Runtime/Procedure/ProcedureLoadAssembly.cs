@@ -56,7 +56,7 @@ namespace Main.Runtime.Procedure
                 {
                     isLoadHotfix = !Application.isEditor;
                 }
-                if (!isLoadHotfix)
+                if (isLoadHotfix)
                 {
                     GameEntryMain.Assemblies.LoadHotUpdateAssembliesByGroupName(DeerSettingsUtils.DeerGlobalSettings.BaseAssetsRootName,
                         delegate(Dictionary<string, byte[]> assemblies)
