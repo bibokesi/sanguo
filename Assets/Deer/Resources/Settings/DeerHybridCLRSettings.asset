@@ -80,6 +80,7 @@ MonoBehaviour:
   - Unity.RenderPipelines.Universal.Runtime.dll
   - Unity.TextMeshPro.dll
   - Unity.Timeline.dll
+  - UnityEngine.AIModule.dll
   - UnityEngine.AndroidJNIModule.dll
   - UnityEngine.AnimationModule.dll
   - UnityEngine.AssetBundleModule.dll
@@ -111,6 +112,8 @@ MonoBehaviour:
   - UnityEngine.UnityAnalyticsModule.dll
   - UnityEngine.UnityWebRequestAudioModule.dll
   - UnityEngine.UnityWebRequestModule.dll
+  - UnityEngine.VFXModule.dll
+  - UnityEngine.VideoModule.dll
   - UnityEngine.VRModule.dll
   - UnityEngine.XRModule.dll
   - UnityGameFramework.Runtime.dll
