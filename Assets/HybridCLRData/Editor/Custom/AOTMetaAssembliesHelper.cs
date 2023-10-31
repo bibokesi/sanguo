@@ -33,6 +33,7 @@ public static class AOTMetaAssembliesHelper
     }
     public static void FindAllAOTMetaAssemblies(BuildTarget buildTarget)
     {
+        // fixed by zh
 //        string folder = $"{SettingsUtil.GetAssembliesPostIl2CppStripDir(buildTarget)}";
 //        DeerSettingsUtils.DeerHybridCLRSettings.AOTMetaAssemblies.Clear();
 //        if (!Directory.Exists(folder))
