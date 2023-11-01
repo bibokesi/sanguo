@@ -130,6 +130,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1764703177563192465, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2885371915229619605, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2885371915229619605, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2885371915229619605, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2885371915229619605, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3286330945320061602, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3286330945320061602, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3286330945320061602, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3286330945320061602, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306832747998289542, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3697501985222744245, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
       propertyPath: m_ActiveWindow
       value: 0
@@ -140,11 +180,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3697501985222841089, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
       propertyPath: m_EditorResourceMode
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4876913478376791013, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4876913478376791013, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4876913478376791013, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4876913478376791013, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5078093320213950745, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_Sprite
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5402190822736383794, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
       propertyPath: m_Name
       value: DeerGF
+      objectReference: {fileID: 0}
+    - target: {fileID: 8043281294386013445, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8494481547056192671, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
       propertyPath: m_RootOrder
@@ -192,11 +256,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8751048774825719248, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
       propertyPath: m_Color.a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8751048774825719248, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
       propertyPath: m_Texture
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2800000, guid: 4fb975ee8aa9f164cb540e72e026b3ea, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}

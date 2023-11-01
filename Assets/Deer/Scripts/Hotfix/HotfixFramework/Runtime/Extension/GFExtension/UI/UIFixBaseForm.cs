@@ -1,9 +1,6 @@
 using System.Collections.Generic;
 using Main.Runtime;
 
-/// <summary>
-/// Please modify the description.
-/// </summary>
 public class UIFixBaseForm : UIBaseForm
 {
     protected Dictionary<ConstantUI.EUIFormId, int> OpenSubFormSerialIds = new Dictionary<ConstantUI.EUIFormId, int>();
