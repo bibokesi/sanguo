@@ -6,7 +6,7 @@ namespace AssetDanshari
 {
     public class AssetDanshariWindow : EditorWindow
     {
-        [MenuItem("DeerTools/Asset/Find Asset Reference")]
+        [MenuItem("GameMainTools/Asset/Find Asset Reference")]
         static void ShowWindow()
         {
             GetWindow<AssetDanshariWindow>();

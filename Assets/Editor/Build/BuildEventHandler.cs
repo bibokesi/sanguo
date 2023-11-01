@@ -11,12 +11,12 @@ public class BuildEventHandler : IBuildEventHandler
 {
     public bool ContinueOnFailure => false;
 
-    private readonly string CommitResourcesPath = Application.dataPath + $"/../CommitResources/{DeerSettingsUtils.ResourcesArea.ResAdminType}{DeerSettingsUtils.ResourcesArea.ResAdminCode}/";
+    private readonly string CommitResourcesPath = Application.dataPath + $"/../CommitResources/{GameMainSettingsUtils.ResourcesArea.ResAdminType}{GameMainSettingsUtils.ResourcesArea.ResAdminCode}/";
     private readonly List<string> StreamingAssetsPaths = new List<string>()
     {
         Utility.Path.GetRegularPath(Path.Combine(Application.dataPath, "StreamingAssets", "AssetsHotfix")),
         Utility.Path.GetRegularPath(Path.Combine(Application.dataPath, "StreamingAssets", "AssetsPacked")),
-        Utility.Path.GetRegularPath(Path.Combine(Application.dataPath, "StreamingAssets", DeerSettingsUtils.DeerGlobalSettings.ConfigFolderName)),
+        Utility.Path.GetRegularPath(Path.Combine(Application.dataPath, "StreamingAssets", GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName)),
     };
     private readonly List<string> StreamingAssetsFilePaths = new List<string>()
     {
@@ -71,13 +71,13 @@ public class BuildEventHandler : IBuildEventHandler
         }*/
         FolderUtils.ClearFolder(Application.streamingAssetsPath);
         UGFExtensions.SpriteCollection.SpriteCollectionUtility.RefreshSpriteCollection();
-        if (string.IsNullOrEmpty(DeerSettingsUtils.DeerPathConfig.ResourceCollectionPath))
+        if (string.IsNullOrEmpty(GameMainSettingsUtils.GameMainPathConfig.ResourceCollectionPath))
         {
             ResourceRuleEditorUtility.RefreshResourceCollection();
         }
         else
         {
-            ResourceRuleEditorUtility.RefreshResourceCollection(DeerSettingsUtils.DeerPathConfig.ResourceCollectionPath);
+            ResourceRuleEditorUtility.RefreshResourceCollection(GameMainSettingsUtils.GameMainPathConfig.ResourceCollectionPath);
         }
         BuildEventHandlerLuban.OnPreprocessAllPlatforms(platforms, outputFullSelected);
 #if ENABLE_HYBRID_CLR_UNITY
@@ -219,15 +219,15 @@ public class BuildEventHandler : IBuildEventHandler
             m_VersionInfo.GameUpdateUrl = "";
             m_VersionInfo.LatestGameVersion = "";
             string versionInfoJson = JsonUtility.ToJson(m_VersionInfo);
-            FileUtils.CreateFile(Path.Combine(outputFullPath,DeerSettingsUtils.DeerGlobalSettings.ResourceVersionFileName),versionInfoJson);
-            if (DeerSettingsUtils.ResourcesArea.WhetherCopyResToCommitPath)
+            FileUtils.CreateFile(Path.Combine(outputFullPath,GameMainSettingsUtils.GameMainGlobalSettings.ResourceVersionFileName),versionInfoJson);
+            if (GameMainSettingsUtils.ResourcesArea.WhetherCopyResToCommitPath)
             {
                 string commitPath = CommitResourcesPath + "/" + platform;
                 if (!Directory.Exists(commitPath))
                 {
                     Directory.CreateDirectory(commitPath);
                 }
-                if (DeerSettingsUtils.ResourcesArea.CleanCommitPathRes)
+                if (GameMainSettingsUtils.ResourcesArea.CleanCommitPathRes)
                 {
                     FolderUtils.ClearFolder(commitPath);
                 }

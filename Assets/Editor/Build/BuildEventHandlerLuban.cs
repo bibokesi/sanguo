@@ -29,8 +29,8 @@ public static class BuildEventHandlerLuban
         {
             //CopyPackageFile();
             if (FolderUtils.CopyFolder(
-                    $"{Application.dataPath}/../LubanTools/GenerateDatas/{DeerSettingsUtils.DeerGlobalSettings.ConfigFolderName}",
-                    Path.Combine(Application.streamingAssetsPath,DeerSettingsUtils.DeerGlobalSettings.ConfigFolderName)))
+                    $"{Application.dataPath}/../LubanTools/GenerateDatas/{GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName}",
+                    Path.Combine(Application.streamingAssetsPath,GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName)))
             {
                 Debug.Log("拷贝表资源文件成功！");
             }
@@ -38,8 +38,8 @@ public static class BuildEventHandlerLuban
         if (!outputPackageSelected && outputPackedSelected)
         {
             if (FolderUtils.CopyFolder(
-                    $"{Application.dataPath}/../LubanTools/GenerateDatas/{DeerSettingsUtils.DeerGlobalSettings.ConfigFolderName}",
-                    Path.Combine(Application.streamingAssetsPath,DeerSettingsUtils.DeerGlobalSettings.ConfigFolderName)))
+                    $"{Application.dataPath}/../LubanTools/GenerateDatas/{GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName}",
+                    Path.Combine(Application.streamingAssetsPath,GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName)))
             {
                 Debug.Log("拷贝表资源文件成功！");
             }
@@ -47,23 +47,23 @@ public static class BuildEventHandlerLuban
         if (outputFullSelected)
         {
             string commitPath = commitResourcesPath + "/" + platform;
-            if (FolderUtils.CopyFolder($"{Application.dataPath}/../LubanTools/GenerateDatas/{DeerSettingsUtils.DeerGlobalSettings.ConfigFolderName}", 
-                    Path.Combine(commitPath,DeerSettingsUtils.DeerGlobalSettings.ConfigFolderName)))
+            if (FolderUtils.CopyFolder($"{Application.dataPath}/../LubanTools/GenerateDatas/{GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName}", 
+                    Path.Combine(commitPath,GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName)))
             {
                 Debug.Log("拷贝表资源文件成功！");
             }
         }
     }
-    //[MenuItem("DeerTools/Test")]
+    //[MenuItem("GameMainTools/Test")]
     private static void CopyPackageFile()
     {
         Dictionary<string, ConfigInfo> m_Configs ;
-        string configFolderPath = Path.Combine(Application.dataPath,$"../LubanTools/GenerateDatas/{DeerSettingsUtils.DeerGlobalSettings.ConfigFolderName}");
-        string configVersionPath = Path.Combine(configFolderPath,DeerSettingsUtils.DeerGlobalSettings.ConfigVersionFileName);
+        string configFolderPath = Path.Combine(Application.dataPath,$"../LubanTools/GenerateDatas/{GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName}");
+        string configVersionPath = Path.Combine(configFolderPath,GameMainSettingsUtils.GameMainGlobalSettings.ConfigVersionFileName);
         string xml = File.ReadAllText(configVersionPath);
         m_Configs = FileUtils.AnalyConfigXml(xml,out string version);
         string configDataPath = $"{configFolderPath}/Datas";
-        string destDataPath = Path.Combine(Application.streamingAssetsPath,DeerSettingsUtils.DeerGlobalSettings.ConfigFolderName,"Datas");
+        string destDataPath = Path.Combine(Application.streamingAssetsPath,GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName,"Datas");
         if (!Directory.Exists(destDataPath))
         {
             Directory.CreateDirectory(destDataPath);
@@ -74,7 +74,7 @@ public static class BuildEventHandlerLuban
                 Path.Combine(destDataPath,$"{item.Value.NameWithoutExtension}{item.Value.Extension}"));
         }
         File.Copy(configVersionPath,
-            Path.Combine(Application.streamingAssetsPath,DeerSettingsUtils.DeerGlobalSettings.ConfigFolderName,DeerSettingsUtils.DeerGlobalSettings.ConfigVersionFileName));
+            Path.Combine(Application.streamingAssetsPath,GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName,GameMainSettingsUtils.GameMainGlobalSettings.ConfigVersionFileName));
         Debug.Log("拷贝表资源文件成功！");
         AssetDatabase.Refresh();
     }

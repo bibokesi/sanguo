@@ -16,7 +16,7 @@ namespace UGFExtensions.Editor.ResourceTools
     /// </summary>
     public class ResourceRuleEditor : EditorWindow
     {
-        private readonly string m_NormalConfigurationPath = "Assets/Deer/GameConfigs/ResourceRuleEditor.asset";
+        private readonly string m_NormalConfigurationPath = "Assets/GameMain/GameConfigs/ResourceRuleEditor.asset";
         private ResourceRuleEditorData m_Configuration;
         private ResourceCollection m_ResourceCollection;
         
@@ -429,7 +429,7 @@ namespace UGFExtensions.Editor.ResourceTools
 
             return false;
         }
-        private string m_Prefix = "Deer/AssetsHotfix/";
+        private string m_Prefix = "GameMain/AssetsHotfix/";
         private void AnalysisResourceFilters()
         {
             m_ResourceCollection = new ResourceCollection();

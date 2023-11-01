@@ -7,7 +7,7 @@ namespace Kogane.Internal
 {
     internal sealed class ConsoleWindowFilterToolbarSettingProvider : SettingsProvider
     {
-        public const string PATH = "Deer/ConsoleWindowFilterToolbar";
+        public const string PATH = "GameMain/ConsoleWindowFilterToolbar";
 
         private Editor m_editor;
 

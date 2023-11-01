@@ -7,14 +7,14 @@ using UnityGameFramework.Editor.ResourceTools;
 public static class GFPathConfig
 {
     [BuildSettingsConfigPath]
-    public static string BuildSettingsConfig = Utility.Path.GetRegularPath(Path.Combine(Application.dataPath, "Deer/GameConfigs/BuildSettings.xml"));
+    public static string BuildSettingsConfig = Utility.Path.GetRegularPath(Path.Combine(Application.dataPath, "GameMain/GameConfigs/BuildSettings.xml"));
 
     [ResourceCollectionConfigPath]
-    public static string ResourceCollectionConfig = Utility.Path.GetRegularPath(Path.Combine(Application.dataPath, "Deer/GameConfigs/ResourceCollection.xml"));
+    public static string ResourceCollectionConfig = Utility.Path.GetRegularPath(Path.Combine(Application.dataPath, "GameMain/GameConfigs/ResourceCollection.xml"));
 
     [ResourceEditorConfigPath]
-    public static string ResourceEditorConfig = Utility.Path.GetRegularPath(Path.Combine(Application.dataPath, "Deer/GameConfigs/ResourceEditor.xml"));
+    public static string ResourceEditorConfig = Utility.Path.GetRegularPath(Path.Combine(Application.dataPath, "GameMain/GameConfigs/ResourceEditor.xml"));
 
     [ResourceBuilderConfigPath]
-    public static string ResourceBuilderConfig = Utility.Path.GetRegularPath(Path.Combine(Application.dataPath, "Deer/GameConfigs/ResourceBuilder.xml"));
+    public static string ResourceBuilderConfig = Utility.Path.GetRegularPath(Path.Combine(Application.dataPath, "GameMain/GameConfigs/ResourceBuilder.xml"));
 }

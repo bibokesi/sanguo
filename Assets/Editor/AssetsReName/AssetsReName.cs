@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace Deer.Editor
+namespace GameMain.Editor
 {
     /// <summary>
     /// 资源重命名工具
@@ -188,7 +188,7 @@ namespace Deer.Editor
 
         #region /*——GUI——*/
 
-        [MenuItem("DeerTools/Asset/Asset ReName _&#_1")]
+        [MenuItem("GameMainTools/Asset/Asset ReName _&#_1")]
         public static void NewWindow_AssetsReName()
         {
             GetWindow<AssetsReName>(true, "资源重命名");

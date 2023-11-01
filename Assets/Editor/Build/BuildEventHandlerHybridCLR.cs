@@ -36,7 +36,7 @@ public static class BuildEventHandlerHybridCLR
     }
     public static void OnPreprocessAllPlatforms(Platform platforms) 
     {
-        if (!DeerSettingsUtils.DeerHybridCLRSettings.Enable)
+        if (!GameMainSettingsUtils.GameMainHybridCLRSettings.Enable)
         {
             return;
         }
@@ -98,8 +98,8 @@ public static class BuildEventHandlerHybridCLR
         if (outputPackageSelected)
         {
             if (FolderUtils.CopyFolder(
-                    $"{Application.dataPath}/../{DeerSettingsUtils.DeerHybridCLRSettings.HybridCLRDataPath}/{DeerSettingsUtils.DeerHybridCLRSettings.HybridCLRAssemblyPath}",
-                    Path.Combine(Application.streamingAssetsPath,DeerSettingsUtils.DeerHybridCLRSettings.HybridCLRAssemblyPath)))
+                    $"{Application.dataPath}/../{GameMainSettingsUtils.GameMainHybridCLRSettings.HybridCLRDataPath}/{GameMainSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath}",
+                    Path.Combine(Application.streamingAssetsPath,GameMainSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath)))
             {
                 Debug.Log("拷贝程序集资源文件成功！");
             }
@@ -107,8 +107,8 @@ public static class BuildEventHandlerHybridCLR
         if (!outputPackageSelected && outputPackedSelected)
         {
             if (FolderUtils.CopyFolder(
-                    $"{Application.dataPath}/../{DeerSettingsUtils.DeerHybridCLRSettings.HybridCLRDataPath}/{DeerSettingsUtils.DeerHybridCLRSettings.HybridCLRAssemblyPath}",
-                    Path.Combine(Application.streamingAssetsPath,DeerSettingsUtils.DeerHybridCLRSettings.HybridCLRAssemblyPath)))
+                    $"{Application.dataPath}/../{GameMainSettingsUtils.GameMainHybridCLRSettings.HybridCLRDataPath}/{GameMainSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath}",
+                    Path.Combine(Application.streamingAssetsPath,GameMainSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath)))
             {
                 Debug.Log("拷贝程序集资源文件成功！");
             }
@@ -117,8 +117,8 @@ public static class BuildEventHandlerHybridCLR
         {
             string commitPath = commitResourcesPath + "/" + platform;
             if (FolderUtils.CopyFolder(
-                    $"{Application.dataPath}/../{DeerSettingsUtils.DeerHybridCLRSettings.HybridCLRDataPath}/{DeerSettingsUtils.DeerHybridCLRSettings.HybridCLRAssemblyPath}", 
-                    Path.Combine(commitPath,DeerSettingsUtils.DeerHybridCLRSettings.HybridCLRAssemblyPath)))
+                    $"{Application.dataPath}/../{GameMainSettingsUtils.GameMainHybridCLRSettings.HybridCLRDataPath}/{GameMainSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath}", 
+                    Path.Combine(commitPath,GameMainSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath)))
             {
                 Debug.Log("拷贝程序集资源文件成功！");
             }
@@ -132,7 +132,7 @@ public static class BuildEventHandlerHybridCLR
     private static string[] FindAddHotfixDllGuids(string resourcesName) 
     {
         guids.Clear();
-        List<string> files = Main.Runtime.FileUtils.FindFiles(Path.Combine((Application.dataPath),"Deer", resourcesName),false);
+        List<string> files = Main.Runtime.FileUtils.FindFiles(Path.Combine((Application.dataPath),"GameMain", resourcesName),false);
         for (int i = 0; i < files.Count; i++)
         {
             if (!files[i].Contains(".meta"))

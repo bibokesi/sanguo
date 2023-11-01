@@ -9,11 +9,11 @@ namespace DevLocker.Tools
 	/// <summary>
 	/// Helpful menu items like:
 	/// - Copy selected GUIDs
-	/// - Deer Notepad++ or Sublime
+	/// - GameMain Notepad++ or Sublime
 	/// </summary>
 	public static class MiscUtils
 	{
-		[MenuItem("Assets/Deer/Copy GUIDs", false, 60)]
+		[MenuItem("Assets/GameMain/Copy GUIDs", false, 60)]
 		private static void CopySelectedGuid()
 		{
 			List<string> guids = new List<string>(Selection.objects.Length);
@@ -40,7 +40,7 @@ namespace DevLocker.Tools
 			te.Copy();
 		}
 
-		[MenuItem("Assets/Deer/Copy Asset Names", false, 61)]
+		[MenuItem("Assets/GameMain/Copy Asset Names", false, 61)]
 		private static void CopySelectedAssetNames()
 		{
 			// Get by selected guids.
@@ -65,7 +65,7 @@ namespace DevLocker.Tools
 			te.Copy();
 		}
 
-		[MenuItem("Assets/Deer/Copy Relative Paths", false, 62)]
+		[MenuItem("Assets/GameMain/Copy Relative Paths", false, 62)]
 		private static void CopySelectedAssetPaths()
 		{
 			// Get by selected guids.
@@ -84,7 +84,7 @@ namespace DevLocker.Tools
 			te.Copy();
 		}
 
-		[MenuItem("Assets/Deer/Copy Absolute Paths", false, 63)]
+		[MenuItem("Assets/GameMain/Copy Absolute Paths", false, 63)]
 		private static void CopySelectedAbsolutePaths()
 		{
 			var projectRoot = Path.GetDirectoryName(Application.dataPath);
@@ -164,32 +164,32 @@ namespace DevLocker.Tools
         };
 
 #if UNITY_EDITOR_WIN
-        [MenuItem("Assets/Deer/Notepad++", false, 30)]
+        [MenuItem("Assets/GameMain/Notepad++", false, 30)]
 		private static void EditWithNotepadPlusPlus()
 		{
 			var args = string.Join(" ", GetPathsOfAssets(Selection.objects, false));
-			EditWithApp(DeerSettingsUtils.DeerPathConfig.NotepadPath, args, _notepadPaths);
+			EditWithApp(GameMainSettingsUtils.GameMainPathConfig.NotepadPath, args, _notepadPaths);
 		}
 
-		[MenuItem("Assets/Deer/Notepad++ Metas", false, 31)]
+		[MenuItem("Assets/GameMain/Notepad++ Metas", false, 31)]
 		private static void EditWithNotepadPlusPlusMetas()
 		{
 			var args = string.Join(" ", GetPathsOfAssets(Selection.objects, true));
-			EditWithApp(DeerSettingsUtils.DeerPathConfig.NotepadPath, args, _notepadPaths);
+			EditWithApp(GameMainSettingsUtils.GameMainPathConfig.NotepadPath, args, _notepadPaths);
 		}
 #endif
-		[MenuItem("Assets/Deer/Sublime", false, 32)]
+		[MenuItem("Assets/GameMain/Sublime", false, 32)]
 		private static void EditWithSublime()
 		{
 			var args = string.Join(" ", GetPathsOfAssets(Selection.objects, false));
-			EditWithApp(DeerSettingsUtils.DeerPathConfig.SublimePath, args, _sublimePaths);
+			EditWithApp(GameMainSettingsUtils.GameMainPathConfig.SublimePath, args, _sublimePaths);
 		}
 
-		[MenuItem("Assets/Deer/Sublime Metas", false, 33)]
+		[MenuItem("Assets/GameMain/Sublime Metas", false, 33)]
 		private static void EditWithSublimeMetas()
 		{
 			var args = string.Join(" ", GetPathsOfAssets(Selection.objects, true));
-			EditWithApp(DeerSettingsUtils.DeerPathConfig.SublimePath, args, _sublimePaths);
+			EditWithApp(GameMainSettingsUtils.GameMainPathConfig.SublimePath, args, _sublimePaths);
 		}
 
 		private static IEnumerable<string> GetPathsOfAssets(Object[] objects, bool metas) {
@@ -218,7 +218,7 @@ namespace DevLocker.Tools
                 {
                     EditorUtility.DisplayDialog("Error", $"The program could not be found.\n" +
                         $"Please go to Settings to configure the path first.\n" +
-                        $"DeerTools > Settings > Path Setting", "ok");
+                        $"GameMainTools > Settings > Path Setting", "ok");
                     return;
 				}
             }

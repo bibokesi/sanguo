@@ -8,11 +8,11 @@ using UnityEngine;
 using UnityGameFramework.Editor;
 
 /// <summary>
-/// 一键添加和移除Deer例子
+/// 一键添加和移除GameMain例子
 /// </summary>
-public static class OneKeyAddOrRemoveDeerExample
+public static class OneKeyAddOrRemoveGameMainExample
 {
-	private const string EnableEXAMPLE = "UNITY_ENABLE_DEER_EXAMPLE";
+	private const string EnableEXAMPLE = "UNITY_ENABLE_GAMEMAIN_EXAMPLE";
 	private static readonly BuildTargetGroup[] BuildTargetGroups = new BuildTargetGroup[]
 	{
 		BuildTargetGroup.Standalone,
@@ -23,20 +23,20 @@ public static class OneKeyAddOrRemoveDeerExample
 	};
 	private static Dictionary<string,string> m_DicExamplePaths = new Dictionary<string, string>()
 	{
-		["Assets/Deer/AssetsHotfix/ADeerExample"] = "1",
-		["Assets/Deer/AssetsHotfix/AGameExample"] = "1",
-		["Assets/Deer/Scripts/Hotfix/HotfixADeerExample"] = "1",
-		["Assets/Deer/Scripts/Hotfix/HotfixAGameExample"] = "1",
-		["Assets/Standard Assets/DeerExample"] = "1",
+		["Assets/GameMain/AssetsHotfix/GameMainExample"] = "1",
+		["Assets/GameMain/AssetsHotfix/AGameExample"] = "1",
+		["Assets/GameMain/Scripts/Hotfix/HotfixGameMainExample"] = "1",
+		["Assets/GameMain/Scripts/Hotfix/HotfixAGameExample"] = "1",
+		["Assets/Standard Assets/GameMainExample"] = "1",
 	};
 	// 将"Assets/MyFolder"移动到“项目根路径/MyFolder”
-	private static string m_DestFolderPath = Application.dataPath + "/../DeerExample/";
-	[MenuItem("DeerTools/DeerExample/AddExample")]
-	public static void AddDeerExample()
+	private static string m_DestFolderPath = Application.dataPath + "/../GameMainExample/";
+	[MenuItem("GameMainTools/GameMainExample/AddExample")]
+	public static void AddGameMainExample()
 	{
 		if (!Directory.Exists(m_DestFolderPath))
 		{
-			Logger.Warning("Path is not find, If there are examples in the project, remove them first[DeerTools/DeerExample/RemoveExample]. Path:"+ m_DestFolderPath);
+			Logger.Warning("Path is not find, If there are examples in the project, remove them first[GameMainTools/GameMainExample/RemoveExample]. Path:"+ m_DestFolderPath);
 			return;
 		}
 		foreach (var dicExample in m_DicExamplePaths)
@@ -61,13 +61,13 @@ public static class OneKeyAddOrRemoveDeerExample
 		}
 		//Enable();
 		AddOrRemoveAssembly(true);
-		DeerSettingsUtils.DeerGlobalSettings.m_UseDeerExample = true;
+		GameMainSettingsUtils.GameMainGlobalSettings.m_UseGameMainExample = true;
 		AssetDatabase.SaveAssets();
 		AssetDatabase.Refresh();
 		
 	}
-	[MenuItem("DeerTools/DeerExample/RemoveExample")]
-	public static void RemoveDeerExample()
+	[MenuItem("GameMainTools/GameMainExample/RemoveExample")]
+	public static void RemoveGameMainExample()
 	{
 		if (!Directory.Exists(m_DestFolderPath))
 		{
@@ -99,46 +99,46 @@ public static class OneKeyAddOrRemoveDeerExample
 		}
 		//Disable();
 		AddOrRemoveAssembly(false);
-		DeerSettingsUtils.DeerGlobalSettings.m_UseDeerExample = false;
+		GameMainSettingsUtils.GameMainGlobalSettings.m_UseGameMainExample = false;
 		AssetDatabase.SaveAssets();
 		AssetDatabase.Refresh();
 	}
 
-	public static bool IsUseDeerExampleInProject()
+	public static bool IsUseGameMainExampleInProject()
 	{
-		return DeerSettingsUtils.DeerGlobalSettings.m_UseDeerExample;
+		return GameMainSettingsUtils.GameMainGlobalSettings.m_UseGameMainExample;
 	}
 
 	private static void AddOrRemoveAssembly(bool isAdd)
 	{
 		Dictionary<string, string> dicAssembly = new()
 		{
-			{ "ADeerExample", "HotfixADeerExample.dll" },
+			{ "GameMainExample", "HotfixGameMainExample.dll" },
 			{ "AGameExample", "HotfixAGameExample.dll" }
 		};
 		foreach (var item in dicAssembly)
 		{
-			DeerSettingsUtils.AddOrRemoveHotUpdateAssemblies(isAdd,item.Key,item.Value);
+			GameMainSettingsUtils.AddOrRemoveHotUpdateAssemblies(isAdd,item.Key,item.Value);
 		}
 		//弹出提示框
 		string message;
 		if (isAdd)
 		{
 			message =
-				"DeerExample 添加成功，需要在[HybridCLR/Settings]中添加热更新程序集(HotfixADeerExample.dll,HotfixAGameExample.dll)才可以实现热更!";
+				"GameMainExample 添加成功，需要在[HybridCLR/Settings]中添加热更新程序集(HotfixGameMainExample.dll,HotfixAGameExample.dll)才可以实现热更!";
 		}
 		else
 		{
 			message =
-				"DeerExample 移除成功，需要在[HybridCLR/Settings]中移除热更新程序集(HotfixADeerExample.dll,HotfixAGameExample.dll)才可以完全移除!";
+				"GameMainExample 移除成功，需要在[HybridCLR/Settings]中移除热更新程序集(HotfixGameMainExample.dll,HotfixAGameExample.dll)才可以完全移除!";
 		}
-		EditorUtility.DisplayDialog("DeerExample",message,"已知晓");
+		EditorUtility.DisplayDialog("GameMainExample",message,"已知晓");
 	}
 
 	/*private static void Enable()
 	{
 		AddScriptingDefineSymbol();
-		DeerSettingsUtils.DeerGlobalSettings.m_UseDeerExample = true;
+		GameMainSettingsUtils.GameMainGlobalSettings.m_UseGameMainExample = true;
 	}
 
 	private static void Disable()
