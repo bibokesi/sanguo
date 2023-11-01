@@ -23,11 +23,11 @@ public static class OneKeyAddOrRemoveGameMainExample
 	};
 	private static Dictionary<string,string> m_DicExamplePaths = new Dictionary<string, string>()
 	{
-		["Assets/GameMain/AssetsHotfix/GameMainExample"] = "1",
-		["Assets/GameMain/AssetsHotfix/AGameExample"] = "1",
-		["Assets/GameMain/Scripts/Hotfix/HotfixGameMainExample"] = "1",
-		["Assets/GameMain/Scripts/Hotfix/HotfixAGameExample"] = "1",
-		["Assets/Standard Assets/GameMainExample"] = "1",
+		["Assets/GameMain/AssetsHotfix/GameMainExample1"] = "1",
+		["Assets/GameMain/AssetsHotfix/GameMainExample2"] = "1",
+		["Assets/GameMain/Scripts/Hotfix/GameMainExample1"] = "1",
+		["Assets/GameMain/Scripts/Hotfix/GameMainExample2"] = "1",
+		["Assets/Standard Assets/GameMainExample1"] = "1",
 	};
 	// 将"Assets/MyFolder"移动到“项目根路径/MyFolder”
 	private static string m_DestFolderPath = Application.dataPath + "/../GameMainExample/";
@@ -113,8 +113,8 @@ public static class OneKeyAddOrRemoveGameMainExample
 	{
 		Dictionary<string, string> dicAssembly = new()
 		{
-			{ "GameMainExample", "HotfixGameMainExample.dll" },
-			{ "AGameExample", "HotfixAGameExample.dll" }
+			{ "GameMainExample1", "GameMainExample1.dll" },
+			{ "GameMainExample2", "GameMainExample2.dll" }
 		};
 		foreach (var item in dicAssembly)
 		{
