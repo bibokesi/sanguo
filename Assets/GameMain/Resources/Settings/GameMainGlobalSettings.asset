@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2884b9adb9d3e644f8e0e617f02e7222, type: 3}
+  m_Name: GameMainGlobalSettings
+  m_EditorClassIdentifier: 
+  m_UseDeerExample: 1
+  m_ScriptAuthor: Lcl
+  m_ScriptVersion: 1.0
+  m_AppStage: 1
+  m_DefaultFont: wryhSDF
+  BaseAssetsRootName: BaseAssets
+  m_ResourcesArea:
+    m_ResAdminType: 
+    m_ResAdminCode: 
+    m_WhetherCopyResToCommitPath: 1
+    m_CleanCommitPathRes: 1
+    m_ServerType: 1
+    m_InnerResourceSourceUrl: http://26.26.26.1:8080/
+    m_ExtraResourceSourceUrl: http://26.26.26.1:8080/
+    m_FormalResourceSourceUrl: http://26.26.26.1:8080/
+  m_ResourceVersionFileName: ResourceVersion.txt
+  WindowsAppUrl: http://26.26.26.1:8080/
+  MacOSAppUrl: http://26.26.26.1:8080/
+  IOSAppUrl: http://26.26.26.1:8080/
+  AndroidAppUrl: http://26.26.26.1:8080/
+  m_CurUseServerChannel: 
+  m_ServerChannelInfos:
+  - ChannelName: 
+    CurUseServerName: 
+    ServerIpAndPorts:
+    - ServerName: 
+      Ip: 
+      Port: 0
+  m_IsReadLocalConfigInEditor: 1
+  m_ConfigVersionFileName: ConfigVersion.xml
+  m_ConfigFolderName: LubanConfig
