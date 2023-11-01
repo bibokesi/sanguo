@@ -5,7 +5,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// {{ AOT assemblies
 	public static readonly IReadOnlyList<string> PatchedAOTAssemblyList = new List<string>
 	{
-		"CatJson.dll",
 		"DOTween.dll",
 		"GameFramework.dll",
 		"Google.Protobuf.dll",
@@ -23,40 +22,11 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// }} 
 
 	// {{ AOT generic types
-	// CatJson.BaseJsonFormatter<object>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<ConfigManager.<ConfigLoader>d__2,object>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<ConfigManager.<LoadAllUserConfig>d__1,object>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__0>d>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__10>d>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__1>d>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__2>d>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__3>d>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__4>d>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__5>d>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__6>d>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__7>d>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__8>d>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__9>d>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<cfg.Tables.<LoadAsync>d__45>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<ConfigManager.<ConfigLoader>d__2,object>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<ConfigManager.<LoadAllUserConfig>d__1,object>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__0>d>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__10>d>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__1>d>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__2>d>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__3>d>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__4>d>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__5>d>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__6>d>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__7>d>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__8>d>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__9>d>
-	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<cfg.Tables.<LoadAsync>d__45>
+	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask.<>c<ConfigManager.<ConfigLoader>d__1,object>
+	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTask<ConfigManager.<ConfigLoader>d__1,object>
 	// Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder<object>
 	// Cysharp.Threading.Tasks.CompilerServices.IStateMachineRunnerPromise<object>
 	// Cysharp.Threading.Tasks.ITaskPoolNode<object>
-	// Cysharp.Threading.Tasks.IUniTaskSource<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>>>
-	// Cysharp.Threading.Tasks.IUniTaskSource<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>>
 	// Cysharp.Threading.Tasks.IUniTaskSource<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>
 	// Cysharp.Threading.Tasks.IUniTaskSource<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>
 	// Cysharp.Threading.Tasks.IUniTaskSource<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>
@@ -66,8 +36,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// Cysharp.Threading.Tasks.IUniTaskSource<System.ValueTuple<byte,object>>
 	// Cysharp.Threading.Tasks.IUniTaskSource<object>
 	// Cysharp.Threading.Tasks.TaskPool<object>
-	// Cysharp.Threading.Tasks.UniTask.Awaiter<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>>>
-	// Cysharp.Threading.Tasks.UniTask.Awaiter<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>>
 	// Cysharp.Threading.Tasks.UniTask.Awaiter<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>
 	// Cysharp.Threading.Tasks.UniTask.Awaiter<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>
 	// Cysharp.Threading.Tasks.UniTask.Awaiter<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>
@@ -76,8 +44,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// Cysharp.Threading.Tasks.UniTask.Awaiter<System.ValueTuple<byte,System.ValueTuple<byte,object>>>
 	// Cysharp.Threading.Tasks.UniTask.Awaiter<System.ValueTuple<byte,object>>
 	// Cysharp.Threading.Tasks.UniTask.Awaiter<object>
-	// Cysharp.Threading.Tasks.UniTask.IsCanceledSource<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>>>
-	// Cysharp.Threading.Tasks.UniTask.IsCanceledSource<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>>
 	// Cysharp.Threading.Tasks.UniTask.IsCanceledSource<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>
 	// Cysharp.Threading.Tasks.UniTask.IsCanceledSource<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>
 	// Cysharp.Threading.Tasks.UniTask.IsCanceledSource<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>
@@ -86,8 +52,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// Cysharp.Threading.Tasks.UniTask.IsCanceledSource<System.ValueTuple<byte,System.ValueTuple<byte,object>>>
 	// Cysharp.Threading.Tasks.UniTask.IsCanceledSource<System.ValueTuple<byte,object>>
 	// Cysharp.Threading.Tasks.UniTask.IsCanceledSource<object>
-	// Cysharp.Threading.Tasks.UniTask.MemoizeSource<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>>>
-	// Cysharp.Threading.Tasks.UniTask.MemoizeSource<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>>
 	// Cysharp.Threading.Tasks.UniTask.MemoizeSource<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>
 	// Cysharp.Threading.Tasks.UniTask.MemoizeSource<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>
 	// Cysharp.Threading.Tasks.UniTask.MemoizeSource<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>
@@ -96,8 +60,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// Cysharp.Threading.Tasks.UniTask.MemoizeSource<System.ValueTuple<byte,System.ValueTuple<byte,object>>>
 	// Cysharp.Threading.Tasks.UniTask.MemoizeSource<System.ValueTuple<byte,object>>
 	// Cysharp.Threading.Tasks.UniTask.MemoizeSource<object>
-	// Cysharp.Threading.Tasks.UniTask<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>>>>
-	// Cysharp.Threading.Tasks.UniTask<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>>>
 	// Cysharp.Threading.Tasks.UniTask<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>>
 	// Cysharp.Threading.Tasks.UniTask<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>
 	// Cysharp.Threading.Tasks.UniTask<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>
@@ -107,12 +69,10 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// Cysharp.Threading.Tasks.UniTask<System.ValueTuple<byte,System.ValueTuple<byte,object>>>
 	// Cysharp.Threading.Tasks.UniTask<System.ValueTuple<byte,object>>
 	// Cysharp.Threading.Tasks.UniTask<object>
-	// Cysharp.Threading.Tasks.UniTaskCompletionSourceCore<Cysharp.Threading.Tasks.AsyncUnit>
 	// Cysharp.Threading.Tasks.UniTaskCompletionSourceCore<object>
 	// GameFramework.Fsm.Fsm<object>
 	// GameFramework.Fsm.FsmState<object>
 	// GameFramework.Fsm.IFsm<object>
-	// GameFramework.GameFrameworkAction<byte,UnityEngine.Vector3>
 	// GameFramework.GameFrameworkLinkedList.Enumerator<object>
 	// GameFramework.GameFrameworkLinkedList<object>
 	// GameFramework.ObjectPool.IObjectPool<object>
@@ -171,13 +131,11 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// SerializableDictionaryBase<object,object,object>
 	// Singleton<object>
 	// SingletonMono<object>
-	// System.Action<Cysharp.Threading.Tasks.UniTask>
 	// System.Action<System.Collections.Generic.KeyValuePair<long,object>>
 	// System.Action<System.Collections.Generic.KeyValuePair<object,object>>
 	// System.Action<UnityEngine.EventSystems.RaycastResult>
 	// System.Action<UnityEngine.Touch>
 	// System.Action<UnityEngine.Vector2>
-	// System.Action<UnityEngine.Vector3>
 	// System.Action<double>
 	// System.Action<float>
 	// System.Action<int>
@@ -185,24 +143,19 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Action<object,object>
 	// System.Action<object>
 	// System.Action<short>
-	// System.Collections.Generic.ArraySortHelper<Cysharp.Threading.Tasks.UniTask>
 	// System.Collections.Generic.ArraySortHelper<System.Collections.Generic.KeyValuePair<long,object>>
 	// System.Collections.Generic.ArraySortHelper<System.Collections.Generic.KeyValuePair<object,object>>
 	// System.Collections.Generic.ArraySortHelper<UnityEngine.EventSystems.RaycastResult>
 	// System.Collections.Generic.ArraySortHelper<UnityEngine.Touch>
 	// System.Collections.Generic.ArraySortHelper<UnityEngine.Vector2>
-	// System.Collections.Generic.ArraySortHelper<UnityEngine.Vector3>
 	// System.Collections.Generic.ArraySortHelper<double>
 	// System.Collections.Generic.ArraySortHelper<float>
 	// System.Collections.Generic.ArraySortHelper<int>
 	// System.Collections.Generic.ArraySortHelper<long>
 	// System.Collections.Generic.ArraySortHelper<object>
 	// System.Collections.Generic.ArraySortHelper<short>
-	// System.Collections.Generic.Comparer<Cysharp.Threading.Tasks.UniTask>
 	// System.Collections.Generic.Comparer<System.Collections.Generic.KeyValuePair<long,object>>
 	// System.Collections.Generic.Comparer<System.Collections.Generic.KeyValuePair<object,object>>
-	// System.Collections.Generic.Comparer<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>>
-	// System.Collections.Generic.Comparer<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>
 	// System.Collections.Generic.Comparer<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>
 	// System.Collections.Generic.Comparer<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>
 	// System.Collections.Generic.Comparer<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>
@@ -212,7 +165,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.Comparer<UnityEngine.EventSystems.RaycastResult>
 	// System.Collections.Generic.Comparer<UnityEngine.Touch>
 	// System.Collections.Generic.Comparer<UnityEngine.Vector2>
-	// System.Collections.Generic.Comparer<UnityEngine.Vector3>
 	// System.Collections.Generic.Comparer<byte>
 	// System.Collections.Generic.Comparer<double>
 	// System.Collections.Generic.Comparer<float>
@@ -256,8 +208,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.Dictionary<int,object>
 	// System.Collections.Generic.Dictionary<object,int>
 	// System.Collections.Generic.Dictionary<object,object>
-	// System.Collections.Generic.EqualityComparer<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>>
-	// System.Collections.Generic.EqualityComparer<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>
 	// System.Collections.Generic.EqualityComparer<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>
 	// System.Collections.Generic.EqualityComparer<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>
 	// System.Collections.Generic.EqualityComparer<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>
@@ -274,7 +224,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.HashSet<object>
 	// System.Collections.Generic.HashSetEqualityComparer<int>
 	// System.Collections.Generic.HashSetEqualityComparer<object>
-	// System.Collections.Generic.ICollection<Cysharp.Threading.Tasks.UniTask>
 	// System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<byte,object>>
 	// System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<int,int>>
 	// System.Collections.Generic.ICollection<System.Collections.Generic.KeyValuePair<int,long>>
@@ -285,20 +234,17 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.ICollection<UnityEngine.EventSystems.RaycastResult>
 	// System.Collections.Generic.ICollection<UnityEngine.Touch>
 	// System.Collections.Generic.ICollection<UnityEngine.Vector2>
-	// System.Collections.Generic.ICollection<UnityEngine.Vector3>
 	// System.Collections.Generic.ICollection<double>
 	// System.Collections.Generic.ICollection<float>
 	// System.Collections.Generic.ICollection<int>
 	// System.Collections.Generic.ICollection<long>
 	// System.Collections.Generic.ICollection<object>
 	// System.Collections.Generic.ICollection<short>
-	// System.Collections.Generic.IComparer<Cysharp.Threading.Tasks.UniTask>
 	// System.Collections.Generic.IComparer<System.Collections.Generic.KeyValuePair<long,object>>
 	// System.Collections.Generic.IComparer<System.Collections.Generic.KeyValuePair<object,object>>
 	// System.Collections.Generic.IComparer<UnityEngine.EventSystems.RaycastResult>
 	// System.Collections.Generic.IComparer<UnityEngine.Touch>
 	// System.Collections.Generic.IComparer<UnityEngine.Vector2>
-	// System.Collections.Generic.IComparer<UnityEngine.Vector3>
 	// System.Collections.Generic.IComparer<double>
 	// System.Collections.Generic.IComparer<float>
 	// System.Collections.Generic.IComparer<int>
@@ -306,7 +252,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.IComparer<object>
 	// System.Collections.Generic.IComparer<short>
 	// System.Collections.Generic.IDictionary<object,object>
-	// System.Collections.Generic.IEnumerable<Cysharp.Threading.Tasks.UniTask>
 	// System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<byte,object>>
 	// System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<int,int>>
 	// System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<int,long>>
@@ -317,7 +262,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.IEnumerable<UnityEngine.EventSystems.RaycastResult>
 	// System.Collections.Generic.IEnumerable<UnityEngine.Touch>
 	// System.Collections.Generic.IEnumerable<UnityEngine.Vector2>
-	// System.Collections.Generic.IEnumerable<UnityEngine.Vector3>
 	// System.Collections.Generic.IEnumerable<byte>
 	// System.Collections.Generic.IEnumerable<double>
 	// System.Collections.Generic.IEnumerable<float>
@@ -325,7 +269,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.IEnumerable<long>
 	// System.Collections.Generic.IEnumerable<object>
 	// System.Collections.Generic.IEnumerable<short>
-	// System.Collections.Generic.IEnumerator<Cysharp.Threading.Tasks.UniTask>
 	// System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<byte,object>>
 	// System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<int,int>>
 	// System.Collections.Generic.IEnumerator<System.Collections.Generic.KeyValuePair<int,long>>
@@ -336,7 +279,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.IEnumerator<UnityEngine.EventSystems.RaycastResult>
 	// System.Collections.Generic.IEnumerator<UnityEngine.Touch>
 	// System.Collections.Generic.IEnumerator<UnityEngine.Vector2>
-	// System.Collections.Generic.IEnumerator<UnityEngine.Vector3>
 	// System.Collections.Generic.IEnumerator<byte>
 	// System.Collections.Generic.IEnumerator<double>
 	// System.Collections.Generic.IEnumerator<float>
@@ -347,13 +289,11 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.IEqualityComparer<byte>
 	// System.Collections.Generic.IEqualityComparer<int>
 	// System.Collections.Generic.IEqualityComparer<object>
-	// System.Collections.Generic.IList<Cysharp.Threading.Tasks.UniTask>
 	// System.Collections.Generic.IList<System.Collections.Generic.KeyValuePair<long,object>>
 	// System.Collections.Generic.IList<System.Collections.Generic.KeyValuePair<object,object>>
 	// System.Collections.Generic.IList<UnityEngine.EventSystems.RaycastResult>
 	// System.Collections.Generic.IList<UnityEngine.Touch>
 	// System.Collections.Generic.IList<UnityEngine.Vector2>
-	// System.Collections.Generic.IList<UnityEngine.Vector3>
 	// System.Collections.Generic.IList<double>
 	// System.Collections.Generic.IList<float>
 	// System.Collections.Generic.IList<int>
@@ -370,26 +310,22 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.LinkedList.Enumerator<object>
 	// System.Collections.Generic.LinkedList<object>
 	// System.Collections.Generic.LinkedListNode<object>
-	// System.Collections.Generic.List.Enumerator<Cysharp.Threading.Tasks.UniTask>
 	// System.Collections.Generic.List.Enumerator<System.Collections.Generic.KeyValuePair<long,object>>
 	// System.Collections.Generic.List.Enumerator<System.Collections.Generic.KeyValuePair<object,object>>
 	// System.Collections.Generic.List.Enumerator<UnityEngine.EventSystems.RaycastResult>
 	// System.Collections.Generic.List.Enumerator<UnityEngine.Touch>
 	// System.Collections.Generic.List.Enumerator<UnityEngine.Vector2>
-	// System.Collections.Generic.List.Enumerator<UnityEngine.Vector3>
 	// System.Collections.Generic.List.Enumerator<double>
 	// System.Collections.Generic.List.Enumerator<float>
 	// System.Collections.Generic.List.Enumerator<int>
 	// System.Collections.Generic.List.Enumerator<long>
 	// System.Collections.Generic.List.Enumerator<object>
 	// System.Collections.Generic.List.Enumerator<short>
-	// System.Collections.Generic.List<Cysharp.Threading.Tasks.UniTask>
 	// System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<long,object>>
 	// System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<object,object>>
 	// System.Collections.Generic.List<UnityEngine.EventSystems.RaycastResult>
 	// System.Collections.Generic.List<UnityEngine.Touch>
 	// System.Collections.Generic.List<UnityEngine.Vector2>
-	// System.Collections.Generic.List<UnityEngine.Vector3>
 	// System.Collections.Generic.List<double>
 	// System.Collections.Generic.List<float>
 	// System.Collections.Generic.List<int>
@@ -399,11 +335,8 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.LowLevelList<object>
 	// System.Collections.Generic.LowLevelListWithIList.Enumerator<object>
 	// System.Collections.Generic.LowLevelListWithIList<object>
-	// System.Collections.Generic.ObjectComparer<Cysharp.Threading.Tasks.UniTask>
 	// System.Collections.Generic.ObjectComparer<System.Collections.Generic.KeyValuePair<long,object>>
 	// System.Collections.Generic.ObjectComparer<System.Collections.Generic.KeyValuePair<object,object>>
-	// System.Collections.Generic.ObjectComparer<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>
-	// System.Collections.Generic.ObjectComparer<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>
 	// System.Collections.Generic.ObjectComparer<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>
 	// System.Collections.Generic.ObjectComparer<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>
 	// System.Collections.Generic.ObjectComparer<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>
@@ -412,7 +345,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.ObjectComparer<UnityEngine.EventSystems.RaycastResult>
 	// System.Collections.Generic.ObjectComparer<UnityEngine.Touch>
 	// System.Collections.Generic.ObjectComparer<UnityEngine.Vector2>
-	// System.Collections.Generic.ObjectComparer<UnityEngine.Vector3>
 	// System.Collections.Generic.ObjectComparer<byte>
 	// System.Collections.Generic.ObjectComparer<double>
 	// System.Collections.Generic.ObjectComparer<float>
@@ -420,8 +352,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.ObjectComparer<long>
 	// System.Collections.Generic.ObjectComparer<object>
 	// System.Collections.Generic.ObjectComparer<short>
-	// System.Collections.Generic.ObjectEqualityComparer<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>
-	// System.Collections.Generic.ObjectEqualityComparer<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>
 	// System.Collections.Generic.ObjectEqualityComparer<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>
 	// System.Collections.Generic.ObjectEqualityComparer<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>
 	// System.Collections.Generic.ObjectEqualityComparer<System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>
@@ -483,26 +413,22 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Collections.Generic.TreeSet<System.Collections.Generic.KeyValuePair<object,object>>
 	// System.Collections.Generic.TreeWalkPredicate<System.Collections.Generic.KeyValuePair<long,object>>
 	// System.Collections.Generic.TreeWalkPredicate<System.Collections.Generic.KeyValuePair<object,object>>
-	// System.Collections.ObjectModel.ReadOnlyCollection<Cysharp.Threading.Tasks.UniTask>
 	// System.Collections.ObjectModel.ReadOnlyCollection<System.Collections.Generic.KeyValuePair<long,object>>
 	// System.Collections.ObjectModel.ReadOnlyCollection<System.Collections.Generic.KeyValuePair<object,object>>
 	// System.Collections.ObjectModel.ReadOnlyCollection<UnityEngine.EventSystems.RaycastResult>
 	// System.Collections.ObjectModel.ReadOnlyCollection<UnityEngine.Touch>
 	// System.Collections.ObjectModel.ReadOnlyCollection<UnityEngine.Vector2>
-	// System.Collections.ObjectModel.ReadOnlyCollection<UnityEngine.Vector3>
 	// System.Collections.ObjectModel.ReadOnlyCollection<double>
 	// System.Collections.ObjectModel.ReadOnlyCollection<float>
 	// System.Collections.ObjectModel.ReadOnlyCollection<int>
 	// System.Collections.ObjectModel.ReadOnlyCollection<long>
 	// System.Collections.ObjectModel.ReadOnlyCollection<object>
 	// System.Collections.ObjectModel.ReadOnlyCollection<short>
-	// System.Comparison<Cysharp.Threading.Tasks.UniTask>
 	// System.Comparison<System.Collections.Generic.KeyValuePair<long,object>>
 	// System.Comparison<System.Collections.Generic.KeyValuePair<object,object>>
 	// System.Comparison<UnityEngine.EventSystems.RaycastResult>
 	// System.Comparison<UnityEngine.Touch>
 	// System.Comparison<UnityEngine.Vector2>
-	// System.Comparison<UnityEngine.Vector3>
 	// System.Comparison<double>
 	// System.Comparison<float>
 	// System.Comparison<int>
@@ -510,17 +436,14 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Comparison<object>
 	// System.Comparison<short>
 	// System.EventHandler<object>
-	// System.Func<Cysharp.Threading.Tasks.UniTask>
 	// System.Func<System.UIntPtr>
 	// System.Func<byte,int>
 	// System.Func<byte>
 	// System.Func<int,int>
 	// System.Func<int>
 	// System.Func<long,int>
-	// System.Func<object,Cysharp.Threading.Tasks.UniTask<object>>
 	// System.Func<object,System.UIntPtr>
 	// System.Func<object,byte>
-	// System.Func<object,int,object>
 	// System.Func<object,int>
 	// System.Func<object,object,object>
 	// System.Func<object,object>
@@ -528,13 +451,11 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.IEquatable<object>
 	// System.Nullable<UnityEngine.Color>
 	// System.Nullable<int>
-	// System.Predicate<Cysharp.Threading.Tasks.UniTask>
 	// System.Predicate<System.Collections.Generic.KeyValuePair<long,object>>
 	// System.Predicate<System.Collections.Generic.KeyValuePair<object,object>>
 	// System.Predicate<UnityEngine.EventSystems.RaycastResult>
 	// System.Predicate<UnityEngine.Touch>
 	// System.Predicate<UnityEngine.Vector2>
-	// System.Predicate<UnityEngine.Vector3>
 	// System.Predicate<double>
 	// System.Predicate<float>
 	// System.Predicate<int>
@@ -571,8 +492,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.Threading.Tasks.TaskFactory<System.UIntPtr>
 	// System.Threading.Tasks.TaskFactory<byte>
 	// System.Threading.Tasks.TaskFactory<object>
-	// System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>>>
-	// System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>>
 	// System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>>
 	// System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>>
 	// System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,System.ValueTuple<byte,object>>>>>>
@@ -582,49 +501,16 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	// System.ValueTuple<byte,System.ValueTuple<byte,object>>
 	// System.ValueTuple<byte,object>
 	// UnityEngine.Events.InvokableCall<UnityEngine.Vector2>
-	// UnityEngine.Events.InvokableCall<float>
-	// UnityEngine.Events.InvokableCall<object>
 	// UnityEngine.Events.UnityAction<UnityEngine.Vector2>
-	// UnityEngine.Events.UnityAction<float>
-	// UnityEngine.Events.UnityAction<object>
 	// UnityEngine.Events.UnityEvent<UnityEngine.Vector2>
-	// UnityEngine.Events.UnityEvent<float>
-	// UnityEngine.Events.UnityEvent<object>
 	// }}
 
 	public void RefMethods()
 	{
-		// string CatJson.JsonParser.ToJson<object>(object)
 		// object ComponentAutoBindTool.GetBindComponent<object>(int)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,cfg.Tables.<LoadAsync>d__45>(Cysharp.Threading.Tasks.UniTask.Awaiter&,cfg.Tables.<LoadAsync>d__45&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter<object>,cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__0>d>(Cysharp.Threading.Tasks.UniTask.Awaiter<object>&,cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__0>d&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter<object>,cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__10>d>(Cysharp.Threading.Tasks.UniTask.Awaiter<object>&,cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__10>d&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter<object>,cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__1>d>(Cysharp.Threading.Tasks.UniTask.Awaiter<object>&,cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__1>d&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter<object>,cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__2>d>(Cysharp.Threading.Tasks.UniTask.Awaiter<object>&,cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__2>d&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter<object>,cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__3>d>(Cysharp.Threading.Tasks.UniTask.Awaiter<object>&,cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__3>d&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter<object>,cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__4>d>(Cysharp.Threading.Tasks.UniTask.Awaiter<object>&,cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__4>d&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter<object>,cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__5>d>(Cysharp.Threading.Tasks.UniTask.Awaiter<object>&,cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__5>d&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter<object>,cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__6>d>(Cysharp.Threading.Tasks.UniTask.Awaiter<object>&,cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__6>d&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter<object>,cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__7>d>(Cysharp.Threading.Tasks.UniTask.Awaiter<object>&,cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__7>d&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter<object>,cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__8>d>(Cysharp.Threading.Tasks.UniTask.Awaiter<object>&,cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__8>d&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter<object>,cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__9>d>(Cysharp.Threading.Tasks.UniTask.Awaiter<object>&,cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__9>d&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder<object>.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter,ConfigManager.<LoadAllUserConfig>d__1>(Cysharp.Threading.Tasks.UniTask.Awaiter&,ConfigManager.<LoadAllUserConfig>d__1&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder<object>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,ConfigManager.<ConfigLoader>d__2>(System.Runtime.CompilerServices.TaskAwaiter&,ConfigManager.<ConfigLoader>d__2&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder<object>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,ConfigManager.<ConfigLoader>d__2>(System.Runtime.CompilerServices.TaskAwaiter<object>&,ConfigManager.<ConfigLoader>d__2&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__0>d>(cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__0>d&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__10>d>(cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__10>d&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__1>d>(cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__1>d&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__2>d>(cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__2>d&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__3>d>(cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__3>d&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__4>d>(cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__4>d&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__5>d>(cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__5>d&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__6>d>(cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__6>d&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__7>d>(cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__7>d&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__8>d>(cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__8>d&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__9>d>(cfg.Tables.<>c__DisplayClass45_0.<<LoadAsync>b__9>d&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder.Start<cfg.Tables.<LoadAsync>d__45>(cfg.Tables.<LoadAsync>d__45&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder<object>.Start<ConfigManager.<ConfigLoader>d__2>(ConfigManager.<ConfigLoader>d__2&)
-		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder<object>.Start<ConfigManager.<LoadAllUserConfig>d__1>(ConfigManager.<LoadAllUserConfig>d__1&)
+		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder<object>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter,ConfigManager.<ConfigLoader>d__1>(System.Runtime.CompilerServices.TaskAwaiter&,ConfigManager.<ConfigLoader>d__1&)
+		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder<object>.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,ConfigManager.<ConfigLoader>d__1>(System.Runtime.CompilerServices.TaskAwaiter<object>&,ConfigManager.<ConfigLoader>d__1&)
+		// System.Void Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder<object>.Start<ConfigManager.<ConfigLoader>d__1>(ConfigManager.<ConfigLoader>d__1&)
 		// object DG.Tweening.TweenSettingsExtensions.OnComplete<object>(object,DG.Tweening.TweenCallback)
 		// object DG.Tweening.TweenSettingsExtensions.SetEase<object>(object,DG.Tweening.Ease)
 		// object DG.Tweening.TweenSettingsExtensions.SetLoops<object>(object,int,DG.Tweening.LoopType)
@@ -669,12 +555,10 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<byte>.Start<TimerComponent.<FrameAsync>d__22>(TimerComponent.<FrameAsync>d__22&)
 		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<byte>.Start<TimerComponent.<OnceTimerAsync>d__21>(TimerComponent.<OnceTimerAsync>d__21&)
 		// System.Void System.Runtime.CompilerServices.AsyncTaskMethodBuilder<object>.Start<UGFExtensions.Await.AwaitableExtensions.<LoadAssetsAsync>d__19<object>>(UGFExtensions.Await.AwaitableExtensions.<LoadAssetsAsync>d__19<object>&)
-		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted<Cysharp.Threading.Tasks.UniTask.Awaiter<object>,ConfigComponent.<LoadAllUserConfig>d__6>(Cysharp.Threading.Tasks.UniTask.Awaiter<object>&,ConfigComponent.<LoadAllUserConfig>d__6&)
 		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<byte>,UGFExtensions.CancellationToken.<CancelAfter>d__5>(System.Runtime.CompilerServices.TaskAwaiter<byte>&,UGFExtensions.CancellationToken.<CancelAfter>d__5&)
 		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UGFExtensions.SpriteCollection.SpriteCollectionComponent.<SetSpriteAsync>d__17>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UGFExtensions.SpriteCollection.SpriteCollectionComponent.<SetSpriteAsync>d__17&)
 		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UGFExtensions.Texture.TextureSetComponent.<SetTextureByNetworkAsync>d__24>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UGFExtensions.Texture.TextureSetComponent.<SetTextureByNetworkAsync>d__24&)
 		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.AwaitUnsafeOnCompleted<System.Runtime.CompilerServices.TaskAwaiter<object>,UGFExtensions.Texture.TextureSetComponent.<SetTextureByResourcesAsync>d__32>(System.Runtime.CompilerServices.TaskAwaiter<object>&,UGFExtensions.Texture.TextureSetComponent.<SetTextureByResourcesAsync>d__32&)
-		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start<ConfigComponent.<LoadAllUserConfig>d__6>(ConfigComponent.<LoadAllUserConfig>d__6&)
 		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start<UGFExtensions.CancellationToken.<CancelAfter>d__5>(UGFExtensions.CancellationToken.<CancelAfter>d__5&)
 		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start<UGFExtensions.SpriteCollection.SpriteCollectionComponent.<SetSpriteAsync>d__17>(UGFExtensions.SpriteCollection.SpriteCollectionComponent.<SetSpriteAsync>d__17&)
 		// System.Void System.Runtime.CompilerServices.AsyncVoidMethodBuilder.Start<UGFExtensions.Texture.TextureSetComponent.<SetTextureByNetworkAsync>d__24>(UGFExtensions.Texture.TextureSetComponent.<SetTextureByNetworkAsync>d__24&)
@@ -682,14 +566,11 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 		// System.Threading.Tasks.Task<object[]> System.Threading.Tasks.Task.InternalWhenAll<object>(System.Threading.Tasks.Task<object>[])
 		// System.Threading.Tasks.Task<object[]> System.Threading.Tasks.Task.WhenAll<object>(System.Threading.Tasks.Task<object>[])
 		// object UnityEngine.Component.GetComponent<object>()
-		// object UnityEngine.Component.GetComponentInChildren<object>()
 		// object[] UnityEngine.Component.GetComponentsInChildren<object>()
 		// object[] UnityEngine.Component.GetComponentsInChildren<object>(bool)
-		// bool UnityEngine.Component.TryGetComponent<object>(object&)
 		// object UnityEngine.GameObject.AddComponent<object>()
 		// object UnityEngine.GameObject.GetComponent<object>()
 		// object[] UnityEngine.GameObject.GetComponentsInChildren<object>(bool)
-		// bool UnityEngine.GameObject.TryGetComponent<object>(object&)
 		// object UnityEngine.Object.Instantiate<object>(object)
 		// object UnityEngine.Object.Instantiate<object>(object,UnityEngine.Transform,bool)
 		// object UnityExtension.GetOrAddComponent<object>(UnityEngine.GameObject)

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Deer.Editor;
+using GameMain.Editor;
 using UnityEditor;
 using UnityEditor.PackageManager;
 using UnityEditor.PackageManager.Requests;
@@ -81,7 +81,7 @@ public static class HybridCLRIns
                 "You are missing a hybridclr_unity. Would you like to install one?",
                 "Yes", "No"))
         {
-            string installUrl = DeerSettingsUtils.DeerHybridCLRSettings.Gitee ? GiteeUrl : GithubUrl;
+            string installUrl = GameMainSettingsUtils.GameMainHybridCLRSettings.Gitee ? GiteeUrl : GithubUrl;
             var request = Client.Add(installUrl);
             EditorUtility.DisplayProgressBar("Installing","Install hybridclr_unity...",0);
             while (!request.IsCompleted)

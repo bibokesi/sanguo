@@ -32,16 +32,16 @@ public class Copylibil2cppToIosProject : IPostprocessBuildWithReport
 		}
 
 		string fileName = "libil2cpp.a";
-		var srcPathFile = $"{DeerSettingsUtils.GetLibil2cppBuildPath()}/{fileName}";
+		var srcPathFile = $"{GameMainSettingsUtils.GetLibil2cppBuildPath()}/{fileName}";
 		if (!File.Exists(srcPathFile))
 		{
-			Debug.LogError($"[Copylibil2cppToIosProject] You need start call build_libil2cpp.sh file. path:{DeerSettingsUtils.DeerHybridCLRSettings.HybridCLRIosBuildPath}");
+			Debug.LogError($"[Copylibil2cppToIosProject] You need start call build_libil2cpp.sh file. path:{GameMainSettingsUtils.GameMainHybridCLRSettings.HybridCLRIosBuildPath}");
 			return;
 		}
-		var dstPath = DeerSettingsUtils.GetOutputXCodePath();
+		var dstPath = GameMainSettingsUtils.GetOutputXCodePath();
 		if (!Directory.Exists(dstPath))
 		{
-			Debug.LogError("[Copylibil2cppToIosProject] XCode path error! Look DeerSettings/HybridCLRCustomGlobalSettings [HybridCLRIosXCodePath]");
+			Debug.LogError("[Copylibil2cppToIosProject] XCode path error! Look GameMainSettings/HybridCLRCustomGlobalSettings [HybridCLRIosXCodePath]");
 			return;
 		}
 		File.Copy($"{srcPathFile}", $"{dstPath}/Libraries/{fileName}", true);

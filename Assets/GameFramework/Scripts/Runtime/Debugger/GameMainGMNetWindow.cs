@@ -1,10 +1,10 @@
 using GameFramework.Debugger;
 using UnityEngine;
 
-public class DeerGMNetWindow : IDebuggerWindow
+public class GameMainGMNetWindow : IDebuggerWindow
 {
     private Vector2 m_ScrollPosition = Vector2.zero;
-    private DeerGMNetWindowHelper m_NetWindowHelper;
+    private GameMainGMNetWindowHelper m_NetWindowHelper;
 
     public void Initialize(params object[] args)
     {
@@ -39,7 +39,7 @@ public class DeerGMNetWindow : IDebuggerWindow
     /// 设置辅助窗口
     /// </summary>
     /// <param name="netWindowHelper"></param>
-    public void SetHelper(DeerGMNetWindowHelper netWindowHelper)
+    public void SetHelper(GameMainGMNetWindowHelper netWindowHelper)
     {
         m_NetWindowHelper = netWindowHelper;
     }

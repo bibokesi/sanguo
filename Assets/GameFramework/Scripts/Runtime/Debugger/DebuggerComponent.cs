@@ -86,21 +86,21 @@ namespace UnityGameFramework.Runtime
         private SettingsWindow m_SettingsWindow = new SettingsWindow();
         private OperationsWindow m_OperationsWindow = new OperationsWindow();
         /*Custom by duxin*/
-        private DeerCustomSettingWindow m_DeerCustomSettingWindow = new DeerCustomSettingWindow();
-        private DeerGMNetWindow m_DeerGMNetWindow = new DeerGMNetWindow();
-        public DeerCustomSettingWindow CustomSettingWindow
+        private GameMainCustomSettingWindow m_GameMainCustomSettingWindow = new GameMainCustomSettingWindow();
+        private GameMainGMNetWindow m_GameMainGMNetWindow = new GameMainGMNetWindow();
+        public GameMainCustomSettingWindow CustomSettingWindow
         {
             get
             {
-                return m_DeerCustomSettingWindow;
+                return m_GameMainCustomSettingWindow;
             }
         }
 
-        public DeerGMNetWindow NetWindow
+        public GameMainGMNetWindow NetWindow
         {
             get
             {
-                return m_DeerGMNetWindow;
+                return m_GameMainGMNetWindow;
             }
         }
 
@@ -236,8 +236,8 @@ namespace UnityGameFramework.Runtime
             RegisterDebuggerWindow("Other/Settings", m_SettingsWindow);
             RegisterDebuggerWindow("Other/Operations", m_OperationsWindow);
             /*Custom by duxin*/
-            RegisterDebuggerWindow("Other/Custom", m_DeerCustomSettingWindow);
-            RegisterDebuggerWindow("Other/GMNet", m_DeerGMNetWindow);
+            RegisterDebuggerWindow("Other/Custom", m_GameMainCustomSettingWindow);
+            RegisterDebuggerWindow("Other/GMNet", m_GameMainGMNetWindow);
 
             switch (m_ActiveWindow)
             {

@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace BrunoMikoski.AnimationSequencer
 {
-    [CreateAssetMenu(menuName = "Deer/Animation Sequencer", fileName = "AnimationControllerDefaults", order = 21)]
+    [CreateAssetMenu(menuName = "GameMain/Animation Sequencer", fileName = "AnimationControllerDefaults", order = 21)]
     public sealed class AnimationControllerDefaults : EditorDefaultResourceSingleton<AnimationControllerDefaults>
     {
         [SerializeField]

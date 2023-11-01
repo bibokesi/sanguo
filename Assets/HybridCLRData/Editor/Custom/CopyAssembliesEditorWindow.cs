@@ -14,7 +14,7 @@ public class CopyAssembliesEditorWindow : EditorWindow
     private float m_Width = 100f;
     
 
-    [MenuItem("DeerTools/Builder/Assemblies Builder", priority = 101)]
+    [MenuItem("GameMainTools/Builder/Assemblies Builder", priority = 101)]
     public static void OpenWindow()
     {
         CopyAssembliesEditorWindow window = GetWindow<CopyAssembliesEditorWindow>("构建程序集");
@@ -103,8 +103,8 @@ public class CopyAssembliesEditorWindow : EditorWindow
                 }
             }
             GUILayout.EndHorizontal();*/
-            EditorGUILayout.LabelField("Compression Helper"+"[DeerTools/Settings/Deer HybridCLR Settings]:");
-            EditorGUILayout.LabelField(DeerSettingsUtils.DeerHybridCLRSettings.CompressionHelperTypeName);
+            EditorGUILayout.LabelField("Compression Helper"+"[GameMainTools/Settings/GameMain HybridCLR Settings]:");
+            EditorGUILayout.LabelField(GameMainSettingsUtils.GameMainHybridCLRSettings.CompressionHelperTypeName);
             GUILayout.Space(10);
             GUILayout.Space(10);
             if (GUILayout.Button("构建所有程序集"))

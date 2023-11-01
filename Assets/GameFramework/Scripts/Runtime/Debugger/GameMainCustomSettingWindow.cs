@@ -1,10 +1,10 @@
 using GameFramework.Debugger;
 using UnityEngine;
 
-public class DeerCustomSettingWindow : IDebuggerWindow
+public class GameMainCustomSettingWindow : IDebuggerWindow
 {
     private Vector2 m_ScrollPosition = Vector2.zero;
-    private DeerCustomSettingWindowHelper m_CustomWindowHelper;
+    private GameMainCustomSettingWindowHelper m_CustomWindowHelper;
 
     public void Initialize(params object[] args)
     {
@@ -39,7 +39,7 @@ public class DeerCustomSettingWindow : IDebuggerWindow
     /// 设置辅助窗口
     /// </summary>
     /// <param name="customWindowHelper"></param>
-    public void SetHelper(DeerCustomSettingWindowHelper customWindowHelper)
+    public void SetHelper(GameMainCustomSettingWindowHelper customWindowHelper)
     {
         m_CustomWindowHelper = customWindowHelper;
     }
