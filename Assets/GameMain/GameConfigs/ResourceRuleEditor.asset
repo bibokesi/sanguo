@@ -24,7 +24,7 @@ MonoBehaviour:
     filterType: 0
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/GF
+    name: BaseAssets/GameFramework
     variant: 
     fileSystem: 
     groups: BaseAssets
@@ -124,90 +124,90 @@ MonoBehaviour:
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: ADeerExample/EntityPrefabs
+    name: GameMainExample1/EntityPrefabs
     variant: 
     fileSystem: 
-    groups: ADeerExample
+    groups: GameMainExample1
     assetsDirectoryPath: Assets/Deer/AssetsHotfix/ADeerExample/EntityPrefabs
     loadType: 0
     packed: 0
     filterType: 0
     searchPatterns: '*.*'
   - valid: 1
-    name: ADeerExample/EntityResources
+    name: GameMainExample1/EntityResources
     variant: 
     fileSystem: 
-    groups: ADeerExample
+    groups: GameMainExample1
     assetsDirectoryPath: Assets/Deer/AssetsHotfix/ADeerExample/EntityResources
     loadType: 0
     packed: 0
     filterType: 0
     searchPatterns: '*.*'
   - valid: 1
-    name: ADeerExample/Scenes
+    name: GameMainExample1/Scenes
     variant: 
     fileSystem: 
-    groups: ADeerExample
+    groups: GameMainExample1
     assetsDirectoryPath: Assets/Deer/AssetsHotfix/ADeerExample/Scenes
     loadType: 0
     packed: 0
     filterType: 0
     searchPatterns: '*.*'
   - valid: 1
-    name: ADeerExample/UI
+    name: GameMainExample1/UI
     variant: 
     fileSystem: 
-    groups: ADeerExample
+    groups: GameMainExample1
     assetsDirectoryPath: Assets/Deer/AssetsHotfix/ADeerExample/UI
     loadType: 0
     packed: 0
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: AGameExample/EntityPrefabs
+    name: GameMainExample2/EntityPrefabs
     variant: 
     fileSystem: 
-    groups: AGameExample
+    groups: GameMainExample2
     assetsDirectoryPath: Assets/Deer/AssetsHotfix/AGameExample/EntityPrefabs
     loadType: 0
     packed: 0
     filterType: 0
     searchPatterns: '*.*'
   - valid: 1
-    name: AGameExample/EntityResources
+    name: GameMainExample2/EntityResources
     variant: 
     fileSystem: 
-    groups: AGameExample
+    groups: GameMainExample2
     assetsDirectoryPath: Assets/Deer/AssetsHotfix/AGameExample/EntityResources
     loadType: 0
     packed: 0
     filterType: 0
     searchPatterns: '*.*'
   - valid: 1
-    name: AGameExample/Scenes
+    name: GameMainExample2/Scenes
     variant: 
     fileSystem: 
-    groups: AGameExample
+    groups: GameMainExample2
     assetsDirectoryPath: Assets/Deer/AssetsHotfix/AGameExample/Scenes
     loadType: 0
     packed: 0
     filterType: 0
     searchPatterns: '*.*'
   - valid: 1
-    name: AGameExample/Sounds
+    name: GameMainExample2/Sounds
     variant: 
     fileSystem: 
-    groups: AGameExample
+    groups: GameMainExample2
     assetsDirectoryPath: Assets/Deer/AssetsHotfix/AGameExample/Sounds
     loadType: 0
     packed: 0
     filterType: 0
     searchPatterns: '*.*'
   - valid: 1
-    name: AGameExample/UI
+    name: GameMainExample2/UI
     variant: 
     fileSystem: 
-    groups: AGameExample
+    groups: GameMainExample2
     assetsDirectoryPath: Assets/Deer/AssetsHotfix/AGameExample/UI
     loadType: 0
     packed: 0
