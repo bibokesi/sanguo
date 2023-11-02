@@ -178,5 +178,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameFramework
       objectReference: {fileID: 0}
+    - target: {fileID: 5715333672656899874, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 750
+      objectReference: {fileID: 0}
+    - target: {fileID: 5715333672656899874, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5715333673181699324, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 45.409912
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}

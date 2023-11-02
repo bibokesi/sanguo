@@ -59,25 +59,8 @@ public class CreateTemplateScript
 }
 class CreateScriptAsset : EndNameEditAction
 {
-    private static string annotationCSStr =
-"// ================================================\r\n"
-+ "//描 述:\r\n"
-+ "//作 者:#Author#\r\n"
-+ "//创建时间:#CreatTime#\r\n"
-+ "//修改作者:#ChangeAuthor#\r\n"
-+ "//修改时间:#ChangeTime#\r\n"
-+ "//版 本:#Version# \r\n"
-+ "// ===============================================\r\n";
-    private static string annotationLuaStr =
-"\r\n"
-+ "---================================================\r\n"
-+ "---描 述:\r\n"
-+ "---作 者:#Author#\r\n"
-+ "---创建时间:#CreatTime#\r\n"
-+ "---修改作者:#ChangeAuthor#\r\n"
-+ "---修改时间:#ChangeTime#\r\n"
-+ "---版 本:#Version#\r\n"
-+ "---===============================================\r\n";
+    private static string annotationCSStr = "";
+    private static string annotationLuaStr = "";
 
     public override void Action(int instanceId, string newScriptPath, string templatePath)
     {

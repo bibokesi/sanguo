@@ -572,15 +572,7 @@ public class ComponentAutoBindToolInspector : Editor
         }
         File.WriteAllText(filePath, text, Encoding.UTF8); //utf-8格式保存，防止乱码
     }
-    private static string annotationCSStr =
-"// ================================================\r\n"
-+ "//描 述:\r\n"
-+ "//作 者:#Author#\r\n"
-+ "//创建时间:#CreatTime#\r\n"
-+ "//修改作者:#ChangeAuthor#\r\n"
-+ "//修改时间:#ChangeTime#\r\n"
-+ "//版 本:#Version# \r\n"
-+ "// ===============================================\r\n";
+    private static string annotationCSStr = "";
     private string GetFileHead() 
     {
         string annotationStr = annotationCSStr;
