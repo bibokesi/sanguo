@@ -21,9 +21,9 @@ MonoBehaviour:
     Assembly: HotfixFramework.Runtime.dll
   - AssetGroupName: BaseAssets
     Assembly: HotfixBusiness.dll
-  - AssetGroupName: 
+  - AssetGroupName: GameMainExample1
     Assembly: GameMainExample1.dll
-  - AssetGroupName: 
+  - AssetGroupName: GameMainExample2
     Assembly: GameMainExample2.dll
   AOTMetaAssemblies:
   - Assembly-CSharp-firstpass.dll
