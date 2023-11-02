@@ -177,11 +177,11 @@ public class ShootText : MonoBehaviour
         var strPath = "";
         if (textShowComponentType == TextShowComponentType.Text)
         {
-            strPath = "Assets/GameMain/AssetsHotfix/UI/UIShootText/Text_ShootText.prefab";
+            strPath = "Assets/GameMain/BaseAssets/UI/UIShootText/Text_ShootText.prefab";
         }
         else
         {
-            strPath = "Assets/GameMain/AssetsHotfix/UI/UIShootText/Image_ShootText.prefab";
+            strPath = "Assets/GameMain/BaseAssets/UI/UIShootText/Image_ShootText.prefab";
         }
         GameEntry.AssetObject.LoadGameObject(strPath,"ShootText",
             delegate(bool success, object obj, int serial)
@@ -201,7 +201,7 @@ public class ShootText : MonoBehaviour
                 }
             });
 
-        strPath = "Assets/GameMain/AssetsHotfix/UI/UIShootText/ShootText_Pure.prefab";
+        strPath = "Assets/GameMain/BaseAssets/UI/UIShootText/ShootText_Pure.prefab";
         GameEntry.AssetObject.LoadGameObject(strPath,"ShootText",
             delegate(bool success, object obj, int serial)
             {

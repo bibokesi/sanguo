@@ -18,7 +18,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/Prefab
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Prefab
     loadType: 0
     packed: 1
     filterType: 0
@@ -28,7 +28,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/Sounds/Music
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sounds/Music
     loadType: 0
     packed: 1
     filterType: 1
@@ -38,7 +38,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/Sounds/UISound
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sounds/UISound
     loadType: 0
     packed: 1
     filterType: 1
@@ -48,7 +48,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/Font
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Font
     loadType: 0
     packed: 1
     filterType: 0
@@ -58,7 +58,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/UI/Forms
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/UI/Forms
     loadType: 0
     packed: 1
     filterType: 1
@@ -68,7 +68,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/UI/AtlasCollection
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/UI/AtlasCollection
     loadType: 0
     packed: 1
     filterType: 1
@@ -78,7 +78,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/UI/Texture
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/UI/Texture
     loadType: 0
     packed: 1
     filterType: 1
@@ -88,7 +88,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/UI/Sprites
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/UI/Sprites
     loadType: 0
     packed: 1
     filterType: 2
@@ -98,7 +98,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/UI/Template
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/UI/Template
     loadType: 0
     packed: 1
     filterType: 1

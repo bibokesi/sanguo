@@ -7,15 +7,15 @@ public static partial class AssetUtility
     {
         public static string GetMusicAsset(string groupName,string assetName)
         {
-            return $"Assets/GameMain/AssetsHotfix/{groupName}/Sounds/{assetName}.mp3";
+            return $"Assets/GameMain/BaseAssets/{groupName}/Sounds/{assetName}.mp3";
         }
         public static string GetUISoundAsset(string groupName,string assetName)
         {
-            return $"Assets/GameMain/AssetsHotfix/{groupName}/Sounds/{assetName}.wav";
+            return $"Assets/GameMain/BaseAssets/{groupName}/Sounds/{assetName}.wav";
         }
         public static string GetSoundAsset(string groupName,string assetName)
         {
-            return $"Assets/GameMain/AssetsHotfix/{groupName}/Sounds/{assetName}.wav";
+            return $"Assets/GameMain/BaseAssets/{groupName}/Sounds/{assetName}.wav";
         }
     }
 }

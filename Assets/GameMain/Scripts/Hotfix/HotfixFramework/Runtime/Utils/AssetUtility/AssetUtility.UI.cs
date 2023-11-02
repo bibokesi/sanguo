@@ -16,7 +16,7 @@ public static partial class AssetUtility
         {
             string moduleName = uiFormInfo.ModuleName;
             string assetName = uiFormInfo.AssetName;
-            return Utility.Text.Format("Assets/GameMain/AssetsHotfix/{0}/UI/UIForms/{1}/{2}.prefab", moduleName,assetName.Replace("Form",""), assetName);
+            return Utility.Text.Format("Assets/GameMain/BaseAssets/{0}/UI/UIForms/{1}/{2}.prefab", moduleName,assetName.Replace("Form",""), assetName);
         }
         public static string GetUISubFormAsset(ConstantUI.UIFormInfo  uiFormInfo)
         {
@@ -25,7 +25,7 @@ public static partial class AssetUtility
             string[] args = assetName.Split('_');
             if (args is { Length: > 1 })
             {
-                return Utility.Text.Format("Assets/GameMain/AssetsHotfix/{0}/UI/UIForms/{1}/{2}.prefab", moduleName,args[0], assetName);
+                return Utility.Text.Format("Assets/GameMain/BaseAssets/{0}/UI/UIForms/{1}/{2}.prefab", moduleName,args[0], assetName);
             }
             Logger.Error("UISubForm prefab wrong name.It should be [UIxxx_xxxSubForm]");
             return string.Empty;
@@ -34,7 +34,7 @@ public static partial class AssetUtility
         {
             string moduleName = uiFormInfo.ModuleName;
             string assetName = uiFormInfo.AssetName;
-            return Utility.Text.Format("Assets/GameMain/AssetsHotfix/{0}/UI/UIForms/UISub/{1}.prefab",moduleName, assetName);
+            return Utility.Text.Format("Assets/GameMain/BaseAssets/{0}/UI/UIForms/UISub/{1}.prefab", moduleName, assetName);
         }
         /// <summary>
         /// 获取伤害预制
@@ -42,7 +42,7 @@ public static partial class AssetUtility
         /// <returns></returns>
         public static string GetUIDamagePrefabPath(string damagePrefabName)
         {
-            return string.Format("Assets/GameMain/AssetsHotfix/UI/UIPrefab/UIUnit/DamagePrefab/{0}.prefab", damagePrefabName);
+            return string.Format("Assets/GameMain/BaseAssets/UI/UIPrefab/UIUnit/DamagePrefab/{0}.prefab", damagePrefabName);
         }
 
         /// <summary>
@@ -51,7 +51,7 @@ public static partial class AssetUtility
         /// <returns></returns>
         public static string GetUITopUnitPrefabPath(string prefabName)
         {
-            return string.Format("Assets/GameMain/AssetsHotfix/UI/UIPrefab/UIUnit/UIFightUnit/{0}.prefab", prefabName);
+            return string.Format("Assets/GameMain/BaseAssets/UI/UIPrefab/UIUnit/UIFightUnit/{0}.prefab", prefabName);
         }
 
         /// <summary>
@@ -60,7 +60,7 @@ public static partial class AssetUtility
         /// <returns></returns>
         public static string GetHPChangePrefabPath()
         {
-            return "Assets/GameMain/AssetsHotfix/UI/UIPrefab/UIUnit/HPChange.prefab";
+            return "Assets/GameMain/BaseAssets/UI/UIPrefab/UIUnit/HPChange.prefab";
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ public static partial class AssetUtility
         /// <returns></returns>
         public static string GetPlayerHudPath()
         {
-            return "Assets/GameMain/AssetsHotfix/UI/UIPrefab/UIHUD/UIPlayerHUDPanel.prefab";
+            return "Assets/GameMain/BaseAssets/UI/UIPrefab/UIHUD/UIPlayerHUDPanel.prefab";
         }
 
         /// <summary>

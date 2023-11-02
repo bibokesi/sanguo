@@ -16,7 +16,7 @@ public static partial class AssetUtility
         /// <returns></returns>
         public static string GetSceneAsset(string groupName,string sceneName)
         {
-            return Utility.Text.Format("Assets/GameMain/AssetsHotfix/{0}/Scenes/{1}.unity",groupName, sceneName);
+            return Utility.Text.Format("Assets/GameMain/BaseAssets/{0}/Scenes/{1}.unity", groupName, sceneName);
         }
 
         /// <summary>

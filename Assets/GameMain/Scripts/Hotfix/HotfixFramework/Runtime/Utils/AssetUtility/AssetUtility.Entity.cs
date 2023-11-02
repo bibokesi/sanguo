@@ -15,7 +15,7 @@ public static partial class AssetUtility
         /// <returns></returns>
         public static string GetEntityAsset(string groupName,string entityModelName)
         {
-            return $"Assets/GameMain/AssetsHotfix/{groupName}/EntityPrefabs/{entityModelName}.prefab";
+            return $"Assets/GameMain/BaseAssets/{groupName}/EntityPrefabs/{entityModelName}.prefab";
         }
 
         /// <summary>
@@ -36,7 +36,7 @@ public static partial class AssetUtility
         /// <returns></returns>
         public static string GetUIEntityAsset(string modelName)
         {
-            return string.Format("Assets/GameMain/AssetsHotfix/TackorHotfix/Prefabs/{0}.prefab", modelName);
+            return string.Format("Assets/GameMain/BaseAssets/TackorHotfix/Prefabs/{0}.prefab", modelName);
         }
 
     }

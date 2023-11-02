@@ -429,7 +429,7 @@ namespace UGFExtensions.Editor.ResourceTools
 
             return false;
         }
-        private string m_Prefix = "GameMain/AssetsHotfix/";
+        private string m_Prefix = "GameMain/";
         private void AnalysisResourceFilters()
         {
             m_ResourceCollection = new ResourceCollection();

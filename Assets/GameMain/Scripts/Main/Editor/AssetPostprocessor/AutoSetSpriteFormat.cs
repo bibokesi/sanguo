@@ -16,13 +16,13 @@ public class AutoSetSpriteFormat : AssetPostprocessor
         string dirName = Path.GetDirectoryName(assetPath);
         string atlasName = Path.GetFileNameWithoutExtension(assetPath);
         string folderStr = Path.GetFileName(dirName);
-        if (assetPath.Contains("Assets/GameMain/AssetsHotfix/UI/UIArt/Texture"))
+        if (assetPath.Contains("Assets/GameMain/BaseAssets/UI/UIArt/Texture"))
         {
             textureImporter.textureType = TextureImporterType.Default;
             textureImporter.mipmapEnabled = false;
             textureImporter.alphaIsTransparency = true;
         }
-        else if (assetPath.Contains("Assets/GameMain/AssetsHotfix/UI/UIArt/UISprites"))
+        else if (assetPath.Contains("Assets/GameMain/BaseAssets/UI/UIArt/UISprites"))
         {
             textureImporter.textureType = TextureImporterType.Sprite;
             textureImporter.maxTextureSize = 512;
