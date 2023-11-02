@@ -18,7 +18,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/GameConfigs
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/GameConfigs
     loadType: 0
     packed: 0
     filterType: 0
@@ -28,7 +28,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/GF
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/GameFramework
     loadType: 0
     packed: 0
     filterType: 0
@@ -38,7 +38,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/Sounds/Music
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/Sounds/Music
     loadType: 0
     packed: 0
     filterType: 1
@@ -48,7 +48,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/Sounds/UISound
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/Sounds/UISound
     loadType: 0
     packed: 0
     filterType: 1
@@ -58,7 +58,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/Font
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/Font
     loadType: 0
     packed: 0
     filterType: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/UI/UIForms
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/UI/UIForms
     loadType: 0
     packed: 0
     filterType: 1
@@ -78,7 +78,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/UI/UIPrefabs
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/UI/UIPrefabs
     loadType: 0
     packed: 0
     filterType: 0
@@ -88,7 +88,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/UI/UIArt/AtlasCollection
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/UI/UIArt/AtlasCollection
     loadType: 0
     packed: 0
     filterType: 1
@@ -98,7 +98,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/UI/UIArt/Texture
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/UI/UIArt/Texture
     loadType: 0
     packed: 0
     filterType: 1
@@ -108,7 +108,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/UI/UIArt/UISprites
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/UI/UIArt/UISprites
     loadType: 0
     packed: 0
     filterType: 2
@@ -118,7 +118,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/BaseAssets/UITemplate
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/UITemplate
     loadType: 0
     packed: 0
     filterType: 1
@@ -128,7 +128,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: GameMainExample1
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/ADeerExample/EntityPrefabs
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/GameMainExample1/EntityPrefabs
     loadType: 0
     packed: 0
     filterType: 0
@@ -138,7 +138,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: GameMainExample1
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/ADeerExample/EntityResources
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/GameMainExample1/EntityResources
     loadType: 0
     packed: 0
     filterType: 0
@@ -148,7 +148,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: GameMainExample1
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/ADeerExample/Scenes
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/GameMainExample1/Scenes
     loadType: 0
     packed: 0
     filterType: 0
@@ -158,7 +158,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: GameMainExample1
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/ADeerExample/UI
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/GameMainExample1/UI
     loadType: 0
     packed: 0
     filterType: 1
@@ -168,7 +168,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: GameMainExample2
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/AGameExample/EntityPrefabs
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/GameMainExample2/EntityPrefabs
     loadType: 0
     packed: 0
     filterType: 0
@@ -178,7 +178,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: GameMainExample2
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/AGameExample/EntityResources
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/GameMainExample2/EntityResources
     loadType: 0
     packed: 0
     filterType: 0
@@ -188,7 +188,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: GameMainExample2
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/AGameExample/Scenes
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/GameMainExample2/Scenes
     loadType: 0
     packed: 0
     filterType: 0
@@ -198,7 +198,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: GameMainExample2
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/AGameExample/Sounds
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/GameMainExample2/Sounds
     loadType: 0
     packed: 0
     filterType: 0
@@ -208,7 +208,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: GameMainExample2
-    assetsDirectoryPath: Assets/Deer/AssetsHotfix/AGameExample/UI
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/GameMainExample2/UI
     loadType: 0
     packed: 0
     filterType: 0
