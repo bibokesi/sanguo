@@ -8,7 +8,7 @@ namespace UnityToolbarExtender.Examples
 	[InitializeOnLoad]
 	public class SceneSwitchLeftButton
 	{
-		private static string SceneName1 = "GameMainLauncher", SceneName2 = "TestCity";
+		private static string SceneName1 = "Launcher", SceneName2 = "TestCity";
 		private static float startPos = (SceneName1.Length + SceneName2.Length) * 6f;
 		static SceneSwitchLeftButton()
 		{
