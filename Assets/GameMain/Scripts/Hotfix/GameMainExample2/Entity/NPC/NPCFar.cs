@@ -2,7 +2,7 @@ using HotfixBusiness.Procedure;
 using Kit.Physic;
 using System.Collections;
 using System.Collections.Generic;
-using HotfixAGameExample.Procedure;
+using GameMainExample2.Procedure;
 using UnityEngine;
 
 namespace HotfixBusiness.Entity

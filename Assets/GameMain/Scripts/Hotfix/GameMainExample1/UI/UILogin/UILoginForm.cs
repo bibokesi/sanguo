@@ -7,14 +7,14 @@
 //版 本:0.1 
 // ===============================================
 
-using HotfixAGameMainExample.Procedure;
+using GameMainExample1.Procedure;
 using HotfixBusiness.Procedure;
 using HotfixFramework.Runtime;
 using Main.Runtime;
 using Main.Runtime.Procedure;
 using UnityGameFramework.Runtime;
 
-namespace HotfixAGameMainExample.UI 
+namespace GameMainExample1.UI 
 {
     /// <summary>
     /// Please modify the description.

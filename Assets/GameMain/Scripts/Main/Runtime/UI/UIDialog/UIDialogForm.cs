@@ -16,10 +16,10 @@ namespace Main.Runtime.UI
 			 GetBindComponents(gameObject);
 
 /*--------------------Auto generate start button listener.Do not modify!--------------------*/
-			m_Btn_bg.onClick.AddListener(Btn_bgEvent);
-			m_Btn_Sure.onClick.AddListener(Btn_SureEvent);
-			m_Btn_Cancel.onClick.AddListener(Btn_CancelEvent);
-			m_Btn_Other.onClick.AddListener(Btn_OtherEvent);
+			 m_Btn_bg.onClick.AddListener(Btn_bgEvent);
+			 m_Btn_Sure.onClick.AddListener(Btn_SureEvent);
+			 m_Btn_Cancel.onClick.AddListener(Btn_CancelEvent);
+			 m_Btn_Other.onClick.AddListener(Btn_OtherEvent);
 /*--------------------Auto generate end button listener.Do not modify!----------------------*/
 		}
 

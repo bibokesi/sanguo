@@ -15,7 +15,7 @@ using Main.Runtime.Procedure;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
-namespace HotfixAGameMainExample.UI
+namespace GameMainExample1.UI
 {
 	/// <summary>
 	/// Please modify the description.

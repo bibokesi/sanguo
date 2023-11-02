@@ -7,14 +7,14 @@
 //版 本:0.1 
 // ===============================================
 using GameFramework;
-using HotfixAGameMainExample.UI;
+using GameMainExample1.UI;
 using HotfixBusiness.Entity;
 using Main.Runtime.Procedure;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 
-namespace HotfixAGameMainExample.Procedure
+namespace GameMainExample1.Procedure
 {
     public class ProcedureGameMainMain : ProcedureBase
     {

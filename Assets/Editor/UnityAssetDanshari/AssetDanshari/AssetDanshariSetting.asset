@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_AssetReferenceInfos:
   - title: "\u754C\u9762"
-    referenceFolder: '"Assets/Deer/AssetsHotfix/UI/UIForms"'
-    assetFolder: '"Assets/Deer/AssetsHotfix/UI/UIArt/UISprites"'
+    referenceFolder: '"Assets/GameMain/AssetsHotfix/UI/UIForms"'
+    assetFolder: '"Assets/GameMain/AssetsHotfix/UI/UIArt/UISprites"'
     assetCommonFolder: '"Assets/Simple UI/PNG/Common"'
   - title: "\u5B57\u4F53"
     referenceFolder: '"Assets/Simple UI/Samples"'

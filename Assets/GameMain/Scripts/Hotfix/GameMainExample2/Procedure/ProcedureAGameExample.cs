@@ -12,7 +12,7 @@ using Main.Runtime.Procedure;
 using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 
-namespace HotfixAGameExample.Procedure
+namespace GameMainExample2.Procedure
 {
     public class ProcedureAGameExample : ProcedureBase
     {

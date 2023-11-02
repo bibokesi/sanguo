@@ -23,6 +23,6 @@ public class GameMainPathSetting : ScriptableObject
     [Header("ResourceCollection Config Path")]
     [SerializeField]
     private string m_ResourceCollectionPath = "";
-    //Assets/GameMain/GameConfigs/ResourceRuleEditor.asset
+    //Assets/GameMain/Configs/ResourceRuleEditor.asset
     public string ResourceCollectionPath => m_ResourceCollectionPath;
 }

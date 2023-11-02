@@ -14,21 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rules:
   - valid: 1
-    name: BaseAssets/GameConfigs
+    name: BaseAssets/Configs
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/GameConfigs
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/Configs
     loadType: 0
     packed: 0
     filterType: 0
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/GameFramework
+    name: BaseAssets/Prefab
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/GameFramework
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/Prefab
     loadType: 0
     packed: 0
     filterType: 0
@@ -114,11 +114,11 @@ MonoBehaviour:
     filterType: 2
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/UITemplate
+    name: BaseAssets/UI/UITemplate
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/UITemplate
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/UI/UITemplate
     loadType: 0
     packed: 0
     filterType: 1

@@ -11,7 +11,7 @@ using HotfixBusiness.Procedure;
 using HotfixFramework.Runtime;
 using System.Collections;
 using System.Collections.Generic;
-using HotfixAGameExample.Procedure;
+using GameMainExample2.Procedure;
 using UnityEngine;
 
 namespace HotfixBusiness.UI

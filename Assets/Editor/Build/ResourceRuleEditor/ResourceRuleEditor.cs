@@ -16,7 +16,7 @@ namespace UGFExtensions.Editor.ResourceTools
     /// </summary>
     public class ResourceRuleEditor : EditorWindow
     {
-        private readonly string m_NormalConfigurationPath = "Assets/GameMain/GameConfigs/ResourceRuleEditor.asset";
+        private readonly string m_NormalConfigurationPath = "Assets/GameMain/Configs/ResourceRuleEditor.asset";
         private ResourceRuleEditorData m_Configuration;
         private ResourceCollection m_ResourceCollection;
         

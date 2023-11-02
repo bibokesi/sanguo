@@ -17,7 +17,7 @@ namespace Game.Main.Editor
 
         public static ResourceGroupEditorData Load()
         {
-            string path = "Assets/GameMain/GameConfigs/ResourceGroupEditor.asset";
+            string path = "Assets/GameMain/Configs/ResourceGroupEditor.asset";
 
             ResourceGroupEditorData groupData= AssetDatabase.LoadAssetAtPath<ResourceGroupEditorData>(path);
             if (groupData == null)

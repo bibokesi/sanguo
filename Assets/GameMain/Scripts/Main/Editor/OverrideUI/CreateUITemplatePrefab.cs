@@ -96,7 +96,7 @@ namespace GameMain.Editor
 
         static GameObject SaveObject(MenuCommand menuCommand, string prefabName, string objName = "")
         {
-            var path = FileUtils.GetPath($@"Assets\GameMain\AssetsHotfix\BaseAssets\UITemplate\{prefabName}.prefab");
+            var path = FileUtils.GetPath($@"Assets\GameMain\AssetsHotfix\BaseAssets\UI\UITemplate\{prefabName}.prefab");
             GameObject prefab = (GameObject)AssetDatabase.LoadMainAssetAtPath(path);
             if (prefab)
             {

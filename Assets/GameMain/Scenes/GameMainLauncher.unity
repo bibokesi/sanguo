@@ -123,6 +123,23 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1751230500 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3306832747998289542, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+  m_PrefabInstance: {fileID: 1823114893}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1751230506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1751230500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8384af7e5cb5164096fa6f931c00730, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1823114893
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -133,6 +150,14 @@ PrefabInstance:
     - target: {fileID: 1764703177563192465, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681452179607589045, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_ComCodePath
+      value: GameMain/Scripts/Main/Runtime/UI/BindComponents
+      objectReference: {fileID: 0}
+    - target: {fileID: 2681452179607589045, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_MountCodePath
+      value: GameMain/Scripts/Main/Runtime/UI
       objectReference: {fileID: 0}
     - target: {fileID: 2885371915229619605, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
       propertyPath: m_AnchorMax.y
@@ -180,15 +205,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3697501985222841089, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
       propertyPath: m_LogHelperTypeName
-      value: 
+      value: GameMainLogHelper
       objectReference: {fileID: 0}
     - target: {fileID: 3697501985222841089, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
       propertyPath: m_EditorResourceMode
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3697501985222922161, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
       propertyPath: m_WebRequestAgentHelperTypeName
       value: GameMainWebRequestAgentHelper
+      objectReference: {fileID: 0}
+    - target: {fileID: 3697501985222936151, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_EnableStrictCheck
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3697501985222936355, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
       propertyPath: m_LocalizationHelperTypeName
@@ -225,6 +254,14 @@ PrefabInstance:
     - target: {fileID: 5402190822736383794, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
       propertyPath: m_Name
       value: GameFramework
+      objectReference: {fileID: 0}
+    - target: {fileID: 6977307580660093424, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_ComCodePath
+      value: GameMain/Scripts/Main/Runtime/UI/BindComponents
+      objectReference: {fileID: 0}
+    - target: {fileID: 6977307580660093424, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_MountCodePath
+      value: GameMain/Scripts/Main/Runtime/UI
       objectReference: {fileID: 0}
     - target: {fileID: 8043281294386013445, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
       propertyPath: m_IsActive
@@ -282,5 +319,13 @@ PrefabInstance:
       propertyPath: m_Texture
       value: 
       objectReference: {fileID: 2800000, guid: 4fb975ee8aa9f164cb540e72e026b3ea, type: 3}
+    - target: {fileID: 8767777304685698808, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_ComCodePath
+      value: GameMain/Scripts/Main/Runtime/UI/BindComponents
+      objectReference: {fileID: 0}
+    - target: {fileID: 8767777304685698808, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_MountCodePath
+      value: GameMain/Scripts/Main/Runtime/UI
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}

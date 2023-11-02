@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace HotfixAGameMainExample.UI
+namespace GameMainExample1.UI
 {
 	public partial class UILoginForm
 	{

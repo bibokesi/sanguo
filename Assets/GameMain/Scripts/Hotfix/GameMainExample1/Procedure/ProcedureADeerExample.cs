@@ -11,7 +11,7 @@ using HotfixBusiness.Procedure;
 using Main.Runtime.Procedure;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 
-namespace HotfixAGameMainExample.Procedure
+namespace GameMainExample1.Procedure
 {
     public class ProcedureAGameMainExample : ProcedureBase
     {

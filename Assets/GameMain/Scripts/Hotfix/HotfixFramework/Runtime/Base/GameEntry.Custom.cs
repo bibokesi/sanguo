@@ -180,7 +180,7 @@ public partial class GameEntry
     /// </summary>
     private static void LoadCustomComponent() 
     {
-        GameEntryMain.Resource.LoadAsset("Assets/GameMain/AssetsHotfix/BaseAssets/GameFramework/Customs.prefab", new LoadAssetCallbacks(LoadAssetSuccessCallback,LoadAssetFailureCallback));
+        GameEntryMain.Resource.LoadAsset("Assets/GameMain/AssetsHotfix/BaseAssets/Prefab/GameFramework/Customs.prefab", new LoadAssetCallbacks(LoadAssetSuccessCallback,LoadAssetFailureCallback));
     }
 
     private static void LoadAssetFailureCallback(string assetName, LoadResourceStatus status, string errorMessage, object userData)

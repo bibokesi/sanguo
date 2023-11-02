@@ -44,9 +44,9 @@ public static partial class Constant
         public const string ProcedureGameMainMain = "HotfixGameMainExample.Procedure.ProcedureGameMainMain";
         public const string ProcedureGameMainLogin = "HotfixGameMainExample.Procedure.ProcedureGameMainLogin";
         
-        public const string ProcedureAGameExample = "HotfixAGameExample.Procedure.ProcedureAGameExample";
-        public const string ProcedureGamePlay = "HotfixAGameExample.Procedure.ProcedureGamePlay";
-        public const string ProcedureGameMenu = "HotfixAGameExample.Procedure.ProcedureGameMenu";
+        public const string ProcedureAGameExample = "GameMainExample2.Procedure.ProcedureAGameExample";
+        public const string ProcedureGamePlay = "GameMainExample2.Procedure.ProcedureGamePlay";
+        public const string ProcedureGameMenu = "GameMainExample2.Procedure.ProcedureGameMenu";
         private static Dictionary<string, ProcedureInfo> ProcedureInfos = new Dictionary<string, ProcedureInfo>()
         {
             {ProcedureMainMenu,new ProcedureInfo(ProcedureMainMenu,false,false,"BaseAssets","")},
