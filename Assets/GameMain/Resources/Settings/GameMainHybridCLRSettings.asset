@@ -16,15 +16,11 @@ MonoBehaviour:
   m_Gitee: 1
   HotUpdateAssemblies:
   - AssetGroupName: BaseAssets
-    Assembly: HotfixCommon.dll
-  - AssetGroupName: BaseAssets
     Assembly: HotfixFramework.Runtime.dll
   - AssetGroupName: BaseAssets
+    Assembly: HotfixCommon.dll
+  - AssetGroupName: BaseAssets
     Assembly: HotfixBusiness.dll
-  - AssetGroupName: GameMainExample1
-    Assembly: GameMainExample1.dll
-  - AssetGroupName: GameMainExample2
-    Assembly: GameMainExample2.dll
   AOTMetaAssemblies:
   - Assembly-CSharp-firstpass.dll
   - Assembly-CSharp.dll

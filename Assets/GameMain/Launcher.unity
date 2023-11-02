@@ -178,5 +178,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameFramework
       objectReference: {fileID: 0}
+    - target: {fileID: 2449484809995130725, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_EditorResourceMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}

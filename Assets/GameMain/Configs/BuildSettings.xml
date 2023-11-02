@@ -2,12 +2,10 @@
 <UnityGameFramework>
   <BuildSettings>
     <DefaultScenes>
-      <DefaultScene Name="Assets/GameMain/Scenes/Launcher.unity" />
+      <DefaultScene Name="Assets/GameMain/Launcher.unity" />
     </DefaultScenes>
     <SearchScenePaths>
-      <SearchScenePath Path="Assets/GameMain/Scenes" />
-      <SearchScenePath Path="Assets/GameMain/AssetsHotfix/GameMainExample/Scenes" />
-	  <SearchScenePath Path="Assets/GameMain/AssetsHotfix/AGameExample/Scenes" />
+      <SearchScenePath Path="Assets/GameMain" />
     </SearchScenePaths>
   </BuildSettings>
 </UnityGameFramework>

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SublimePath: D:/Job_Files/Sublime Text/sublime_text.exe
   m_NotepadPath: C:/Users/A03/Desktop/notepad++.exe
-  m_AtlasFolder: Assets/GameMain/Atlas/
+  m_AtlasFolder: Assets/GameMain/AssetsHotfix/BaseAssets/UI/Atlas/
   m_ResourceCollectionPath: 

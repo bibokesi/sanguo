@@ -14,16 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rules:
   - valid: 1
-    name: BaseAssets/Configs
-    variant: 
-    fileSystem: 
-    groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/Configs
-    loadType: 0
-    packed: 1
-    filterType: 0
-    searchPatterns: '*.*'
-  - valid: 1
     name: BaseAssets/Prefab
     variant: 
     fileSystem: 
@@ -64,152 +54,52 @@ MonoBehaviour:
     filterType: 0
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/UI/UIForms
+    name: BaseAssets/UI/Forms
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/UI/UIForms
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/UI/Forms
     loadType: 0
     packed: 1
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/UI/UIPrefabs
+    name: BaseAssets/UI/AtlasCollection
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/UI/UIPrefabs
-    loadType: 0
-    packed: 1
-    filterType: 0
-    searchPatterns: '*.*'
-  - valid: 1
-    name: BaseAssets/UI/UIArt/AtlasCollection
-    variant: 
-    fileSystem: 
-    groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/UI/UIArt/AtlasCollection
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/UI/AtlasCollection
     loadType: 0
     packed: 1
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/UI/UIArt/Texture
+    name: BaseAssets/UI/Texture
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/UI/UIArt/Texture
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/UI/Texture
     loadType: 0
     packed: 1
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/UI/UIArt/UISprites
+    name: BaseAssets/UI/Sprites
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/UI/UIArt/UISprites
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/UI/Sprites
     loadType: 0
     packed: 1
     filterType: 2
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/UI/UITemplate
+    name: BaseAssets/UI/Template
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/UI/UITemplate
+    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/BaseAssets/UI/Template
     loadType: 0
     packed: 1
     filterType: 1
-    searchPatterns: '*.*'
-  - valid: 1
-    name: GameMainExample1/EntityPrefabs
-    variant: 
-    fileSystem: 
-    groups: GameMainExample1
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/GameMainExample1/EntityPrefabs
-    loadType: 0
-    packed: 1
-    filterType: 0
-    searchPatterns: '*.*'
-  - valid: 1
-    name: GameMainExample1/EntityResources
-    variant: 
-    fileSystem: 
-    groups: GameMainExample1
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/GameMainExample1/EntityResources
-    loadType: 0
-    packed: 1
-    filterType: 0
-    searchPatterns: '*.*'
-  - valid: 1
-    name: GameMainExample1/Scenes
-    variant: 
-    fileSystem: 
-    groups: GameMainExample1
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/GameMainExample1/Scenes
-    loadType: 0
-    packed: 1
-    filterType: 0
-    searchPatterns: '*.*'
-  - valid: 1
-    name: GameMainExample1/UI
-    variant: 
-    fileSystem: 
-    groups: GameMainExample1
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/GameMainExample1/UI
-    loadType: 0
-    packed: 1
-    filterType: 1
-    searchPatterns: '*.*'
-  - valid: 1
-    name: GameMainExample2/EntityPrefabs
-    variant: 
-    fileSystem: 
-    groups: GameMainExample2
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/GameMainExample2/EntityPrefabs
-    loadType: 0
-    packed: 1
-    filterType: 0
-    searchPatterns: '*.*'
-  - valid: 1
-    name: GameMainExample2/EntityResources
-    variant: 
-    fileSystem: 
-    groups: GameMainExample2
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/GameMainExample2/EntityResources
-    loadType: 0
-    packed: 1
-    filterType: 0
-    searchPatterns: '*.*'
-  - valid: 1
-    name: GameMainExample2/Scenes
-    variant: 
-    fileSystem: 
-    groups: GameMainExample2
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/GameMainExample2/Scenes
-    loadType: 0
-    packed: 1
-    filterType: 0
-    searchPatterns: '*.*'
-  - valid: 1
-    name: GameMainExample2/Sounds
-    variant: 
-    fileSystem: 
-    groups: GameMainExample2
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/GameMainExample2/Sounds
-    loadType: 0
-    packed: 1
-    filterType: 0
-    searchPatterns: '*.*'
-  - valid: 1
-    name: GameMainExample2/UI
-    variant: 
-    fileSystem: 
-    groups: GameMainExample2
-    assetsDirectoryPath: Assets/GameMain/AssetsHotfix/GameMainExample2/UI
-    loadType: 0
-    packed: 1
-    filterType: 0
     searchPatterns: '*.*'
