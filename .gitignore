@@ -3,6 +3,7 @@
 .vsconfig
 *.csproj
 *.sln
+*.suo
 Library
 Logs
 obj

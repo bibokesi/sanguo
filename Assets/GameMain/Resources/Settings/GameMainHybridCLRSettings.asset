@@ -22,9 +22,9 @@ MonoBehaviour:
   - AssetGroupName: BaseAssets
     Assembly: HotfixBusiness.dll
   - AssetGroupName: 
-    Assembly: HotfixAGameMainExample.dll
+    Assembly: GameMainExample1.dll
   - AssetGroupName: 
-    Assembly: HotfixAGameExample.dll
+    Assembly: GameMainExample2.dll
   AOTMetaAssemblies:
   - Assembly-CSharp-firstpass.dll
   - Assembly-CSharp.dll
@@ -39,7 +39,13 @@ MonoBehaviour:
   - Google.Protobuf.dll
   - HybridCLR.Runtime.dll
   - ICSharpCode.SharpZipLib.dll
+  - JoystickPack.dll
+  - LeanCommon.dll
+  - LeanCommonPlus.dll
+  - LeanTouch.dll
+  - LeanTouchPlus.dll
   - Main.Runtime.dll
+  - MinimalistBarSystem.dll
   - Mono.Security.dll
   - mscorlib.dll
   - Pathfinding.ClipperLib.dll
@@ -48,6 +54,7 @@ MonoBehaviour:
   - PlayerPrefsEditor.dll
   - QHierarchyNullable.dll
   - QHierarchyRuntime.dll
+  - RaycastGizmosVisualizer.dll
   - Sirenix.OdinInspector.Attributes.dll
   - Sirenix.Serialization.Config.dll
   - Sirenix.Serialization.dll
@@ -59,6 +66,7 @@ MonoBehaviour:
   - System.Numerics.dll
   - System.Runtime.CompilerServices.Unsafe.dll
   - System.Xml.dll
+  - UIExtensions.dll
   - UniTask.Addressables.dll
   - UniTask.dll
   - UniTask.DOTween.dll
