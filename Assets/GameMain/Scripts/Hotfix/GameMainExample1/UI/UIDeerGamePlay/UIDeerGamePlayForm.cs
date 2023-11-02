@@ -1,13 +1,4 @@
-﻿// ================================================
-//描 述:
-//作 者:AlanDu
-//创建时间:2023-06-01 23-40-50
-//修改作者:AlanDu
-//修改时间:2023-06-02 00-03-02
-//版 本:0.1 
-// ===============================================
-
-using HotfixFramework.Runtime;
+﻿using HotfixFramework.Runtime;
 using System.Collections;
 using System.Collections.Generic;
 using HotfixBusiness.Procedure;

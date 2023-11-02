@@ -1,13 +1,4 @@
-﻿// ================================================
-//描 述:
-//作 者:杜鑫
-//创建时间:2022-06-18 00-19-22
-//修改作者:AlanDu
-//修改时间:2023-06-01 21-26-33
-//版 本:0.1 
-// ===============================================
-
-using GameMainExample1.Procedure;
+﻿using GameMainExample1.Procedure;
 using HotfixBusiness.Procedure;
 using HotfixFramework.Runtime;
 using Main.Runtime;

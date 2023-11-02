@@ -1,13 +1,4 @@
-﻿// ================================================
-//描 述:
-//作 者:AlanDu
-//创建时间:2022-11-23 09-57-04
-//修改作者:AlanDu
-//修改时间:2022-11-23 09-57-04
-//版 本:0.1 
-// ===============================================
-
-using cfg.GameMain;
+﻿using cfg.GameMain;
 using HotfixBusiness.Procedure;
 using HotfixFramework.Runtime;
 using System.Collections;
