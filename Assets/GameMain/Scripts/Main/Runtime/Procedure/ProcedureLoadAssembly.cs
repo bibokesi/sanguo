@@ -167,10 +167,10 @@ namespace Main.Runtime.Procedure
                 Logger.Fatal<ProcedureLoadAssembly>("Main logic assembly missing.");
                 return;
             }
-            var appType = m_MainLogicAssembly.GetType("AppMain");
+            var appType = m_MainLogicAssembly.GetType("GameEnterLogic");
             if (null == appType)
             {
-                Logger.Fatal<ProcedureLoadAssembly>("Main logic type 'AppMain' missing.");
+                Logger.Fatal<ProcedureLoadAssembly>("Main logic type 'GameEnterLogic' missing.");
                 return;
             }
             var entryMethod = appType.GetMethod("Entrance");
