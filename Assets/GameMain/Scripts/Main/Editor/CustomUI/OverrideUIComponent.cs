@@ -8,7 +8,7 @@ namespace GameMain.Editor
 {
     public class OverrideUIComponent
     {
-        [MenuItem("GameObject/UIGameMain/Text - TextMeshPro", false, 21)]
+        [MenuItem("GameObject/CustomUI/Override/Text - TextMeshPro", false, 21)]
         static TextMeshProUGUI CreateText()
         {
             var text = CreateComponent<TextMeshProUGUI>("Text");
@@ -19,7 +19,7 @@ namespace GameMain.Editor
             return text;
         }
 
-        [MenuItem("GameObject/UIGameMain/Image", false, 20)]
+        [MenuItem("GameObject/CustomUI/Override/Image", false, 20)]
         static Image CreateUImage()
         {
             string defaultName = "Image";
@@ -30,7 +30,7 @@ namespace GameMain.Editor
             return image;
         }
 
-        [MenuItem("GameObject/UIGameMain/Raw Image", false, 22)]
+        [MenuItem("GameObject/CustomUI/Override/Raw Image", false, 22)]
         static RawImage CreateRawImage()
         {
             var image = CreateComponent<RawImage>("Raw Image");
@@ -110,6 +110,5 @@ namespace GameMain.Editor
             }
             return string.Empty;
         }
-
     }
 }

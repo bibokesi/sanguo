@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MeshTools
 {
-    [MenuItem("Assets/Mesh/SetOptimizeGameObjects")]
+    [MenuItem("GameMainTools/MeshTools/SetOptimizeGameObjects")]
     public static void Optimize()
     {
         var fbxGo = Selection.activeGameObject;
@@ -20,7 +20,7 @@ public class MeshTools
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
     }
-    [MenuItem("Assets/Mesh/UndoOptimizeGameObjects")]
+    [MenuItem("GameMainTools/MeshTools/UndoOptimizeGameObjects")]
     public static void UndoOptimize()
     {
         var fbxGo = Selection.activeGameObject;
@@ -35,7 +35,7 @@ public class MeshTools
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
     }
-    [MenuItem("Assets/Mesh/SearchSkinnedMeshRenderer")]
+    [MenuItem("GameMainTools/MeshTools/SearchSkinnedMeshRenderer")]
     public static void SearchSkinnedMeshRenderer()
     {
         var fbxGos = Selection.gameObjects;
@@ -51,7 +51,7 @@ public class MeshTools
             }
         }
     }
-    [MenuItem("Assets/Mesh/SetSkinnedMeshRenderer")]
+    [MenuItem("GameMainTools/MeshTools/SetSkinnedMeshRenderer")]
     public static void SetSkinnedMeshRenderer() 
     {
         var fbxGos = Selection.gameObjects;

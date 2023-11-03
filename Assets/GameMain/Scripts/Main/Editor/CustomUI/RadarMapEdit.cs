@@ -35,7 +35,6 @@ namespace GameMain.Editor
 
             RadarMap radar = target as RadarMap;
 
-
             serializedObject.ApplyModifiedProperties();
             if (GUI.changed)
             {

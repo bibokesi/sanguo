@@ -6,7 +6,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using UnityEditor;
 using UnityEngine;
 
-public class ReferenceFinderData
+public class FindReferencesData
 {
     //缓存路径
     private const string CACHE_PATH = "Library/ReferenceFinderCache";

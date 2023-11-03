@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 namespace GameMain.Editor
 {
-    public class CreateUITemplatePrefab
+    public class CreateUITemplate
     {
-        #region 0 - 9
-        [MenuItem("GameObject/UIGameMain/UIForm", false, 0)]
+
+        [MenuItem("GameObject/CustomUI/Form", false, 1)]
         static void CreateUIPanelObj(MenuCommand menuCommand)
         {
-            GameObject panel = SaveObject(menuCommand, "UIForm");
+            GameObject panel = SaveObject(menuCommand, "Form");
             panel.GetComponent<RectTransform>().anchorMin = new Vector2(0, 0);
             panel.GetComponent<RectTransform>().anchorMax = new Vector2(1, 1);
             panel.GetComponent<RectTransform>().offsetMin = new Vector2(0, 0);
@@ -20,83 +20,93 @@ namespace GameMain.Editor
             AssetDatabase.SaveAssets();
         }
 
-        #endregion
-
-        #region 10 - 59
-        //10 - 12  In OverrideUIComponent class
-        [MenuItem("GameObject/UIGameMain/UIModel", false, 23)]
+        [MenuItem("GameObject/CustomUI/Model", false, 2)]
         static void CreateUIModel(MenuCommand menuCommand)
         {
-            SaveObject(menuCommand, "UIModel");
-        }
-        [MenuItem("GameObject/UIGameMain/Toggle - TextMeshPro", false, 24)]
-        static void CreateUIToggle(MenuCommand menuCommand)
-        {
-            SaveObject(menuCommand, "UIToggle");
-        }
-        [MenuItem("GameObject/UIGameMain/Button - TextMeshPro", false, 25)]
-        static void CreateUISuperButton(MenuCommand menuCommand)
-        {
-            SaveObject(menuCommand, "UIButton");
+            SaveObject(menuCommand, "Model");
         }
 
-        [MenuItem("GameObject/UIGameMain/InputField - TextMeshPro", false, 28)]
+
+
+
+
+
+        [MenuItem("GameObject/CustomUI/Toggle - TextMeshPro", false, 21)]
+        static void CreateUIToggle(MenuCommand menuCommand)
+        {
+            SaveObject(menuCommand, "Toggle");
+        }
+
+        [MenuItem("GameObject/CustomUI/Button - TextMeshPro", false, 22)]
+        static void CreateUISuperButton(MenuCommand menuCommand)
+        {
+            SaveObject(menuCommand, "Button");
+        }
+
+        [MenuItem("GameObject/CustomUI/InputField - TextMeshPro", false, 23)]
         static void CreateUIInputField(MenuCommand menuCommand)
         {
-            SaveObject(menuCommand, "UIInputField");
+            SaveObject(menuCommand, "InputField");
         }
-        [MenuItem("GameObject/UIGameMain/Radar Map", false, 29)]
+
+
+
+
+
+        [MenuItem("GameObject/CustomUI/ScrollView/HListScroll View", false, 31)]
+        static void CreateHListScroll(MenuCommand menuCommand)
+        {
+            SaveObject(menuCommand, "ScrollView/HListScrollView");
+        }
+
+        [MenuItem("GameObject/CustomUI/ScrollView/HGridScroll View", false, 32)]
+        static void CreateHGridScroll(MenuCommand menuCommand)
+        {
+            SaveObject(menuCommand, "ScrollView/HGridScrollView");
+        }
+
+        [MenuItem("GameObject/CustomUI/ScrollView/VListScroll View", false, 33)]
+        static void CreateVListScroll(MenuCommand menuCommand)
+        {
+            SaveObject(menuCommand, "ScrollView/VListScrollView");
+        }
+
+        [MenuItem("GameObject/CustomUI/ScrollView/VGridScroll View", false, 34)]
+        static void CreateVGridScroll(MenuCommand menuCommand)
+        {
+            SaveObject(menuCommand, "ScrollView/VGridScrollView");
+        }
+
+        [MenuItem("GameObject/CustomUI/ScrollView/ScrollVItemPrefab", false, 35)]
+        static void CreateScrollVItemPrefab(MenuCommand menuCommand)
+        {
+            SaveObject(menuCommand, "ScrollView/ScrollVItemPrefab");
+        }
+
+
+
+        [MenuItem("GameObject/CustomUI/UIHealthBar", false, 101)]
+        static void CreateUIHealthbar(MenuCommand menuCommand)
+        {
+            SaveObject(menuCommand, "HealthBar");
+        }
+
+        [MenuItem("GameObject/CustomUI/SpriteAnimation", false, 102)]
+        static void CreateUGUISpriteAnimation(MenuCommand menuCommand)
+        {
+            SaveObject(menuCommand, "SpriteAnimation");
+        }
+
+        [MenuItem("GameObject/CustomUI/Radar Map", false, 103)]
         static void CreateUIRadarMap(MenuCommand menuCommand)
         {
             SaveObject(menuCommand, "Radar Map");
         }
 
-        #endregion
-
-        #region 60 - 69
-        [MenuItem("GameObject/UIGameMain/UIHealthBar", false, 60)]
-        static void CreateUIHealthbar(MenuCommand menuCommand)
-        {
-            SaveObject(menuCommand, "UIHealthBar");
-        }
-        [MenuItem("GameObject/UIGameMain/SpriteAnimation", false, 61)]
-        static void CreateUGUISpriteAnimation(MenuCommand menuCommand)
-        {
-            SaveObject(menuCommand, "UISpriteAnimation");
-        }
-        #endregion
-
-        #region All ScrollView
-        [MenuItem("GameObject/UIGameMain/All ScrollView/HListScroll View", false, 101)]
-        static void CreateHListScroll(MenuCommand menuCommand)
-        {
-            SaveObject(menuCommand, "ScrollView/HListScrollView");
-        }
-        [MenuItem("GameObject/UIGameMain/All ScrollView/HGridScroll View", false, 102)]
-        static void CreateHGridScroll(MenuCommand menuCommand)
-        {
-            SaveObject(menuCommand, "ScrollView/HGridScrollView");
-        }
-        [MenuItem("GameObject/UIGameMain/All ScrollView/VListScroll View", false, 103)]
-        static void CreateVListScroll(MenuCommand menuCommand)
-        {
-            SaveObject(menuCommand, "ScrollView/VListScrollView");
-        }
-        [MenuItem("GameObject/UIGameMain/All ScrollView/VGridScroll View", false, 104)]
-        static void CreateVGridScroll(MenuCommand menuCommand)
-        {
-            SaveObject(menuCommand, "ScrollView/VGridScrollView");
-        }
-        [MenuItem("GameObject/UIGameMain/All ScrollView/ScrollVItemPrefab", false, 105)]
-        static void CreateScrollVItemPrefab(MenuCommand menuCommand)
-        {
-            SaveObject(menuCommand, "ScrollView/ScrollVItemPrefab");
-        }
-        #endregion
 
         static GameObject SaveObject(MenuCommand menuCommand, string prefabName, string objName = "")
         {
-            var path = FileUtils.GetPath($@"Assets\GameMain\AssetsHotfix\BaseAssets\UI\UITemplate\{prefabName}.prefab");
+            var path = FileUtils.GetPath($@"Assets\GameMain\BaseAssets\UI\Template\{prefabName}.prefab");
             GameObject prefab = (GameObject)AssetDatabase.LoadMainAssetAtPath(path);
             if (prefab)
             {

@@ -5,7 +5,7 @@ using UnityEditor.IMGUI.Controls;
 //带数据的TreeViewItem
 public class AssetViewItem : TreeViewItem
 {
-    public ReferenceFinderData.AssetDescription data;
+    public FindReferencesData.AssetDescription data;
 }
 
 //资源引用树
@@ -145,7 +145,7 @@ public class AssetTreeView : TreeView
                 break;
             case MyColumns.State:
                 {
-                    GUI.Label(cellRect, ReferenceFinderData.GetInfoByState(item.data.state),stateGUIStyle);
+                    GUI.Label(cellRect, FindReferencesData.GetInfoByState(item.data.state),stateGUIStyle);
                 }
                 break;
         }

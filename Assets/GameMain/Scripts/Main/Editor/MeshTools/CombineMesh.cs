@@ -4,12 +4,12 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-public class MeshRenderEditor : Editor
+public class CombineMesh : Editor
 {
-    [MenuItem("GameMainTools/CombineMesh")]
+    [MenuItem("GameMainTools/MeshTools/CombineMesh")]
     public static void EditorTest()
     {
-        CombineMesh();
+        CombineMesh1();
     }
     /// <summary>
     /// 图片缓存路径
@@ -19,7 +19,7 @@ public class MeshRenderEditor : Editor
     /// material缓存路径
     /// </summary>
     private static string MaterialPath = "Assets/mat.mat";
-    static void CombineMesh()
+    static void CombineMesh1()
     {
         #region 如果在游戏运行时动态合并网格,在脚本Start里运行这块代码就可以了
         GameObject gameObject = Selection.gameObjects[0];

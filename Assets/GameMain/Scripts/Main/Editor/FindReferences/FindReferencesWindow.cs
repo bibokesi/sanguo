@@ -4,14 +4,14 @@ using UnityEditor;
 using UnityEngine;
 using UnityEditor.IMGUI.Controls;
 
-public class ReferenceFinderWindow : EditorWindow
+public class FindReferencesWindow : EditorWindow
 {
     //依赖模式的key
     const string isDependPrefKey = "ReferenceFinderData_IsDepend";
     //是否需要更新信息状态的key
     const string needUpdateStatePrefKey = "ReferenceFinderData_needUpdateState";
 
-    private static ReferenceFinderData data = new ReferenceFinderData();
+    private static FindReferencesData data = new FindReferencesData();
     private static bool initializedData = false;
     
     private bool isDepend = false;
@@ -32,20 +32,20 @@ public class ReferenceFinderWindow : EditorWindow
     private TreeViewState m_TreeViewState;
     
     //查找资源引用信息
-    [MenuItem("Assets/Find References In Project %#&f", false, 25)]
+    [MenuItem("Assets/GameMain/Find References In Project", false, 101)]
     static void FindRef()
     {
         InitDataIfNeeded();
         OpenWindow();
-        ReferenceFinderWindow window = GetWindow<ReferenceFinderWindow>();
+        FindReferencesWindow window = GetWindow<FindReferencesWindow>();
         window.UpdateSelectedAssets();
     }
     
     //打开窗口
-    [MenuItem("Window/Reference Finder", false, 1000)]
+    //[MenuItem("Window/Reference Finder", false, 1000)]
     static void OpenWindow()
     {
-        ReferenceFinderWindow window = GetWindow<ReferenceFinderWindow>();
+        FindReferencesWindow window = GetWindow<FindReferencesWindow>();
         window.wantsMouseMove = false;
         window.titleContent = new GUIContent("Ref Finder");
         window.Show();
