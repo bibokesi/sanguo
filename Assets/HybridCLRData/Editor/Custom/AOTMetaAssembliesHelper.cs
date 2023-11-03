@@ -35,7 +35,7 @@ public static class AOTMetaAssembliesHelper
     {
         //        fixed by zh
         string folder = $"{SettingsUtil.GetAssembliesPostIl2CppStripDir(buildTarget)}";
-        FrameworkSettingsUtils.GameMainHybridCLRSettings.AOTMetaAssemblies.Clear();
+        FrameworkSettingsUtils.HybridCLRSettings.AOTMetaAssemblies.Clear();
         if (!Directory.Exists(folder))
         {
 #if UNITY_EDITOR_WIN
@@ -49,9 +49,9 @@ public static class AOTMetaAssembliesHelper
         foreach (var fileInfo in root.GetFiles("*dll", SearchOption.AllDirectories))
         {
             string fileName = fileInfo.Name;
-            FrameworkSettingsUtils.GameMainHybridCLRSettings.AOTMetaAssemblies.Add(fileName);
+            FrameworkSettingsUtils.HybridCLRSettings.AOTMetaAssemblies.Add(fileName);
         }
-        EditorUtility.SetDirty(FrameworkSettingsUtils.GameMainHybridCLRSettings);
+        EditorUtility.SetDirty(FrameworkSettingsUtils.HybridCLRSettings);
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
     }
@@ -60,7 +60,7 @@ public static class AOTMetaAssembliesHelper
     {
         // fixed by zh
         string folder = $"{SettingsUtil.GetAssembliesPostIl2CppStripDir(buildTarget)}";
-        FrameworkSettingsUtils.GameMainHybridCLRSettings.AOTMetaAssemblies.Clear();
+        FrameworkSettingsUtils.HybridCLRSettings.AOTMetaAssemblies.Clear();
         if (!Directory.Exists(folder))
         {
 #if UNITY_EDITOR_WIN
@@ -74,9 +74,9 @@ public static class AOTMetaAssembliesHelper
         foreach (var fileInfo in root.GetFiles("*dll", SearchOption.AllDirectories))
         {
             string fileName = fileInfo.Name;
-            FrameworkSettingsUtils.GameMainHybridCLRSettings.AOTMetaAssemblies.Add(fileName);
+            FrameworkSettingsUtils.HybridCLRSettings.AOTMetaAssemblies.Add(fileName);
         }
-        EditorUtility.SetDirty(FrameworkSettingsUtils.GameMainHybridCLRSettings);
+        EditorUtility.SetDirty(FrameworkSettingsUtils.HybridCLRSettings);
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
     }

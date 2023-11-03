@@ -302,7 +302,7 @@ namespace HotfixBusiness.Procedure
 
         private void LoadHotUpdateAssembly()
         {
-            if (Application.isEditor || !FrameworkSettingsUtils.GameMainHybridCLRSettings.Enable)
+            if (Application.isEditor || !FrameworkSettingsUtils.HybridCLRSettings.Enable)
             {
                 if (AddHotAssemblyToArray())
                 {

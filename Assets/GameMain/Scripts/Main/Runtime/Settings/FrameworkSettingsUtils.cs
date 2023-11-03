@@ -10,20 +10,20 @@ using UnityEngine;
 public static class FrameworkSettingsUtils
 {
     private static readonly string FrameworkSettingsPath = $"Settings/FrameworkSettings";
-    private static readonly string GameMainHybridCLRSettingsPath = $"Settings/GameMainHybridCLRSettings";
+    private static readonly string HybridCLRSettingsPath = $"Settings/HybridCLRSettings";
     private static FrameworkSettings _mFrameworkGlobalSettings;
-    private static GameMainHybridCLRSettings _mGameMainHybridCLRSettings;
+    private static HybridCLRSettings _mHybridCLRSettings;
 
-    static GameMainPathSetting m_GameMainPathSetting;
-    public static GameMainPathSetting GameMainPathConfig
+    static CustomPathSetting m_CustomPathSetting;
+    public static CustomPathSetting CustomPathConfig
     {
         get
         {
-            if (m_GameMainPathSetting == null)
+            if (m_CustomPathSetting == null)
             {
-                m_GameMainPathSetting = GetSingletonAssetsByResources<GameMainPathSetting>("Settings/GameMainPathSetting");
+                m_CustomPathSetting = GetSingletonAssetsByResources<CustomPathSetting>("Settings/CustomPathSetting");
             }
-            return m_GameMainPathSetting;
+            return m_CustomPathSetting;
         }
     }
     public static FrameworkSettings FrameworkSettings
@@ -37,15 +37,15 @@ public static class FrameworkSettingsUtils
             return _mFrameworkGlobalSettings;
         }
     }
-    public static GameMainHybridCLRSettings GameMainHybridCLRSettings
+    public static HybridCLRSettings HybridCLRSettings
     {
         get
         {
-            if (_mGameMainHybridCLRSettings == null)
+            if (_mHybridCLRSettings == null)
             {
-                _mGameMainHybridCLRSettings = GetSingletonAssetsByResources<GameMainHybridCLRSettings>(GameMainHybridCLRSettingsPath);
+                _mHybridCLRSettings = GetSingletonAssetsByResources<HybridCLRSettings>(HybridCLRSettingsPath);
             }
-            return _mGameMainHybridCLRSettings;
+            return _mHybridCLRSettings;
         }
     }
     public static ResourcesArea ResourcesArea { get { return FrameworkSettings.ResourcesArea; } }
@@ -56,7 +56,7 @@ public static class FrameworkSettingsUtils
         {
             bool isFind = false;
             List<string> _RepetitionAssembly = new List<string>();
-            foreach (var hotUpdateAssembly in GameMainHybridCLRSettings.HotUpdateAssemblies)
+            foreach (var hotUpdateAssembly in HybridCLRSettings.HotUpdateAssemblies)
             {
                 if (hotUpdate == hotUpdateAssembly.Assembly)
                 {
@@ -70,12 +70,12 @@ public static class FrameworkSettingsUtils
             }
             if (!isFind)
             {
-                GameMainHybridCLRSettings.HotUpdateAssemblies.Add(new HotUpdateAssemblie("",hotUpdate));
+                HybridCLRSettings.HotUpdateAssemblies.Add(new HotUpdateAssemblie("",hotUpdate));
             }
         }
 
         List<HotUpdateAssemblie> listRemove = new();
-        foreach (var hotUpdateAssembly in GameMainHybridCLRSettings.HotUpdateAssemblies)
+        foreach (var hotUpdateAssembly in HybridCLRSettings.HotUpdateAssemblies)
         {
             bool isFind = false;
             foreach (var hotUpdate in hotUpdateAssemblies)
@@ -92,22 +92,22 @@ public static class FrameworkSettingsUtils
         }
         foreach (var item in listRemove)
         {
-            GameMainHybridCLRSettings.HotUpdateAssemblies.Remove(item);
+            HybridCLRSettings.HotUpdateAssemblies.Remove(item);
         }
         listRemove.Clear();
     }
 
     public static void SetHybridCLRAOTMetaAssemblies(List<string> aOTMetaAssemblies)
     {
-        GameMainHybridCLRSettings.AOTMetaAssemblies = aOTMetaAssemblies;
+        HybridCLRSettings.AOTMetaAssemblies = aOTMetaAssemblies;
     }
 
     public static List<string> GetHotUpdateAssemblies(string assetGroupName)
     {
         List<string> hotUpdateAssemblies = new List<string>();
-        for (int i = 0; i < GameMainHybridCLRSettings.HotUpdateAssemblies.Count; i++)
+        for (int i = 0; i < HybridCLRSettings.HotUpdateAssemblies.Count; i++)
         {
-            var hotUpdateAssembly = GameMainHybridCLRSettings.HotUpdateAssemblies.ElementAt(i);
+            var hotUpdateAssembly = HybridCLRSettings.HotUpdateAssemblies.ElementAt(i);
             if (hotUpdateAssembly.AssetGroupName == assetGroupName)
             {
                 hotUpdateAssemblies.Add(hotUpdateAssembly.Assembly);
@@ -120,7 +120,7 @@ public static class FrameworkSettingsUtils
     {
         bool isFind = false;
         HotUpdateAssemblie findHotUpdateAssembly = null;
-        foreach (var hotUpdateAssembly in GameMainHybridCLRSettings.HotUpdateAssemblies)
+        foreach (var hotUpdateAssembly in HybridCLRSettings.HotUpdateAssemblies)
         {
             if (assemblyName == hotUpdateAssembly.Assembly)
             {
@@ -133,14 +133,14 @@ public static class FrameworkSettingsUtils
         {
             if (isAdd)
             {
-                GameMainHybridCLRSettings.HotUpdateAssemblies.Add(new HotUpdateAssemblie(assetGroupName,assemblyName));
+                HybridCLRSettings.HotUpdateAssemblies.Add(new HotUpdateAssemblie(assetGroupName,assemblyName));
             }
         }
         else
         {
             if (!isAdd)
             {
-                GameMainHybridCLRSettings.HotUpdateAssemblies.Remove(findHotUpdateAssembly);
+                HybridCLRSettings.HotUpdateAssemblies.Remove(findHotUpdateAssembly);
             } 
         }
     }
@@ -385,7 +385,7 @@ public static class FrameworkSettingsUtils
     /// </summary>
     public static string HotfixAssemblyTextAssetPath()
     {
-        return Path.Combine(Application.dataPath,"..", GameMainHybridCLRSettings.HybridCLRDataPath,GameMainHybridCLRSettings.HybridCLRAssemblyPath,HotfixNode);
+        return Path.Combine(Application.dataPath,"..", HybridCLRSettings.HybridCLRDataPath,HybridCLRSettings.HybridCLRAssemblyPath,HotfixNode);
     }
 
     /// <summary>
@@ -393,22 +393,22 @@ public static class FrameworkSettingsUtils
     /// </summary>
     public static string AOTAssemblyTextAssetPath
     {
-        get { return Path.Combine(Application.dataPath,"..", GameMainHybridCLRSettings.HybridCLRDataPath,GameMainHybridCLRSettings.HybridCLRAssemblyPath, AotNode); }
+        get { return Path.Combine(Application.dataPath,"..", HybridCLRSettings.HybridCLRDataPath,HybridCLRSettings.HybridCLRAssemblyPath, AotNode); }
     }
     /// <summary>
     /// AOT程序集文件资源地址
     /// </summary>
     public static string HybridCLRAssemblyPath
     {
-        get { return Path.Combine(Application.dataPath,"..", GameMainHybridCLRSettings.HybridCLRDataPath,GameMainHybridCLRSettings.HybridCLRAssemblyPath); }
+        get { return Path.Combine(Application.dataPath,"..", HybridCLRSettings.HybridCLRDataPath,HybridCLRSettings.HybridCLRAssemblyPath); }
     }
     public static string GetLibil2cppBuildPath()
     {
-        return $"{GameMainHybridCLRSettings.HybridCLRIosBuildPath}/build";
+        return $"{HybridCLRSettings.HybridCLRIosBuildPath}/build";
     }
     
     public static string GetOutputXCodePath()
     {
-        return GameMainHybridCLRSettings.HybridCLRIosXCodePath;
+        return HybridCLRSettings.HybridCLRIosXCodePath;
     }
 }

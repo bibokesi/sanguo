@@ -36,7 +36,7 @@ public static class BuildEventHandlerHybridCLR
     }
     public static void OnPreprocessAllPlatforms(Platform platforms) 
     {
-        if (!FrameworkSettingsUtils.GameMainHybridCLRSettings.Enable)
+        if (!FrameworkSettingsUtils.HybridCLRSettings.Enable)
         {
             return;
         }
@@ -98,8 +98,8 @@ public static class BuildEventHandlerHybridCLR
         if (outputPackageSelected)
         {
             if (FolderUtils.CopyFolder(
-                    $"{Application.dataPath}/../{FrameworkSettingsUtils.GameMainHybridCLRSettings.HybridCLRDataPath}/{FrameworkSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath}",
-                    Path.Combine(Application.streamingAssetsPath,FrameworkSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath)))
+                    $"{Application.dataPath}/../{FrameworkSettingsUtils.HybridCLRSettings.HybridCLRDataPath}/{FrameworkSettingsUtils.HybridCLRSettings.HybridCLRAssemblyPath}",
+                    Path.Combine(Application.streamingAssetsPath,FrameworkSettingsUtils.HybridCLRSettings.HybridCLRAssemblyPath)))
             {
                 Debug.Log("拷贝程序集资源文件成功！");
             }
@@ -107,8 +107,8 @@ public static class BuildEventHandlerHybridCLR
         if (!outputPackageSelected && outputPackedSelected)
         {
             if (FolderUtils.CopyFolder(
-                    $"{Application.dataPath}/../{FrameworkSettingsUtils.GameMainHybridCLRSettings.HybridCLRDataPath}/{FrameworkSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath}",
-                    Path.Combine(Application.streamingAssetsPath,FrameworkSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath)))
+                    $"{Application.dataPath}/../{FrameworkSettingsUtils.HybridCLRSettings.HybridCLRDataPath}/{FrameworkSettingsUtils.HybridCLRSettings.HybridCLRAssemblyPath}",
+                    Path.Combine(Application.streamingAssetsPath,FrameworkSettingsUtils.HybridCLRSettings.HybridCLRAssemblyPath)))
             {
                 Debug.Log("拷贝程序集资源文件成功！");
             }
@@ -117,8 +117,8 @@ public static class BuildEventHandlerHybridCLR
         {
             string commitPath = commitResourcesPath + "/" + platform;
             if (FolderUtils.CopyFolder(
-                    $"{Application.dataPath}/../{FrameworkSettingsUtils.GameMainHybridCLRSettings.HybridCLRDataPath}/{FrameworkSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath}", 
-                    Path.Combine(commitPath,FrameworkSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath)))
+                    $"{Application.dataPath}/../{FrameworkSettingsUtils.HybridCLRSettings.HybridCLRDataPath}/{FrameworkSettingsUtils.HybridCLRSettings.HybridCLRAssemblyPath}", 
+                    Path.Combine(commitPath,FrameworkSettingsUtils.HybridCLRSettings.HybridCLRAssemblyPath)))
             {
                 Debug.Log("拷贝程序集资源文件成功！");
             }

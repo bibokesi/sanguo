@@ -12,7 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2884b9adb9d3e644f8e0e617f02e7222, type: 3}
   m_Name: FrameworkSettings
   m_EditorClassIdentifier: 
-  m_UseDeerExample: 1
   m_ScriptAuthor: Lcl
   m_ScriptVersion: 1.0
   m_AppStage: 1

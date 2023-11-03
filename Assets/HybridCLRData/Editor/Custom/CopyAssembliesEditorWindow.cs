@@ -104,7 +104,7 @@ public class CopyAssembliesEditorWindow : EditorWindow
             }
             GUILayout.EndHorizontal();*/
             EditorGUILayout.LabelField("Compression Helper"+"[GameMainTools/Settings/GameMain HybridCLR Settings]:");
-            EditorGUILayout.LabelField(FrameworkSettingsUtils.GameMainHybridCLRSettings.CompressionHelperTypeName);
+            EditorGUILayout.LabelField(FrameworkSettingsUtils.HybridCLRSettings.CompressionHelperTypeName);
             GUILayout.Space(10);
             GUILayout.Space(10);
             if (GUILayout.Button("构建所有程序集"))

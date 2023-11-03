@@ -71,13 +71,13 @@ public class BuildEventHandler : IBuildEventHandler
         }*/
         FolderUtils.ClearFolder(Application.streamingAssetsPath);
         UGFExtensions.SpriteCollection.SpriteCollectionUtility.RefreshSpriteCollection();
-        if (string.IsNullOrEmpty(FrameworkSettingsUtils.GameMainPathConfig.ResourceCollectionPath))
+        if (string.IsNullOrEmpty(FrameworkSettingsUtils.CustomPathConfig.ResourceCollectionPath))
         {
             ResourceRuleEditorUtility.RefreshResourceCollection();
         }
         else
         {
-            ResourceRuleEditorUtility.RefreshResourceCollection(FrameworkSettingsUtils.GameMainPathConfig.ResourceCollectionPath);
+            ResourceRuleEditorUtility.RefreshResourceCollection(FrameworkSettingsUtils.CustomPathConfig.ResourceCollectionPath);
         }
         BuildEventHandlerLuban.OnPreprocessAllPlatforms(platforms, outputFullSelected);
 #if ENABLE_HYBRID_CLR_UNITY

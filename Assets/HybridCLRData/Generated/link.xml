@@ -101,7 +101,7 @@
     <type fullname="CrossPlatformComponent" preserve="all" />
     <type fullname="GameEntryMain" preserve="all" />
     <type fullname="FrameworkSettings" preserve="all" />
-    <type fullname="GameMainHybridCLRSettings" preserve="all" />
+    <type fullname="HybridCLRSettings" preserve="all" />
     <type fullname="FrameworkSettingsUtils" preserve="all" />
     <type fullname="Logger" preserve="all" />
     <type fullname="LubanConfigComponent" preserve="all" />

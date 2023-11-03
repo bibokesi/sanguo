@@ -116,7 +116,7 @@ namespace Main.Runtime.Procedure
         /// </summary>
         private void DownLoadAssembliesVersion()
         {
-            string fileName = $"{FrameworkSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath}/{FrameworkSettingsUtils.GameMainHybridCLRSettings.AssembliesVersionTextFileName}";
+            string fileName = $"{FrameworkSettingsUtils.HybridCLRSettings.HybridCLRAssemblyPath}/{FrameworkSettingsUtils.HybridCLRSettings.AssembliesVersionTextFileName}";
             string downLoadPath = Path.Combine(GameEntryMain.Resource.ReadWritePath, fileName);
             string downLoadUrl = FrameworkSettingsUtils.GetResDownLoadPath(fileName);
             GameEntryMain.Download.AddDownload(downLoadPath, downLoadUrl, new CheckData() { CheckType = ResourcesType.Assemblies });

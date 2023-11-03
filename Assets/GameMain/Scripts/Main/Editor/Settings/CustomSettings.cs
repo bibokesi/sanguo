@@ -6,10 +6,10 @@ public static class CustomSettings
     public static void OpenFrameworkSettings() => SettingsService.OpenProjectSettings("GameMain/FrameworkSettings");
 
     [MenuItem("GameMainTools/CustomSettings/HybridCLR Settings", priority = 110)]
-    public static void OpenGameMainHybridSettings() => SettingsService.OpenProjectSettings("GameMain/GameMainHybridSettings");
+    public static void OpenHybridCLRSettings() => SettingsService.OpenProjectSettings("GameMain/HybridCLRSettings");
 
     [MenuItem("GameMainTools/CustomSettings/CustomPath Settings", priority = 120)]
-    public static void OpenGameMainPathSettings() => SettingsService.OpenProjectSettings("GameMain/GameMainPathSetting");
+    public static void OpenCustomPathSettings() => SettingsService.OpenProjectSettings("GameMain/CustomPathSetting");
 
     [MenuItem("GameMainTools/CustomSettings/AutoBind Setting", priority = 130)]
     public static void OpenAutoBindSettings() => SettingsService.OpenProjectSettings("GameMain/AutoBindSetting");

@@ -2,8 +2,8 @@ using UnityEngine;
 /// <summary>
 /// 优化设置界面
 /// </summary>
-[CreateAssetMenu(fileName = "GameMainPathSetting", menuName = "GameMain/GameMain Path Setting", order = 40)]
-public class GameMainPathSetting : ScriptableObject
+[CreateAssetMenu(fileName = "CustomPathSetting", menuName = "GameMain/CustomPath Setting", order = 40)]
+public class CustomPathSetting : ScriptableObject
 {
     [Header("Sublime文件路径")]
     [SerializeField]

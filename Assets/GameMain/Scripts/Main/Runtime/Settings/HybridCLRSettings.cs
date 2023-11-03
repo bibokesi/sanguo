@@ -18,11 +18,11 @@ public class HotUpdateAssemblie
 /// <summary>
 /// HybridCLR 自定义全局设置
 /// </summary>
-[CreateAssetMenu(fileName = "GameMainHybridCLRSettings", menuName = "GameMain/HybridCLR Settings", order = 41)]
-public class GameMainHybridCLRSettings:ScriptableObject
+[CreateAssetMenu(fileName = "HybridCLRSettings", menuName = "GameMain/HybridCLR Settings", order = 41)]
+public class HybridCLRSettings:ScriptableObject
 {
-    [Header("Auto sync with [HybridCLRGlobalSettings]")]
-    [Tooltip("You should modify the file form file path [Assets/CustomHybridCLR/Settings/HybridCLRGlobalSettings.asset]")]
+    [Header("Auto sync with [HybridCLRSettings]")]
+    [Tooltip("You should modify the file form file path [Assets/CustomHybridCLR/Settings/HybridCLRSettings.asset]")]
     [SerializeField] private bool m_Enable = false;
     public bool Enable { get { return m_Enable; }
         set { m_Enable = value; }
@@ -31,8 +31,8 @@ public class GameMainHybridCLRSettings:ScriptableObject
     public bool Gitee { get { return m_Gitee; }
         set { m_Gitee = value; }
     }
-    [Header("Click up button sync with [HybridCLRGlobalSettings]")]
-    //[Tooltip("You should modify the file form file path [Assets/CustomHybridCLR/Settings/HybridCLRGlobalSettings.asset]")]
+    [Header("Click up button sync with [HybridCLRSettings]")]
+    //[Tooltip("You should modify the file form file path [Assets/CustomHybridCLR/Settings/HybridCLRSettings.asset]")]
     
     [SerializeField] public List<HotUpdateAssemblie> HotUpdateAssemblies;
     //[Header("Need manual setting!")]

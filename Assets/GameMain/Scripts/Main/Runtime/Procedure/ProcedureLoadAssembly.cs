@@ -52,7 +52,7 @@ namespace Main.Runtime.Procedure
             else
             {
                 bool isLoadHotfix = false;
-                if (FrameworkSettingsUtils.GameMainHybridCLRSettings.Enable)
+                if (FrameworkSettingsUtils.HybridCLRSettings.Enable)
                 {
                     isLoadHotfix = !Application.isEditor;
                 }
@@ -66,7 +66,7 @@ namespace Main.Runtime.Procedure
                                 var item = assemblies.ElementAt(i);
                                 Logger.Debug<ProcedureLoadAssembly>($"LoadAsset: [ {item.Key} ]");
                                 var asm = Assembly.Load(item.Value);
-                                if (string.Compare(FrameworkSettingsUtils.GameMainHybridCLRSettings.LogicMainDllName, item.Key, StringComparison.Ordinal) == 0)
+                                if (string.Compare(FrameworkSettingsUtils.HybridCLRSettings.LogicMainDllName, item.Key, StringComparison.Ordinal) == 0)
                                     m_MainLogicAssembly = asm;
                                 m_HotfixAssemblys.Add(asm);
                                 Logger.Debug<ProcedureLoadAssembly>($"Assembly [ {asm.GetName().Name} ] loaded");
@@ -139,7 +139,7 @@ namespace Main.Runtime.Procedure
             List<string> hotUpdateAsm = FrameworkSettingsUtils.GetHotUpdateAssemblies(FrameworkSettingsUtils.FrameworkSettings.BaseAssetsRootName);
             foreach (var asm in AppDomain.CurrentDomain.GetAssemblies())
             {
-                if (string.Compare(FrameworkSettingsUtils.GameMainHybridCLRSettings.LogicMainDllName, $"{asm.GetName().Name}.dll",
+                if (string.Compare(FrameworkSettingsUtils.HybridCLRSettings.LogicMainDllName, $"{asm.GetName().Name}.dll",
                         StringComparison.Ordinal) == 0)
                 {
                     mainLogicAssembly = asm;

@@ -31,14 +31,14 @@ public static class CopyAssemblies
         // 复制热更程序集到资源文件夹
         foreach (var dll in SettingsUtil.HotUpdateAssemblyFilesIncludePreserved)
         {
-            foreach (var hotUpdateAssembly in FrameworkSettingsUtils.GameMainHybridCLRSettings.HotUpdateAssemblies)
+            foreach (var hotUpdateAssembly in FrameworkSettingsUtils.HybridCLRSettings.HotUpdateAssemblies)
             {
                 if (dll == hotUpdateAssembly.Assembly)
                 {
                     string dllPath = $"{SettingsUtil.GetHotUpdateDllsOutputDirByTarget(buildTarget)}/{dll}";
                     /*using FileStream fileStream = new FileStream(dllPath, FileMode.Open, FileAccess.Read);
                     int hashCode = Utility.Verifier.GetCrc32(fileStream);*/
-                    string dllBytesPath = Path.Combine(targetPath, $"{dll}{FrameworkSettingsUtils.GameMainHybridCLRSettings.AssemblyAssetExtension}");
+                    string dllBytesPath = Path.Combine(targetPath, $"{dll}{FrameworkSettingsUtils.HybridCLRSettings.AssemblyAssetExtension}");
                     File.Copy(dllPath, dllBytesPath, true);
                     byte[] bytes = File.ReadAllBytes(dllBytesPath);
                     int length = bytes.Length;
@@ -47,7 +47,7 @@ public static class CopyAssemblies
                     File.WriteAllBytes(dllBytesPath, bytes);
                     int compressedLength = bytes.Length;
                     int compressedHashCode = Utility.Verifier.GetCrc32(bytes);
-                    string dllBytesNewPath = Path.Combine(targetPath, $"{dll}.{hashCode}{FrameworkSettingsUtils.GameMainHybridCLRSettings.AssemblyAssetExtension}");
+                    string dllBytesNewPath = Path.Combine(targetPath, $"{dll}.{hashCode}{FrameworkSettingsUtils.HybridCLRSettings.AssemblyAssetExtension}");
                     File.Move(dllBytesPath, dllBytesNewPath);
                     //FileInfo fileInfo = new FileInfo(dllPath);
                     //long size = (long)Math.Ceiling(fileInfo.Length / 1024f);
@@ -84,12 +84,12 @@ public static class CopyAssemblies
         }
 
         string mergedFileName = AssemblyFileData.GetMergedFileName();
-        string mergedFilePath = $"{FrameworkSettingsUtils.AOTAssemblyTextAssetPath}/{mergedFileName}{FrameworkSettingsUtils.GameMainHybridCLRSettings.AssemblyAssetExtension}";
+        string mergedFilePath = $"{FrameworkSettingsUtils.AOTAssemblyTextAssetPath}/{mergedFileName}{FrameworkSettingsUtils.HybridCLRSettings.AssemblyAssetExtension}";
         using StreamWriter mergedFileWriter = new StreamWriter(mergedFilePath);
         long currentPosition = 0;
         m_ListAssemblyFileData.Clear();
         // 复制AOT程序集到资源文件夹
-        foreach (var dll in FrameworkSettingsUtils.GameMainHybridCLRSettings.AOTMetaAssemblies)
+        foreach (var dll in FrameworkSettingsUtils.HybridCLRSettings.AOTMetaAssemblies)
         {
             string dllPath = $"{SettingsUtil.GetAssembliesPostIl2CppStripDir(buildTarget)}/{dll}";
             if (!File.Exists(dllPath))
@@ -118,7 +118,7 @@ public static class CopyAssemblies
         int compressedHashCode = Utility.Verifier.GetCrc32(bytes);
         //fileStream.Close();
         //fileStream.Dispose();
-        string mergedNewFilePath = $"{FrameworkSettingsUtils.AOTAssemblyTextAssetPath}/{mergedFileName}.{hashCode}{FrameworkSettingsUtils.GameMainHybridCLRSettings.AssemblyAssetExtension}";
+        string mergedNewFilePath = $"{FrameworkSettingsUtils.AOTAssemblyTextAssetPath}/{mergedFileName}.{hashCode}{FrameworkSettingsUtils.HybridCLRSettings.AssemblyAssetExtension}";
         File.Move(mergedFilePath, mergedNewFilePath);
         //FileInfo fileInfo = new FileInfo(mergedNewFilePath);
         //long size = (long)Math.Ceiling(fileInfo.Length / 1024f);
@@ -165,7 +165,7 @@ public static class CopyAssemblies
         string assembly = m_ListAssemblies.ToJson();
         string assemblyFileData = m_ListAssemblyFileData.ToJson();
         assembly = $"{assembly}{AssemblyFileData.GetSeparator()}{assemblyFileData}";
-        string path = $"{FrameworkSettingsUtils.HybridCLRAssemblyPath}/{FrameworkSettingsUtils.GameMainHybridCLRSettings.AssembliesVersionTextFileName}";
+        string path = $"{FrameworkSettingsUtils.HybridCLRAssemblyPath}/{FrameworkSettingsUtils.HybridCLRSettings.AssembliesVersionTextFileName}";
         File.WriteAllText(path, assembly);
         string[] ssss = assembly.Split(AssemblyFileData.GetSeparator());
         var m_UpdateAssemblies = ssss[0].ParseJson<List<AssemblyInfo>>();
@@ -174,9 +174,9 @@ public static class CopyAssemblies
     private static bool RefreshCompressionHelper()
     {
         bool retVal = false;
-        if (!string.IsNullOrEmpty(FrameworkSettingsUtils.GameMainHybridCLRSettings.CompressionHelperTypeName))
+        if (!string.IsNullOrEmpty(FrameworkSettingsUtils.HybridCLRSettings.CompressionHelperTypeName))
         {
-            System.Type compressionHelperType = Utility.Assembly.GetType(FrameworkSettingsUtils.GameMainHybridCLRSettings.CompressionHelperTypeName);
+            System.Type compressionHelperType = Utility.Assembly.GetType(FrameworkSettingsUtils.HybridCLRSettings.CompressionHelperTypeName);
             if (compressionHelperType != null)
             {
                 Utility.Compression.ICompressionHelper compressionHelper = (Utility.Compression.ICompressionHelper)Activator.CreateInstance(compressionHelperType);

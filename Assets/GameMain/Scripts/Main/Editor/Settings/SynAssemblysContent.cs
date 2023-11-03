@@ -11,9 +11,9 @@ public static class SynAssemblysContent
     {
         FrameworkSettingsUtils.SetHybridCLRHotUpdateAssemblies(SettingsUtil.HotUpdateAssemblyFilesIncludePreserved);
         // 修改 obj 中的 MyField 属性...
-        Undo.RecordObject(FrameworkSettingsUtils.GameMainHybridCLRSettings, "Modify Enable");
-        FrameworkSettingsUtils.GameMainHybridCLRSettings.Enable = SettingsUtil.Enable;
-        EditorUtility.SetDirty(FrameworkSettingsUtils.GameMainHybridCLRSettings);
+        Undo.RecordObject(FrameworkSettingsUtils.HybridCLRSettings, "Modify Enable");
+        FrameworkSettingsUtils.HybridCLRSettings.Enable = SettingsUtil.Enable;
+        EditorUtility.SetDirty(FrameworkSettingsUtils.HybridCLRSettings);
         AssetDatabase.Refresh();
         AssetDatabase.SaveAssets();
     }

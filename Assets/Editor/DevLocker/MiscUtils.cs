@@ -168,28 +168,28 @@ namespace DevLocker.Tools
 		private static void EditWithNotepadPlusPlus()
 		{
 			var args = string.Join(" ", GetPathsOfAssets(Selection.objects, false));
-			EditWithApp(FrameworkSettingsUtils.GameMainPathConfig.NotepadPath, args, _notepadPaths);
+			EditWithApp(FrameworkSettingsUtils.CustomPathConfig.NotepadPath, args, _notepadPaths);
 		}
 
 		[MenuItem("Assets/GameMain/Notepad++ Metas", false, 31)]
 		private static void EditWithNotepadPlusPlusMetas()
 		{
 			var args = string.Join(" ", GetPathsOfAssets(Selection.objects, true));
-			EditWithApp(FrameworkSettingsUtils.GameMainPathConfig.NotepadPath, args, _notepadPaths);
+			EditWithApp(FrameworkSettingsUtils.CustomPathConfig.NotepadPath, args, _notepadPaths);
 		}
 #endif
 		[MenuItem("Assets/GameMain/Sublime", false, 32)]
 		private static void EditWithSublime()
 		{
 			var args = string.Join(" ", GetPathsOfAssets(Selection.objects, false));
-			EditWithApp(FrameworkSettingsUtils.GameMainPathConfig.SublimePath, args, _sublimePaths);
+			EditWithApp(FrameworkSettingsUtils.CustomPathConfig.SublimePath, args, _sublimePaths);
 		}
 
 		[MenuItem("Assets/GameMain/Sublime Metas", false, 33)]
 		private static void EditWithSublimeMetas()
 		{
 			var args = string.Join(" ", GetPathsOfAssets(Selection.objects, true));
-			EditWithApp(FrameworkSettingsUtils.GameMainPathConfig.SublimePath, args, _sublimePaths);
+			EditWithApp(FrameworkSettingsUtils.CustomPathConfig.SublimePath, args, _sublimePaths);
 		}
 
 		private static IEnumerable<string> GetPathsOfAssets(Object[] objects, bool metas) {

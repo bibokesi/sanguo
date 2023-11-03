@@ -7,10 +7,10 @@ using UnityEditor.Graphs;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class GameMainHybridCLRSettingsProvider : SettingsProvider
+public class HybridCLRSettingsProvider : SettingsProvider
 {
-    const string k_FrameworkSettingsPath = "Assets/GameMain/Resources/Settings/GameMainHybridCLRSettings.asset";
-    private const string headerName = "GameMain/GameMainHybridSettings";
+    const string k_FrameworkSettingsPath = "Assets/GameMain/Resources/Settings/HybridCLRSettings.asset";
+    private const string headerName = "GameMain/HybridCLRSettings";
     private SerializedObject m_CustomSettings;
     private SerializedProperty m_CompressionHelperTypeName;
     private const string NoneOptionName = "<None>";
@@ -19,7 +19,7 @@ public class GameMainHybridCLRSettingsProvider : SettingsProvider
 
     private static SerializedObject GetSerializedSettings()
     {
-        return new SerializedObject(FrameworkSettingsUtils.GameMainHybridCLRSettings);
+        return new SerializedObject(FrameworkSettingsUtils.HybridCLRSettings);
     }
 
     private static bool IsSettingsAvailable()
@@ -89,7 +89,7 @@ public class GameMainHybridCLRSettingsProvider : SettingsProvider
         if ( !changeCheckScope.changed ) return;
         m_CustomSettings.ApplyModifiedPropertiesWithoutUndo();
     }
-    public GameMainHybridCLRSettingsProvider(string path, SettingsScope scopes, IEnumerable<string> keywords = null) : base(path, scopes, keywords)
+    public HybridCLRSettingsProvider(string path, SettingsScope scopes, IEnumerable<string> keywords = null) : base(path, scopes, keywords)
     {
     }
     [SettingsProvider]
@@ -97,8 +97,8 @@ public class GameMainHybridCLRSettingsProvider : SettingsProvider
     {
         if (IsSettingsAvailable())
         {
-            var provider = new GameMainHybridCLRSettingsProvider(headerName, SettingsScope.Project);
-            provider.keywords = GetSearchKeywordsFromGUIContentProperties<GameMainHybridCLRSettings>();
+            var provider = new HybridCLRSettingsProvider(headerName, SettingsScope.Project);
+            provider.keywords = GetSearchKeywordsFromGUIContentProperties<HybridCLRSettings>();
             return provider;
         }
         return null;

@@ -7,10 +7,10 @@ using UnityEngine.UIElements;
 /// <summary>
 /// 工程优化
 /// </summary>
-public class GameMainPathSettingProvide : SettingsProvider
+public class CustomPathSettingProvider : SettingsProvider
 {
-    private const string m_HeaderName = "GameMain/GameMainPathSetting";
-    private static readonly string GameMainPathSettings = "Assets/GameMain/Resources/Settings/GameMainPathSetting.asset";
+    private const string m_HeaderName = "GameMain/CustomPathSetting";
+    private static readonly string CustomPathSettings = "Assets/GameMain/Resources/Settings/CustomPathSetting.asset";
 
     private SerializedProperty m_SublimePath;
     private SerializedProperty m_NotepadPath;
@@ -31,7 +31,7 @@ public class GameMainPathSettingProvide : SettingsProvider
             }
         };
 
-        GameMainPathSetting _optimal = LoadSettingAtPath<GameMainPathSetting>();
+        CustomPathSetting _optimal = LoadSettingAtPath<CustomPathSetting>();
         m_CustomSettings = new SerializedObject(_optimal);
 
         m_SublimePath = m_CustomSettings.FindProperty("m_SublimePath");
@@ -118,7 +118,7 @@ public class GameMainPathSettingProvide : SettingsProvider
     /// <summary>
     /// 项目设置面板 (构造)
     /// </summary>
-    public GameMainPathSettingProvide(string path, SettingsScope scopes, IEnumerable<string> keywords = null) : base(path, scopes, keywords)
+    public CustomPathSettingProvider(string path, SettingsScope scopes, IEnumerable<string> keywords = null) : base(path, scopes, keywords)
     {
     }
 
@@ -129,11 +129,11 @@ public class GameMainPathSettingProvide : SettingsProvider
     [SettingsProvider]
     private static SettingsProvider CreateSettingProvider()
     {
-        if (File.Exists(GameMainPathSettings))
+        if (File.Exists(CustomPathSettings))
         {
-            var provider = new GameMainPathSettingProvide(m_HeaderName, SettingsScope.Project)
+            var provider = new CustomPathSettingProvider(m_HeaderName, SettingsScope.Project)
             {
-                keywords = GetSearchKeywordsFromGUIContentProperties<GameMainPathSetting>()
+                keywords = GetSearchKeywordsFromGUIContentProperties<CustomPathSetting>()
             };
             return provider;
         }

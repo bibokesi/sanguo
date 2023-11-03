@@ -35,7 +35,7 @@ public class Copylibil2cppToIosProject : IPostprocessBuildWithReport
 		var srcPathFile = $"{FrameworkSettingsUtils.GetLibil2cppBuildPath()}/{fileName}";
 		if (!File.Exists(srcPathFile))
 		{
-			Debug.LogError($"[Copylibil2cppToIosProject] You need start call build_libil2cpp.sh file. path:{FrameworkSettingsUtils.GameMainHybridCLRSettings.HybridCLRIosBuildPath}");
+			Debug.LogError($"[Copylibil2cppToIosProject] You need start call build_libil2cpp.sh file. path:{FrameworkSettingsUtils.HybridCLRSettings.HybridCLRIosBuildPath}");
 			return;
 		}
 		var dstPath = FrameworkSettingsUtils.GetOutputXCodePath();

@@ -22,7 +22,7 @@ public class AutoBindRulePrefixe
 /// <summary>
 /// 自动绑定全局设置
 /// </summary>
-[CreateAssetMenu(fileName = "AutoBindSetting", menuName = "GameMain/Auto Bind Setting", order = 41)]
+[CreateAssetMenu(fileName = "AutoBindSetting", menuName = "GameMain/AutoBind Setting", order = 41)]
 public class AutoBindSetting : ScriptableObject
 {
     [SerializeField]
