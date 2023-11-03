@@ -84,10 +84,6 @@ public class ServerChannelInfo
 [CreateAssetMenu(fileName = "GameMainGlobalSettings", menuName = "GameMain/Global Settings", order = 40)]
 public class GameMainGlobalSettings : ScriptableObject
 {
-    [Header("General")] 
-    [Sirenix.OdinInspector.ReadOnly]
-    public bool m_UseGameMainExample;
-
     [Header("Framework")]
     [SerializeField]
     [Tooltip("脚本作者名")]
@@ -95,7 +91,7 @@ public class GameMainGlobalSettings : ScriptableObject
     public string ScriptAuthor { get { return m_ScriptAuthor; } }
     [SerializeField]
     [Tooltip("版本")]
-    private string m_ScriptVersion = "0.1";
+    private string m_ScriptVersion = "1.0";
     public string ScriptVersion { get { return m_ScriptVersion; } }
     [SerializeField] private AppStageEnum m_AppStage = AppStageEnum.Debug;
     public AppStageEnum AppStage { get { return m_AppStage; } }

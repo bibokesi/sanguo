@@ -15,6 +15,7 @@ public static partial class Constant
         public string ProcedureName { get; }
 
         public bool IsCheckAsset { get; }
+
         public bool IsJumpScene { get; }
 
         public string GroupName { get; }

@@ -649,7 +649,7 @@ public class ComponentAutoBindToolInspector : Editor
             {
                 sw.WriteLine(GetFileHead());
     
-                sw.WriteLine("using HotfixFramework.Runtime;");
+                sw.WriteLine("using HotfixFramework;");
                 sw.WriteLine("using System.Collections;");
                 sw.WriteLine("using System.Collections.Generic;");
                 sw.WriteLine("using UnityEngine;");

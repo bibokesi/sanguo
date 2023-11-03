@@ -12,7 +12,6 @@ public class GameMainHybridCLRSettingsProvider : SettingsProvider
     const string k_GameMainSettingsPath = "Assets/GameMain/Resources/Settings/GameMainHybridCLRSettings.asset";
     private const string headerName = "GameMain/GameMainHybridSettings";
     private SerializedObject m_CustomSettings;
-    SerializedProperty m_UseGameMainExampleField;
     private SerializedProperty m_CompressionHelperTypeName;
     private const string NoneOptionName = "<None>";
     private string[] m_CompressionHelperTypeNames;

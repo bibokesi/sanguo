@@ -1,4 +1,4 @@
-﻿using HotfixFramework.Runtime;
+﻿using HotfixFramework;
 using Main.Runtime;
 
 namespace HotfixBusiness.UI

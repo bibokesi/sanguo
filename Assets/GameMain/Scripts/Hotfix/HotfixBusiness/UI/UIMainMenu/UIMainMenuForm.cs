@@ -1,4 +1,4 @@
-﻿using HotfixFramework.Runtime;
+﻿using HotfixFramework;
 using System.Collections;
 using System.Collections.Generic;
 using HotfixBusiness.Procedure;
@@ -26,16 +26,6 @@ namespace HotfixBusiness.UI
 
 		private void Btn_GameMainExampleEvent()
 		{
-			if (!GameMainSettingsUtils.GameMainGlobalSettings.m_UseGameMainExample)
-			{
-				DialogParams dialogParams = new DialogParams();
-				dialogParams.Mode = 1;
-				dialogParams.Title = "提示";
-				dialogParams.Message = "GameMain例子已经被移除! [GameMainTools/GameMainExample/AddExample]可以添加GameMain例子。";
-				dialogParams.ConfirmText = "确定";
-				GameEntry.UI.OpenDialog(dialogParams);
-				return;
-			}
 			if (GameEntry.Procedure.CurrentProcedure is ProcedureBase procedureBase)
 			{
 				procedureBase.ProcedureOwner.SetData<VarString>("nextProcedure", Constant.Procedure.ProcedureGameMainExample);
@@ -45,16 +35,6 @@ namespace HotfixBusiness.UI
 
 		private void Btn_GameMainGameEvent()
 		{
-			if (!GameMainSettingsUtils.GameMainGlobalSettings.m_UseGameMainExample)
-			{
-				DialogParams dialogParams = new DialogParams();
-				dialogParams.Mode = 1;
-				dialogParams.Title = "提示";
-				dialogParams.Message = "GameMain游戏例子已经被移除! [GameMainTools/GameMainExample/AddExample]可以添加GameMain游戏例子。";
-				dialogParams.ConfirmText = "确定";
-				GameEntry.UI.OpenDialog(dialogParams);
-				return;
-			}
 			if (GameEntry.Procedure.CurrentProcedure is ProcedureBase procedureBase)
 			{
 				procedureBase.ProcedureOwner.SetData<VarString>("nextProcedure", Constant.Procedure.ProcedureAGameExample);

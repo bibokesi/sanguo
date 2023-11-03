@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 264849a40942f444fb3df32197e9101b, type: 3}
   m_Name: GameMainPathSetting
   m_EditorClassIdentifier: 
-  m_SublimePath: D:/Job_Files/Sublime Text/sublime_text.exe
-  m_NotepadPath: C:/Users/A03/Desktop/notepad++.exe
+  m_SublimePath: 
+  m_NotepadPath: 
   m_AtlasFolder: Assets/GameMain/AssetsHotfix/BaseAssets/UI/Atlas/
   m_ResourceCollectionPath: 

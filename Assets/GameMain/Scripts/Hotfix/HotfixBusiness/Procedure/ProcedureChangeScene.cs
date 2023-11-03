@@ -1,7 +1,7 @@
 using cfg.GameMain;
 using GameFramework;
 using GameFramework.Event;
-using HotfixFramework.Runtime;
+using HotfixFramework;
 using Main.Runtime.Procedure;
 using System.Collections.Generic;
 using UnityEngine;

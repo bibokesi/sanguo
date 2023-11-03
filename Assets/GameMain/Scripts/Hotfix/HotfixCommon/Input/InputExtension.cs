@@ -7,31 +7,29 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 #region Fake script / 示例代码
-namespace Example
+using static InputExtension; //使用静态 using 可以直接取用类中成员，本例使用 IsMouseRaycastUI
+class Foo : MonoBehaviour 
 {
-    using static InputExtension; //使用静态 using 可以直接取用类中成员，本例使用 IsMouseRaycastUI
-    class Foo : MonoBehaviour 
+    bool canmove;
+    int button = 0;//鼠标左键 
+    private void Update()
     {
-        bool canmove;
-        int button = 0;//鼠标左键 
-        private void Update()
+        if (Input.GetMouseButton(button) &&! IsMouseRaycastUI()) 
         {
-            if (Input.GetMouseButton(button) &&! IsMouseRaycastUI()) 
-            {
-                canmove = true;
-            }
-            else if(Input.GetMouseButtonUp(button))
-            {
-                canmove = false;
-            }
-            else if(canmove&&Input.GetMouseButton(button))
-            {
-                // 按下按钮且没有撞击到UI 时需要处理的事项写在里面。
-                // The things that need to be handled when the button is pressed and the UI is not hit are written in it.
-            }
+            canmove = true;
+        }
+        else if(Input.GetMouseButtonUp(button))
+        {
+            canmove = false;
+        }
+        else if(canmove&&Input.GetMouseButton(button))
+        {
+            // 按下按钮且没有撞击到UI 时需要处理的事项写在里面。
+            // The things that need to be handled when the button is pressed and the UI is not hit are written in it.
         }
     }
 }
+
 #endregion
 
 public static class InputExtension

@@ -44,7 +44,7 @@ public class GameMainHybridCLRSettings:ScriptableObject
     /// <summary>
     /// Dll of main business logic assembly
     /// </summary>
-    public string LogicMainDllName = "HotfixFramework.Runtime.dll";
+    public string LogicMainDllName = "HotfixFramework.dll";
 
     /// <summary>
     /// 程序集文本资产打包Asset后缀名

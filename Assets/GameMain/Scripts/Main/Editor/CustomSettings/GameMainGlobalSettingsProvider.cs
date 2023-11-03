@@ -11,7 +11,7 @@ public class GameMainSettingsProvider : SettingsProvider
     const string k_GameMainSettingsPath = "Assets/GameMain/Resources/Settings/GameMainGlobalSettings.asset";
     private const string headerName = "GameMain/GameMainGlobalSettings";
     private SerializedObject m_CustomSettings;
-    SerializedProperty m_UseGameMainExampleField;
+
     internal static SerializedObject GetSerializedSettings()
     {
         return new SerializedObject(GameMainSettingsUtils.GameMainGlobalSettings);
@@ -25,7 +25,6 @@ public class GameMainSettingsProvider : SettingsProvider
     {
         base.OnActivate(searchContext, rootElement);
         m_CustomSettings = GetSerializedSettings();
-        m_UseGameMainExampleField = m_CustomSettings.FindProperty("m_UseGameMainExample");
     }
 
     public override void OnGUI(string searchContext)
@@ -33,7 +32,6 @@ public class GameMainSettingsProvider : SettingsProvider
         base.OnGUI(searchContext);
         using var changeCheckScope = new EditorGUI.ChangeCheckScope();
         EditorGUI.BeginDisabledGroup(true);
-        EditorGUILayout.PropertyField(m_UseGameMainExampleField);
         EditorGUI.EndDisabledGroup();
         EditorGUILayout.PropertyField(m_CustomSettings.FindProperty("m_ScriptAuthor"));
         EditorGUILayout.PropertyField(m_CustomSettings.FindProperty("m_ScriptVersion"));
