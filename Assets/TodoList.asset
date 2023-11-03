@@ -12,41 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f958145dc24921c4d95f3544ca648fbf, type: 3}
   m_Name: TodoList
   m_EditorClassIdentifier: 
-  TaskCount: 16
-  Mark: 00000000000000000000000000000000
-  Enabled: 00000000000000000000000000000000
-  Progress: 01000000010000000100000001000000010000000100000000000000000000000000000000000000000000000000000001000000010000000000000001000000
-  Title:
-  - android aot
-  - list
-  - "\u6D41\u7A0B"
-  - demo
-  - "\u6DF7\u6DC6"
-  - luban
-  - pb
-  - entity
-  - network
-  - ui
-  - scene
-  - sound
-  - tmp
-  - auto bind
-  - "\u6700\u5C0F\u5305\u5F00\u5173"
-  - IL2CPP Code Generation
-  Description:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  TaskCount: 0
+  Mark: 
+  Enabled: 
+  Progress: 
+  Title: []
+  Description: []

@@ -594,8 +594,8 @@ public class ComponentAutoBindToolInspector : Editor
             GameMainSettingsUtils.GameMainGlobalSettings.ScriptVersion);
         return annotationStr;
     }
-    string strChangeAuthor = "//修改作者:";
-    string strChangeTime = "//修改时间:";
+    string strChangeAuthor = "";
+    string strChangeTime = "";
     private List<string> ChangeFileHead(List<string> strList) 
     {
         for (int i = 0; i < strList.Count; i++)

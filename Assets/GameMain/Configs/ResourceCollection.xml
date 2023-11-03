@@ -4,13 +4,13 @@
     <Resources>
       <Resource Name="BaseAssets/Font" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/Prefab" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UI/Sprites/Common" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
+      <Resource Name="BaseAssets/UI/Sprite/Common" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
     </Resources>
     <Assets>
       <Asset Guid="0c210c5b35c48d4408b1fdf6cd3f3061" ResourceName="BaseAssets/Font" />
       <Asset Guid="3c31266dd0ae57c468b36845e0397b6a" ResourceName="BaseAssets/Font" />
-      <Asset Guid="716a243830ee50249a909f893f37c5d4" ResourceName="BaseAssets/UI/Sprites/Common" />
-      <Asset Guid="a5671ef5b26e98f48b513cadb9e87e2b" ResourceName="BaseAssets/UI/Sprites/Common" />
+      <Asset Guid="716a243830ee50249a909f893f37c5d4" ResourceName="BaseAssets/UI/Sprite/Common" />
+      <Asset Guid="a5671ef5b26e98f48b513cadb9e87e2b" ResourceName="BaseAssets/UI/Sprite/Common" />
       <Asset Guid="f3ab0d53e9c425d4da9724fab4bfd7d9" ResourceName="BaseAssets/Prefab" />
       <Asset Guid="f9612d2ea47890742846a458b552127a" ResourceName="BaseAssets/Font" />
     </Assets>

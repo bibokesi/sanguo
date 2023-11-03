@@ -17,7 +17,7 @@ public class GameMainPathSetting : ScriptableObject
 
     [Header("SpriteCollection 图集资源存放地")]
     [SerializeField]
-    private string m_AtlasFolder = "Assets/GameMain/Atlas/";
+    private string m_AtlasFolder = "Assets/GameMain/BaseAssets/Atlas/";
     public string AtlasFolder => m_AtlasFolder;
         
     [Header("ResourceCollection Config Path")]
