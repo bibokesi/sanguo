@@ -24,26 +24,6 @@ MonoBehaviour:
     filterType: 0
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/Sounds/Music
-    variant: 
-    fileSystem: 
-    groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sounds/Music
-    loadType: 0
-    packed: 1
-    filterType: 1
-    searchPatterns: '*.*'
-  - valid: 1
-    name: BaseAssets/Sounds/UISound
-    variant: 
-    fileSystem: 
-    groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sounds/UISound
-    loadType: 0
-    packed: 1
-    filterType: 1
-    searchPatterns: '*.*'
-  - valid: 1
     name: BaseAssets/Font
     variant: 
     fileSystem: 
@@ -54,11 +34,11 @@ MonoBehaviour:
     filterType: 0
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/UI/Forms
+    name: BaseAssets/UI/Form
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/UI/Forms
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/UI/Form
     loadType: 0
     packed: 1
     filterType: 1
@@ -84,11 +64,11 @@ MonoBehaviour:
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/UI/Sprites
+    name: BaseAssets/UI/Sprite
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/UI/Sprites
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/UI/Sprite
     loadType: 0
     packed: 1
     filterType: 2
@@ -99,6 +79,66 @@ MonoBehaviour:
     fileSystem: 
     groups: BaseAssets
     assetsDirectoryPath: Assets/GameMain/BaseAssets/UI/Template
+    loadType: 0
+    packed: 1
+    filterType: 1
+    searchPatterns: '*.*'
+  - valid: 1
+    name: BaseAssets/UI/Atlas
+    variant: 
+    fileSystem: 
+    groups: BaseAssets
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/UI/Atlas
+    loadType: 0
+    packed: 1
+    filterType: 1
+    searchPatterns: '*.*'
+  - valid: 1
+    name: BaseAssets/Models
+    variant: 
+    fileSystem: 
+    groups: BaseAssets
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Models
+    loadType: 0
+    packed: 1
+    filterType: 1
+    searchPatterns: '*.*'
+  - valid: 1
+    name: BaseAssets/Sound/BattleSounds
+    variant: 
+    fileSystem: 
+    groups: BaseAssets
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sounds/BattleSounds
+    loadType: 0
+    packed: 1
+    filterType: 1
+    searchPatterns: '*.*'
+  - valid: 1
+    name: BaseAssets/Sound/CommonSounds
+    variant: 
+    fileSystem: 
+    groups: BaseAssets
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sounds/CommonSounds
+    loadType: 0
+    packed: 1
+    filterType: 1
+    searchPatterns: '*.*'
+  - valid: 1
+    name: BaseAssets/Sound/MusicSounds
+    variant: 
+    fileSystem: 
+    groups: BaseAssets
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sounds/MusicSounds
+    loadType: 0
+    packed: 1
+    filterType: 1
+    searchPatterns: '*.*'
+  - valid: 1
+    name: BaseAssets/Sound/UISounds
+    variant: 
+    fileSystem: 
+    groups: BaseAssets
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sounds/UISounds
     loadType: 0
     packed: 1
     filterType: 1

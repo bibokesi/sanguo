@@ -4,6 +4,7 @@
     <Resources>
       <Resource Name="BaseAssets/Font" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/Prefab" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
+      <Resource Name="BaseAssets/Sounds/MusicSounds/MusicSounds" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/UI/Sprite/Common" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
     </Resources>
     <Assets>
@@ -12,6 +13,7 @@
       <Asset Guid="716a243830ee50249a909f893f37c5d4" ResourceName="BaseAssets/UI/Sprite/Common" />
       <Asset Guid="a5671ef5b26e98f48b513cadb9e87e2b" ResourceName="BaseAssets/UI/Sprite/Common" />
       <Asset Guid="f3ab0d53e9c425d4da9724fab4bfd7d9" ResourceName="BaseAssets/Prefab" />
+      <Asset Guid="f93c234d11ff0654380731a4ede99252" ResourceName="BaseAssets/Sounds/MusicSounds/MusicSounds" />
       <Asset Guid="f9612d2ea47890742846a458b552127a" ResourceName="BaseAssets/Font" />
     </Assets>
   </ResourceCollection>
