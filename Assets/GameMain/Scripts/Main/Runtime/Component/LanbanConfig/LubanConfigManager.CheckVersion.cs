@@ -30,17 +30,17 @@ public partial class LubanConfigManager
     {
         Logger.Debug("InitConfigVersion");
         m_OnInitConfigCompleteCallback = onInitConfigCompleteCallback;
-        LoadBytes(Utility.Path.GetRemotePath(Path.Combine(GameEntryMain.Resource.ReadOnlyPath,GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName, 
-            GameMainSettingsUtils.GameMainGlobalSettings.ConfigVersionFileName)), new LoadBytesCallbacks(OnLoadLocalConfigVersionSuccess, OnLoadLocalConfigVersionFailure), null);
+        LoadBytes(Utility.Path.GetRemotePath(Path.Combine(GameEntryMain.Resource.ReadOnlyPath,FrameworkSettingsUtils.FrameworkSettings.ConfigFolderName, 
+            FrameworkSettingsUtils.FrameworkSettings.ConfigVersionFileName)), new LoadBytesCallbacks(OnLoadLocalConfigVersionSuccess, OnLoadLocalConfigVersionFailure), null);
     }
     
     public void CheckVersionList(CheckConfigVersionListCompleteCallback checkConfigVersionListComplete)
     {
         m_CheckVersionListCompleteCallback = checkConfigVersionListComplete;
-        LoadBytes(Utility.Path.GetRemotePath(Path.Combine(GameEntryMain.Resource.ReadOnlyPath,GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName, 
-            GameMainSettingsUtils.GameMainGlobalSettings.ConfigVersionFileName)), new LoadBytesCallbacks(OnLoadLocalConfigVersionSuccess, OnLoadLocalConfigVersionFailure), null);
-        LoadBytes(Utility.Path.GetRemotePath(Path.Combine(GameEntryMain.Resource.ReadWritePath,GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName, 
-            GameMainSettingsUtils.GameMainGlobalSettings.ConfigVersionFileName)), new LoadBytesCallbacks(OnLoadUpdateConfigVersionSuccess, OnLoadUpdateConfigVersionFailure), null);
+        LoadBytes(Utility.Path.GetRemotePath(Path.Combine(GameEntryMain.Resource.ReadOnlyPath,FrameworkSettingsUtils.FrameworkSettings.ConfigFolderName, 
+            FrameworkSettingsUtils.FrameworkSettings.ConfigVersionFileName)), new LoadBytesCallbacks(OnLoadLocalConfigVersionSuccess, OnLoadLocalConfigVersionFailure), null);
+        LoadBytes(Utility.Path.GetRemotePath(Path.Combine(GameEntryMain.Resource.ReadWritePath,FrameworkSettingsUtils.FrameworkSettings.ConfigFolderName, 
+            FrameworkSettingsUtils.FrameworkSettings.ConfigVersionFileName)), new LoadBytesCallbacks(OnLoadUpdateConfigVersionSuccess, OnLoadUpdateConfigVersionFailure), null);
     }
     
     /// <summary>
@@ -115,7 +115,7 @@ public partial class LubanConfigManager
                 }
             }
             config.Value.IsLoadReadOnly = false;
-            filePath = Path.Combine(GameEntryMain.Resource.ReadWritePath, GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName,"Datas", config.Value.Name);
+            filePath = Path.Combine(GameEntryMain.Resource.ReadWritePath, FrameworkSettingsUtils.FrameworkSettings.ConfigFolderName,"Datas", config.Value.Name);
             if (File.Exists(filePath))
             {
                 using FileStream fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read);

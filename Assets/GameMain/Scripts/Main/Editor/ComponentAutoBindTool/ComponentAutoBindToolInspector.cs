@@ -27,7 +27,7 @@ public class ComponentAutoBindToolInspector : Editor
     private string m_HelperTypeName;
     private int m_HelperTypeNameIndex;
 
-    private AutoBindGlobalSetting m_Setting;
+    private AutoBindSetting m_Setting;
 
     private SerializedProperty m_Namespace;
     private SerializedProperty m_ClassName;
@@ -42,7 +42,7 @@ public class ComponentAutoBindToolInspector : Editor
         m_BindComs = serializedObject.FindProperty("m_BindComs");
 
         m_HelperTypeNames = GetTypeNames(typeof(IAutoBindRuleHelper), s_AssemblyNames);
-        m_Setting = AutoBindGlobalSetting.GetAutoBindGlobalSetting();
+        m_Setting = AutoBindSetting.GetAutoBindSetting();
         m_Namespace = serializedObject.FindProperty("m_Namespace");
         m_ClassName = serializedObject.FindProperty("m_ClassName");
         m_ComCodePath = serializedObject.FindProperty("m_ComCodePath");
@@ -202,7 +202,7 @@ public class ComponentAutoBindToolInspector : Editor
                     continue;
                 }
             }
-            if (AutoBindGlobalSetting.IsValidBind(child, m_TempFiledNames, m_TempComponentTypeNames))
+            if (AutoBindSetting.IsValidBind(child, m_TempFiledNames, m_TempComponentTypeNames))
             {
                 for (int i = 0; i < m_TempFiledNames.Count; i++)
                 {
@@ -585,13 +585,13 @@ public class ComponentAutoBindToolInspector : Editor
             System.DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss"));
         //把#Author# 替换
         annotationStr = annotationStr.Replace("#Author#",
-            GameMainSettingsUtils.GameMainGlobalSettings.ScriptAuthor);
+            FrameworkSettingsUtils.FrameworkSettings.ScriptAuthor);
         //把#ChangeAuthor# 替换
         annotationStr = annotationStr.Replace("#ChangeAuthor#",
-            GameMainSettingsUtils.GameMainGlobalSettings.ScriptAuthor);
+            FrameworkSettingsUtils.FrameworkSettings.ScriptAuthor);
         //把#Version# 替换
         annotationStr = annotationStr.Replace("#Version#",
-            GameMainSettingsUtils.GameMainGlobalSettings.ScriptVersion);
+            FrameworkSettingsUtils.FrameworkSettings.ScriptVersion);
         return annotationStr;
     }
     string strChangeAuthor = "";
@@ -602,7 +602,7 @@ public class ComponentAutoBindToolInspector : Editor
         {
             if (strList[i].Contains(strChangeAuthor))
             {
-                strList[i] = $"{strChangeAuthor}{GameMainSettingsUtils.GameMainGlobalSettings.ScriptAuthor}";
+                strList[i] = $"{strChangeAuthor}{FrameworkSettingsUtils.FrameworkSettings.ScriptAuthor}";
             }
             if (strList[i].Contains(strChangeTime))
             {

@@ -29,16 +29,16 @@ public partial class AssembliesManager
     {
         Logger.Debug("InitAssembliesVersion");
         m_OnInitAssembliesCompleteCallback = onInitAssembliesCompleteCallback;
-        LoadBytes(Utility.Path.GetRemotePath(Path.Combine(GameEntryMain.Resource.ReadOnlyPath,GameMainSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath, GameMainSettingsUtils.GameMainHybridCLRSettings.AssembliesVersionTextFileName)), new LoadBytesCallbacks(OnLoadReadOnlyAssembliesVersionSuccess, OnLoadReadOnlyAssembliesVersionFailure), null);
+        LoadBytes(Utility.Path.GetRemotePath(Path.Combine(GameEntryMain.Resource.ReadOnlyPath,FrameworkSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath, FrameworkSettingsUtils.GameMainHybridCLRSettings.AssembliesVersionTextFileName)), new LoadBytesCallbacks(OnLoadReadOnlyAssembliesVersionSuccess, OnLoadReadOnlyAssembliesVersionFailure), null);
     }
     
     public void CheckVersionList(CheckAssembliesVersionListCompleteCallback checkAssembliesVersionListComplete)
     {
         m_CheckVersionListCompleteCallback = checkAssembliesVersionListComplete;
-        LoadBytes(Utility.Path.GetRemotePath(Path.Combine(GameEntryMain.Resource.ReadOnlyPath,GameMainSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath, 
-            GameMainSettingsUtils.GameMainHybridCLRSettings.AssembliesVersionTextFileName)), new LoadBytesCallbacks(OnLoadReadOnlyAssembliesVersionSuccess, OnLoadReadOnlyAssembliesVersionFailure), null);
-        LoadBytes(Utility.Path.GetRemotePath(Path.Combine(GameEntryMain.Resource.ReadWritePath,GameMainSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath, 
-            GameMainSettingsUtils.GameMainHybridCLRSettings.AssembliesVersionTextFileName)), new LoadBytesCallbacks(OnLoadReadWriteAssembliesVersionSuccess, OnLoadReadWriteAssembliesVersionFailure), null);
+        LoadBytes(Utility.Path.GetRemotePath(Path.Combine(GameEntryMain.Resource.ReadOnlyPath,FrameworkSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath, 
+            FrameworkSettingsUtils.GameMainHybridCLRSettings.AssembliesVersionTextFileName)), new LoadBytesCallbacks(OnLoadReadOnlyAssembliesVersionSuccess, OnLoadReadOnlyAssembliesVersionFailure), null);
+        LoadBytes(Utility.Path.GetRemotePath(Path.Combine(GameEntryMain.Resource.ReadWritePath,FrameworkSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath, 
+            FrameworkSettingsUtils.GameMainHybridCLRSettings.AssembliesVersionTextFileName)), new LoadBytesCallbacks(OnLoadReadWriteAssembliesVersionSuccess, OnLoadReadWriteAssembliesVersionFailure), null);
     }
 
     public void CheckAssemblies(string groupName,CheckAssembliesCompleteCallback completeCallback)
@@ -167,7 +167,7 @@ public partial class AssembliesManager
                 }
             }
             assemblyInfo.IsLoadReadOnly = false;
-            filePath = Path.Combine(GameEntryMain.Resource.ReadWritePath,GameMainSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath,assemblyInfo.PathRoot,$"{assemblyInfo.Name}{GameMainSettingsUtils.GameMainHybridCLRSettings.AssemblyAssetExtension}");
+            filePath = Path.Combine(GameEntryMain.Resource.ReadWritePath,FrameworkSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath,assemblyInfo.PathRoot,$"{assemblyInfo.Name}{FrameworkSettingsUtils.GameMainHybridCLRSettings.AssemblyAssetExtension}");
             if (File.Exists(filePath))
             {
                 using FileStream fileStream = new FileStream(filePath, FileMode.Open, FileAccess.Read);

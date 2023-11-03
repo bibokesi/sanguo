@@ -6,19 +6,19 @@ using UnityEditor.Graphs;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class GameMainSettingsProvider : SettingsProvider
+public class FrameworkSettingsProvider : SettingsProvider
 {
-    const string k_GameMainSettingsPath = "Assets/GameMain/Resources/Settings/GameMainGlobalSettings.asset";
-    private const string headerName = "GameMain/GameMainGlobalSettings";
+    const string k_FrameworkSettingsPath = "Assets/GameMain/Resources/Settings/FrameworkSettings.asset";
+    private const string headerName = "GameMain/FrameworkSettings";
     private SerializedObject m_CustomSettings;
 
     internal static SerializedObject GetSerializedSettings()
     {
-        return new SerializedObject(GameMainSettingsUtils.GameMainGlobalSettings);
+        return new SerializedObject(FrameworkSettingsUtils.FrameworkSettings);
     }
     public static bool IsSettingsAvailable()
     {
-        return File.Exists(k_GameMainSettingsPath);
+        return File.Exists(k_FrameworkSettingsPath);
     }
 
     public override void OnActivate(string searchContext, VisualElement rootElement)
@@ -54,7 +54,7 @@ public class GameMainSettingsProvider : SettingsProvider
         m_CustomSettings.ApplyModifiedPropertiesWithoutUndo();
     }
 
-    public GameMainSettingsProvider(string path, SettingsScope scopes, IEnumerable<string> keywords = null) : base(path, scopes, keywords)
+    public FrameworkSettingsProvider(string path, SettingsScope scopes, IEnumerable<string> keywords = null) : base(path, scopes, keywords)
     {
     }
     [SettingsProvider]
@@ -62,8 +62,8 @@ public class GameMainSettingsProvider : SettingsProvider
     {
         if (IsSettingsAvailable())
         {
-            var provider = new GameMainSettingsProvider(headerName, SettingsScope.Project);
-            provider.keywords = GetSearchKeywordsFromGUIContentProperties<GameMainGlobalSettings>();
+            var provider = new FrameworkSettingsProvider(headerName, SettingsScope.Project);
+            provider.keywords = GetSearchKeywordsFromGUIContentProperties<FrameworkSettings>();
             return provider;
         }
         return null;

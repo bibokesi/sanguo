@@ -59,7 +59,7 @@ namespace Main.Runtime.Procedure
             m_CheckVersionInfos.Add(ResourcesType.Config,new CheckVersionInfo(ResourcesType.Config,0,false,false));
             m_CheckVersionInfos.Add(ResourcesType.Assemblies,new CheckVersionInfo(ResourcesType.Assemblies,0,false,false));
             
-            GameEntryMain.Resource.UpdatePrefixUri = GameMainSettingsUtils.GetResDownLoadPath();
+            GameEntryMain.Resource.UpdatePrefixUri = FrameworkSettingsUtils.GetResDownLoadPath();
             GameEntryMain.Event.Subscribe(DownloadSuccessEventArgs.EventId, OnDownloadSuccess);
             GameEntryMain.Event.Subscribe(DownloadFailureEventArgs.EventId, OnDownloadFailure);
             DownLoadConfigVersion();
@@ -106,9 +106,9 @@ namespace Main.Runtime.Procedure
         /// </summary>
         private void DownLoadConfigVersion()
         {
-            string fileName = $"{GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName}/{GameMainSettingsUtils.GameMainGlobalSettings.ConfigVersionFileName}";
+            string fileName = $"{FrameworkSettingsUtils.FrameworkSettings.ConfigFolderName}/{FrameworkSettingsUtils.FrameworkSettings.ConfigVersionFileName}";
             string downLoadPath = Path.Combine(GameEntryMain.Resource.ReadWritePath, fileName);
-            string downLoadUrl = GameMainSettingsUtils.GetResDownLoadPath(fileName);
+            string downLoadUrl = FrameworkSettingsUtils.GetResDownLoadPath(fileName);
             GameEntryMain.Download.AddDownload(downLoadPath, downLoadUrl, new CheckData() { CheckType = ResourcesType.Config });
         }
         /// <summary>
@@ -116,9 +116,9 @@ namespace Main.Runtime.Procedure
         /// </summary>
         private void DownLoadAssembliesVersion()
         {
-            string fileName = $"{GameMainSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath}/{GameMainSettingsUtils.GameMainHybridCLRSettings.AssembliesVersionTextFileName}";
+            string fileName = $"{FrameworkSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath}/{FrameworkSettingsUtils.GameMainHybridCLRSettings.AssembliesVersionTextFileName}";
             string downLoadPath = Path.Combine(GameEntryMain.Resource.ReadWritePath, fileName);
-            string downLoadUrl = GameMainSettingsUtils.GetResDownLoadPath(fileName);
+            string downLoadUrl = FrameworkSettingsUtils.GetResDownLoadPath(fileName);
             GameEntryMain.Download.AddDownload(downLoadPath, downLoadUrl, new CheckData() { CheckType = ResourcesType.Assemblies });
         }
         /// <summary>
@@ -126,9 +126,9 @@ namespace Main.Runtime.Procedure
         /// </summary>
         private void DownLoadResourcesVersion()
         {
-            string resourceVersionFileName = GameMainSettingsUtils.GameMainGlobalSettings.ResourceVersionFileName;
+            string resourceVersionFileName = FrameworkSettingsUtils.FrameworkSettings.ResourceVersionFileName;
             string downLoadPath = Path.Combine(GameEntryMain.Resource.ReadWritePath, resourceVersionFileName);
-            string downLoadUrl = GameMainSettingsUtils.GetResDownLoadPath(resourceVersionFileName);
+            string downLoadUrl = FrameworkSettingsUtils.GetResDownLoadPath(resourceVersionFileName);
             if (Application.isEditor && GameEntryMain.Base.EditorResourceMode)
             {
                 CheckVersionInfo checkVersionInfo = GetCheckVersionInfo(ResourcesType.Resources);

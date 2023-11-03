@@ -22,7 +22,7 @@ public partial class AssembliesManager
     {
         m_LoadHotfixAssemblyBytes.Clear();
         m_OnLoadHotfixAssembliesCompleteCallback = onLoadAssembliesComplete;
-        m_LoadAssemblies = GameMainSettingsUtils.GetHotUpdateAssemblies(groupName);
+        m_LoadAssemblies = FrameworkSettingsUtils.GetHotUpdateAssemblies(groupName);
         m_LoadHotfixAssemblyCount = m_LoadAssemblies.Count;
         if (m_LoadHotfixAssemblyCount == 0)
         {
@@ -34,8 +34,8 @@ public partial class AssembliesManager
             AssemblyInfo assemblyInfo = FindAssemblyInfoByName(assemblyName);
             if (assemblyInfo !=null)
             {
-                string fileName = assemblyInfo.IsLoadReadOnly ? $"{assemblyInfo.Name}.{assemblyInfo.HashCode}{GameMainSettingsUtils.GameMainHybridCLRSettings.AssemblyAssetExtension}" : $"{assemblyInfo.Name}{GameMainSettingsUtils.GameMainHybridCLRSettings.AssemblyAssetExtension}";
-                LoadBytes(Utility.Path.GetRemotePath(Path.Combine(assemblyInfo.IsLoadReadOnly ? GameEntryMain.Resource.ReadOnlyPath : GameEntryMain.Resource.ReadWritePath,GameMainSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath, assemblyInfo.PathRoot, fileName)), 
+                string fileName = assemblyInfo.IsLoadReadOnly ? $"{assemblyInfo.Name}.{assemblyInfo.HashCode}{FrameworkSettingsUtils.GameMainHybridCLRSettings.AssemblyAssetExtension}" : $"{assemblyInfo.Name}{FrameworkSettingsUtils.GameMainHybridCLRSettings.AssemblyAssetExtension}";
+                LoadBytes(Utility.Path.GetRemotePath(Path.Combine(assemblyInfo.IsLoadReadOnly ? GameEntryMain.Resource.ReadOnlyPath : GameEntryMain.Resource.ReadWritePath,FrameworkSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath, assemblyInfo.PathRoot, fileName)), 
                     new LoadBytesCallbacks(OnLoadHotfixAssemblySuccess, OnLoadHotfixAssemblyFailure), assemblyInfo);
             }
         }
@@ -54,7 +54,7 @@ public partial class AssembliesManager
         // 注意，补充元数据是给AOT dll补充元数据，而不是给热更新dll补充元数据。
         // 热更新dll不缺元数据，不需要补充，如果调用LoadMetadataForAOTAssembly会返回错误
 
-        if (GameMainSettingsUtils.GameMainHybridCLRSettings.AOTMetaAssemblies.Count == 0)
+        if (FrameworkSettingsUtils.GameMainHybridCLRSettings.AOTMetaAssemblies.Count == 0)
         {
             //m_OnLoadAotAssembliesCompleteCallback?.Invoke(new());
             //return;
@@ -63,8 +63,8 @@ public partial class AssembliesManager
         AssemblyInfo assemblyInfo = FindAssemblyInfoByName(mergedFileName);
         if (assemblyInfo != null)
         {
-            string fileName = assemblyInfo.IsLoadReadOnly ? $"{assemblyInfo.Name}.{assemblyInfo.HashCode}{GameMainSettingsUtils.GameMainHybridCLRSettings.AssemblyAssetExtension}" : $"{assemblyInfo.Name}{GameMainSettingsUtils.GameMainHybridCLRSettings.AssemblyAssetExtension}";
-            LoadBytes(Utility.Path.GetRemotePath(Path.Combine(assemblyInfo.IsLoadReadOnly ? GameEntryMain.Resource.ReadOnlyPath : GameEntryMain.Resource.ReadWritePath,GameMainSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath, assemblyInfo.PathRoot, fileName)), 
+            string fileName = assemblyInfo.IsLoadReadOnly ? $"{assemblyInfo.Name}.{assemblyInfo.HashCode}{FrameworkSettingsUtils.GameMainHybridCLRSettings.AssemblyAssetExtension}" : $"{assemblyInfo.Name}{FrameworkSettingsUtils.GameMainHybridCLRSettings.AssemblyAssetExtension}";
+            LoadBytes(Utility.Path.GetRemotePath(Path.Combine(assemblyInfo.IsLoadReadOnly ? GameEntryMain.Resource.ReadOnlyPath : GameEntryMain.Resource.ReadWritePath,FrameworkSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath, assemblyInfo.PathRoot, fileName)), 
                 new LoadBytesCallbacks(OnLoadAotAssemblySuccess, OnLoadAotAssemblyFailure), assemblyInfo);
         }
     }
@@ -105,7 +105,7 @@ public partial class AssembliesManager
         byte[] newBytes = Utility.Compression.Decompress(bytes);
         using MemoryStream stream = new MemoryStream(newBytes);
         using BinaryReader binaryReader = new BinaryReader(stream);
-        foreach (var assemblyName in GameMainSettingsUtils.GameMainHybridCLRSettings.AOTMetaAssemblies)
+        foreach (var assemblyName in FrameworkSettingsUtils.GameMainHybridCLRSettings.AOTMetaAssemblies)
         {
             AssemblyFileData assemblyFileData = FindAssemblyFileDataByName(assemblyName);
             if (assemblyFileData != null)

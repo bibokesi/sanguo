@@ -6,10 +6,10 @@ using UnityEditor.Graphs;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class AutoBindGlobalSettingProvider : SettingsProvider
+public class AutoBindSettingProvider : SettingsProvider
 {
-    const string k_AutoBindGlobalSettingPath = "Assets/GameMain/Resources/Settings/AutoBindGlobalSetting.asset";
-    private const string headerName = "GameMain/AutoBindGlobalSetting";
+    const string k_AutoBindSettingPath = "Assets/GameMain/Resources/Settings/AutoBindSetting.asset";
+    private const string headerName = "GameMain/AutoBindSetting";
     private SerializedObject m_CustomSettings;
     private SerializedProperty m_RulePrefixes;
     private SerializedProperty m_ComCodePath;
@@ -18,12 +18,12 @@ public class AutoBindGlobalSettingProvider : SettingsProvider
 
     internal static SerializedObject GetSerializedSettings()
     {
-        var m_Setting = AutoBindGlobalSetting.GetAutoBindGlobalSetting();
+        var m_Setting = AutoBindSetting.GetAutoBindSetting();
         return new SerializedObject(m_Setting);
     }
     public static bool IsSettingsAvailable()
     {
-        return File.Exists(k_AutoBindGlobalSettingPath);
+        return File.Exists(k_AutoBindSettingPath);
     }
 
     public override void OnActivate(string searchContext, VisualElement rootElement)
@@ -88,7 +88,7 @@ public class AutoBindGlobalSettingProvider : SettingsProvider
         AssetDatabase.Refresh();
     }
 
-    public AutoBindGlobalSettingProvider(string path, SettingsScope scopes, IEnumerable<string> keywords = null) : base(path, scopes, keywords)
+    public AutoBindSettingProvider(string path, SettingsScope scopes, IEnumerable<string> keywords = null) : base(path, scopes, keywords)
     {
     }
     [SettingsProvider]
@@ -96,8 +96,8 @@ public class AutoBindGlobalSettingProvider : SettingsProvider
     {
         if (IsSettingsAvailable())
         {
-            var provider = new AutoBindGlobalSettingProvider(headerName, SettingsScope.Project);
-            provider.keywords = GetSearchKeywordsFromGUIContentProperties<AutoBindGlobalSetting>();
+            var provider = new AutoBindSettingProvider(headerName, SettingsScope.Project);
+            provider.keywords = GetSearchKeywordsFromGUIContentProperties<AutoBindSetting>();
             return provider;
         }
         return null;

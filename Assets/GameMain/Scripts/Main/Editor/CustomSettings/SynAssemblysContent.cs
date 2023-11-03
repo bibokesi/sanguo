@@ -9,11 +9,11 @@ public static class SynAssemblysContent
 {
     public static void RefreshAssembly()
     {
-        GameMainSettingsUtils.SetHybridCLRHotUpdateAssemblies(SettingsUtil.HotUpdateAssemblyFilesIncludePreserved);
+        FrameworkSettingsUtils.SetHybridCLRHotUpdateAssemblies(SettingsUtil.HotUpdateAssemblyFilesIncludePreserved);
         // 修改 obj 中的 MyField 属性...
-        Undo.RecordObject(GameMainSettingsUtils.GameMainHybridCLRSettings, "Modify Enable");
-        GameMainSettingsUtils.GameMainHybridCLRSettings.Enable = SettingsUtil.Enable;
-        EditorUtility.SetDirty(GameMainSettingsUtils.GameMainHybridCLRSettings);
+        Undo.RecordObject(FrameworkSettingsUtils.GameMainHybridCLRSettings, "Modify Enable");
+        FrameworkSettingsUtils.GameMainHybridCLRSettings.Enable = SettingsUtil.Enable;
+        EditorUtility.SetDirty(FrameworkSettingsUtils.GameMainHybridCLRSettings);
         AssetDatabase.Refresh();
         AssetDatabase.SaveAssets();
     }

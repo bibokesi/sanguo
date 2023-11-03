@@ -80,7 +80,7 @@ namespace Main.Runtime.Procedure
             GameEntryMain.UI.GameMainUIInitRootForm().OnOpenLoadingForm(true);
             if (GameEntryMain.Base.EditorResourceMode)
             {
-                if (!GameMainSettingsUtils.GameMainGlobalSettings.ReadLocalConfigInEditor)
+                if (!FrameworkSettingsUtils.FrameworkSettings.ReadLocalConfigInEditor)
                 {
                     GameEntryMain.LubanConfig.CheckConfigVersion(OnCheckConfigComplete);
                 }
@@ -105,7 +105,7 @@ namespace Main.Runtime.Procedure
             }
             GameEntryMain.LubanConfig.CheckConfigVersion(OnCheckConfigComplete);
             GameEntryMain.Resource.CheckResources(OnCheckResourcesComplete);
-            GameEntryMain.Assemblies.CheckAssemblies(GameMainSettingsUtils.GameMainGlobalSettings.BaseAssetsRootName,OnCheckAssembliesComplete);
+            GameEntryMain.Assemblies.CheckAssemblies(FrameworkSettingsUtils.FrameworkSettings.BaseAssetsRootName,OnCheckAssembliesComplete);
         }
 
         protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)
@@ -184,10 +184,10 @@ namespace Main.Runtime.Procedure
         }
         private void OnCheckResourcesComplete(int movedCount, int removedCount, int updateCount, long updateTotalLength, long updateTotalZipLength)
         {
-            IResourceGroup resourceGroup = GameEntryMain.Resource.GetResourceGroup(GameMainSettingsUtils.GameMainGlobalSettings.BaseAssetsRootName);
+            IResourceGroup resourceGroup = GameEntryMain.Resource.GetResourceGroup(FrameworkSettingsUtils.FrameworkSettings.BaseAssetsRootName);
             if (resourceGroup == null)
             {
-                Logger.Error($"has no resource group '{GameMainSettingsUtils.GameMainGlobalSettings.BaseAssetsRootName}',");
+                Logger.Error($"has no resource group '{FrameworkSettingsUtils.FrameworkSettings.BaseAssetsRootName}',");
                 return;
             }
             UpdateResourceInfo updateResourceInfo = GetUpdateResourceInfo(ResourcesType.Resources);
@@ -267,13 +267,13 @@ namespace Main.Runtime.Procedure
 
         private void StartUpdateResources(object userData)
         {
-            Logger.Info($"Start update resource group {GameMainSettingsUtils.GameMainGlobalSettings.BaseAssetsRootName} ");
-            GameEntryMain.Resource.UpdateResources(GameMainSettingsUtils.GameMainGlobalSettings.BaseAssetsRootName,OnUpdateResourcesComplete);
+            Logger.Info($"Start update resource group {FrameworkSettingsUtils.FrameworkSettings.BaseAssetsRootName} ");
+            GameEntryMain.Resource.UpdateResources(FrameworkSettingsUtils.FrameworkSettings.BaseAssetsRootName,OnUpdateResourcesComplete);
         }
 
         private void StartUpdateAssemblies(object userData)
         {
-            GameEntryMain.Assemblies.UpdateAssemblies(GameMainSettingsUtils.GameMainGlobalSettings.BaseAssetsRootName,OnUpdateAssembliesComplete);
+            GameEntryMain.Assemblies.UpdateAssemblies(FrameworkSettingsUtils.FrameworkSettings.BaseAssetsRootName,OnUpdateAssembliesComplete);
         }
 
         private void RefreshProgress()

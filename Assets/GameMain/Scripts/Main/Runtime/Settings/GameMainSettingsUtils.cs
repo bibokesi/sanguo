@@ -7,11 +7,11 @@ using UnityEditor;
 #endif
 using UnityEngine;
 
-public static class GameMainSettingsUtils
+public static class FrameworkSettingsUtils
 {
-    private static readonly string GameMainGlobalSettingsPath = $"Settings/GameMainGlobalSettings";
+    private static readonly string FrameworkSettingsPath = $"Settings/FrameworkSettings";
     private static readonly string GameMainHybridCLRSettingsPath = $"Settings/GameMainHybridCLRSettings";
-    private static GameMainGlobalSettings _mGameMainGlobalGlobalSettings;
+    private static FrameworkSettings _mFrameworkGlobalSettings;
     private static GameMainHybridCLRSettings _mGameMainHybridCLRSettings;
 
     static GameMainPathSetting m_GameMainPathSetting;
@@ -26,15 +26,15 @@ public static class GameMainSettingsUtils
             return m_GameMainPathSetting;
         }
     }
-    public static GameMainGlobalSettings GameMainGlobalSettings
+    public static FrameworkSettings FrameworkSettings
     {
         get
         {
-            if (_mGameMainGlobalGlobalSettings == null)
+            if (_mFrameworkGlobalSettings == null)
             {
-                _mGameMainGlobalGlobalSettings = GetSingletonAssetsByResources<GameMainGlobalSettings>(GameMainGlobalSettingsPath);
+                _mFrameworkGlobalSettings = GetSingletonAssetsByResources<FrameworkSettings>(FrameworkSettingsPath);
             }
-            return _mGameMainGlobalGlobalSettings;
+            return _mFrameworkGlobalSettings;
         }
     }
     public static GameMainHybridCLRSettings GameMainHybridCLRSettings
@@ -48,7 +48,7 @@ public static class GameMainSettingsUtils
             return _mGameMainHybridCLRSettings;
         }
     }
-    public static ResourcesArea ResourcesArea { get { return GameMainGlobalSettings.ResourcesArea; } }
+    public static ResourcesArea ResourcesArea { get { return FrameworkSettings.ResourcesArea; } }
 
     public static void SetHybridCLRHotUpdateAssemblies(List<string> hotUpdateAssemblies) 
     {
@@ -153,13 +153,13 @@ public static class GameMainSettingsUtils
     {
         string url = null;
 #if UNITY_EDITOR_WIN || UNITY_STANDALONE_WIN
-        url = GameMainGlobalSettings.WindowsAppUrl;
+        url = FrameworkSettings.WindowsAppUrl;
 #elif UNITY_EDITOR_OSX || UNITY_STANDALONE_OSX
-            url = GameMainGlobalSettings.MacOSAppUrl;
+            url = FrameworkSettings.MacOSAppUrl;
 #elif UNITY_IOS
-            url = GameMainGlobalSettings.IOSAppUrl;
+            url = FrameworkSettings.IOSAppUrl;
 #elif UNITY_ANDROID
-            url = GameMainGlobalSettings.AndroidAppUrl;
+            url = FrameworkSettings.AndroidAppUrl;
 #endif
         return url;
     }
@@ -200,7 +200,7 @@ public static class GameMainSettingsUtils
     {
         if (string.IsNullOrEmpty(channelName))
         {
-            channelName = GameMainGlobalSettings.CurUseServerChannel;
+            channelName = FrameworkSettings.CurUseServerChannel;
         }
 
         if (string.IsNullOrEmpty(channelName))
@@ -208,7 +208,7 @@ public static class GameMainSettingsUtils
             Logger.Error("当前网络频道名为null");
             return null;
         }
-        foreach (var serverChannelInfo in GameMainGlobalSettings.ServerChannelInfos)
+        foreach (var serverChannelInfo in FrameworkSettings.ServerChannelInfos)
         {
             if (serverChannelInfo.ChannelName.Equals(channelName))
             {
@@ -244,7 +244,7 @@ public static class GameMainSettingsUtils
 
     public static void SetCurUseServerChannel(string channelName = "Default")
     {
-        GameMainGlobalSettings.CurUseServerChannel = channelName;
+        FrameworkSettings.CurUseServerChannel = channelName;
     }
 
     public static void AddServerChannel(string ip, int port, string serverName,bool isUse,string channelName = "Default")
@@ -252,7 +252,7 @@ public static class GameMainSettingsUtils
         if (!string.IsNullOrEmpty(channelName))
         {
             ServerChannelInfo findServerChannelInfo = null; 
-            foreach (var serverChannelInfo in GameMainGlobalSettings.ServerChannelInfos)
+            foreach (var serverChannelInfo in FrameworkSettings.ServerChannelInfos)
             {
                 if (serverChannelInfo.ChannelName.Equals(channelName))
                 {
@@ -298,7 +298,7 @@ public static class GameMainSettingsUtils
             }
             else
             {
-                GameMainGlobalSettings.ServerChannelInfos.Add(new ServerChannelInfo(channelName,serverName,new List<ServerIpAndPort>()
+                FrameworkSettings.ServerChannelInfos.Add(new ServerChannelInfo(channelName,serverName,new List<ServerIpAndPort>()
                 {
                     new ServerIpAndPort(serverName,ip,port)
                 }));

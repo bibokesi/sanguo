@@ -129,7 +129,7 @@ namespace HotfixBusiness.Procedure
         private void OnStartLoadAsset()
         {
             UnloadAllResources();
-            m_HotUpdateAsm = GameMainSettingsUtils.GetHotUpdateAssemblies(m_AssetGroupName);
+            m_HotUpdateAsm = FrameworkSettingsUtils.GetHotUpdateAssemblies(m_AssetGroupName);
             if (GameEntryMain.Base.EditorResourceMode)
             {
                 UpdateResourceInfo updateResourceInfo = GetUpdateResourceInfo(ResourcesType.Resources);
@@ -302,7 +302,7 @@ namespace HotfixBusiness.Procedure
 
         private void LoadHotUpdateAssembly()
         {
-            if (Application.isEditor || !GameMainSettingsUtils.GameMainHybridCLRSettings.Enable)
+            if (Application.isEditor || !FrameworkSettingsUtils.GameMainHybridCLRSettings.Enable)
             {
                 if (AddHotAssemblyToArray())
                 {

@@ -22,8 +22,8 @@ public class AutoBindRulePrefixe
 /// <summary>
 /// 自动绑定全局设置
 /// </summary>
-[CreateAssetMenu(fileName = "AutoBindGlobalSetting", menuName = "GameMain/Auto Bind Setting", order = 41)]
-public class AutoBindGlobalSetting : ScriptableObject
+[CreateAssetMenu(fileName = "AutoBindSetting", menuName = "GameMain/Auto Bind Setting", order = 41)]
+public class AutoBindSetting : ScriptableObject
 {
     [SerializeField]
     private string m_Namespace;
@@ -126,8 +126,8 @@ public class AutoBindGlobalSetting : ScriptableObject
         {
             string str = strArray[i].Replace("#","");
             string comName;
-            var _AutoBindGlobalSetting = GetAutoBindGlobalSetting();
-            var _PrefixesDict = _AutoBindGlobalSetting.RulePrefixes;
+            var _AutoBindSetting = GetAutoBindSetting();
+            var _PrefixesDict = _AutoBindSetting.RulePrefixes;
             bool isFindComponent = false;
             foreach (var autoBindRulePrefix in _PrefixesDict)
             {
@@ -154,37 +154,37 @@ public class AutoBindGlobalSetting : ScriptableObject
         return true;
     }
     
-    private static void CreateAutoBindGlobalSetting()
+    private static void CreateAutoBindSetting()
     {
-        string[] paths = AssetDatabase.FindAssets("t:AutoBindGlobalSetting");
+        string[] paths = AssetDatabase.FindAssets("t:AutoBindSetting");
         if (paths.Length >= 1)
         {
             string path = AssetDatabase.GUIDToAssetPath(paths[0]);
-            EditorUtility.DisplayDialog("警告", $"已存在AutoBindGlobalSetting，路径:{path}", "确认");
+            EditorUtility.DisplayDialog("警告", $"已存在AutoBindSetting，路径:{path}", "确认");
             return;
         }
-        AutoBindGlobalSetting setting = CreateInstance<AutoBindGlobalSetting>();
-        AssetDatabase.CreateAsset(setting, "Assets/AutoBindGlobalSetting.asset");
+        AutoBindSetting setting = CreateInstance<AutoBindSetting>();
+        AssetDatabase.CreateAsset(setting, "Assets/AutoBindSetting.asset");
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
     }
 
-    public static AutoBindGlobalSetting GetAutoBindGlobalSetting()
+    public static AutoBindSetting GetAutoBindSetting()
     {
-        AutoBindGlobalSetting _AutoBindGlobalSetting = null;
-        string[] paths = AssetDatabase.FindAssets("t:AutoBindGlobalSetting");
+        AutoBindSetting _AutoBindSetting = null;
+        string[] paths = AssetDatabase.FindAssets("t:AutoBindSetting");
         if (paths.Length == 0)
         {
-            Debug.LogError("不存在AutoBindGlobalSetting");
-            return _AutoBindGlobalSetting;
+            Debug.LogError("不存在AutoBindSetting");
+            return _AutoBindSetting;
         }
         if (paths.Length > 1)
         {
-            Debug.LogError("AutoBindGlobalSetting数量大于1");
-            return _AutoBindGlobalSetting;
+            Debug.LogError("AutoBindSetting数量大于1");
+            return _AutoBindSetting;
         }
         string path = AssetDatabase.GUIDToAssetPath(paths[0]);
-        _AutoBindGlobalSetting = AssetDatabase.LoadAssetAtPath<AutoBindGlobalSetting>(path);
-        return _AutoBindGlobalSetting;
+        _AutoBindSetting = AssetDatabase.LoadAssetAtPath<AutoBindSetting>(path);
+        return _AutoBindSetting;
     }
 }

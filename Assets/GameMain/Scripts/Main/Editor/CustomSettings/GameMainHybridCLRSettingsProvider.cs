@@ -9,7 +9,7 @@ using UnityEngine.UIElements;
 
 public class GameMainHybridCLRSettingsProvider : SettingsProvider
 {
-    const string k_GameMainSettingsPath = "Assets/GameMain/Resources/Settings/GameMainHybridCLRSettings.asset";
+    const string k_FrameworkSettingsPath = "Assets/GameMain/Resources/Settings/GameMainHybridCLRSettings.asset";
     private const string headerName = "GameMain/GameMainHybridSettings";
     private SerializedObject m_CustomSettings;
     private SerializedProperty m_CompressionHelperTypeName;
@@ -19,12 +19,12 @@ public class GameMainHybridCLRSettingsProvider : SettingsProvider
 
     private static SerializedObject GetSerializedSettings()
     {
-        return new SerializedObject(GameMainSettingsUtils.GameMainHybridCLRSettings);
+        return new SerializedObject(FrameworkSettingsUtils.GameMainHybridCLRSettings);
     }
 
     private static bool IsSettingsAvailable()
     {
-        return File.Exists(k_GameMainSettingsPath);
+        return File.Exists(k_FrameworkSettingsPath);
     }
 
     public override void OnActivate(string searchContext, VisualElement rootElement)

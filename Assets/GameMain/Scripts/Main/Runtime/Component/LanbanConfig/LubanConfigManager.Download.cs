@@ -38,10 +38,10 @@ public partial class LubanConfigManager
 
         foreach (var config in m_NeedUpdateConfigs)
         {
-            string fileUrlName = $"{GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName}/Datas/{Path.GetFileNameWithoutExtension(config.Value.Name)}.{config.Value.HashCode}{config.Value.Extension}";
-            string fileLocalName = $"{GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName}/Datas/{config.Value.Name}";
+            string fileUrlName = $"{FrameworkSettingsUtils.FrameworkSettings.ConfigFolderName}/Datas/{Path.GetFileNameWithoutExtension(config.Value.Name)}.{config.Value.HashCode}{config.Value.Extension}";
+            string fileLocalName = $"{FrameworkSettingsUtils.FrameworkSettings.ConfigFolderName}/Datas/{config.Value.Name}";
             string downloadPath = Path.Combine(GameEntryMain.Resource.ReadWritePath,fileLocalName);
-            string downloadUri = GameMainSettingsUtils.GetResDownLoadPath(fileUrlName);
+            string downloadUri = FrameworkSettingsUtils.GetResDownLoadPath(fileUrlName);
             GameEntryMain.Download.AddDownload(downloadPath, downloadUri, config.Value);
         }
     }
@@ -96,7 +96,7 @@ public partial class LubanConfigManager
         {
             configInfo.RetryCount++;
             string downloadPath = Path.Combine(GameEntryMain.Resource.ReadWritePath + configInfo.Path);
-            string downloadUri = GameMainSettingsUtils.GetResDownLoadPath(configInfo.Path);
+            string downloadUri = FrameworkSettingsUtils.GetResDownLoadPath(configInfo.Path);
             GameEntryMain.Download.AddDownload(downloadPath, downloadUri, configInfo);
         }
         else

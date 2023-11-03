@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 089caf30d869f954eb91eb065677f71c, type: 3}
-  m_Name: AutoBindGlobalSetting
+  m_Name: AutoBindSetting
   m_EditorClassIdentifier: 
   m_Namespace: HotfixBusiness.UI
   m_ComCodePath: GameMain/Scripts/Hotfix/HotfixBusiness/UI/BindComponents

@@ -29,8 +29,8 @@ public static class BuildEventHandlerLuban
         {
             //CopyPackageFile();
             if (FolderUtils.CopyFolder(
-                    $"{Application.dataPath}/../LubanTools/GenerateDatas/{GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName}",
-                    Path.Combine(Application.streamingAssetsPath,GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName)))
+                    $"{Application.dataPath}/../LubanTools/GenerateDatas/{FrameworkSettingsUtils.FrameworkSettings.ConfigFolderName}",
+                    Path.Combine(Application.streamingAssetsPath,FrameworkSettingsUtils.FrameworkSettings.ConfigFolderName)))
             {
                 Debug.Log("拷贝表资源文件成功！");
             }
@@ -38,8 +38,8 @@ public static class BuildEventHandlerLuban
         if (!outputPackageSelected && outputPackedSelected)
         {
             if (FolderUtils.CopyFolder(
-                    $"{Application.dataPath}/../LubanTools/GenerateDatas/{GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName}",
-                    Path.Combine(Application.streamingAssetsPath,GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName)))
+                    $"{Application.dataPath}/../LubanTools/GenerateDatas/{FrameworkSettingsUtils.FrameworkSettings.ConfigFolderName}",
+                    Path.Combine(Application.streamingAssetsPath,FrameworkSettingsUtils.FrameworkSettings.ConfigFolderName)))
             {
                 Debug.Log("拷贝表资源文件成功！");
             }
@@ -47,8 +47,8 @@ public static class BuildEventHandlerLuban
         if (outputFullSelected)
         {
             string commitPath = commitResourcesPath + "/" + platform;
-            if (FolderUtils.CopyFolder($"{Application.dataPath}/../LubanTools/GenerateDatas/{GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName}", 
-                    Path.Combine(commitPath,GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName)))
+            if (FolderUtils.CopyFolder($"{Application.dataPath}/../LubanTools/GenerateDatas/{FrameworkSettingsUtils.FrameworkSettings.ConfigFolderName}", 
+                    Path.Combine(commitPath,FrameworkSettingsUtils.FrameworkSettings.ConfigFolderName)))
             {
                 Debug.Log("拷贝表资源文件成功！");
             }
@@ -58,12 +58,12 @@ public static class BuildEventHandlerLuban
     private static void CopyPackageFile()
     {
         Dictionary<string, ConfigInfo> m_Configs ;
-        string configFolderPath = Path.Combine(Application.dataPath,$"../LubanTools/GenerateDatas/{GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName}");
-        string configVersionPath = Path.Combine(configFolderPath,GameMainSettingsUtils.GameMainGlobalSettings.ConfigVersionFileName);
+        string configFolderPath = Path.Combine(Application.dataPath,$"../LubanTools/GenerateDatas/{FrameworkSettingsUtils.FrameworkSettings.ConfigFolderName}");
+        string configVersionPath = Path.Combine(configFolderPath,FrameworkSettingsUtils.FrameworkSettings.ConfigVersionFileName);
         string xml = File.ReadAllText(configVersionPath);
         m_Configs = FileUtils.AnalyConfigXml(xml,out string version);
         string configDataPath = $"{configFolderPath}/Datas";
-        string destDataPath = Path.Combine(Application.streamingAssetsPath,GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName,"Datas");
+        string destDataPath = Path.Combine(Application.streamingAssetsPath,FrameworkSettingsUtils.FrameworkSettings.ConfigFolderName,"Datas");
         if (!Directory.Exists(destDataPath))
         {
             Directory.CreateDirectory(destDataPath);
@@ -74,7 +74,7 @@ public static class BuildEventHandlerLuban
                 Path.Combine(destDataPath,$"{item.Value.NameWithoutExtension}{item.Value.Extension}"));
         }
         File.Copy(configVersionPath,
-            Path.Combine(Application.streamingAssetsPath,GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName,GameMainSettingsUtils.GameMainGlobalSettings.ConfigVersionFileName));
+            Path.Combine(Application.streamingAssetsPath,FrameworkSettingsUtils.FrameworkSettings.ConfigFolderName,FrameworkSettingsUtils.FrameworkSettings.ConfigVersionFileName));
         Debug.Log("拷贝表资源文件成功！");
         AssetDatabase.Refresh();
     }

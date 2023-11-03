@@ -20,7 +20,7 @@ public static class OpenFolder
     [MenuItem("GameMainTools/OpenFolder/Assemblies")]
     public static void OpenAssemblies()
     {
-        Application.OpenURL($"file://{Application.dataPath}/../{GameMainSettingsUtils.GameMainHybridCLRSettings.HybridCLRDataPath}/{GameMainSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath}");
+        Application.OpenURL($"file://{Application.dataPath}/../{FrameworkSettingsUtils.GameMainHybridCLRSettings.HybridCLRDataPath}/{FrameworkSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath}");
     }
     
     [MenuItem("GameMainTools/OpenFolder/AssetsPath")]

@@ -22,12 +22,12 @@ public class SocketConnectDemo : MonoBehaviour
     void Connect()
     {
         //默认Default
-        GameMainSettingsUtils.SetCurUseServerChannel();
+        FrameworkSettingsUtils.SetCurUseServerChannel();
         //默认Default
         GameEntry.NetConnector.CreateTcpNetworkChannel();
-        GameMainSettingsUtils.AddServerChannel("127.0.0.1", 8080,"Server01",true);
+        FrameworkSettingsUtils.AddServerChannel("127.0.0.1", 8080,"Server01",true);
         //默认连接Default频道
-        GameEntry.NetConnector.Connect(GameMainSettingsUtils.GetServerIp(), GameMainSettingsUtils.GetServerPort());
+        GameEntry.NetConnector.Connect(FrameworkSettingsUtils.GetServerIp(), FrameworkSettingsUtils.GetServerPort());
     }
     /// <summary>
     /// 发送消息

@@ -52,13 +52,13 @@ namespace Main.Runtime.Procedure
             else
             {
                 bool isLoadHotfix = false;
-                if (GameMainSettingsUtils.GameMainHybridCLRSettings.Enable)
+                if (FrameworkSettingsUtils.GameMainHybridCLRSettings.Enable)
                 {
                     isLoadHotfix = !Application.isEditor;
                 }
                 if (isLoadHotfix)
                 {
-                    GameEntryMain.Assemblies.LoadHotUpdateAssembliesByGroupName(GameMainSettingsUtils.GameMainGlobalSettings.BaseAssetsRootName,
+                    GameEntryMain.Assemblies.LoadHotUpdateAssembliesByGroupName(FrameworkSettingsUtils.FrameworkSettings.BaseAssetsRootName,
                         delegate(Dictionary<string, byte[]> assemblies)
                         {
                             for (int i = 0; i < assemblies.Count; i++)
@@ -66,7 +66,7 @@ namespace Main.Runtime.Procedure
                                 var item = assemblies.ElementAt(i);
                                 Logger.Debug<ProcedureLoadAssembly>($"LoadAsset: [ {item.Key} ]");
                                 var asm = Assembly.Load(item.Value);
-                                if (string.Compare(GameMainSettingsUtils.GameMainHybridCLRSettings.LogicMainDllName, item.Key, StringComparison.Ordinal) == 0)
+                                if (string.Compare(FrameworkSettingsUtils.GameMainHybridCLRSettings.LogicMainDllName, item.Key, StringComparison.Ordinal) == 0)
                                     m_MainLogicAssembly = asm;
                                 m_HotfixAssemblys.Add(asm);
                                 Logger.Debug<ProcedureLoadAssembly>($"Assembly [ {asm.GetName().Name} ] loaded");
@@ -136,10 +136,10 @@ namespace Main.Runtime.Procedure
         private Assembly GetMainLogicAssembly()
         {
             Assembly mainLogicAssembly = null;
-            List<string> hotUpdateAsm = GameMainSettingsUtils.GetHotUpdateAssemblies(GameMainSettingsUtils.GameMainGlobalSettings.BaseAssetsRootName);
+            List<string> hotUpdateAsm = FrameworkSettingsUtils.GetHotUpdateAssemblies(FrameworkSettingsUtils.FrameworkSettings.BaseAssetsRootName);
             foreach (var asm in AppDomain.CurrentDomain.GetAssemblies())
             {
-                if (string.Compare(GameMainSettingsUtils.GameMainHybridCLRSettings.LogicMainDllName, $"{asm.GetName().Name}.dll",
+                if (string.Compare(FrameworkSettingsUtils.GameMainHybridCLRSettings.LogicMainDllName, $"{asm.GetName().Name}.dll",
                         StringComparison.Ordinal) == 0)
                 {
                     mainLogicAssembly = asm;

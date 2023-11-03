@@ -40,7 +40,7 @@ public class ConfigManager : MonoBehaviour
             {
                 try
                 {
-                    string configVersionPath = Path.Combine(Application.dataPath, $"../LubanTools/GenerateDatas/{GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName}/{GameMainSettingsUtils.GameMainGlobalSettings.ConfigVersionFileName}");
+                    string configVersionPath = Path.Combine(Application.dataPath, $"../LubanTools/GenerateDatas/{FrameworkSettingsUtils.FrameworkSettings.ConfigFolderName}/{FrameworkSettingsUtils.FrameworkSettings.ConfigVersionFileName}");
                     string xml = await File.ReadAllTextAsync(configVersionPath);
                     m_Configs = FileUtils.AnalyConfigXml(xml, out string version);
                 }
@@ -57,7 +57,7 @@ public class ConfigManager : MonoBehaviour
             fileName = $"{file}.{m_Configs[fileName].HashCode}{m_Configs[fileName].Extension}";
 
             filePath = Utility.Path.GetRemotePath(Path.Combine(Application.dataPath, "../LubanTools/GenerateDatas",
-                GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName,
+                FrameworkSettingsUtils.FrameworkSettings.ConfigFolderName,
                 "Datas", fileName));
         }
         else
@@ -65,7 +65,7 @@ public class ConfigManager : MonoBehaviour
             ConfigInfo configInfo = GameEntryMain.LubanConfig.FindConfigInfoByName(fileName);
             fileName = configInfo.IsLoadReadOnly ? $"{configInfo.NameWithoutExtension}.{configInfo.HashCode}{configInfo.Extension}" : $"{configInfo.NameWithoutExtension}{configInfo.Extension}";
             filePath = Utility.Path.GetRemotePath(Path.Combine(configInfo.IsLoadReadOnly ? GameEntry.Resource.ReadOnlyPath : GameEntry.Resource.ReadWritePath,
-                GameMainSettingsUtils.GameMainGlobalSettings.ConfigFolderName,
+                FrameworkSettingsUtils.FrameworkSettings.ConfigFolderName,
                 "Datas", fileName));
             Logger.Debug<ConfigManager>("fileLoadPath:" + filePath);
         }

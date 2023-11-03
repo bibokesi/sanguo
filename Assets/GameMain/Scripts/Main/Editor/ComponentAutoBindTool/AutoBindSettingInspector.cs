@@ -4,8 +4,8 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(AutoBindGlobalSetting))]
-public class AutoBindGlobalSettingInspector : Editor
+[CustomEditor(typeof(AutoBindSetting))]
+public class AutoBindSettingInspector : Editor
 {
     private SerializedProperty m_Namespace;
     private SerializedProperty m_ComCodePath;

@@ -81,8 +81,8 @@ public class ServerChannelInfo
 /// <summary>
 /// 框架设置
 /// </summary>
-[CreateAssetMenu(fileName = "GameMainGlobalSettings", menuName = "GameMain/Global Settings", order = 40)]
-public class GameMainGlobalSettings : ScriptableObject
+[CreateAssetMenu(fileName = "FrameworkSettings", menuName = "GameMain/Global Settings", order = 40)]
+public class FrameworkSettings : ScriptableObject
 {
     [Header("Framework")]
     [SerializeField]

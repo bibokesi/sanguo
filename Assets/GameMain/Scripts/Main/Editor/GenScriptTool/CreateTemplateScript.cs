@@ -94,13 +94,13 @@ class CreateScriptAsset : EndNameEditAction
             System.DateTime.Now.ToString("yyyy-MM-dd HH-mm-ss"));
         //把#Author# 替换
         annotationStr = annotationStr.Replace("#Author#",
-            GameMainSettingsUtils.GameMainGlobalSettings.ScriptAuthor);
+            FrameworkSettingsUtils.FrameworkSettings.ScriptAuthor);
         //把#ChangeAuthor# 替换
         annotationStr = annotationStr.Replace("#ChangeAuthor#",
-            GameMainSettingsUtils.GameMainGlobalSettings.ScriptAuthor);
+            FrameworkSettingsUtils.FrameworkSettings.ScriptAuthor);
         //把#Version# 替换
         annotationStr = annotationStr.Replace("#Version#",
-            GameMainSettingsUtils.GameMainGlobalSettings.ScriptVersion);
+            FrameworkSettingsUtils.FrameworkSettings.ScriptVersion);
         //把内容重新写入脚本
         bool encoderShouldEmitUTF8Identifier = false;
         bool throwOnInvalidBytes = false;

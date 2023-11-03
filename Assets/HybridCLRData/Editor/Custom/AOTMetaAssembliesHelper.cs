@@ -35,7 +35,7 @@ public static class AOTMetaAssembliesHelper
     {
         //        fixed by zh
         string folder = $"{SettingsUtil.GetAssembliesPostIl2CppStripDir(buildTarget)}";
-        GameMainSettingsUtils.GameMainHybridCLRSettings.AOTMetaAssemblies.Clear();
+        FrameworkSettingsUtils.GameMainHybridCLRSettings.AOTMetaAssemblies.Clear();
         if (!Directory.Exists(folder))
         {
 #if UNITY_EDITOR_WIN
@@ -49,9 +49,9 @@ public static class AOTMetaAssembliesHelper
         foreach (var fileInfo in root.GetFiles("*dll", SearchOption.AllDirectories))
         {
             string fileName = fileInfo.Name;
-            GameMainSettingsUtils.GameMainHybridCLRSettings.AOTMetaAssemblies.Add(fileName);
+            FrameworkSettingsUtils.GameMainHybridCLRSettings.AOTMetaAssemblies.Add(fileName);
         }
-        EditorUtility.SetDirty(GameMainSettingsUtils.GameMainHybridCLRSettings);
+        EditorUtility.SetDirty(FrameworkSettingsUtils.GameMainHybridCLRSettings);
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
     }
@@ -60,7 +60,7 @@ public static class AOTMetaAssembliesHelper
     {
         // fixed by zh
         string folder = $"{SettingsUtil.GetAssembliesPostIl2CppStripDir(buildTarget)}";
-        GameMainSettingsUtils.GameMainHybridCLRSettings.AOTMetaAssemblies.Clear();
+        FrameworkSettingsUtils.GameMainHybridCLRSettings.AOTMetaAssemblies.Clear();
         if (!Directory.Exists(folder))
         {
 #if UNITY_EDITOR_WIN
@@ -74,9 +74,9 @@ public static class AOTMetaAssembliesHelper
         foreach (var fileInfo in root.GetFiles("*dll", SearchOption.AllDirectories))
         {
             string fileName = fileInfo.Name;
-            GameMainSettingsUtils.GameMainHybridCLRSettings.AOTMetaAssemblies.Add(fileName);
+            FrameworkSettingsUtils.GameMainHybridCLRSettings.AOTMetaAssemblies.Add(fileName);
         }
-        EditorUtility.SetDirty(GameMainSettingsUtils.GameMainHybridCLRSettings);
+        EditorUtility.SetDirty(FrameworkSettingsUtils.GameMainHybridCLRSettings);
         AssetDatabase.SaveAssets();
         AssetDatabase.Refresh();
     }

@@ -42,8 +42,8 @@ public partial class AssembliesManager
     
     private void DownloadOne(AssemblyInfo needUpdateAssembly)
     {
-        string downloadPath = Path.Combine(GameEntryMain.Resource.ReadWritePath,GameMainSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath,needUpdateAssembly.PathRoot,$"{needUpdateAssembly.Name}{GameMainSettingsUtils.GameMainHybridCLRSettings.AssemblyAssetExtension}");
-        string downloadUri = GameMainSettingsUtils.GetResDownLoadPath(Path.Combine(GameMainSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath,needUpdateAssembly.PathRoot, $"{needUpdateAssembly.Name}.{needUpdateAssembly.HashCode}{GameMainSettingsUtils.GameMainHybridCLRSettings.AssemblyAssetExtension}"));
+        string downloadPath = Path.Combine(GameEntryMain.Resource.ReadWritePath,FrameworkSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath,needUpdateAssembly.PathRoot,$"{needUpdateAssembly.Name}{FrameworkSettingsUtils.GameMainHybridCLRSettings.AssemblyAssetExtension}");
+        string downloadUri = FrameworkSettingsUtils.GetResDownLoadPath(Path.Combine(FrameworkSettingsUtils.GameMainHybridCLRSettings.HybridCLRAssemblyPath,needUpdateAssembly.PathRoot, $"{needUpdateAssembly.Name}.{needUpdateAssembly.HashCode}{FrameworkSettingsUtils.GameMainHybridCLRSettings.AssemblyAssetExtension}"));
         GameEntryMain.Download.AddDownload(downloadPath, downloadUri, needUpdateAssembly); 
     }
 
