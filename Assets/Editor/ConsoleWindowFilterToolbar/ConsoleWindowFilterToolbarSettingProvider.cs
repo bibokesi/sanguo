@@ -46,14 +46,14 @@ namespace Kogane.Internal
             ConsoleWindowFilterToolbarSetting.instance.Save();
         }
 
-        [SettingsProvider]
-        private static SettingsProvider CreateSettingProvider()
-        {
-            return new ConsoleWindowFilterToolbarSettingProvider
-            (
-                path: PATH,
-                scopes: SettingsScope.Project
-            );
-        }
+        //[SettingsProvider]
+        //private static SettingsProvider CreateSettingProvider()
+        //{
+        //    return new ConsoleWindowFilterToolbarSettingProvider
+        //    (
+        //        path: PATH,
+        //        scopes: SettingsScope.Project
+        //    );
+        //}
     }
 }

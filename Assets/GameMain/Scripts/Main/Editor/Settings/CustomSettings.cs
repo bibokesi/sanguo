@@ -14,6 +14,6 @@ public static class CustomSettings
     [MenuItem("GameMainTools/CustomSettings/AutoBind Setting", priority = 130)]
     public static void OpenAutoBindSettings() => SettingsService.OpenProjectSettings("GameMain/AutoBindSetting");
 
-    [MenuItem("GameMainTools/CustomSettings/ConsoleWindowFilter Toolbar", priority = 200)]
-    public static void OpenConsoleWindowFilterToolbar() => SettingsService.OpenProjectSettings("GameMain/ConsoleWindowFilterToolbar");
+    //[MenuItem("GameMainTools/CustomSettings/ConsoleWindowFilter Toolbar", priority = 200)]
+    //public static void OpenConsoleWindowFilterToolbar() => SettingsService.OpenProjectSettings("GameMain/ConsoleWindowFilterToolbar");
 }
