@@ -8,10 +8,10 @@ namespace GameMain.Editor
     public class CreateUITemplate
     {
 
-        [MenuItem("GameObject/CustomUI/Form", false, 1)]
+        [MenuItem("GameObject/CustomUI/UIForm", false, 101)]
         static void CreateUIPanelObj(MenuCommand menuCommand)
         {
-            GameObject panel = SaveObject(menuCommand, "Form");
+            GameObject panel = SaveObject(menuCommand, "UIForm");
             panel.GetComponent<RectTransform>().anchorMin = new Vector2(0, 0);
             panel.GetComponent<RectTransform>().anchorMax = new Vector2(1, 1);
             panel.GetComponent<RectTransform>().offsetMin = new Vector2(0, 0);
@@ -20,10 +20,10 @@ namespace GameMain.Editor
             AssetDatabase.SaveAssets();
         }
 
-        [MenuItem("GameObject/CustomUI/Model", false, 2)]
+        [MenuItem("GameObject/CustomUI/UIModel", false, 102)]
         static void CreateUIModel(MenuCommand menuCommand)
         {
-            SaveObject(menuCommand, "Model");
+            SaveObject(menuCommand, "UIModel");
         }
 
 
@@ -31,19 +31,19 @@ namespace GameMain.Editor
 
 
 
-        [MenuItem("GameObject/CustomUI/Toggle - TextMeshPro", false, 21)]
+        [MenuItem("GameObject/CustomUI/Toggle - TextMeshPro", false, 301)]
         static void CreateUIToggle(MenuCommand menuCommand)
         {
             SaveObject(menuCommand, "Toggle");
         }
 
-        [MenuItem("GameObject/CustomUI/Button - TextMeshPro", false, 22)]
+        [MenuItem("GameObject/CustomUI/Button - TextMeshPro", false, 302)]
         static void CreateUISuperButton(MenuCommand menuCommand)
         {
             SaveObject(menuCommand, "Button");
         }
 
-        [MenuItem("GameObject/CustomUI/InputField - TextMeshPro", false, 23)]
+        [MenuItem("GameObject/CustomUI/InputField - TextMeshPro", false, 303)]
         static void CreateUIInputField(MenuCommand menuCommand)
         {
             SaveObject(menuCommand, "InputField");
@@ -53,31 +53,31 @@ namespace GameMain.Editor
 
 
 
-        [MenuItem("GameObject/CustomUI/ScrollView/HListScroll View", false, 31)]
+        [MenuItem("GameObject/CustomUI/ScrollView/HListScroll View", false, 404)]
         static void CreateHListScroll(MenuCommand menuCommand)
         {
             SaveObject(menuCommand, "ScrollView/HListScrollView");
         }
 
-        [MenuItem("GameObject/CustomUI/ScrollView/HGridScroll View", false, 32)]
+        [MenuItem("GameObject/CustomUI/ScrollView/HGridScroll View", false, 405)]
         static void CreateHGridScroll(MenuCommand menuCommand)
         {
             SaveObject(menuCommand, "ScrollView/HGridScrollView");
         }
 
-        [MenuItem("GameObject/CustomUI/ScrollView/VListScroll View", false, 33)]
+        [MenuItem("GameObject/CustomUI/ScrollView/VListScroll View", false, 406)]
         static void CreateVListScroll(MenuCommand menuCommand)
         {
             SaveObject(menuCommand, "ScrollView/VListScrollView");
         }
 
-        [MenuItem("GameObject/CustomUI/ScrollView/VGridScroll View", false, 34)]
+        [MenuItem("GameObject/CustomUI/ScrollView/VGridScroll View", false, 407)]
         static void CreateVGridScroll(MenuCommand menuCommand)
         {
             SaveObject(menuCommand, "ScrollView/VGridScrollView");
         }
 
-        [MenuItem("GameObject/CustomUI/ScrollView/ScrollVItemPrefab", false, 35)]
+        [MenuItem("GameObject/CustomUI/ScrollView/ScrollVItemPrefab", false, 408)]
         static void CreateScrollVItemPrefab(MenuCommand menuCommand)
         {
             SaveObject(menuCommand, "ScrollView/ScrollVItemPrefab");
@@ -85,19 +85,19 @@ namespace GameMain.Editor
 
 
 
-        [MenuItem("GameObject/CustomUI/UIHealthBar", false, 101)]
+        [MenuItem("GameObject/CustomUI/UIHealthBar", false, 401)]
         static void CreateUIHealthbar(MenuCommand menuCommand)
         {
             SaveObject(menuCommand, "HealthBar");
         }
 
-        [MenuItem("GameObject/CustomUI/SpriteAnimation", false, 102)]
+        [MenuItem("GameObject/CustomUI/SpriteAnimation", false, 402)]
         static void CreateUGUISpriteAnimation(MenuCommand menuCommand)
         {
             SaveObject(menuCommand, "SpriteAnimation");
         }
 
-        [MenuItem("GameObject/CustomUI/Radar Map", false, 103)]
+        [MenuItem("GameObject/CustomUI/Radar Map", false, 403)]
         static void CreateUIRadarMap(MenuCommand menuCommand)
         {
             SaveObject(menuCommand, "Radar Map");

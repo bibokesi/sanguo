@@ -39,7 +39,7 @@ MonoBehaviour:
     FullName: GridLayoutGroup
   - Prefixe: ToggleGroup
     FullName: ToggleGroup
-  - Prefixe: UIButtonSuper
+  - Prefixe: Button
     FullName: UIButtonSuper
   - Prefixe: ButtonPro
     FullName: ButtonPro
@@ -51,7 +51,7 @@ MonoBehaviour:
     FullName: Text
   - Prefixe: TextMeshProUGUI
     FullName: TextMeshProUGUI
-  - Prefixe: TMP_InputField
+  - Prefixe: InputField
     FullName: TMP_InputField
   - Prefixe: Slider
     FullName: Slider

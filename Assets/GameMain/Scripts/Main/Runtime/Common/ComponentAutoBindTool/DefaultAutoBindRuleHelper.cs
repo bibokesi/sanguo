@@ -25,7 +25,7 @@ public class DefaultAutoBindRuleHelper : IAutoBindRuleHelper
         {"GGroup","GridLayoutGroup"},
         {"TGroup","ToggleGroup"},
 
-        {"Btn","UIButtonSuper"},
+        {"Button","UIButtonSuper"},
         {"Img","Image"},
         {"RImg","RawImage"},
         {"Txt","Text"},

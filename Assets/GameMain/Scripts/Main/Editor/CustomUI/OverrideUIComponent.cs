@@ -8,18 +8,18 @@ namespace GameMain.Editor
 {
     public class OverrideUIComponent
     {
-        [MenuItem("GameObject/CustomUI/Override/Text - TextMeshPro", false, 21)]
+        [MenuItem("GameObject/CustomUI/Text - TextMeshPro", false, 201)]
         static TextMeshProUGUI CreateText()
         {
             var text = CreateComponent<TextMeshProUGUI>("Text");
             text.raycastTarget = false;
-            text.font = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>($"Assets/GameMain/AssetsPkg/Font/{FrameworkSettingsUtils.FrameworkSettings.DefaultFont}.asset"); // 默认字体  
+            text.font = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>($"Assets/GameMain/BaseAssets/Font/{FrameworkSettingsUtils.FrameworkSettings.DefaultFont}.asset"); // 默认字体  
             text.color = Color.black;
             text.text = "New Text";
             return text;
         }
 
-        [MenuItem("GameObject/CustomUI/Override/Image", false, 20)]
+        [MenuItem("GameObject/CustomUI/Image", false, 202)]
         static Image CreateUImage()
         {
             string defaultName = "Image";
@@ -30,7 +30,7 @@ namespace GameMain.Editor
             return image;
         }
 
-        [MenuItem("GameObject/CustomUI/Override/Raw Image", false, 22)]
+        [MenuItem("GameObject/CustomUI/Raw Image", false, 203)]
         static RawImage CreateRawImage()
         {
             var image = CreateComponent<RawImage>("Raw Image");

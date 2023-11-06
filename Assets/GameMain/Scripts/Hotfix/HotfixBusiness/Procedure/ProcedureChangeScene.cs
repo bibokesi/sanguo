@@ -27,7 +27,7 @@ namespace HotfixBusiness.Procedure
             GameEntry.Event.Subscribe(LoadSceneUpdateEventArgs.EventId, OnHandleLoadSceneUpdate);
             GameEntry.Event.Subscribe(LoadSceneDependencyAssetEventArgs.EventId, OnHandleLoadSceneDependencyAsset);
 
-            //m_UIFormSerialId = GameEntry.UI.OpenUIForm(ConstantUI.EUIFormId.UILoadingSceneForm, this);
+            //m_UIFormSerialId = GameEntry.UI.OpenUIForm(ConstantUI.UIFormId.UILoadingSceneForm, this);
             Logger.Debug<ProcedureChangeScene>($"ProcedureChangeScene OnEnter {m_UIFormSerialId}");
 
         }

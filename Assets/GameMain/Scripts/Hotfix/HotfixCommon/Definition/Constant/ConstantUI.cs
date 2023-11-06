@@ -10,7 +10,7 @@ public static class ConstantUI
         /// <summary>
         /// 界面类型
         /// </summary>
-        public EUIFormType FormType { get; }
+        public UIFormType FormType { get; }
         /// <summary>
         /// 模块名
         /// </summary>
@@ -22,7 +22,7 @@ public static class ConstantUI
         /// <summary>
         /// 界面组
         /// </summary>
-        public EUIGroupName UIGroupName { get; }
+        public UIGroupName UIGroupName { get; }
         /// <summary>
         /// 是否允许多个界面实例
         /// </summary>
@@ -31,7 +31,7 @@ public static class ConstantUI
         /// 是否暂停被其覆盖的界面
         /// </summary>
         public bool PauseCoveredUIForm { get; }
-        public UIFormInfo(EUIFormType formType,string moduleName, string assetName, EUIGroupName groupName, bool allowMultiInstance, bool pauseCoveredUIForm)
+        public UIFormInfo(UIFormType formType,string moduleName, string assetName, UIGroupName groupName, bool allowMultiInstance, bool pauseCoveredUIForm)
         {
             this.FormType = formType;
             this.ModuleName = moduleName;
@@ -41,7 +41,7 @@ public static class ConstantUI
             this.PauseCoveredUIForm = pauseCoveredUIForm;
         }
     }
-    public enum EUIGroupName
+    public enum UIGroupName
     {
         AlwaysBottom,
         Background,
@@ -53,45 +53,45 @@ public static class ConstantUI
     /// <summary>
     /// 界面类型
     /// </summary>
-    public enum EUIFormType
+    public enum UIFormType
     {
         /// <summary>
         /// 独立主界面
         /// </summary>
-        MainForm = 1,
+        Alone = 1,
         /// <summary>
         /// 独立主界面下子界面
         /// </summary>
-        SubForm = 2,
+        Sub = 2,
         /// <summary>
         /// 公共子界面
         /// </summary>
-        ComSubForm = 3,
+        ComSub = 3,
     }
     
-    public static Dictionary<EUIGroupName, int> UIGroups = new Dictionary<EUIGroupName, int>() {
-        {EUIGroupName.AlwaysBottom,1000},
-        {EUIGroupName.Background,2000 },
-        {EUIGroupName.Common,3000 },
-        {EUIGroupName.AnimationOn,4000 },
-        {EUIGroupName.PopUI,5000 },
-        {EUIGroupName.Guide,6000 },
+    public static Dictionary<UIGroupName, int> UIGroups = new Dictionary<UIGroupName, int>() {
+        {UIGroupName.AlwaysBottom,1000},
+        {UIGroupName.Background,2000 },
+        {UIGroupName.Common,3000 },
+        {UIGroupName.AnimationOn,4000 },
+        {UIGroupName.PopUI,5000 },
+        {UIGroupName.Guide,6000 },
     };
 
-    private static Dictionary<EUIFormId, UIFormInfo> uiForms = new Dictionary<EUIFormId, UIFormInfo>()
+    private static Dictionary<UIFormId, UIFormInfo> uiForms = new Dictionary<UIFormId, UIFormInfo>()
     {
-        {EUIFormId.DialogForm, new UIFormInfo(EUIFormType.MainForm,"BaseAssets","UIDialogForm",EUIGroupName.PopUI,false,true)},
-        {EUIFormId.UITipsForm, new UIFormInfo(EUIFormType.MainForm,"BaseAssets","UITipsForm",EUIGroupName.PopUI,true,false)},
-        {EUIFormId.UILoadingForm, new UIFormInfo(EUIFormType.MainForm,"BaseAssets","UILoadingForm",EUIGroupName.AnimationOn,false,true)},
-        {EUIFormId.UILoadingOneForm, new UIFormInfo(EUIFormType.MainForm,"BaseAssets","UILoadingOneForm",EUIGroupName.PopUI,false,true)},
-        {EUIFormId.UIMainMenuForm, new UIFormInfo(EUIFormType.MainForm,"BaseAssets","UIMainMenuForm",EUIGroupName.Background,false,true)},
+        {UIFormId.UIDialogForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UIDialogForm",UIGroupName.PopUI,false,true)},
+        {UIFormId.UITipsForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UITipsForm",UIGroupName.PopUI,true,false)},
+        {UIFormId.UILoadingForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UILoadingForm",UIGroupName.AnimationOn,false,true)},
+        {UIFormId.UILoadingOneForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UILoadingOneForm",UIGroupName.PopUI,false,true)},
+        {UIFormId.UIMainMenuForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UIMainMenuForm",UIGroupName.Background,false,true)},
     };
 
-    public static UIFormInfo GetUIFormInfo(EUIFormId euiFormId)
+    public static UIFormInfo GetUIFormInfo(UIFormId uiFormId)
     {
-        if (uiForms.ContainsKey(euiFormId))
+        if (uiForms.ContainsKey(uiFormId))
         {
-            return uiForms[euiFormId];
+            return uiForms[uiFormId];
         }
         return null;
     }
@@ -100,10 +100,10 @@ public static class ConstantUI
         string name = typeof(T).Name;
         try
         {
-            EUIFormId euiFormId = (EUIFormId)System.Enum.Parse( typeof(EUIFormId),name);
-            if (uiForms.ContainsKey(euiFormId))
+            UIFormId uiFormId = (UIFormId)System.Enum.Parse( typeof(UIFormId),name);
+            if (uiForms.ContainsKey(uiFormId))
             {
-                return uiForms[euiFormId];
+                return uiForms[uiFormId];
             }
         }
         catch (Exception e)
@@ -116,14 +116,14 @@ public static class ConstantUI
     /// <summary>
     /// 界面编号。
     /// </summary>
-    public enum EUIFormId
+    public enum UIFormId
     {
         Undefined = 0,
         
         /// <summary>
         /// 弹出框。
         /// </summary>
-        DialogForm = 2,
+        UIDialogForm = 2,
         /// <summary>
         /// 提示框。
         /// </summary>

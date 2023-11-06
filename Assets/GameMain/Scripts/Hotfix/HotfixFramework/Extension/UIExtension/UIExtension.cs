@@ -25,9 +25,9 @@ public static class UIExtension
         return GameEntry.UI.GetInstanceRoot().GetComponent<Canvas>();
     }
 
-    public static bool HasUIForm(this UIComponent uiComponent, ConstantUI.EUIFormId euiFormId, string uiGroupName = null)
+    public static bool HasUIForm(this UIComponent uiComponent, ConstantUI.UIFormId uiFormId, string uiGroupName = null)
     {
-        var uiFormInfo = ConstantUI.GetUIFormInfo(euiFormId);
+        var uiFormInfo = ConstantUI.GetUIFormInfo(uiFormId);
         if (uiFormInfo == null)
         {
             return false;
@@ -48,9 +48,9 @@ public static class UIExtension
         return uiGroup.HasUIForm(assetName);
     }
 
-    public static UIBaseForm GetUIForm(this UIComponent uiComponent, ConstantUI.EUIFormId euiFormId, string uiGroupName = null)
+    public static UIBaseForm GetUIForm(this UIComponent uiComponent, ConstantUI.UIFormId uiFormId, string uiGroupName = null)
     {
-        var uiFormInfo = ConstantUI.GetUIFormInfo(euiFormId);
+        var uiFormInfo = ConstantUI.GetUIFormInfo(uiFormId);
         if (uiFormInfo == null)
         {
             return null;
@@ -91,7 +91,7 @@ public static class UIExtension
         uiComponent.CloseUIForm(uiForm.UIForm);
     }
 
-    public static int OpenUIForm(this UIComponent uiComponent, ConstantUI.EUIFormId uiFormId, object userData = null)
+    public static int OpenUIForm(this UIComponent uiComponent, ConstantUI.UIFormId uiFormId, object userData = null)
     {
         return uiComponent.OpenUIForm(ConstantUI.GetUIFormInfo(uiFormId), userData);
     }
@@ -106,13 +106,13 @@ public static class UIExtension
         string assetName = string.Empty;
         switch (uiFormInfo.FormType)
         {
-            case ConstantUI.EUIFormType.MainForm:
+            case ConstantUI.UIFormType.Alone:
                 assetName = AssetUtility.UI.GetUIFormAsset(uiFormInfo);
                 break;
-            case ConstantUI.EUIFormType.SubForm:
+            case ConstantUI.UIFormType.Sub:
                 assetName = AssetUtility.UI.GetUISubFormAsset(uiFormInfo);
                 break;
-            case ConstantUI.EUIFormType.ComSubForm:
+            case ConstantUI.UIFormType.ComSub:
                 assetName = AssetUtility.UI.GetUIComSubFormAsset(uiFormInfo);
                 break;
         }
@@ -134,12 +134,12 @@ public static class UIExtension
 
     public static void OpenDialog(this UIComponent uiComponent, DialogParams dialogParams)
     {
-        uiComponent.OpenUIForm(ConstantUI.EUIFormId.DialogForm, dialogParams);
+        uiComponent.OpenUIForm(ConstantUI.UIFormId.UIDialogForm, dialogParams);
     }
 
     public static void OpenUILoadingForm(this UIComponent uiComponent)
     {
-        var uiFormInfo = ConstantUI.GetUIFormInfo(ConstantUI.EUIFormId.UILoadingForm);
+        var uiFormInfo = ConstantUI.GetUIFormInfo(ConstantUI.UIFormId.UILoadingForm);
         if (uiFormInfo == null)
         {
             return;
@@ -176,7 +176,7 @@ public static class UIExtension
     }
     public static void OpenUILoadingOneForm(this UIComponent uiComponent, int timeOut = 10, Action onTimeOut = null)
     {
-        var uiFormInfo = ConstantUI.GetUIFormInfo(ConstantUI.EUIFormId.UILoadingOneForm);
+        var uiFormInfo = ConstantUI.GetUIFormInfo(ConstantUI.UIFormId.UILoadingOneForm);
         if (uiFormInfo == null)
         {
             return;
@@ -220,6 +220,6 @@ public static class UIExtension
         info.param2 = color ?? Color.white;
         info.param3 = openBg;
 
-        uIComponent.OpenUIForm(ConstantUI.EUIFormId.UITipsForm, info);
+        uIComponent.OpenUIForm(ConstantUI.UIFormId.UITipsForm, info);
     }
 }
