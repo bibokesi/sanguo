@@ -74,16 +74,6 @@ MonoBehaviour:
     filterType: 2
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/UI/UITemplate
-    variant: 
-    fileSystem: 
-    groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/UI/UITemplate
-    loadType: 0
-    packed: 1
-    filterType: 1
-    searchPatterns: '*.*'
-  - valid: 1
     name: BaseAssets/UI/UIAtlas
     variant: 
     fileSystem: 
@@ -108,7 +98,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sounds/BattleSound
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sound/BattleSound
     loadType: 0
     packed: 1
     filterType: 1
@@ -118,7 +108,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sounds/CommonSound
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sound/CommonSound
     loadType: 0
     packed: 1
     filterType: 1
@@ -128,7 +118,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sounds/MusicSound
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sound/MusicSound
     loadType: 0
     packed: 1
     filterType: 1
@@ -138,7 +128,7 @@ MonoBehaviour:
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sounds/UISound
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sound/UISound
     loadType: 0
     packed: 1
     filterType: 1

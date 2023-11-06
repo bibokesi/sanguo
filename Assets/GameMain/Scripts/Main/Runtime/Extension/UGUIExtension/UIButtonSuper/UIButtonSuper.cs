@@ -67,16 +67,9 @@ public enum ButtonSoundType
     Drag
 }
 
-public enum ButtonSoundAssetType
-{
-    Hotfix,
-    Packed,
-}
-
 [Serializable]
 public class ButtonSoundCell
 {
-    public ButtonSoundAssetType ButtonSoundAssetType = ButtonSoundAssetType.Hotfix;
     public ButtonSoundType ButtonSoundType = ButtonSoundType.Click;
     public string ButtonUISoundName = "ui_click_button";
     public string ButtonUISoundAssetGroup = "BaseAssets";
@@ -251,17 +244,7 @@ public class UIButtonSuper : Button, IBeginDragHandler,IDragHandler,IEndDragHand
         playSoundParams.Loop = false;
         playSoundParams.VolumeInSoundGroup = 1;
         playSoundParams.SpatialBlend = 0;
-        string soundPath = "";
-        if (buttonSound.ButtonSoundAssetType == ButtonSoundAssetType.Packed)
-        {
-            //UISound/ui_click button
-            soundPath = $"Assets/GameMain/AssetsPacked/{buttonSound.ButtonUISoundAssetGroup}/Sounds/{soundGroup}/{buttonSound.ButtonUISoundName}.wav";
-        }
-        else
-        {
-            soundPath = $"Assets/GameMain/BaseAssets/{buttonSound.ButtonUISoundAssetGroup}/Sounds/{soundGroup}/{buttonSound.ButtonUISoundName}.wav";
-        }
-
+        string soundPath = $"Assets/GameMain/{buttonSound.ButtonUISoundAssetGroup}/Sound/{soundGroup}/{buttonSound.ButtonUISoundName}.wav";
         int audioId = GameEntryMain.Sound.PlaySound(soundPath, soundGroup, 50, playSoundParams);
     }
 

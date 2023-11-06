@@ -254,6 +254,10 @@ PrefabInstance:
       propertyPath: m_UIGroupHelperTypeName
       value: Main.Runtime.CustomUIGroupHelper
       objectReference: {fileID: 0}
+    - target: {fileID: 2449484810233114356, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_ActiveWindow
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2449484808373247225, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
