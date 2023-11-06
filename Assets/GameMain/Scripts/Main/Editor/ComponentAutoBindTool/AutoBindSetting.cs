@@ -42,36 +42,7 @@ public class AutoBindSetting : ScriptableObject
     [SerializeField] [LabelText("组件的缩略名字映射")]
     private List<AutoBindRulePrefixe> m_RulePrefixes= new List<AutoBindRulePrefixe>()
     {
-        new AutoBindRulePrefixe("Trans","Transform"),
-        new AutoBindRulePrefixe("OldAnim","Animation"),
-        new AutoBindRulePrefixe("NewAnim","Animator"),
-        new AutoBindRulePrefixe("Rect","RectTransform"),
-        new AutoBindRulePrefixe("Canvas","Canvas"),
-        new AutoBindRulePrefixe("Group","CanvasGroup"),
-        new AutoBindRulePrefixe("VGroup","VerticalLayoutGroup"),
-        new AutoBindRulePrefixe("HGroup","HorizontalLayoutGroup"),
-        new AutoBindRulePrefixe("GGroup","GridLayoutGroup"),
-        new AutoBindRulePrefixe("TGroup","ToggleGroup"),
-        new AutoBindRulePrefixe("Btn","UIButtonSuper"),
-        new AutoBindRulePrefixe("BtnP","ButtonPro"),
-        new AutoBindRulePrefixe("Img","Image"),
-        new AutoBindRulePrefixe("RImg","RawImage"),
-        new AutoBindRulePrefixe("Txt","Text"),
-        new AutoBindRulePrefixe("TxtM","TextMeshProUGUI"),
-        new AutoBindRulePrefixe("Input","TMP_InputField"),
-        new AutoBindRulePrefixe("Slider","Slider"),
-        new AutoBindRulePrefixe("Mask","Mask"),
-        new AutoBindRulePrefixe("Mask2D","RectMask2D"),
-        new AutoBindRulePrefixe("Tog","Toggle"),
-        new AutoBindRulePrefixe("Sbar","Scrollbar"),
-        new AutoBindRulePrefixe("SRect","ScrollRect"),
-        new AutoBindRulePrefixe("Drop","Dropdown"),
-        new AutoBindRulePrefixe("USpriteAni","UGUISpriteAnimation"),
-        new AutoBindRulePrefixe("VGridV","LoopGridView"),
-        new AutoBindRulePrefixe("HGridV","LoopGridView"),
-        new AutoBindRulePrefixe("VListV","LoopListView2"),
-        new AutoBindRulePrefixe("HListV","LoopListView2"),
-        new AutoBindRulePrefixe("Map","RadarMap"),
+    
     };
 
     public List<AutoBindRulePrefixe> RulePrefixes

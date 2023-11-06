@@ -19,39 +19,39 @@ MonoBehaviour:
   - Main.Runtime
   - HotfixBusiness
   m_RulePrefixes:
-  - Prefixe: Trans
+  - Prefixe: Transform
     FullName: Transform
-  - Prefixe: OldAnim
+  - Prefixe: Animation
     FullName: Animation
-  - Prefixe: NewAnim
+  - Prefixe: Animator
     FullName: Animator
-  - Prefixe: Rect
+  - Prefixe: RectTransform
     FullName: RectTransform
   - Prefixe: Canvas
     FullName: Canvas
-  - Prefixe: Group
+  - Prefixe: CanvasGroup
     FullName: CanvasGroup
-  - Prefixe: VGroup
+  - Prefixe: VerticalLayoutGroup
     FullName: VerticalLayoutGroup
-  - Prefixe: HGroup
+  - Prefixe: HorizontalLayoutGroup
     FullName: HorizontalLayoutGroup
-  - Prefixe: GGroup
+  - Prefixe: GridLayoutGroup
     FullName: GridLayoutGroup
-  - Prefixe: TGroup
+  - Prefixe: ToggleGroup
     FullName: ToggleGroup
-  - Prefixe: Btn
+  - Prefixe: UIButtonSuper
     FullName: UIButtonSuper
-  - Prefixe: BtnP
+  - Prefixe: ButtonPro
     FullName: ButtonPro
-  - Prefixe: Img
+  - Prefixe: Image
     FullName: Image
-  - Prefixe: RImg
+  - Prefixe: RawImage
     FullName: RawImage
-  - Prefixe: Txt
+  - Prefixe: Text
     FullName: Text
-  - Prefixe: TxtM
+  - Prefixe: TextMeshProUGUI
     FullName: TextMeshProUGUI
-  - Prefixe: Input
+  - Prefixe: TMP_InputField
     FullName: TMP_InputField
   - Prefixe: Slider
     FullName: Slider
@@ -59,31 +59,31 @@ MonoBehaviour:
     FullName: Mask
   - Prefixe: Mask2D
     FullName: Mask2D
-  - Prefixe: Tog
+  - Prefixe: Toggle
     FullName: Toggle
-  - Prefixe: Sbar
+  - Prefixe: Scrollbar
     FullName: Scrollbar
   - Prefixe: Sbar
     FullName: Scrollbar
-  - Prefixe: SRect
+  - Prefixe: ScrollRect
     FullName: ScrollRect
-  - Prefixe: Drop
+  - Prefixe: Dropdown
     FullName: Dropdown
-  - Prefixe: USpriteAni
+  - Prefixe: UGUISpriteAnimation
     FullName: UGUISpriteAnimation
-  - Prefixe: VGridS
+  - Prefixe: LoopGridView
     FullName: LoopGridView
-  - Prefixe: HGridS
+  - Prefixe: LoopGridView
     FullName: LoopGridView
-  - Prefixe: VListS
+  - Prefixe: LoopListView2
     FullName: LoopListView2
-  - Prefixe: HListS
+  - Prefixe: LoopListView2
     FullName: LoopListView2
-  - Prefixe: VJoystick
+  - Prefixe: VariableJoystick
     FullName: VariableJoystick
-  - Prefixe: VBarBhv
+  - Prefixe: BarBhv
     FullName: BarBhv
-  - Prefixe: HSelector
+  - Prefixe: HorizontalSelector
     FullName: HorizontalSelector
-  - Prefixe: Map
+  - Prefixe: RadarMap
     FullName: RadarMap
