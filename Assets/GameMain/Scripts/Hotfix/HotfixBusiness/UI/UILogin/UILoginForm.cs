@@ -19,8 +19,14 @@ namespace HotfixBusiness.UI
 /*--------------------Auto generate start button listener.Do not modify!--------------------*/
 			m_Button_Login.onClick.AddListener(Button_LoginEvent);
 			m_Button_Register.onClick.AddListener(Button_RegisterEvent);
-/*--------------------Auto generate end button listener.Do not modify!----------------------*/
-		}
+            /*--------------------Auto generate end button listener.Do not modify!----------------------*/
+
+            string groupName = Constant.Procedure.FindAssetGroup(GameEntry.Procedure.CurrentProcedure.GetType().FullName);
+            //m_RawImage_Test.SetTexture(AssetUtility.UI.GetTexturePath(groupName, "login_bg"));
+            m_Image_Test.SetSprite(AssetUtility.UI.GetSpriteCollectionPath(groupName, "Common"), AssetUtility.UI.GetSpritePath(groupName, "Common/loading"));
+            m_RawImage_Test.SetTextureByNetwork("https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png");
+
+        }
 
 		private void Button_LoginEvent(){
 			GameEntry.UI.OpenTips(m_InputField_UserName.text + "  " + m_InputField_PassWord.text);

@@ -47,7 +47,7 @@ public static partial class AssetUtility
         /// <returns></returns>
         public static string GetSpritePath(string groupName, string spriteName)
         {
-            return $"Assets/GameMain/{groupName}/UI/UIArt/UISprites/{spriteName}.png";
+            return $"Assets/GameMain/{groupName}/UI/UISprite/{spriteName}.png";
         }
 
         /// <summary>
@@ -58,7 +58,7 @@ public static partial class AssetUtility
         /// <returns></returns>
         public static string GetSpriteCollectionPath(string groupName,string collectionName)
         {
-            return $"Assets/GameMain/{groupName}/UI/UIArt/AtlasCollection/{collectionName}.asset";
+            return $"Assets/GameMain/{groupName}/UI/UIAtlasCollection/{collectionName}.asset";
         }
 
         /// <summary>
@@ -69,7 +69,7 @@ public static partial class AssetUtility
         /// <returns></returns>
         public static string GetTexturePath(string groupName,string textureName)
         {
-            return $"Assets/GameMain/{groupName}/UI/UIArt/Texture/{textureName}.png";
+            return $"Assets/GameMain/{groupName}/UI/UITexture/{textureName}.png";
         }
 
         /// <summary>
@@ -77,9 +77,9 @@ public static partial class AssetUtility
         /// </summary>
         /// <param name="iconName"></param>
         /// <returns></returns>
-        public static string GetRenderTexturePath(string textureName)
+        public static string GetRenderTexturePath(string groupName, string textureName)
         {
-            return string.Format("Assets/GameMain/UI/UIArt/Texture/{0}.renderTexture", textureName);
+            return $"Assets/GameMain/{groupName}/UI/UITexture/{textureName}.renderTexture";
         }
     }
 }

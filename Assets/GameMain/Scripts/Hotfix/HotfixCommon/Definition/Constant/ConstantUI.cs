@@ -87,7 +87,10 @@ public static class ConstantUI
         {UIFormId.UILoadingOneForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UILoadingOneForm",UIGroupName.PopUI,false,true)},
         {UIFormId.UIMainMenuForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UIMainMenuForm",UIGroupName.Background,false,true)},
 
+        //-------------------------------------------------------------------------------------------
         {UIFormId.UILoginForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UILoginForm",UIGroupName.Background,false,false)},
+        {UIFormId.UIMainForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UIMainForm",UIGroupName.Background,false,false)},
+        {UIFormId.UIFightForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UIFightForm",UIGroupName.Background,false,false)},
     };
 
     public static UIFormInfo GetUIFormInfo(UIFormId uiFormId)
@@ -147,7 +150,17 @@ public static class ConstantUI
         /// <summary>
         /// 登录界面
         /// </summary>
-        UILoginForm = 7,
+        UILoginForm,
+
+        /// <summary>
+        /// 主界面
+        /// </summary>
+        UIMainForm,
+
+        /// <summary>
+        /// 战斗界面
+        /// </summary>
+        UIFightForm,
     }
 }
     

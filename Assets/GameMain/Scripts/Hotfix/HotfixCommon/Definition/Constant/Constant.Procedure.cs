@@ -1,5 +1,4 @@
-﻿
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 
 /// <summary>
@@ -9,9 +8,6 @@ public static partial class Constant
 {
     public class ProcedureInfo
     {
-        /// <summary>
-        /// 流程名字
-        /// </summary>
         public string ProcedureName { get; }
 
         public bool IsCheckAsset { get; }
@@ -22,7 +18,7 @@ public static partial class Constant
 
         public string SceneName { get; }
 
-        public ProcedureInfo(string procedureName, bool isCheck,bool isJumpScene, string groupName, string sceneName)
+        public ProcedureInfo(string procedureName, bool isCheck, bool isJumpScene, string groupName, string sceneName)
         {
             ProcedureName = procedureName;
             IsCheckAsset = isCheck;
@@ -51,19 +47,14 @@ public static partial class Constant
 
         //-------------------------------------------------------------
         public const string ProcedureLogin = "HotfixBusiness.Procedure.ProcedureLogin";
+        public const string ProcedureMain = "HotfixBusiness.Procedure.ProcedureMain";
+        public const string ProcedureFight = "HotfixBusiness.Procedure.ProcedureFight";
 
         private static Dictionary<string, ProcedureInfo> ProcedureInfos = new Dictionary<string, ProcedureInfo>()
         {
-            {ProcedureMainMenu,new ProcedureInfo(ProcedureMainMenu,false,false,"BaseAssets","")},
-            {ProcedureGameMainExample,new ProcedureInfo(ProcedureGameMainExample,true,false,"GameMainExample","")},
-            {ProcedureGameMainLogin,new ProcedureInfo(ProcedureGameMainLogin,false,true,"GameMainExample","")},
-            {ProcedureGameMainMain,new ProcedureInfo(ProcedureGameMainMain,false,true,"GameMainExample","Main")},
-            {ProcedureAGameExample,new ProcedureInfo(ProcedureAGameExample,true,false,"AGameExample","")},
-            {ProcedureGamePlay,new ProcedureInfo(ProcedureGamePlay,false,true,"AGameExample","RaceScene_")},
-            {ProcedureGameMenu,new ProcedureInfo(ProcedureGameMenu,false,false,"AGameExample","")},
-
-            //-------------------------------------------------------------
             {ProcedureLogin,new ProcedureInfo(ProcedureLogin,false,false,"BaseAssets","")},
+            {ProcedureMain,new ProcedureInfo(ProcedureMain,false,false,"BaseAssets","")},
+            {ProcedureFight,new ProcedureInfo(ProcedureFight,false,false,"BaseAssets","")},
         };
 
         public static bool IsJumpScene(string procedureName)
@@ -75,6 +66,7 @@ public static partial class Constant
             }
             return false;
         }
+
         public static bool IsCheckAsset(string procedureName)
         {
             if (ProcedureInfos.ContainsKey(procedureName))
@@ -84,6 +76,7 @@ public static partial class Constant
             }
             return false;
         }
+
         public static string FindAssetGroup(string procedureName)
         {
             if (ProcedureInfos.ContainsKey(procedureName))
@@ -93,6 +86,7 @@ public static partial class Constant
             }
             return string.Empty;
         }
+
         public static string FindSceneName(string procedureName)
         {
             if (ProcedureInfos.ContainsKey(procedureName))
