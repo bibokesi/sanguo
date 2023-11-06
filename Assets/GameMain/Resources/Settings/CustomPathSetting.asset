@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SublimePath: 
   m_NotepadPath: 
-  m_AtlasFolder: Assets/GameMain/AssetsHotfix/BaseAssets/UI/Atlas/
+  m_AtlasFolder: Assets/GameMain/BaseAssets/UI/UIAtlas/
   m_ResourceCollectionPath: 

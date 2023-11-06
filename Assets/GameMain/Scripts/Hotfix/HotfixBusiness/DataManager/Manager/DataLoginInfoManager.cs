@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace HotfixBusiness.DataUser
+namespace HotfixBusiness.Data
 {
     public class DataLoginInfoManager : Singleton<DataLoginInfoManager>,IUserInfoManager
     {

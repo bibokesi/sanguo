@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace HotfixBusiness.DataUser
+namespace HotfixBusiness.Data
 {
     public class DataManagerEntry:SingletonMono<DataManagerEntry>
     {
@@ -11,6 +11,7 @@ namespace HotfixBusiness.DataUser
         private static DataLevelInfoManager _levelInfo;
         
         private List<IUserInfoManager> m_AllUserInfoManagers = new();
+
         protected override void Awake()
         {
             base.Awake();

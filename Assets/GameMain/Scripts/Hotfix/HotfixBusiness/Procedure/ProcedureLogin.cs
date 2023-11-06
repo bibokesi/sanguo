@@ -7,10 +7,12 @@ using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedure
 
 namespace HotfixBusiness.Procedure
 {
-    public class ProcedureMainMenu : ProcedureBase
+    public class ProcedureLogin : ProcedureBase
     {
         public override bool UseNativeDialog => false;
-        private int m_UIEntranceMenuFormId;
+
+        private int m_LoginFormId = 0;
+
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {
             base.OnEnter(procedureOwner);
@@ -18,7 +20,8 @@ namespace HotfixBusiness.Procedure
             //初始化所有信息管理器
             DataManagerEntry.Instance.OnInit();
 
-            ShowUIEntranceMenuForm(true);
+            // 打开登陆界面
+            ShowLoginForm(true);
         }
 
         protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)
@@ -26,25 +29,25 @@ namespace HotfixBusiness.Procedure
             base.OnLeave(procedureOwner, isShutdown);
 
             //清理所有信息管理器
-            DataManagerEntry.GetInstance()?.OnClear();
+            //DataManagerEntry.GetInstance()?.OnClear();
 
-            ShowUIEntranceMenuForm(false);            
+            ShowLoginForm(false);            
         }
 
-        private void ShowUIEntranceMenuForm(bool isOpen)
+        private void ShowLoginForm(bool isOpen)
         {
             if (isOpen)
             {
-                if (!GameEntry.UI.HasUIForm(m_UIEntranceMenuFormId) && !GameEntry.UI.IsLoadingUIForm(m_UIEntranceMenuFormId))
+                if (!GameEntry.UI.HasUIForm(m_LoginFormId) && !GameEntry.UI.IsLoadingUIForm(m_LoginFormId))
                 {
-                    m_UIEntranceMenuFormId = GameEntry.UI.OpenUIForm(ConstantUI.GetUIFormInfo<UIMainMenuForm>());
+                    m_LoginFormId = GameEntry.UI.OpenUIForm(ConstantUI.GetUIFormInfo<UIMainMenuForm>());
                 }
             }
             else
             {
-                if (GameEntry.UI.HasUIForm(m_UIEntranceMenuFormId) || GameEntry.UI.IsLoadingUIForm(m_UIEntranceMenuFormId))
+                if (GameEntry.UI.HasUIForm(m_LoginFormId) || GameEntry.UI.IsLoadingUIForm(m_LoginFormId))
                 {
-                    GameEntry.UI.CloseUIForm(m_UIEntranceMenuFormId);
+                    GameEntry.UI.CloseUIForm(m_LoginFormId);
                 }
             }
         }

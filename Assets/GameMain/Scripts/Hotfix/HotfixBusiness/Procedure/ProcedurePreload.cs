@@ -1,7 +1,7 @@
 using GameFramework.Resource;
 using Main.Runtime.Procedure;
 using System.Collections.Generic;
-using HotfixBusiness.DataUser;
+using HotfixBusiness.Data;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 using UnityEngine;
 
@@ -16,10 +16,10 @@ namespace HotfixBusiness.Procedure
         {
             base.OnEnter(procedureOwner);
 
-            Logger.Debug("tackor HotFix ProcedurePreload OnEnter");
+            Logger.Debug("ProcedurePreload OnEnter");
 
             m_procedureOwner = procedureOwner;
-            //初始化所有角色信息管理器
+
             PreloadConfig();
         }
         protected override void OnUpdate(ProcedureOwner procedureOwner, float elapseSeconds, float realElapseSeconds)

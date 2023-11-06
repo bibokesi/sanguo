@@ -28,7 +28,7 @@ namespace HotfixBusiness.Procedure
             GameEntry.Event.Subscribe(LoadSceneDependencyAssetEventArgs.EventId, OnHandleLoadSceneDependencyAsset);
 
             //m_UIFormSerialId = GameEntry.UI.OpenUIForm(ConstantUI.EUIFormId.UILoadingSceneForm, this);
-            Logger.Debug<ProcedureChangeScene>($"tackor ProcedureChangeScene OnEnter {m_UIFormSerialId}");
+            Logger.Debug<ProcedureChangeScene>($"ProcedureChangeScene OnEnter {m_UIFormSerialId}");
 
         }
 
@@ -51,11 +51,9 @@ namespace HotfixBusiness.Procedure
             GameEntry.Event.Unsubscribe(LoadSceneUpdateEventArgs.EventId, OnHandleLoadSceneUpdate);
             GameEntry.Event.Unsubscribe(LoadSceneDependencyAssetEventArgs.EventId, OnHandleLoadSceneDependencyAsset);
 
-            Logger.Debug<ProcedureChangeScene>($"tackor ProcedureChangeScene OnLeave {m_UIFormSerialId}");
+            Logger.Debug<ProcedureChangeScene>($"ProcedureChangeScene OnLeave {m_UIFormSerialId}");
             if (m_UIFormSerialId != 0 && GameEntry.UI.HasUIForm((int)m_UIFormSerialId))
             {
-                Logger.Debug<ProcedureChangeScene>("tackor Clost UI");
-
                 GameEntry.UI.CloseUIForm((int)m_UIFormSerialId);
             }
 

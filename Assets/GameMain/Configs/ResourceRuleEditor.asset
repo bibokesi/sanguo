@@ -34,111 +34,111 @@ MonoBehaviour:
     filterType: 0
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/UI/Form
+    name: BaseAssets/UI/UIForm
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/UI/Form
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/UI/UIForm
     loadType: 0
     packed: 1
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/UI/AtlasCollection
+    name: BaseAssets/UI/UIAtlasCollection
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/UI/AtlasCollection
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/UI/UIAtlasCollection
     loadType: 0
     packed: 1
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/UI/Texture
+    name: BaseAssets/UI/UITexture
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/UI/Texture
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/UI/UITexture
     loadType: 0
     packed: 1
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/UI/Sprite
+    name: BaseAssets/UI/UISprite
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/UI/Sprite
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/UI/UISprite
     loadType: 0
     packed: 1
     filterType: 2
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/UI/Template
+    name: BaseAssets/UI/UITemplate
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/UI/Template
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/UI/UITemplate
     loadType: 0
     packed: 1
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/UI/Atlas
+    name: BaseAssets/UI/UIAtlas
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/UI/Atlas
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/UI/UIAtlas
     loadType: 0
     packed: 1
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/Models
+    name: BaseAssets/Model
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/Models
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Model
     loadType: 0
     packed: 1
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/Sound/BattleSounds
+    name: BaseAssets/Sound/BattleSound
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sounds/BattleSounds
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sounds/BattleSound
     loadType: 0
     packed: 1
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/Sound/CommonSounds
+    name: BaseAssets/Sound/CommonSound
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sounds/CommonSounds
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sounds/CommonSound
     loadType: 0
     packed: 1
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/Sound/MusicSounds
+    name: BaseAssets/Sound/MusicSound
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sounds/MusicSounds
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sounds/MusicSound
     loadType: 0
     packed: 1
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/Sound/UISounds
+    name: BaseAssets/Sound/UISound
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sounds/UISounds
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sounds/UISound
     loadType: 0
     packed: 1
     filterType: 1

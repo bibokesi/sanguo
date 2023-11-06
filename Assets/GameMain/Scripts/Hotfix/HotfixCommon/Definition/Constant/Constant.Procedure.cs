@@ -48,6 +48,10 @@ public static partial class Constant
         public const string ProcedureAGameExample = "GameMainExample2.Procedure.ProcedureAGameExample";
         public const string ProcedureGamePlay = "GameMainExample2.Procedure.ProcedureGamePlay";
         public const string ProcedureGameMenu = "GameMainExample2.Procedure.ProcedureGameMenu";
+
+        //-------------------------------------------------------------
+        public const string ProcedureLogin = "HotfixBusiness.Procedure.ProcedureLogin";
+
         private static Dictionary<string, ProcedureInfo> ProcedureInfos = new Dictionary<string, ProcedureInfo>()
         {
             {ProcedureMainMenu,new ProcedureInfo(ProcedureMainMenu,false,false,"BaseAssets","")},
@@ -57,6 +61,9 @@ public static partial class Constant
             {ProcedureAGameExample,new ProcedureInfo(ProcedureAGameExample,true,false,"AGameExample","")},
             {ProcedureGamePlay,new ProcedureInfo(ProcedureGamePlay,false,true,"AGameExample","RaceScene_")},
             {ProcedureGameMenu,new ProcedureInfo(ProcedureGameMenu,false,false,"AGameExample","")},
+
+            //-------------------------------------------------------------
+            {ProcedureLogin,new ProcedureInfo(ProcedureLogin,false,false,"BaseAssets","")},
         };
 
         public static bool IsJumpScene(string procedureName)

@@ -4,9 +4,9 @@ using Main.Runtime;
 using UnityEngine;
 
 /// <summary>
-/// 游戏入口
+/// 业务入口
 /// </summary>
-public static class GameEnterLogic
+public static class GameEnterMain
 {
     public static void Entrance(object[] objects) 
     {
