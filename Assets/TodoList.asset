@@ -12,11 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f958145dc24921c4d95f3544ca648fbf, type: 3}
   m_Name: TodoList
   m_EditorClassIdentifier: 
-  TaskCount: 1
-  Mark: 00
-  Enabled: 01
-  Progress: 00000000
-  Title:
-  - "Title \u6807\u9898"
-  Description:
-  - "Please fill in the task description.\u8BF7\u586B\u5199\u4EFB\u52A1\u63CF\u8FF0"
+  TaskCount: 0
+  Mark: 
+  Enabled: 
+  Progress: 
+  Title: []
+  Description: []
