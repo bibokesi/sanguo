@@ -31,6 +31,7 @@ public static class ConstantUI
         /// 是否暂停被其覆盖的界面
         /// </summary>
         public bool PauseCoveredUIForm { get; }
+
         public UIFormInfo(UIFormType formType,string moduleName, string assetName, UIGroupName groupName, bool allowMultiInstance, bool pauseCoveredUIForm)
         {
             this.FormType = formType;
@@ -85,6 +86,8 @@ public static class ConstantUI
         {UIFormId.UILoadingForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UILoadingForm",UIGroupName.AnimationOn,false,true)},
         {UIFormId.UILoadingOneForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UILoadingOneForm",UIGroupName.PopUI,false,true)},
         {UIFormId.UIMainMenuForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UIMainMenuForm",UIGroupName.Background,false,true)},
+
+        {UIFormId.UILoginForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UILoginForm",UIGroupName.Background,false,false)},
     };
 
     public static UIFormInfo GetUIFormInfo(UIFormId uiFormId)
@@ -140,6 +143,11 @@ public static class ConstantUI
         /// 游戏入口菜单
         /// </summary>
         UIMainMenuForm = 6,
+
+        /// <summary>
+        /// 登录界面
+        /// </summary>
+        UILoginForm = 7,
     }
 }
     

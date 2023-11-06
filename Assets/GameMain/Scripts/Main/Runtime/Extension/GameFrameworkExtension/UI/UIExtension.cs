@@ -53,7 +53,7 @@ namespace Main.Runtime
             } 
         }
         
-        private static string m_UIGroupHelperTypeName = "Main.Runtime.GameMainUIGroupHelper";
+        private static string m_UIGroupHelperTypeName = "Main.Runtime.CustomUIGroupHelper";
         private static UIGroupHelperBase m_CustomUIGroupHelper = null;
         public static Transform GetInstanceRoot(this UIComponent uIComponent) 
         {
@@ -158,18 +158,18 @@ namespace Main.Runtime
             }
         }
 
-        public static void OpenUIInitRootForm(this UIComponent uiComponent) 
+        public static void OpenUIInitForm(this UIComponent uiComponent) 
         {
-            var foregroundTrans = InstanceRoot.Find("UIInitRootForm");
-            if (foregroundTrans != null)
+            var initForm = InstanceRoot.Find("UIInitForm");
+            if (initForm != null)
             {
-                foregroundTrans.gameObject.SetActive(true);
+                initForm.gameObject.SetActive(true);
             }
         }
 
-        public static UIInitRootForm GameMainUIInitRootForm(this UIComponent uiComponent)
+        public static UIInitForm GetUIInitForm(this UIComponent uiComponent)
         {
-            return UIInitRootForm.Instance;
+            return UIInitForm.Instance;
         }
     }
 }

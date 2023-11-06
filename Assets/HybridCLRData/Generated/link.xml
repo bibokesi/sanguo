@@ -105,12 +105,12 @@
     <type fullname="FrameworkSettingsUtils" preserve="all" />
     <type fullname="Logger" preserve="all" />
     <type fullname="LubanConfigComponent" preserve="all" />
-    <type fullname="Main.Runtime.DialogParams" preserve="all" />
+    <type fullname="Main.Runtime.UIDialogParams" preserve="all" />
     <type fullname="Main.Runtime.FileUtils" preserve="all" />
     <type fullname="Main.Runtime.Procedure.ProcedureBase" preserve="all" />
     <type fullname="Main.Runtime.Procedure.UpdateResourceInfo" preserve="all" />
     <type fullname="Main.Runtime.Procedure.UpdateStateType" preserve="all" />
-    <type fullname="Main.Runtime.UI.UIInitRootForm" preserve="all" />
+    <type fullname="Main.Runtime.UI.UIInitForm" preserve="all" />
     <type fullname="Main.Runtime.UIBaseForm" preserve="all" />
     <type fullname="Main.Runtime.UIExtension" preserve="all" />
     <type fullname="MessengerComponent" preserve="all" />

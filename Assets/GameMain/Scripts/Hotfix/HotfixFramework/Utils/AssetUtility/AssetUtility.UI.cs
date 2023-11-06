@@ -16,8 +16,9 @@ public static partial class AssetUtility
         {
             string moduleName = uiFormInfo.ModuleName;
             string assetName = uiFormInfo.AssetName;
-            return Utility.Text.Format("Assets/GameMain/BaseAssets/{0}/UI/UIForms/{1}/{2}.prefab", moduleName,assetName.Replace("Form",""), assetName);
+            return Utility.Text.Format("Assets/GameMain/{0}/UI/UIForm/{1}/{2}.prefab", moduleName,assetName.Replace("Form",""), assetName);
         }
+
         public static string GetUISubFormAsset(ConstantUI.UIFormInfo  uiFormInfo)
         {
             string moduleName = uiFormInfo.ModuleName;
@@ -25,99 +26,19 @@ public static partial class AssetUtility
             string[] args = assetName.Split('_');
             if (args is { Length: > 1 })
             {
-                return Utility.Text.Format("Assets/GameMain/BaseAssets/{0}/UI/UIForms/{1}/{2}.prefab", moduleName,args[0], assetName);
+                return Utility.Text.Format("Assets/GameMain/{0}/UI/UIForm/{1}/{2}.prefab", moduleName,args[0], assetName);
             }
             Logger.Error("UISubForm prefab wrong name.It should be [UIxxx_xxxSubForm]");
             return string.Empty;
         }
+
         public static string GetUIComSubFormAsset(ConstantUI.UIFormInfo  uiFormInfo)
         {
             string moduleName = uiFormInfo.ModuleName;
             string assetName = uiFormInfo.AssetName;
-            return Utility.Text.Format("Assets/GameMain/BaseAssets/{0}/UI/UIForms/UISub/{1}.prefab", moduleName, assetName);
-        }
-        /// <summary>
-        /// 获取伤害预制
-        /// </summary>
-        /// <returns></returns>
-        public static string GetUIDamagePrefabPath(string damagePrefabName)
-        {
-            return string.Format("Assets/GameMain/BaseAssets/UI/UIPrefab/UIUnit/DamagePrefab/{0}.prefab", damagePrefabName);
+            return Utility.Text.Format("Assets/GameMain/{0}/UI/UIForm/UISub/{1}.prefab", moduleName, assetName);
         }
 
-        /// <summary>
-        /// 获取UITopUnit预制
-        /// </summary>
-        /// <returns></returns>
-        public static string GetUITopUnitPrefabPath(string prefabName)
-        {
-            return string.Format("Assets/GameMain/BaseAssets/UI/UIPrefab/UIUnit/UIFightUnit/{0}.prefab", prefabName);
-        }
-
-        /// <summary>
-        /// 获取伤害预制
-        /// </summary>
-        /// <returns></returns>
-        public static string GetHPChangePrefabPath()
-        {
-            return "Assets/GameMain/BaseAssets/UI/UIPrefab/UIUnit/HPChange.prefab";
-        }
-
-        /// <summary>
-        /// 获取角色血条路径
-        /// </summary>
-        /// <returns></returns>
-        public static string GetPlayerHudPath()
-        {
-            return "Assets/GameMain/BaseAssets/UI/UIPrefab/UIHUD/UIPlayerHUDPanel.prefab";
-        }
-
-        /// <summary>
-        /// 获取怪物血条路径
-        /// </summary>
-        /// <returns></returns>
-        public static string GetMonsterHudPath()
-        {
-            return "Assets/GameMain/AssetsHotfix/UI/UIPrefab/UIHUD/UIMonsterHUD.prefab";
-        }
-
-        /// <summary>
-        /// 获取Npc头顶预制路径
-        /// </summary>
-        /// <returns></returns>
-        public static string GetNpcHudPath()
-        {
-            return "Assets/GameMain/AssetsHotfix/UI/UIPrefab/UIHUD/UINpcHUDPanel.prefab";
-        }
-
-        /// <summary>
-        /// 获取头像资源名称
-        /// </summary>
-        /// <param name="iconName"></param>
-        /// <returns></returns>
-        public static string GetHeadIcon(string iconName)
-        {
-            return string.Format("Assets/GameMain/AssetsHotfix/UI/IconNew/{0}.png", iconName);
-        }
-
-        /// <summary>
-        /// 获取武器头像资源名称
-        /// </summary>
-        /// <param name="iconName"></param>
-        /// <returns></returns>
-        public static string GetWeaponIcon(string iconName)
-        {
-            return string.Format("Assets/GameMain/AssetsHotfix/UI/IconNew/{0}.png", iconName);
-        }
-
-        /// <summary>
-        /// 获取默认Icon
-        /// </summary>
-        /// <returns></returns>
-        public static string GetDefaultIcon()
-        {
-            return "Assets/GameMain/AssetsHotfix/UI/IconNew/Icon_Empty.png";
-        }
         /// <summary>
         /// 获取精灵资源名称
         /// </summary>
@@ -126,8 +47,9 @@ public static partial class AssetUtility
         /// <returns></returns>
         public static string GetSpritePath(string groupName, string spriteName)
         {
-            return $"Assets/GameMain/AssetsHotfix/{groupName}/UI/UIArt/UISprites/{spriteName}.png";
+            return $"Assets/GameMain/{groupName}/UI/UIArt/UISprites/{spriteName}.png";
         }
+
         /// <summary>
         /// 获取精灵资源收集器
         /// </summary>
@@ -136,7 +58,7 @@ public static partial class AssetUtility
         /// <returns></returns>
         public static string GetSpriteCollectionPath(string groupName,string collectionName)
         {
-            return $"Assets/GameMain/AssetsHotfix/{groupName}/UI/UIArt/AtlasCollection/{collectionName}.asset";
+            return $"Assets/GameMain/{groupName}/UI/UIArt/AtlasCollection/{collectionName}.asset";
         }
 
         /// <summary>
@@ -147,7 +69,7 @@ public static partial class AssetUtility
         /// <returns></returns>
         public static string GetTexturePath(string groupName,string textureName)
         {
-            return $"Assets/GameMain/AssetsHotfix/{groupName}/UI/UIArt/Texture/{textureName}.png";
+            return $"Assets/GameMain/{groupName}/UI/UIArt/Texture/{textureName}.png";
         }
 
         /// <summary>
@@ -157,7 +79,7 @@ public static partial class AssetUtility
         /// <returns></returns>
         public static string GetRenderTexturePath(string textureName)
         {
-            return string.Format("Assets/GameMain/AssetsHotfix/UI/UIArt/Texture/{0}.renderTexture", textureName);
+            return string.Format("Assets/GameMain/UI/UIArt/Texture/{0}.renderTexture", textureName);
         }
     }
 }

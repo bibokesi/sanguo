@@ -5,7 +5,7 @@ namespace HotfixBusiness.UI
 {
 	public partial class UIDialogForm : UIFixBaseForm
 	{
-		private DialogParams m_DialogParams;
+		private UIDialogParams m_DialogParams;
 		protected override void OnInit(object userData) {
 			 base.OnInit(userData);
 			 GetBindComponents(gameObject);
@@ -21,7 +21,7 @@ namespace HotfixBusiness.UI
 		protected override void OnOpen(object userData)
 		{
 			base.OnOpen(userData);
-			m_DialogParams = (DialogParams)userData;
+			m_DialogParams = (UIDialogParams)userData;
 			if (m_DialogParams == null)
 			{
 				Close();

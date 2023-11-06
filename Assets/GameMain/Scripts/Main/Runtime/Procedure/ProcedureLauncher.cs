@@ -11,7 +11,7 @@ namespace Main.Runtime.Procedure
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {
             base.OnEnter(procedureOwner);
-            GameEntryMain.UI.OpenUIInitRootForm();
+            GameEntryMain.UI.OpenUIInitForm();
             ChangeState<ProcedureSplash>(procedureOwner);
         }
     }

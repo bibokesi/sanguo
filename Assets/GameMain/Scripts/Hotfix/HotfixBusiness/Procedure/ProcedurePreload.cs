@@ -27,7 +27,7 @@ namespace HotfixBusiness.Procedure
             base.OnUpdate(procedureOwner, elapseSeconds, realElapseSeconds);
             if (IsPreloadFinish())
             {
-                ChangeState<ProcedureMainMenu>(procedureOwner);
+                ChangeState<ProcedureLogin>(procedureOwner);
             }
         }
         protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)

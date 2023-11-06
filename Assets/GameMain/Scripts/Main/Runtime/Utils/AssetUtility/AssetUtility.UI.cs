@@ -15,7 +15,7 @@ namespace Main.Runtime
         {
             public static string GetUIFormAsset(string assetName)
             {
-                return Utility.Text.Format("Assets/GameMain/BaseAssets/UI/Form/{0}/{1}.prefab", assetName.Replace("Form", ""), assetName);
+                return Utility.Text.Format("Assets/GameMain/BaseAssets/UI/UIForm/{0}/{1}.prefab", assetName.Replace("UIForm", ""), assetName);
             }
 
             /// <summary>
@@ -25,7 +25,7 @@ namespace Main.Runtime
             /// <returns></returns>
             public static string GetSpritePath(string spriteName)
             {
-                return string.Format("Assets/GameMain/BaseAssets/UI/Sprite/{0}.png", spriteName);
+                return string.Format("Assets/GameMain/BaseAssets/UI/UISprite/{0}.png", spriteName);
             }
             /// <summary>
             /// 获取精灵资源收集器
@@ -34,7 +34,7 @@ namespace Main.Runtime
             /// <returns></returns>
             public static string GetSpriteCollectionPath(string collectionName)
             {
-                return string.Format("Assets/GameMain/BaseAssets/UI/AtlasCollection/{0}.asset", collectionName);
+                return string.Format("Assets/GameMain/BaseAssets/UI/UIAtlasCollection/{0}.asset", collectionName);
             }
 
             /// <summary>
@@ -44,7 +44,7 @@ namespace Main.Runtime
             /// <returns></returns>
             public static string GetTexturePath(string textureName)
             {
-                return string.Format("Assets/GameMain/BaseAssets/UI/Texture/{0}.png", textureName);
+                return string.Format("Assets/GameMain/BaseAssets/UI/UITexture/{0}.png", textureName);
             }
 
             /// <summary>
@@ -54,7 +54,7 @@ namespace Main.Runtime
             /// <returns></returns>
             public static string GetRenderTexturePath(string textureName)
             {
-                return string.Format("Assets/GameMain/BaseAssets/UI/Texture/{0}.renderTexture", textureName);
+                return string.Format("Assets/GameMain/BaseAssets/UI/UITexture/{0}.renderTexture", textureName);
             }
         }
     }

@@ -566,6 +566,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3404024041783597400}
     m_Modifications:
+    - target: {fileID: 1826014641467258718, guid: ec2ada8d5b3d0154a8edbefa51801e76, type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1826014641467258718, guid: ec2ada8d5b3d0154a8edbefa51801e76, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374334650726412468, guid: ec2ada8d5b3d0154a8edbefa51801e76, type: 3}
+      propertyPath: m_GlobalPointSize
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 2547168950940008463, guid: ec2ada8d5b3d0154a8edbefa51801e76, type: 3}
       propertyPath: m_Name
       value: InputField_UserName
@@ -657,6 +669,14 @@ PrefabInstance:
     - target: {fileID: 8119326380129001918, guid: ec2ada8d5b3d0154a8edbefa51801e76, type: 3}
       propertyPath: m_text
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8119326380129001918, guid: ec2ada8d5b3d0154a8edbefa51801e76, type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8119326380129001918, guid: ec2ada8d5b3d0154a8edbefa51801e76, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec2ada8d5b3d0154a8edbefa51801e76, type: 3}
@@ -925,6 +945,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3404024041783597400}
     m_Modifications:
+    - target: {fileID: 1826014641467258718, guid: ec2ada8d5b3d0154a8edbefa51801e76, type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1826014641467258718, guid: ec2ada8d5b3d0154a8edbefa51801e76, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374334650726412468, guid: ec2ada8d5b3d0154a8edbefa51801e76, type: 3}
+      propertyPath: m_GlobalPointSize
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 2547168950940008463, guid: ec2ada8d5b3d0154a8edbefa51801e76, type: 3}
       propertyPath: m_Name
       value: InputField_PassWord
@@ -1016,6 +1048,14 @@ PrefabInstance:
     - target: {fileID: 8119326380129001918, guid: ec2ada8d5b3d0154a8edbefa51801e76, type: 3}
       propertyPath: m_text
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8119326380129001918, guid: ec2ada8d5b3d0154a8edbefa51801e76, type: 3}
+      propertyPath: m_fontSize
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8119326380129001918, guid: ec2ada8d5b3d0154a8edbefa51801e76, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 30
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ec2ada8d5b3d0154a8edbefa51801e76, type: 3}

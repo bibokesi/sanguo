@@ -82,7 +82,7 @@ namespace HotfixBusiness.Procedure
                     return;
                 }
             }
-            GameEntry.UI.GameMainUIInitRootForm().OnOpenLoadingForm(false);
+            GameEntry.UI.GetUIInitForm().OnOpenLoadingForm(false);
             GameEntry.Setting.SetString("nextProcedure",m_NextProcedure);
             if (m_IsResetProcedure)
             {
@@ -283,7 +283,7 @@ namespace HotfixBusiness.Procedure
             {
                 string conetnt = Utility.Text.Format("有{0}更新", FileUtils.GetLengthString(m_UpdateTotalZipLength));
                 UnityGameFramework.Runtime.Log.Info(conetnt);
-                DialogParams dialogParams = ReferencePool.Acquire<DialogParams>();
+                UIDialogParams dialogParams = ReferencePool.Acquire<UIDialogParams>();
                 dialogParams.Mode = 2;
                 dialogParams.Title = "提示";
                 dialogParams.ConfirmText = "确定";
@@ -291,7 +291,7 @@ namespace HotfixBusiness.Procedure
                 dialogParams.Message = Utility.Text.Format("更新文件大小{0}，建议你在WIFI环境下进行下载，是否现在更新？", FileUtils.GetLengthString(m_UpdateTotalZipLength));
                 dialogParams.OnClickConfirm = (object o) => { StartUpdate(); };
                 dialogParams.OnClickCancel = (object o) => { Application.Quit(); };
-                GameEntryMain.UI.GameMainUIInitRootForm().OnOpenUIDialogForm(dialogParams);
+                GameEntryMain.UI.GetUIInitForm().OnOpenUIDialogForm(dialogParams);
             }
             else
             {
@@ -348,7 +348,7 @@ namespace HotfixBusiness.Procedure
 
         private void StartUpdate()
         {
-            GameEntry.UI.GameMainUIInitRootForm().OnOpenLoadingForm(true);
+            GameEntry.UI.GetUIInitForm().OnOpenLoadingForm(true);
 
             foreach (var item in m_UpdateResourceInfos)
             {
@@ -400,7 +400,7 @@ namespace HotfixBusiness.Procedure
         //弹出提示
         private void OpenDisplay(string content)
         {
-            DialogParams dialogParams = ReferencePool.Acquire<DialogParams>();
+            UIDialogParams dialogParams = ReferencePool.Acquire<UIDialogParams>();
             dialogParams.Mode = 1;
             dialogParams.Title = "";
             dialogParams.Message = content;
@@ -410,7 +410,7 @@ namespace HotfixBusiness.Procedure
                 Logger.Debug<ProcedureCheckAssets>("目前失败没有逻辑");
                 //Application.Quit();
             };
-            GameEntryMain.UI.GameMainUIInitRootForm().OnOpenUIDialogForm(dialogParams);
+            GameEntryMain.UI.GetUIInitForm().OnOpenUIDialogForm(dialogParams);
         }
         private void RefreshProgress()
         {
@@ -438,7 +438,7 @@ namespace HotfixBusiness.Procedure
             Log.Info($"当前下载:{FileUtils.GetByteLengthString(currentTotalUpdateLength)} 总下载:{FileUtils.GetByteLengthString(m_UpdateTotalZipLength)} 下载进度:{progressTotal}");
             Log.Info($"下载速度:{FileUtils.GetByteLengthString((int)GameEntryMain.Download.CurrentSpeed)}");*/
             var tips = $"{FileUtils.GetByteLengthString(currentTotalUpdateLength)}/{FileUtils.GetByteLengthString(m_UpdateTotalZipLength)}  当前下载速度每秒{FileUtils.GetByteLengthString((int)GameEntryMain.Download.CurrentSpeed)}";
-            GameEntryMain.UI.GameMainUIInitRootForm().OnRefreshLoadingProgress(currentTotalUpdateLength, m_UpdateTotalZipLength, tips);
+            GameEntryMain.UI.GetUIInitForm().OnRefreshLoadingProgress(currentTotalUpdateLength, m_UpdateTotalZipLength, tips);
             /*MessengerInfo messengerInfo = ReferencePool.Acquire<MessengerInfo>();
             messengerInfo.param1 = m_UpdateTotalZipLength;
             messengerInfo.param2 = currentTotalUpdateLength;

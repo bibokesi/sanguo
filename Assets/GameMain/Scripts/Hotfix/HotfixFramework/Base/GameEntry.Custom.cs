@@ -201,8 +201,8 @@ public partial class GameEntry
         ResetProcedure();
         ResetUIFormHelper();
         //关闭启动界面
-        GameEntryMain.UI.GameMainUIInitRootForm().OnCloseLaunchView();
-        GameEntryMain.UI.GameMainUIInitRootForm().OnOpenLoadingForm(false);
+        GameEntryMain.UI.GetUIInitForm().OnCloseLaunchView();
+        GameEntryMain.UI.GetUIInitForm().OnOpenLoadingForm(false);
     }
 
     private static List<Assembly> m_HotfixAssemblys = new List<Assembly>();
@@ -242,7 +242,7 @@ public partial class GameEntry
         procedureManager.StartProcedure(_EntranceProcedureBase.GetType());
     }
 
-    private static string m_UIFormHelperTypeName = "Main.Runtime.GameMainUIFormHelper";
+    private static string m_UIFormHelperTypeName = "Main.Runtime.CustomUIFormHelper";
     private static UIFormHelperBase m_CustomUIFormHelper = null;
     private static void ResetUIFormHelper() 
     {

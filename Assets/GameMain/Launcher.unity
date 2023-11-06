@@ -123,37 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &1497473669
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1497473670}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1497473670
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1497473669}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1000, y: 0, z: 46.5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2449484808462136562
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -164,6 +133,42 @@ PrefabInstance:
     - target: {fileID: 2449484808339805617, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
       propertyPath: m_ResourceMode
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2449484808373247227, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_Name
+      value: UIInitForm
+      objectReference: {fileID: 0}
+    - target: {fileID: 2449484808373247230, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_ClassName
+      value: UIInitForm
+      objectReference: {fileID: 0}
+    - target: {fileID: 2449484808373247230, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: BindDatas.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2449484808373247230, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_BindComs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2449484808373247230, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: BindDatas.Array.data[0].Name
+      value: Transform_UILaunchView
+      objectReference: {fileID: 0}
+    - target: {fileID: 2449484808373247230, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: BindDatas.Array.data[1].Name
+      value: Transform_UILoadingForm
+      objectReference: {fileID: 0}
+    - target: {fileID: 2449484808373247230, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: BindDatas.Array.data[2].Name
+      value: Transform_UIDialogForm
+      objectReference: {fileID: 0}
+    - target: {fileID: 2449484808762251752, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_Name
+      value: Transform_UILaunchView
+      objectReference: {fileID: 0}
+    - target: {fileID: 2449484808778143106, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_Name
+      value: Transform_UIDialogForm
       objectReference: {fileID: 0}
     - target: {fileID: 2449484809081457200, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
       propertyPath: m_RootOrder
@@ -213,6 +218,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameFramework
       objectReference: {fileID: 0}
+    - target: {fileID: 2449484809347027041, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_WebRequestAgentHelperTypeName
+      value: CustomWebRequestAgentHelper
+      objectReference: {fileID: 0}
     - target: {fileID: 2449484809830047391, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
       propertyPath: m_fontSize
       value: 22
@@ -222,8 +231,48 @@ PrefabInstance:
       value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 2449484809995130725, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_LogHelperTypeName
+      value: CustomLogHelper
+      objectReference: {fileID: 0}
+    - target: {fileID: 2449484809995130725, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
       propertyPath: m_EditorResourceMode
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 2449484810043118115, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_Name
+      value: Transform_UILoadingForm
+      objectReference: {fileID: 0}
+    - target: {fileID: 2449484810139399429, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_LocalizationHelperTypeName
+      value: CustomLocalizationHelper
+      objectReference: {fileID: 0}
+    - target: {fileID: 2449484810204342645, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_UIFormHelperTypeName
+      value: Main.Runtime.CustomUIFormHelper
+      objectReference: {fileID: 0}
+    - target: {fileID: 2449484810204342645, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_UIGroupHelperTypeName
+      value: Main.Runtime.CustomUIGroupHelper
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2449484808373247225, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+--- !u!1 &2449484808462136563 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2449484808373247227, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+  m_PrefabInstance: {fileID: 2449484808462136562}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2449484808462136564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2449484808462136563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2196e7012306f74784148a7c06182ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UILoadingForm: {fileID: 0}
+  UIDialogForm: {fileID: 0}

@@ -10,7 +10,7 @@ namespace Main.Runtime.UI
 	/// </summary>
 	public partial class UIDialogForm : UIBaseForm
 	{
-		private DialogParams m_DialogParams;
+		private UIDialogParams m_DialogParams;
 		protected override void OnInit(object userData) {
 			 base.OnInit(userData);
 			 GetBindComponents(gameObject);
@@ -30,7 +30,7 @@ namespace Main.Runtime.UI
 
 		public void OpenView(object userData)
 		{
-			m_DialogParams = (DialogParams)userData;
+			m_DialogParams = (UIDialogParams)userData;
 			if (m_DialogParams == null)
 			{
 				CloseView();

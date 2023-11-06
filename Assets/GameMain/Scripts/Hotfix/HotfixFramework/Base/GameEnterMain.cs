@@ -10,7 +10,7 @@ public static class GameEnterMain
 {
     public static void Entrance(object[] objects) 
     {
-        GameEntry.UI.GameMainUIInitRootForm().OnOpenLoadingForm(true);
+        GameEntry.UI.GetUIInitForm().OnOpenLoadingForm(true);
         GameEntry.Entrance(objects);
     }
 }

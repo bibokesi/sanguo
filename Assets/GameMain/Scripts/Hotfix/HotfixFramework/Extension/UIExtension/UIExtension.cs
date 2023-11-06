@@ -14,11 +14,10 @@ public static class UIExtension
 {
     private static Transform m_InstanceRoot;
     private static IUIManager m_UIManager;
-    private static string m_UIGroupHelperTypeName = "Main.Runtime.GameMainUIGroupHelper";
+    private static string m_UIGroupHelperTypeName = "Main.Runtime.CustomUIGroupHelper";
     private static UIGroupHelperBase m_CustomUIGroupHelper = null;
     private static int m_UILoadingFormId;
     private static int m_UILoadingOneFormId;
-
    
     public static Canvas GetCanvas(this UIComponent uiComponent)
     {
@@ -95,6 +94,7 @@ public static class UIExtension
     {
         return uiComponent.OpenUIForm(ConstantUI.GetUIFormInfo(uiFormId), userData);
     }
+
     public static int OpenUIForm(this UIComponent uiComponent, ConstantUI.UIFormInfo uiFormInfo, object userData = null)
     {
         if (uiFormInfo == null)
@@ -132,7 +132,43 @@ public static class UIExtension
         return uiComponent.OpenUIForm(assetName, uiFormInfo.UIGroupName.ToString(), Constant.AssetPriority.UIFormAsset, uiFormInfo.PauseCoveredUIForm, userData);
     }
 
-    public static void OpenDialog(this UIComponent uiComponent, DialogParams dialogParams)
+    /// <summary>
+    /// 打开飘字提示框
+    /// </summary>
+    /// <param name="uIComponent"></param>
+    /// <param name="tips">显示内容</param>
+    /// <param name="color">颜色（默认白色）</param>
+    /// <param name="openBg">背景框（默认打开）</param>
+    //	GameEntry.UI.OpenTips("xxxxxxxx",color:Color.white,openBg:false);
+    public static void OpenTips(this UIComponent uIComponent, string tips, Color? color = null, bool openBg = true)
+    {
+        MessengerInfo info = ReferencePool.Acquire<MessengerInfo>();
+        info.param1 = tips;
+        info.param2 = color ?? Color.white;
+        info.param3 = openBg;
+
+        uIComponent.OpenUIForm(ConstantUI.UIFormId.UITipsForm, info);
+    }
+
+    //  UIDialogParams dialogParams = new UIDialogParams();
+    //  dialogParams.Mode = 2;
+    //	dialogParams.ConfirmText = "确定";
+    //	dialogParams.CancelText = "取消";
+    //	dialogParams.OnClickConfirm = delegate(object o)
+    //	{
+    //		GameEntry.UI.OpenTips("");
+    //	};
+    //  dialogParams.OnClickCancel = delegate (object o)
+    //  {
+    //      GameEntry.UI.OpenTips("");
+    //  };
+    //  dialogParams.OnClickBackground = delegate (object o)
+    //  {
+    //      GameEntry.UI.OpenTips("");
+    //  };
+    //  dialogParams.Message = $"";
+    //  GameEntry.UI.OpenDialog(dialogParams);
+    public static void OpenDialog(this UIComponent uiComponent, UIDialogParams dialogParams)
     {
         uiComponent.OpenUIForm(ConstantUI.UIFormId.UIDialogForm, dialogParams);
     }
@@ -174,6 +210,7 @@ public static class UIExtension
             uiComponent.CloseUIForm(m_UILoadingFormId);
         }
     }
+
     public static void OpenUILoadingOneForm(this UIComponent uiComponent, int timeOut = 10, Action onTimeOut = null)
     {
         var uiFormInfo = ConstantUI.GetUIFormInfo(ConstantUI.UIFormId.UILoadingOneForm);
@@ -206,20 +243,5 @@ public static class UIExtension
             uiComponent.CloseUIForm(m_UILoadingOneFormId);
         }
     }
-    /// <summary>
-    /// 打开飘字提示框
-    /// </summary>
-    /// <param name="uIComponent"></param>
-    /// <param name="tips">显示内容</param>
-    /// <param name="color">颜色（默认白色）</param>
-    /// <param name="openBg">背景框（默认打开）</param>
-    public static void OpenTips(this UIComponent uIComponent, string tips, Color? color = null, bool openBg = true)
-    {
-        MessengerInfo info = ReferencePool.Acquire<MessengerInfo>();
-        info.param1 = tips;
-        info.param2 = color ?? Color.white;
-        info.param3 = openBg;
 
-        uIComponent.OpenUIForm(ConstantUI.UIFormId.UITipsForm, info);
-    }
 }

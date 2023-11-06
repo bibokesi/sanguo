@@ -170,7 +170,7 @@ namespace Main.Runtime
         {
             int oldDepth = Depth;
             base.OnDepthChanged(uiGroupDepth, depthInUIGroup);
-            int deltaDepth = GameMainUIGroupHelper.DepthFactor + uiGroupDepth + DepthFactor * depthInUIGroup - oldDepth + OriginalDepth;
+            int deltaDepth = CustomUIGroupHelper.DepthFactor + uiGroupDepth + DepthFactor * depthInUIGroup - oldDepth + OriginalDepth;
             Canvas[] canvases = GetComponentsInChildren<Canvas>(true);
             for (int i = 0; i < canvases.Length; i++)
             {
