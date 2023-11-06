@@ -59,8 +59,8 @@ public static class SoundComponentExtension
     /// <returns>返回声音播放id</returns>
     public static int PlayMusicFile(this SoundComponent soundComponent, string soundAssetName, float volume = 1f, float fadeInSeconds = m_FadeVolumeDuration, object userData = null)
     {
-        if (!soundComponent.HasSoundGroup(Constant.SoundGroup.Music))
-            soundComponent.AddSoundGroup(Constant.SoundGroup.Music, 5);
+        if (!soundComponent.HasSoundGroup(Constant.SoundGroup.MusicSound))
+            soundComponent.AddSoundGroup(Constant.SoundGroup.MusicSound, 5);
         soundComponent.StopMusic(fadeInSeconds: fadeInSeconds);
         var playSoundParams = PlaySoundParams.Create();
         playSoundParams.Priority = 128;
@@ -68,18 +68,19 @@ public static class SoundComponentExtension
         playSoundParams.VolumeInSoundGroup = volume;
         playSoundParams.FadeInSeconds = fadeInSeconds;
         playSoundParams.SpatialBlend = 0;
-        m_MusicSerialId = soundComponent.PlaySound(soundAssetName, Constant.SoundGroup.Music,
+        m_MusicSerialId = soundComponent.PlaySound(soundAssetName, Constant.SoundGroup.MusicSound,
             playSoundParams, userData, delegate (int serialId, OnLoadAudioClipFinish onLoadAudioClipFinish)
             {
                 soundComponent.StartCoroutine(IELoadLocalAudioFile(serialId, soundAssetName, onLoadAudioClipFinish));
             });
         return m_MusicSerialId;
     }
+
     public static int PlayMusicFile1(this SoundComponent soundComponent, string soundAssetName, float volume = 1f, float fadeInSeconds = m_FadeVolumeDuration, object userData = null)
     {
         //soundComponent.GolDateTime = DateTime.UtcNow;
-        if (!soundComponent.HasSoundGroup(Constant.SoundGroup.Music))
-            soundComponent.AddSoundGroup(Constant.SoundGroup.Music, 5);
+        if (!soundComponent.HasSoundGroup(Constant.SoundGroup.MusicSound))
+            soundComponent.AddSoundGroup(Constant.SoundGroup.MusicSound, 5);
         soundComponent.StopMusic(fadeInSeconds: fadeInSeconds);
         var playSoundParams = PlaySoundParams.Create();
         playSoundParams.Priority = 0;
@@ -87,13 +88,14 @@ public static class SoundComponentExtension
         playSoundParams.VolumeInSoundGroup = volume;
         playSoundParams.FadeInSeconds = fadeInSeconds;
         playSoundParams.SpatialBlend = 0;
-        m_MusicSerialId = soundComponent.PlaySound(soundAssetName, Constant.SoundGroup.Music,
+        m_MusicSerialId = soundComponent.PlaySound(soundAssetName, Constant.SoundGroup.MusicSound,
             playSoundParams, userData, delegate (int serialId, OnLoadAudioClipFinish onLoadAudioClipFinish)
             {
                 soundComponent.StartCoroutine(IELoadLocalAudioFile(serialId, soundAssetName, onLoadAudioClipFinish));
             });
         return m_MusicSerialId;
     }
+
     /// <summary>
     /// 播放本地沙盒目录音效音乐文件
     /// </summary>
@@ -103,20 +105,21 @@ public static class SoundComponentExtension
     /// <returns>返回声音播放id</returns>
     public static int PlaySoundFile(this SoundComponent soundComponent, string soundAssetName, float volume = 1f, float fadeInSeconds = 0, object userData = null)
     {
-        if (!soundComponent.HasSoundGroup(Constant.SoundGroup.Sound))
-            soundComponent.AddSoundGroup(Constant.SoundGroup.Sound, 5);
+        if (!soundComponent.HasSoundGroup(Constant.SoundGroup.CommonSound))
+            soundComponent.AddSoundGroup(Constant.SoundGroup.CommonSound, 5);
         var playSoundParams = PlaySoundParams.Create();
         playSoundParams.Priority = 100;
         playSoundParams.Loop = false;
         playSoundParams.VolumeInSoundGroup = volume;
         playSoundParams.FadeInSeconds = fadeInSeconds;
         playSoundParams.SpatialBlend = 0;
-        return soundComponent.PlaySound(soundAssetName, Constant.SoundGroup.Sound,
+        return soundComponent.PlaySound(soundAssetName, Constant.SoundGroup.CommonSound,
             playSoundParams, userData, delegate (int serialId, OnLoadAudioClipFinish onLoadAudioClipFinish)
             {
                 soundComponent.StartCoroutine(IELoadLocalAudioFile(serialId, soundAssetName, onLoadAudioClipFinish));
             }); ;
     }
+
     /// <summary>
     /// 通过配表方式播放背景音乐
     /// </summary>
@@ -133,8 +136,8 @@ public static class SoundComponentExtension
             Log.Warning("Can not load sound '{0}' from data table.", musicId.ToString());
             return null;
         }
-        if (!soundComponent.HasSoundGroup(Constant.SoundGroup.Music))
-            soundComponent.AddSoundGroup(Constant.SoundGroup.Music, 5);
+        if (!soundComponent.HasSoundGroup(Constant.SoundGroup.MusicSound))
+            soundComponent.AddSoundGroup(Constant.SoundGroup.MusicSound, 5);
         soundComponent.StopMusic();
         var playSoundParams = PlaySoundParams.Create();
         playSoundParams.Priority = config.SoundPriority.ToInt();
@@ -142,11 +145,12 @@ public static class SoundComponentExtension
         playSoundParams.VolumeInSoundGroup = config.SoundVolume;
         playSoundParams.FadeInSeconds = m_FadeVolumeDuration;
         playSoundParams.SpatialBlend = config.SpatialBlend;
-        var soundAssetName = AssetUtility.Sound.GetMusicAsset(config.GroupName, config.SoundName);
-        m_MusicSerialId = soundComponent.PlaySound(soundAssetName, "Music", Constant.AssetPriority.MusicAsset,
+        var soundAssetName = AssetUtility.Sound.GetMusicSoundAsset(config.GroupName, config.SoundName);
+        m_MusicSerialId = soundComponent.PlaySound(soundAssetName, Constant.SoundGroup.MusicSound, Constant.AssetPriority.MusicAsset,
             playSoundParams, null, userData);
         return m_MusicSerialId;
     }
+
     /// <summary>
     /// 通过配表方式播放声音
     /// </summary>
@@ -166,17 +170,18 @@ public static class SoundComponentExtension
             return 0;
         }
 
-        if (!soundComponent.HasSoundGroup(Constant.SoundGroup.Sound))
-            soundComponent.AddSoundGroup(Constant.SoundGroup.Sound, 5);
+        if (!soundComponent.HasSoundGroup(Constant.SoundGroup.CommonSound))
+            soundComponent.AddSoundGroup(Constant.SoundGroup.CommonSound, 5);
         var playSoundParams = PlaySoundParams.Create();
         playSoundParams.Priority = config.SoundPriority.ToInt();
         playSoundParams.Loop = config.Loop == 1;
         playSoundParams.VolumeInSoundGroup = config.SoundVolume;
         playSoundParams.SpatialBlend = config.SpatialBlend;
-        return soundComponent.PlaySound(AssetUtility.Sound.GetSoundAsset(config.GroupName, config.SoundName), "Sound",
+        return soundComponent.PlaySound(AssetUtility.Sound.GetCommonSoundAsset(config.GroupName, config.SoundName), Constant.SoundGroup.CommonSound,
             Constant.AssetPriority.SoundAsset, playSoundParams, bindingEntity != null ? bindingEntity.Entity : null,
             userData);
     }
+
     /// <summary>
     /// 通过配表方式播放声音
     /// </summary>
@@ -201,7 +206,7 @@ public static class SoundComponentExtension
         playSoundParams.Loop = config.Loop == 1;
         playSoundParams.VolumeInSoundGroup = config.SoundVolume;
         playSoundParams.SpatialBlend = config.SpatialBlend;
-        return soundComponent.PlaySound(AssetUtility.Sound.GetUISoundAsset(config.GroupName, config.SoundName), "UISound",
+        return soundComponent.PlaySound(AssetUtility.Sound.GetUISoundAsset(config.GroupName, config.SoundName), Constant.SoundGroup.UISound,
             Constant.AssetPriority.UISoundAsset, playSoundParams, userData);
     }
 
@@ -218,6 +223,7 @@ public static class SoundComponentExtension
         soundComponent.StopSound(m_MusicSerialId, fadeInSeconds);
         m_MusicSerialId = 0;
     }
+
     /// <summary>
     /// 暂停播放背景音乐
     /// </summary>
@@ -230,6 +236,7 @@ public static class SoundComponentExtension
         }
         soundComponent.PauseSound(m_MusicSerialId, fadeInSeconds);
     }
+
     /// <summary>
     /// 恢复播放背景音乐
     /// </summary>
@@ -242,6 +249,7 @@ public static class SoundComponentExtension
         }
         soundComponent.ResumeSound(m_MusicSerialId, fadeInSeconds);
     }
+
     /// <summary>
     /// 获取声音组是否静音
     /// </summary>
@@ -265,6 +273,7 @@ public static class SoundComponentExtension
 
         return soundGroup.Mute;
     }
+
     /// <summary>
     /// 设置是否静音
     /// </summary>
@@ -291,6 +300,7 @@ public static class SoundComponentExtension
         GameEntry.Setting.SetBool(Utility.Text.Format(Constant.Setting.SoundGroupMuted, soundGroupName), mute);
         GameEntry.Setting.Save();
     }
+
     /// <summary>
     /// 获取声音组音量
     /// </summary>
@@ -314,6 +324,7 @@ public static class SoundComponentExtension
 
         return soundGroup.Volume;
     }
+
     /// <summary>
     /// 设置声音组音量
     /// </summary>

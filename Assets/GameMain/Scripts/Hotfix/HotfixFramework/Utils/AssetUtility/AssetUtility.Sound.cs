@@ -1,21 +1,27 @@
-﻿
-using GameFramework;
+﻿using GameFramework;
 
 public static partial class AssetUtility
 {
     public static class Sound
     {
-        public static string GetMusicAsset(string groupName,string assetName)
+        public static string GetMusicSoundAsset(string groupName,string assetName)
         {
-            return $"Assets/GameMain/BaseAssets/{groupName}/Sounds/{assetName}.mp3";
+            return $"Assets/GameMain/BaseAssets/Sound/{groupName}/{assetName}.mp3";
         }
+
         public static string GetUISoundAsset(string groupName,string assetName)
         {
-            return $"Assets/GameMain/BaseAssets/{groupName}/Sounds/{assetName}.wav";
+            return $"Assets/GameMain/BaseAssets/Sound/{groupName}/{assetName}.wav";
         }
-        public static string GetSoundAsset(string groupName,string assetName)
+
+        public static string GetCommonSoundAsset(string groupName,string assetName)
         {
-            return $"Assets/GameMain/BaseAssets/{groupName}/Sounds/{assetName}.wav";
+            return $"Assets/GameMain/BaseAssets/Sound/{groupName}/{assetName}.wav";
+        }
+
+        public static string GetBattleSoundAsset(string groupName, string assetName)
+        {
+            return $"Assets/GameMain/BaseAssets/Sound/{groupName}/{assetName}.wav";
         }
     }
 }

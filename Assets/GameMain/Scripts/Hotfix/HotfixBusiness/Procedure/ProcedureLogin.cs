@@ -17,11 +17,14 @@ namespace HotfixBusiness.Procedure
         {
             base.OnEnter(procedureOwner);
 
-            //初始化所有信息管理器
+            // 初始化所有信息管理器
             DataManagerEntry.Instance.OnInit();
 
             // 打开登陆界面
             ShowLoginForm(true);
+
+            // 播放背景音乐
+            GameEntry.Sound.PlayMusic((int)SceneEnum.Login);
         }
 
         protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)

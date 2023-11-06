@@ -24,6 +24,7 @@ namespace HotfixBusiness.UI
 
 		private void Button_LoginEvent(){
 			GameEntry.UI.OpenTips(m_InputField_UserName.text + "  " + m_InputField_PassWord.text);
+            GameEntry.Sound.StopMusic((int)SceneEnum.Login);
 		}
 		private void Button_RegisterEvent(){
 
