@@ -6,9 +6,6 @@ using UnityGameFramework.Runtime;
 
 namespace Main.Runtime 
 {
-    /// <summary>
-    /// Please modify the description.
-    /// </summary>
     public class CustomUIGroupHelper : UIGroupHelperBase
     {
         public const int DepthFactor = 10000;

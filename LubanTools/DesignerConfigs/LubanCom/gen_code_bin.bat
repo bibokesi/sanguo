@@ -3,7 +3,7 @@ set WORKSPACE=..
 set GEN_CLIENT=%WORKSPACE%\Tools\Luban.ClientServer\Luban.ClientServer.exe
 echo %GEN_CLIENT%
 set CONF_ROOT=%WORKSPACE%\DesignerConfigs
-set OUTPUT_CODE_PATH=%WORKSPACE%\..\Assets\GameMain\Scripts\HotFix\HotFixCommon\LubanConfig
+set OUTPUT_CODE_PATH=%WORKSPACE%\..\Assets\GameMain\Scripts\HotFix\HotfixBusiness\LubanConfig
 set OUTPUT_DATA_PATH=%WORKSPACE%\GenerateDatas\LubanConfig\Datas
 
 %GEN_CLIENT% -h %LUBAN_SERVER_IP% -j cfg --^

@@ -86,14 +86,37 @@ namespace HotfixBusiness.Procedure
         {
             m_LoadSceneComplete = true;
         }
+
         private void OnHandleLoadSceneFailure(object sender, GameEventArgs e)
         {
+            LoadSceneFailureEventArgs ne = (LoadSceneFailureEventArgs)e;
+            if (ne.UserData != this)
+            {
+                return;
+            }
+
+            //Log.Error("Load scene '{0}' failure, error message '{1}'.", ne.SceneAssetName, ne.ErrorMessage);
         }
+
         private void OnHandleLoadSceneUpdate(object sender, GameEventArgs e)
         {
+            LoadSceneUpdateEventArgs ne = (LoadSceneUpdateEventArgs)e;
+            if (ne.UserData != this)
+            {
+                return;
+            }
+
+            //Log.Info("Load scene '{0}' update, progress '{1}'.", ne.SceneAssetName, ne.Progress.ToString("P2"));
         }
         private void OnHandleLoadSceneDependencyAsset(object sender, GameEventArgs e)
         {
+            LoadSceneDependencyAssetEventArgs ne = (LoadSceneDependencyAssetEventArgs)e;
+            if (ne.UserData != this)
+            {
+                return;
+            }
+
+            //Log.Info("Load scene '{0}' dependency asset '{1}', count '{2}/{3}'.", ne.SceneAssetName, ne.DependencyAssetName, ne.LoadedCount.ToString(), ne.TotalCount.ToString());
         }
     }
 }

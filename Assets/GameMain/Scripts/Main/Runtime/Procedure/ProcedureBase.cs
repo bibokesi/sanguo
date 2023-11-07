@@ -29,6 +29,8 @@ namespace Main.Runtime.Procedure
             UnloadAllScene();
             GameEntryMain.Entity.HideAllLoadedEntities();
             GameEntryMain.Entity.HideAllLoadingEntities();
+            GameEntryMain.Sound.StopAllLoadingSounds();
+            GameEntryMain.Sound.StopAllLoadedSounds();
             GameEntryMain.ObjectPool.ReleaseAllUnused();
             GameEntryMain.Resource.ForceUnloadUnusedAssets(true);
         }
