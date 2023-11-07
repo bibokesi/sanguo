@@ -84,16 +84,6 @@ MonoBehaviour:
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/Model
-    variant: 
-    fileSystem: 
-    groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/Model
-    loadType: 0
-    packed: 1
-    filterType: 1
-    searchPatterns: '*.*'
-  - valid: 1
     name: BaseAssets/Sound/BattleSound
     variant: 
     fileSystem: 
@@ -129,6 +119,16 @@ MonoBehaviour:
     fileSystem: 
     groups: BaseAssets
     assetsDirectoryPath: Assets/GameMain/BaseAssets/Sound/UISound
+    loadType: 0
+    packed: 1
+    filterType: 1
+    searchPatterns: '*.*'
+  - valid: 1
+    name: BaseAssets/Scene
+    variant: 
+    fileSystem: 
+    groups: BaseAssets
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Scene
     loadType: 0
     packed: 1
     filterType: 1

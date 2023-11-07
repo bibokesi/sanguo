@@ -180,7 +180,7 @@ namespace HotfixFramework
 				m_IsLastLoadFinish = true;
 				return;
 			}
-			GameEntry.UI.OpenUILoadingOneForm();
+			GameEntry.UI.OpenUIMaskForm();
 			if (IsShowObject(bundleDownInfo))
 			{
 				return;
@@ -238,7 +238,7 @@ namespace HotfixFramework
 			m_listObjectLoadings.Remove(bundleDownInfo);
 			if (m_listObjectLoadings.Count == 0)
 			{
-				GameEntry.UI.CloseUILoadingOneForm();
+				GameEntry.UI.CloseUIMaskForm();
 			}
 			m_IsLastLoadFinish = true;
 			ReferencePool.Release(bundleDownInfo);
@@ -310,7 +310,7 @@ namespace HotfixFramework
 			m_listObjectLoadings.Remove(bundleDownInfo);
 			if (m_listObjectLoadings.Count == 0)
 			{
-				GameEntry.UI.CloseUILoadingOneForm();
+				GameEntry.UI.CloseUIMaskForm();
 			}
 			m_IsLastLoadFinish = true;
 			ReferencePool.Release(bundleDownInfo);

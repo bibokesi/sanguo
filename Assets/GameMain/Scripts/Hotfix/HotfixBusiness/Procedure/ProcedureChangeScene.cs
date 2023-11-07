@@ -15,17 +15,22 @@ namespace HotfixBusiness.Procedure
         private int m_UIFormSerialId;
 
         private bool m_LoadSceneComplete;
+        private bool m_LoadSceneSuccess;
         private string m_NextProcedure;
 
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {
             base.OnEnter(procedureOwner);
             m_NextProcedure = procedureOwner.GetData<VarString>("nextProcedure");
+            m_LoadSceneComplete = false;
+            m_LoadSceneSuccess = false;
+
             OnStartLoadScene();
             GameEntry.Event.Subscribe(LoadSceneSuccessEventArgs.EventId, OnHandleLoadSceneSuccess);
             GameEntry.Event.Subscribe(LoadSceneFailureEventArgs.EventId, OnHandleLoadSceneFailure);
             GameEntry.Event.Subscribe(LoadSceneUpdateEventArgs.EventId, OnHandleLoadSceneUpdate);
             GameEntry.Event.Subscribe(LoadSceneDependencyAssetEventArgs.EventId, OnHandleLoadSceneDependencyAsset);
+            GameEntry.Event.Subscribe(LoadSceneCompleteEventArgs.EventId, OnHandleLoadCompleteSuccess);
 
             m_UIFormSerialId = GameEntry.UI.OpenUIForm(ConstantUI.UIFormId.UILoadingForm, this);
         }
@@ -33,7 +38,7 @@ namespace HotfixBusiness.Procedure
         protected override void OnUpdate(ProcedureOwner procedureOwner, float elapseSeconds, float realElapseSeconds)
         {
             base.OnUpdate(procedureOwner, elapseSeconds, realElapseSeconds);
-            if (m_LoadSceneComplete)
+            if (m_LoadSceneSuccess && m_LoadSceneComplete)
             {
                 ChangeState(procedureOwner, GameEntry.GetProcedureByName(m_NextProcedure).GetType());
             }
@@ -47,6 +52,7 @@ namespace HotfixBusiness.Procedure
             GameEntry.Event.Unsubscribe(LoadSceneFailureEventArgs.EventId, OnHandleLoadSceneFailure);
             GameEntry.Event.Unsubscribe(LoadSceneUpdateEventArgs.EventId, OnHandleLoadSceneUpdate);
             GameEntry.Event.Unsubscribe(LoadSceneDependencyAssetEventArgs.EventId, OnHandleLoadSceneDependencyAsset);
+            GameEntry.Event.Unsubscribe(LoadSceneCompleteEventArgs.EventId, OnHandleLoadCompleteSuccess);
 
             if (m_UIFormSerialId != 0 && GameEntry.UI.HasUIForm((int)m_UIFormSerialId))
             {
@@ -80,7 +86,7 @@ namespace HotfixBusiness.Procedure
 
         private void OnHandleLoadSceneSuccess(object sender, GameEventArgs e)
         {
-            m_LoadSceneComplete = true;
+            m_LoadSceneSuccess = true;
         }
 
         private void OnHandleLoadSceneFailure(object sender, GameEventArgs e)
@@ -113,6 +119,11 @@ namespace HotfixBusiness.Procedure
             }
 
             //Log.Info("Load scene '{0}' dependency asset '{1}', count '{2}/{3}'.", ne.SceneAssetName, ne.DependencyAssetName, ne.LoadedCount.ToString(), ne.TotalCount.ToString());
+        }
+
+        private void OnHandleLoadCompleteSuccess(object sender, GameEventArgs e)
+        {
+            m_LoadSceneComplete = true;
         }
     }
 }

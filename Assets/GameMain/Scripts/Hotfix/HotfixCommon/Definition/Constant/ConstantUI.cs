@@ -84,7 +84,7 @@ public static class ConstantUI
         {UIFormId.UIDialogForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UIDialogForm",UIGroupName.Popup,false,true)},
         {UIFormId.UITipsForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UITipsForm",UIGroupName.Popup,true,false)},
         {UIFormId.UILoadingForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UILoadingForm",UIGroupName.Loading,false,true)},
-        {UIFormId.UILoadingOneForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UILoadingOneForm",UIGroupName.Popup,false,true)},
+        {UIFormId.UIMaskForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UIMaskForm",UIGroupName.AlwaysTop,false,true)},
 
         //-------------------------------------------------------------------------------------------
 
@@ -140,9 +140,9 @@ public static class ConstantUI
         UILoadingForm,
 
         /// <summary>
-        /// 业务逻辑单次请求加载界面。
+        /// 遮罩界面。
         /// </summary>
-        UILoadingOneForm,
+        UIMaskForm,
 
         /// <summary>
         /// 登录界面

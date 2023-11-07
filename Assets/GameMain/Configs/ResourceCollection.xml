@@ -4,6 +4,9 @@
     <Resources>
       <Resource Name="BaseAssets/Font" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/Prefab" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
+      <Resource Name="BaseAssets/Scene/Fight" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
+      <Resource Name="BaseAssets/Scene/Login" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
+      <Resource Name="BaseAssets/Scene/Main" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/Sound/MusicSound/Game_Music" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/Sound/MusicSound/Menu_Music" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/Sound/UISound/Fx_02_V2" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
@@ -13,21 +16,24 @@
       <Resource Name="BaseAssets/UI/UIForm/UIDialog/UIDialogForm" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/UI/UIForm/UIFight/UIFightForm" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/UI/UIForm/UILoading/UILoadingForm" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UI/UIForm/UILoadingOne/UILoadingOneForm" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/UI/UIForm/UILogin/UILoginForm" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/UI/UIForm/UIMain/UIMainForm" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
+      <Resource Name="BaseAssets/UI/UIForm/UIMask/UIMaskForm" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/UI/UIForm/UITips/UITipsForm" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/UI/UISprite/Common" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/UI/UITexture/login_bg" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
     </Resources>
     <Assets>
       <Asset Guid="0c210c5b35c48d4408b1fdf6cd3f3061" ResourceName="BaseAssets/Font" />
-      <Asset Guid="102e820a7b9321d42b127d3104a7ca5a" ResourceName="BaseAssets/UI/UIForm/UILoading/UILoadingForm" />
+      <Asset Guid="17ec5b8f543c59345bc1257ec50c7228" ResourceName="BaseAssets/Scene/Login" />
       <Asset Guid="19d1f77867b631b4e8af112eb72e9daf" ResourceName="BaseAssets/Sound/UISound/ui_click_button" />
       <Asset Guid="1b2c03b8f7cf2004a8cceb6334fa0d34" ResourceName="BaseAssets/UI/UIAtlas/Common" />
       <Asset Guid="2d4f68dd930657644958116906fa1c91" ResourceName="BaseAssets/UI/UIForm/UILogin/UILoginForm" />
+      <Asset Guid="2f15a59e18827984ba1a712606d3bd21" ResourceName="BaseAssets/UI/UIForm/UILoading/UILoadingForm" />
+      <Asset Guid="319a4051d4f4d5d4f80ae9a13c311ce7" ResourceName="BaseAssets/Scene/Main" />
       <Asset Guid="344fd999a66558c47adbfeb5d96e5704" ResourceName="BaseAssets/Sound/MusicSound/Menu_Music" />
       <Asset Guid="3c31266dd0ae57c468b36845e0397b6a" ResourceName="BaseAssets/Font" />
+      <Asset Guid="4a1d78108500a384ab18221468189d18" ResourceName="BaseAssets/Scene/Fight" />
       <Asset Guid="4e6d0f6a0c55e8f45ab683c0cc74df3a" ResourceName="BaseAssets/UI/UIForm/UIFight/UIFightForm" />
       <Asset Guid="5553149e945bd5846b1ee69409d96e3e" ResourceName="BaseAssets/UI/UITexture/login_bg" />
       <Asset Guid="55e9c0991d948ca458c1a235cb21e190" ResourceName="BaseAssets/UI/UIForm/UIMain/UIMainForm" />
@@ -40,7 +46,7 @@
       <Asset Guid="e41de5d16c3cfa04da3d39b8aebad451" ResourceName="BaseAssets/UI/UIForm/UIDialog/UIDialogForm" />
       <Asset Guid="f3ab0d53e9c425d4da9724fab4bfd7d9" ResourceName="BaseAssets/Prefab" />
       <Asset Guid="f9612d2ea47890742846a458b552127a" ResourceName="BaseAssets/Font" />
-      <Asset Guid="fb08855e4c34fc04891f62f0cf3225da" ResourceName="BaseAssets/UI/UIForm/UILoadingOne/UILoadingOneForm" />
+      <Asset Guid="fb08855e4c34fc04891f62f0cf3225da" ResourceName="BaseAssets/UI/UIForm/UIMask/UIMaskForm" />
     </Assets>
   </ResourceCollection>
 </UnityGameFramework>

@@ -37,7 +37,7 @@ namespace HotfixBusiness.Procedure
             {
                 if (!GameEntry.UI.HasUIForm(m_UIFormSerialId) && !GameEntry.UI.IsLoadingUIForm(m_UIFormSerialId))
                 {
-                    m_UIFormSerialId = GameEntry.UI.OpenUIForm(ConstantUI.GetUIFormInfo<UILoginForm>());
+                    m_UIFormSerialId = GameEntry.UI.OpenUIForm(ConstantUI.GetUIFormInfo<UIMainForm>());
                 }
             }
             else

@@ -40,7 +40,7 @@ public static partial class Constant
 
         private static Dictionary<string, ProcedureInfo> ProcedureInfos = new Dictionary<string, ProcedureInfo>()
         {
-            {ProcedureLogin,new ProcedureInfo(ProcedureLogin,true,true,"BaseAssets","Login")},
+            {ProcedureLogin,new ProcedureInfo(ProcedureLogin,true,false,"BaseAssets","Login")},
             {ProcedureMain,new ProcedureInfo(ProcedureMain,true,true,"BaseAssets","Main")},
             {ProcedureFight,new ProcedureInfo(ProcedureFight,true,true,"BaseAssets","Fight")},
         };

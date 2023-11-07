@@ -77,7 +77,7 @@ namespace Main.Runtime.Procedure
             GameEntryMain.Event.Subscribe(DownloadUpdateEventArgs.EventId, OnDownloadUpdate);
             GameEntryMain.Event.Subscribe(DownloadFailureEventArgs.EventId, OnDownloadFailure);
             
-            GameEntryMain.UI.GetUIInitForm().OnOpenLoadingForm(true);
+            GameEntryMain.UI.GetUIInitForm().OpenLoading(true);
             if (GameEntryMain.Base.EditorResourceMode)
             {
                 if (!FrameworkSettingsUtils.FrameworkSettings.ReadLocalConfigInEditor)
@@ -228,7 +228,7 @@ namespace Main.Runtime.Procedure
                 dialogParams.Message = Utility.Text.Format("更新文件大小{0}，建议你在WIFI环境下进行下载，是否现在更新？", FileUtils.GetLengthString(m_UpdateTotalZipLength));
                 dialogParams.OnClickConfirm = (object o) => { StartUpdate(); };
                 dialogParams.OnClickCancel = (object o) => { Application.Quit(); };
-                GameEntryMain.UI.GetUIInitForm().OnOpenUIDialogForm(dialogParams);
+                GameEntryMain.UI.GetUIInitForm().OpenUIDialog(dialogParams);
             }
             else
             {
@@ -299,11 +299,11 @@ namespace Main.Runtime.Procedure
                 Logger.Info(updateProgress);
             }
             float progressTotal = (float)currentTotalUpdateLength / m_UpdateTotalZipLength;
-/*            Logger.Info($"更新成功数量:{m_UpdateSuccessCount} 总更新数量:{m_UpdateConfigCount + m_UpdateResourceCount} 资源数量:{m_UpdateResourceCount} Config数量:{m_UpdateConfigCount}");
+/*          Logger.Info($"更新成功数量:{m_UpdateSuccessCount} 总更新数量:{m_UpdateConfigCount + m_UpdateResourceCount} 资源数量:{m_UpdateResourceCount} Config数量:{m_UpdateConfigCount}");
             Logger.Info($"当前下载:{FileUtils.GetByteLengthString(currentTotalUpdateLength)} 总下载:{FileUtils.GetByteLengthString(m_UpdateTotalZipLength)} 下载进度:{progressTotal}");
             Logger.Info($"下载速度:{FileUtils.GetByteLengthString((int)GameEntryMain.Download.CurrentSpeed)}");*/
             var tips = $"{FileUtils.GetByteLengthString(currentTotalUpdateLength)}/{FileUtils.GetByteLengthString(m_UpdateTotalZipLength)}  当前下载速度每秒{FileUtils.GetByteLengthString((int)GameEntryMain.Download.CurrentSpeed)}";
-            GameEntryMain.UI.GetUIInitForm().OnRefreshLoadingProgress(currentTotalUpdateLength, m_UpdateTotalZipLength, tips);
+            GameEntryMain.UI.GetUIInitForm().RefreshLoadingProgress(currentTotalUpdateLength, m_UpdateTotalZipLength, tips);
         }
         private void OnUpdateConfigsComplete(bool result)
         {
@@ -488,7 +488,7 @@ namespace Main.Runtime.Procedure
             dialogParams.Message = content;
             dialogParams.ConfirmText = "确认";
             dialogParams.OnClickConfirm = (object o) => { Application.Quit(); };
-            GameEntryMain.UI.GetUIInitForm().OnOpenUIDialogForm(dialogParams);
+            GameEntryMain.UI.GetUIInitForm().OpenUIDialog(dialogParams);
         }
         private class UpdateInfoData
         {

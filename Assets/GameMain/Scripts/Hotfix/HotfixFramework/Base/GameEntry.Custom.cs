@@ -201,8 +201,8 @@ public partial class GameEntry
         ResetProcedure();
         ResetUIFormHelper();
         //关闭启动界面
-        GameEntryMain.UI.GetUIInitForm().OnCloseLaunchView();
-        GameEntryMain.UI.GetUIInitForm().OnOpenLoadingForm(false);
+        GameEntryMain.UI.GetUIInitForm().CloseLaunch();
+        GameEntryMain.UI.GetUIInitForm().OpenLoading(false);
     }
 
     private static List<Assembly> m_HotfixAssemblys = new List<Assembly>();

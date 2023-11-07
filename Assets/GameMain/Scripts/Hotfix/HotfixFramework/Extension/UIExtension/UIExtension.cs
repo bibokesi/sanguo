@@ -17,7 +17,7 @@ public static class UIExtension
     private static string m_UIGroupHelperTypeName = "Main.Runtime.CustomUIGroupHelper";
     private static UIGroupHelperBase m_CustomUIGroupHelper = null;
     private static int m_UILoadingFormId;
-    private static int m_UILoadingOneFormId;
+    private static int m_UIMaskFormId;
    
     public static Canvas GetCanvas(this UIComponent uiComponent)
     {
@@ -211,9 +211,9 @@ public static class UIExtension
         }
     }
 
-    public static void OpenUILoadingOneForm(this UIComponent uiComponent, int timeOut = 10, Action onTimeOut = null)
+    public static void OpenUIMaskForm(this UIComponent uiComponent, int timeOut = 10, Action onTimeOut = null)
     {
-        var uiFormInfo = ConstantUI.GetUIFormInfo(ConstantUI.UIFormId.UILoadingOneForm);
+        var uiFormInfo = ConstantUI.GetUIFormInfo(ConstantUI.UIFormId.UIMaskForm);
         if (uiFormInfo == null)
         {
             return;
@@ -233,14 +233,14 @@ public static class UIExtension
         MessengerInfo messengerInfo = ReferencePool.Acquire<MessengerInfo>();
         messengerInfo.param1 = timeOut;
         messengerInfo.action1 = onTimeOut;
-        m_UILoadingOneFormId = uiComponent.OpenUIForm(uiFormInfo, messengerInfo);
+        m_UIMaskFormId = uiComponent.OpenUIForm(uiFormInfo, messengerInfo);
     }
 
-    public static void CloseUILoadingOneForm(this UIComponent uiComponent)
+    public static void CloseUIMaskForm(this UIComponent uiComponent)
     {
-        if (m_UILoadingOneFormId != 0 && (uiComponent.HasUIForm(m_UILoadingOneFormId) || uiComponent.IsLoadingUIForm(m_UILoadingOneFormId)))
+        if (m_UIMaskFormId != 0 && (uiComponent.HasUIForm(m_UIMaskFormId) || uiComponent.IsLoadingUIForm(m_UIMaskFormId)))
         {
-            uiComponent.CloseUIForm(m_UILoadingOneFormId);
+            uiComponent.CloseUIForm(m_UIMaskFormId);
         }
     }
 

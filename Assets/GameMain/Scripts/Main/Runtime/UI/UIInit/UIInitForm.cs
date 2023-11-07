@@ -14,9 +14,9 @@ namespace Main.Runtime.UI
             get { return instance; }
         }
 
-        public RectTransform m_Transform_UILaunchView;
-        public RectTransform m_Transform_UILoadingForm;
-        public RectTransform m_Transform_UIDialogForm;
+        public RectTransform m_Transform_UILaunch;
+        public RectTransform m_Transform_UILoading;
+        public RectTransform m_Transform_UIDialog;
 
         public UIButtonSuper m_Btn_bg;
         public TextMeshProUGUI m_TxtM_Content;
@@ -50,50 +50,49 @@ namespace Main.Runtime.UI
             m_Btn_Cancel.onClick.AddListener(Btn_CancelEvent);
             m_Btn_Other.onClick.AddListener(Btn_OtherEvent);
 
-            CloseAllView();
-            OnOpenLoadingForm(true);
+            CloseAll();
         }
 
-        private void CloseAllView()
+        private void CloseAll()
         {
-            m_Transform_UILaunchView.gameObject.SetActive(true);
-            m_Transform_UILoadingForm.gameObject.SetActive(false);
-            m_Transform_UIDialogForm.gameObject.SetActive(false);
+            m_Transform_UILaunch.gameObject.SetActive(true);
+            m_Transform_UILoading.gameObject.SetActive(false);
+            m_Transform_UIDialog.gameObject.SetActive(false);
         }
 
-        public void OnOpenLaunchView(bool isLandscape = true)
+        public void OpenLaunch(bool isLandscape = true)
         {
-            Logger.Debug<UIInitForm>("OnOpenLaunchView");
-            m_Transform_UILaunchView.gameObject.SetActive(true);
+            Logger.Debug<UIInitForm>("OpenLaunch");
+            m_Transform_UILaunch.gameObject.SetActive(true);
         }
 
-        public void OnCloseLaunchView()
+        public void CloseLaunch()
         {
-            m_Transform_UILaunchView.gameObject.SetActive(false);
+            m_Transform_UILaunch.gameObject.SetActive(false);
         }
 
-        public void OnOpenLoadingForm(bool isOpen)
+        public void OpenLoading(bool isOpen)
         {
-            m_Transform_UILoadingForm.gameObject.SetActive(isOpen);
-            m_Transform_UILaunchView.gameObject.SetActive(false);
+            m_Transform_UILoading.gameObject.SetActive(isOpen);
+            m_Transform_UILaunch.gameObject.SetActive(false);
         }
 
-        public void OnRefreshLoadingProgress(float curProgress, float totalProgress, string tips = "")
+        public void RefreshLoadingProgress(float curProgress, float totalProgress, string tips = "")
         {
             m_Img_ProgressValue.fillAmount = curProgress / totalProgress;
             m_TxtM_Tips.text = tips;
         }
 
-        public void OnOpenUIDialogForm(object userData)
+        public void OpenUIDialog(object userData)
         {
             m_DialogParams = (UIDialogParams)userData;
             if (m_DialogParams == null)
             {
-                m_Transform_UIDialogForm.gameObject.SetActive(false);
+                m_Transform_UIDialog.gameObject.SetActive(false);
                 return;
             }
            
-            m_Transform_UIDialogForm.gameObject.SetActive(true);
+            m_Transform_UIDialog.gameObject.SetActive(true);
 
             m_TxtM_Tilte.text = m_DialogParams.Title;
             m_TxtM_Content.text = m_DialogParams.Message;
@@ -108,25 +107,25 @@ namespace Main.Runtime.UI
         private void Btn_bgEvent()
         {
             m_DialogParams.OnClickBackground?.Invoke(m_DialogParams.UserData);
-            m_Transform_UIDialogForm.gameObject.SetActive(false);
+            m_Transform_UIDialog.gameObject.SetActive(false);
         }
 
         private void Btn_SureEvent()
         {
             m_DialogParams.OnClickConfirm?.Invoke(m_DialogParams.UserData);
-            m_Transform_UIDialogForm.gameObject.SetActive(false);
+            m_Transform_UIDialog.gameObject.SetActive(false);
         }
 
         private void Btn_CancelEvent()
         {
             m_DialogParams.OnClickCancel?.Invoke(m_DialogParams.UserData);
-            m_Transform_UIDialogForm.gameObject.SetActive(false);
+            m_Transform_UIDialog.gameObject.SetActive(false);
         }
 
         private void Btn_OtherEvent()
         {
             m_DialogParams.OnClickOther?.Invoke(m_DialogParams.UserData);
-            m_Transform_UIDialogForm.gameObject.SetActive(false);
+            m_Transform_UIDialog.gameObject.SetActive(false);
         }
     }
 }
