@@ -33,28 +33,16 @@ public static partial class Constant
     /// </summary>
     public static class Procedure
     {
-        
-        public const string ProcedureMainMenu = "HotfixBusiness.Procedure.ProcedureMainMenu";
-        public const string ProcedureResetMain = "HotfixBusiness.Procedure.ProcedureResetMain";
-        
-        public const string ProcedureGameMainExample = "HotfixGameMainExample.Procedure.ProcedureGameMainExample";
-        public const string ProcedureGameMainMain = "HotfixGameMainExample.Procedure.ProcedureGameMainMain";
-        public const string ProcedureGameMainLogin = "HotfixGameMainExample.Procedure.ProcedureGameMainLogin";
-        
-        public const string ProcedureAGameExample = "GameMainExample2.Procedure.ProcedureAGameExample";
-        public const string ProcedureGamePlay = "GameMainExample2.Procedure.ProcedureGamePlay";
-        public const string ProcedureGameMenu = "GameMainExample2.Procedure.ProcedureGameMenu";
-
-        //-------------------------------------------------------------
+        public const string ProcedureReset = "HotfixBusiness.Procedure.ProcedureReset";
         public const string ProcedureLogin = "HotfixBusiness.Procedure.ProcedureLogin";
         public const string ProcedureMain = "HotfixBusiness.Procedure.ProcedureMain";
         public const string ProcedureFight = "HotfixBusiness.Procedure.ProcedureFight";
 
         private static Dictionary<string, ProcedureInfo> ProcedureInfos = new Dictionary<string, ProcedureInfo>()
         {
-            {ProcedureLogin,new ProcedureInfo(ProcedureLogin,false,false,"BaseAssets","")},
-            {ProcedureMain,new ProcedureInfo(ProcedureMain,false,false,"BaseAssets","")},
-            {ProcedureFight,new ProcedureInfo(ProcedureFight,false,false,"BaseAssets","")},
+            {ProcedureLogin,new ProcedureInfo(ProcedureLogin,false,false,"BaseAssets","Login")},
+            {ProcedureMain,new ProcedureInfo(ProcedureMain,false,true,"BaseAssets","Main")},
+            {ProcedureFight,new ProcedureInfo(ProcedureFight,false,true,"BaseAssets","Fight")},
         };
 
         public static bool IsJumpScene(string procedureName)

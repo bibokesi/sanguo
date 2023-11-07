@@ -9,7 +9,6 @@
       <Resource Name="BaseAssets/UI/UIForm/UILoading/UILoadingForm" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/UI/UIForm/UILoadingOne/UILoadingOneForm" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/UI/UIForm/UILogin/UILoginForm" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UI/UIForm/UIMainMenu/UIMainMenuForm" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/UI/UIForm/UITips/UITipsForm" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/UI/UISprite/Common" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/UI/UITexture/loading_bg" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />

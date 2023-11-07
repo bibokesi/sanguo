@@ -86,11 +86,11 @@ namespace HotfixBusiness.Procedure
             GameEntry.Setting.SetString("nextProcedure",m_NextProcedure);
             if (m_IsResetProcedure)
             {
-                GameEntry.ResetProcedure(Constant.Procedure.ProcedureResetMain);
+                GameEntry.ResetProcedure(Constant.Procedure.ProcedureReset);
             }
             else
             {
-                ChangeState<ProcedureResetMain>(m_ProcedureOwner);
+                ChangeState<ProcedureReset>(m_ProcedureOwner);
             }
         }
 

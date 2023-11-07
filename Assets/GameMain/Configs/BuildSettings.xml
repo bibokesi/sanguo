@@ -3,6 +3,9 @@
   <BuildSettings>
     <DefaultScenes>
       <DefaultScene Name="Assets/GameMain/Launcher.unity" />
+      <DefaultScene Name="Assets/GameMain/BaseAssets/Scene/Login.unity" />
+      <DefaultScene Name="Assets/GameMain/BaseAssets/Scene/Main.unity" />
+      <DefaultScene Name="Assets/GameMain/BaseAssets/Scene/Fight.unity" />
     </DefaultScenes>
     <SearchScenePaths>
       <SearchScenePath Path="Assets/GameMain" />

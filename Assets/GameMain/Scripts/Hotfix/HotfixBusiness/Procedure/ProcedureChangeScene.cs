@@ -68,11 +68,6 @@ namespace HotfixBusiness.Procedure
             {
                 string groupName = Constant.Procedure.FindAssetGroup(m_NextProcedure);
                 string sceneName = Constant.Procedure.FindSceneName(m_NextProcedure);
-                if (m_NextProcedure == Constant.Procedure.ProcedureGamePlay)
-                {
-                    float _NextRaceIndex = GameEntry.Setting.GetFloat("NextRaceIndex", 0);
-                    sceneName = $"{sceneName}{_NextRaceIndex}";
-                }
                 string scenePath = AssetUtility.Scene.GetSceneAsset(groupName, sceneName);
                 GameEntry.Scene.LoadScene(scenePath, Constant.AssetPriority.SceneAsset);
             }
@@ -86,6 +81,7 @@ namespace HotfixBusiness.Procedure
                 GameEntry.Scene.UnloadScene(sceneAssetName);
             }
         }
+
         private void OnHandleLoadSceneSuccess(object sender, GameEventArgs e)
         {
             m_LoadSceneComplete = true;

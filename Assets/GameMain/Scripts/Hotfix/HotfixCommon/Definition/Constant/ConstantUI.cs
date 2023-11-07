@@ -85,7 +85,6 @@ public static class ConstantUI
         {UIFormId.UITipsForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UITipsForm",UIGroupName.PopUI,true,false)},
         {UIFormId.UILoadingForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UILoadingForm",UIGroupName.AnimationOn,false,true)},
         {UIFormId.UILoadingOneForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UILoadingOneForm",UIGroupName.PopUI,false,true)},
-        {UIFormId.UIMainMenuForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UIMainMenuForm",UIGroupName.Background,false,true)},
 
         //-------------------------------------------------------------------------------------------
         {UIFormId.UILoginForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UILoginForm",UIGroupName.Background,false,false)},
@@ -142,10 +141,7 @@ public static class ConstantUI
         /// 业务逻辑单次请求加载界面。
         /// </summary>
         UILoadingOneForm = 5,
-        /// <summary>
-        /// 游戏入口菜单
-        /// </summary>
-        UIMainMenuForm = 6,
+
 
         /// <summary>
         /// 登录界面
