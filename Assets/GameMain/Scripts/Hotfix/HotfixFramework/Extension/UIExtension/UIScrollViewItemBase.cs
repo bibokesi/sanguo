@@ -4,9 +4,6 @@ using UnityEngine;
 
 namespace HotfixBusiness.UI 
 {
-    /// <summary>
-    /// Please modify the description.
-    /// </summary>
     public partial class UIScrollViewItemBase : MonoBehaviour
     {
         public int m_ItemIndex;

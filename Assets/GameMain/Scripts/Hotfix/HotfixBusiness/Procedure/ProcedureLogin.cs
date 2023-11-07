@@ -11,7 +11,7 @@ namespace HotfixBusiness.Procedure
     {
         public override bool UseNativeDialog => false;
 
-        private int m_LoginFormId = 0;
+        private int m_UIFormSerialId = 0;
 
         protected override void OnEnter(ProcedureOwner procedureOwner)
         {
@@ -20,8 +20,8 @@ namespace HotfixBusiness.Procedure
             // 初始化所有信息管理器
             DataManagerEntry.Instance.OnInit();
 
-            // 打开登陆界面
-            ShowLoginForm(true);
+            // 打开界面
+            ShowSceneForm(true);
 
             // 播放背景音乐
             GameEntry.Sound.PlayMusic((int)SceneEnum.Login);
@@ -34,23 +34,23 @@ namespace HotfixBusiness.Procedure
             //清理所有信息管理器
             //DataManagerEntry.GetInstance()?.OnClear();
 
-            ShowLoginForm(false);            
+            ShowSceneForm(false);            
         }
 
-        private void ShowLoginForm(bool isOpen)
+        private void ShowSceneForm(bool isOpen)
         {
             if (isOpen)
             {
-                if (!GameEntry.UI.HasUIForm(m_LoginFormId) && !GameEntry.UI.IsLoadingUIForm(m_LoginFormId))
+                if (!GameEntry.UI.HasUIForm(m_UIFormSerialId) && !GameEntry.UI.IsLoadingUIForm(m_UIFormSerialId))
                 {
-                    m_LoginFormId = GameEntry.UI.OpenUIForm(ConstantUI.GetUIFormInfo<UILoginForm>());
+                    m_UIFormSerialId = GameEntry.UI.OpenUIForm(ConstantUI.GetUIFormInfo<UILoginForm>());
                 }
             }
             else
             {
-                if (GameEntry.UI.HasUIForm(m_LoginFormId) || GameEntry.UI.IsLoadingUIForm(m_LoginFormId))
+                if (GameEntry.UI.HasUIForm(m_UIFormSerialId) || GameEntry.UI.IsLoadingUIForm(m_UIFormSerialId))
                 {
-                    GameEntry.UI.CloseUIForm(m_LoginFormId);
+                    GameEntry.UI.CloseUIForm(m_UIFormSerialId);
                 }
             }
         }

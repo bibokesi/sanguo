@@ -5,9 +5,6 @@ using UnityEngine;
 
 namespace Main.Runtime.UI
 {
-	/// <summary>
-	/// Please modify the description.
-	/// </summary>
 	public partial class UIDialogForm : UIBaseForm
 	{
 		private UIDialogParams m_DialogParams;
@@ -28,12 +25,12 @@ namespace Main.Runtime.UI
 			OnInit(this);
 		}
 
-		public void OpenView(object userData)
+		public void Open(object userData)
 		{
 			m_DialogParams = (UIDialogParams)userData;
 			if (m_DialogParams == null)
 			{
-				CloseView();
+				Close();
 				return;
 			}
 			m_TxtM_Tilte.text = m_DialogParams.Title;
@@ -46,7 +43,7 @@ namespace Main.Runtime.UI
 			m_Btn_Other.gameObject.SetActive(m_DialogParams.Mode >= 3);
 		}
 
-		private void CloseView()
+		private void Close()
 		{
 			gameObject.SetActive(false);
 		}
@@ -54,25 +51,25 @@ namespace Main.Runtime.UI
 		private void Btn_bgEvent()
 		{
 			m_DialogParams.OnClickBackground?.Invoke(m_DialogParams.UserData);
-			CloseView();
+			Close();
 		}
 
 		private void Btn_SureEvent()
 		{
 			m_DialogParams.OnClickConfirm?.Invoke(m_DialogParams.UserData);
-			CloseView();
+			Close();
 		}
 
 		private void Btn_CancelEvent()
 		{
 			m_DialogParams.OnClickCancel?.Invoke(m_DialogParams.UserData);
-			CloseView();
+			Close();
 		}
 
 		private void Btn_OtherEvent()
 		{
 			m_DialogParams.OnClickOther?.Invoke(m_DialogParams.UserData);
-			CloseView();
+			Close();
 		}
 /*--------------------Auto generate footer.Do not add anything below the footer!------------*/
 	}

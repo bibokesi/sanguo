@@ -5,9 +5,6 @@ using UnityGameFramework.Runtime;
 
 namespace HotfixBusiness.UI 
 {
-    /// <summary>
-    /// Please modify the description.
-    /// </summary>
     public partial class MyTemplateScript : UIFixBaseForm
     {
         private void Awake()

@@ -5,9 +5,6 @@ using UnityGameFramework.Runtime;
 
 namespace Main.Runtime.UI 
 {
-    /// <summary>
-    /// Please modify the description.
-    /// </summary>
     public partial class MyTemplateScript : UIBaseForm
     {
         private void Awake()

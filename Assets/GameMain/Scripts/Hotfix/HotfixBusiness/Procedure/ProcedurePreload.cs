@@ -4,6 +4,11 @@ using System.Collections.Generic;
 using HotfixBusiness.Data;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 using UnityEngine;
+using HotfixFramework;
+using System.Collections;
+using HotfixBusiness.Procedure;
+using Main.Runtime;
+using UnityGameFramework.Runtime;
 
 namespace HotfixBusiness.Procedure
 {
@@ -27,7 +32,11 @@ namespace HotfixBusiness.Procedure
             base.OnUpdate(procedureOwner, elapseSeconds, realElapseSeconds);
             if (IsPreloadFinish())
             {
-                ChangeState<ProcedureLogin>(procedureOwner);
+                if (GameEntry.Procedure.CurrentProcedure is ProcedureBase procedureBase)
+                {
+                    procedureBase.ProcedureOwner.SetData<VarString>("nextProcedure", Constant.Procedure.ProcedureLogin);
+                    procedureBase.ChangeStateByType(procedureBase.ProcedureOwner, typeof(ProcedureCheckAssets));
+                }
             }
         }
         protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)

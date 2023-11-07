@@ -40,9 +40,9 @@ public static partial class Constant
 
         private static Dictionary<string, ProcedureInfo> ProcedureInfos = new Dictionary<string, ProcedureInfo>()
         {
-            {ProcedureLogin,new ProcedureInfo(ProcedureLogin,false,false,"BaseAssets","Login")},
-            {ProcedureMain,new ProcedureInfo(ProcedureMain,false,true,"BaseAssets","Main")},
-            {ProcedureFight,new ProcedureInfo(ProcedureFight,false,true,"BaseAssets","Fight")},
+            {ProcedureLogin,new ProcedureInfo(ProcedureLogin,true,true,"BaseAssets","Login")},
+            {ProcedureMain,new ProcedureInfo(ProcedureMain,true,true,"BaseAssets","Main")},
+            {ProcedureFight,new ProcedureInfo(ProcedureFight,true,true,"BaseAssets","Fight")},
         };
 
         public static bool IsJumpScene(string procedureName)

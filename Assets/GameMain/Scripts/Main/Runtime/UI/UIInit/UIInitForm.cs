@@ -58,7 +58,7 @@ namespace Main.Runtime.UI
         public void OnOpenUIDialogForm(object userData)
         {
             m_Transform_UIDialogForm.gameObject.SetActive(true);
-            UIDialogForm.OpenView(userData);
+            UIDialogForm.Open(userData);
         }
         /*--------------------Auto generate footer.Do not add anything below the footer!------------*/
     }

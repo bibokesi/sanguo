@@ -14,9 +14,7 @@ public delegate void CheckConfigVersionListCompleteCallback(CheckVersionListResu
 /// </summary>
 /// <param name="result">更新资源结果，全部成功为 true，否则为 false。</param>
 public delegate void UpdateConfigCompleteCallback(bool result);
-/// <summary>
-/// Please modify the description.
-/// </summary>
+
 public partial class LubanConfigManager
 {
     public LubanConfigManager()

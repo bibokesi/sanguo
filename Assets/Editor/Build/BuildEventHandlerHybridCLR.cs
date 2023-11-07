@@ -8,9 +8,6 @@ using UnityEngine;
 using UnityGameFramework.Editor.ResourceTools;
 using UnityGameFramework.Runtime;
 
-/// <summary>
-/// Please modify the description.
-/// </summary>
 public static class BuildEventHandlerHybridCLR
 {
 

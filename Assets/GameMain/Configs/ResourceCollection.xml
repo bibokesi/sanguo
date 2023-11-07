@@ -4,25 +4,38 @@
     <Resources>
       <Resource Name="BaseAssets/Font" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/Prefab" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
+      <Resource Name="BaseAssets/Sound/MusicSound/Game_Music" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
+      <Resource Name="BaseAssets/Sound/MusicSound/Menu_Music" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
+      <Resource Name="BaseAssets/Sound/UISound/Fx_02_V2" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
+      <Resource Name="BaseAssets/Sound/UISound/ui_click_button" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
+      <Resource Name="BaseAssets/UI/UIAtlas/Common" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/UI/UIAtlasCollection/Common" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/UI/UIForm/UIDialog/UIDialogForm" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
+      <Resource Name="BaseAssets/UI/UIForm/UIFight/UIFightForm" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/UI/UIForm/UILoading/UILoadingForm" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/UI/UIForm/UILoadingOne/UILoadingOneForm" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/UI/UIForm/UILogin/UILoginForm" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
+      <Resource Name="BaseAssets/UI/UIForm/UIMain/UIMainForm" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/UI/UIForm/UITips/UITipsForm" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/UI/UISprite/Common" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/UI/UITexture/loading_bg" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
+      <Resource Name="BaseAssets/UI/UITexture/login_bg" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
     </Resources>
     <Assets>
       <Asset Guid="0c210c5b35c48d4408b1fdf6cd3f3061" ResourceName="BaseAssets/Font" />
       <Asset Guid="102e820a7b9321d42b127d3104a7ca5a" ResourceName="BaseAssets/UI/UIForm/UILoading/UILoadingForm" />
+      <Asset Guid="19d1f77867b631b4e8af112eb72e9daf" ResourceName="BaseAssets/Sound/UISound/ui_click_button" />
+      <Asset Guid="1b2c03b8f7cf2004a8cceb6334fa0d34" ResourceName="BaseAssets/UI/UIAtlas/Common" />
       <Asset Guid="2d4f68dd930657644958116906fa1c91" ResourceName="BaseAssets/UI/UIForm/UILogin/UILoginForm" />
+      <Asset Guid="344fd999a66558c47adbfeb5d96e5704" ResourceName="BaseAssets/Sound/MusicSound/Menu_Music" />
       <Asset Guid="3c31266dd0ae57c468b36845e0397b6a" ResourceName="BaseAssets/Font" />
-      <Asset Guid="56c3b222b5f9329408e788cb5f734add" ResourceName="BaseAssets/UI/UITexture/loading_bg" />
+      <Asset Guid="4e6d0f6a0c55e8f45ab683c0cc74df3a" ResourceName="BaseAssets/UI/UIForm/UIFight/UIFightForm" />
+      <Asset Guid="5553149e945bd5846b1ee69409d96e3e" ResourceName="BaseAssets/UI/UITexture/login_bg" />
+      <Asset Guid="55e9c0991d948ca458c1a235cb21e190" ResourceName="BaseAssets/UI/UIForm/UIMain/UIMainForm" />
       <Asset Guid="716a243830ee50249a909f893f37c5d4" ResourceName="BaseAssets/UI/UISprite/Common" />
+      <Asset Guid="824ce40d3721d434d98b9a3034771a0c" ResourceName="BaseAssets/Sound/MusicSound/Game_Music" />
       <Asset Guid="a5671ef5b26e98f48b513cadb9e87e2b" ResourceName="BaseAssets/UI/UISprite/Common" />
-      <Asset Guid="b171dbc43fa6a5243aaaa39a77b13dd6" ResourceName="BaseAssets/UI/UIForm/UIMainMenu/UIMainMenuForm" />
       <Asset Guid="b5b6e5e5b63377b4e9b3556b6812194d" ResourceName="BaseAssets/UI/UIForm/UITips/UITipsForm" />
+      <Asset Guid="b63d82571508e9140a6ff1a3b9c8d83a" ResourceName="BaseAssets/Sound/UISound/Fx_02_V2" />
       <Asset Guid="be2db0afaf364114488351f7201458b1" ResourceName="BaseAssets/UI/UIAtlasCollection/Common" />
       <Asset Guid="e41de5d16c3cfa04da3d39b8aebad451" ResourceName="BaseAssets/UI/UIForm/UIDialog/UIDialogForm" />
       <Asset Guid="f3ab0d53e9c425d4da9724fab4bfd7d9" ResourceName="BaseAssets/Prefab" />

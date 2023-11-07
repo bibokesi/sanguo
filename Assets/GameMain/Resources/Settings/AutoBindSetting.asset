@@ -47,9 +47,9 @@ MonoBehaviour:
     FullName: Image
   - Prefixe: RawImage
     FullName: RawImage
-  - Prefixe: Text
+  - Prefixe: Text1
     FullName: Text
-  - Prefixe: TextMeshProUGUI
+  - Prefixe: Text
     FullName: TextMeshProUGUI
   - Prefixe: InputField
     FullName: TMP_InputField

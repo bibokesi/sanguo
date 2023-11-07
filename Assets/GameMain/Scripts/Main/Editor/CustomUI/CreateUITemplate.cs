@@ -20,13 +20,6 @@ namespace GameMain.Editor
             AssetDatabase.SaveAssets();
         }
 
-        [MenuItem("GameObject/CustomUI/UIModel", false, 102)]
-        static void CreateUIModel(MenuCommand menuCommand)
-        {
-            SaveObject(menuCommand, "UIModel");
-        }
-
-
 
 
 

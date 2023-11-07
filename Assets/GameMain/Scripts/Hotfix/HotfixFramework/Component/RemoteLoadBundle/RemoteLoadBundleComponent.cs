@@ -40,10 +40,6 @@ namespace HotfixFramework
 			failureAction = null;
 		}
 	}
-
-	/// <summary>
-	/// Please modify the description.
-	/// </summary>
 	public class RemoteLoadBundleComponent : GameFrameworkComponent
 	{
 		[SerializeField]

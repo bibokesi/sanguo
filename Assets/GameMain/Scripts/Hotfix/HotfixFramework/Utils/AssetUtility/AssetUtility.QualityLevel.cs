@@ -9,18 +9,7 @@ public static partial class AssetUtility
     {
         get
         {
-            int qualityLevel = GameEntry.Setting.GetInt(Constant.Setting.EffectQualityLevel, 2);
-            switch (qualityLevel)
-            {
-                case 1:
-                    return "_l";
-                case 2:
-                    return "_m";
-                case 3:
-                    return "_h";
-                default:
-                    return "";
-            }
+            return "";
         }
     }
 

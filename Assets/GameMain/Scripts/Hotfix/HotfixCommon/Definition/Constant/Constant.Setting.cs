@@ -19,13 +19,5 @@ public static partial class Constant
         public const string SoundVolume = "Setting.SoundVolume";
         public const string UISoundMuted = "Setting.UISoundMuted";
         public const string UISoundVolume = "Setting.UISoundVolume";
-        public const string FreeJoystic = "Setting.FreeJoystic";
-        public const string SceneEffect = "Setting.SceneEffect";
-        public const string Shadow = "Setting.Shadow";
-        public const string CameraEffect = "Setting.CameraEffect";
-        public const string EffectQualityLevel = "Setting.EffectQualityLevel";
-        public const string OutLine = "Setting.OutLine";
-        public const string Plant = "Setting.Plant";
-        public const string RoleCount = "Setting.RoleCount";
     }
 }

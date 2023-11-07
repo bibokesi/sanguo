@@ -45,11 +45,11 @@ public static class ConstantUI
     public enum UIGroupName
     {
         AlwaysBottom,
-        Background,
-        Common,
-        AnimationOn,
-        PopUI,
+        State,
+        Popup,
         Guide,
+        Loading,
+        AlwaysTop,
     }
     /// <summary>
     /// 界面类型
@@ -72,24 +72,25 @@ public static class ConstantUI
     
     public static Dictionary<UIGroupName, int> UIGroups = new Dictionary<UIGroupName, int>() {
         {UIGroupName.AlwaysBottom,1000},
-        {UIGroupName.Background,2000 },
-        {UIGroupName.Common,3000 },
-        {UIGroupName.AnimationOn,4000 },
-        {UIGroupName.PopUI,5000 },
-        {UIGroupName.Guide,6000 },
+        {UIGroupName.State,2000 },
+        {UIGroupName.Popup,3000 },
+        {UIGroupName.Guide,4000 },
+        {UIGroupName.Loading,5000 },
+        {UIGroupName.AlwaysTop,6000 },
     };
 
     private static Dictionary<UIFormId, UIFormInfo> uiForms = new Dictionary<UIFormId, UIFormInfo>()
     {
-        {UIFormId.UIDialogForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UIDialogForm",UIGroupName.PopUI,false,true)},
-        {UIFormId.UITipsForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UITipsForm",UIGroupName.PopUI,true,false)},
-        {UIFormId.UILoadingForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UILoadingForm",UIGroupName.AnimationOn,false,true)},
-        {UIFormId.UILoadingOneForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UILoadingOneForm",UIGroupName.PopUI,false,true)},
+        {UIFormId.UIDialogForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UIDialogForm",UIGroupName.Popup,false,true)},
+        {UIFormId.UITipsForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UITipsForm",UIGroupName.Popup,true,false)},
+        {UIFormId.UILoadingForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UILoadingForm",UIGroupName.Loading,false,true)},
+        {UIFormId.UILoadingOneForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UILoadingOneForm",UIGroupName.Popup,false,true)},
 
         //-------------------------------------------------------------------------------------------
-        {UIFormId.UILoginForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UILoginForm",UIGroupName.Background,false,false)},
-        {UIFormId.UIMainForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UIMainForm",UIGroupName.Background,false,false)},
-        {UIFormId.UIFightForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UIFightForm",UIGroupName.Background,false,false)},
+
+        {UIFormId.UILoginForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UILoginForm",UIGroupName.State,false,false)},
+        {UIFormId.UIMainForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UIMainForm",UIGroupName.State,false,false)},
+        {UIFormId.UIFightForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UIFightForm",UIGroupName.State,false,false)},
     };
 
     public static UIFormInfo GetUIFormInfo(UIFormId uiFormId)
@@ -122,26 +123,26 @@ public static class ConstantUI
     /// 界面编号。
     /// </summary>
     public enum UIFormId
-    {
-        Undefined = 0,
-        
+    {       
         /// <summary>
         /// 弹出框。
         /// </summary>
-        UIDialogForm = 2,
+        UIDialogForm = 1,
+
         /// <summary>
         /// 提示框。
         /// </summary>
-        UITipsForm = 3,
+        UITipsForm,
+
         /// <summary>
         /// 业务逻辑加载界面。
         /// </summary>
-        UILoadingForm = 4,
+        UILoadingForm,
+
         /// <summary>
         /// 业务逻辑单次请求加载界面。
         /// </summary>
-        UILoadingOneForm = 5,
-
+        UILoadingOneForm,
 
         /// <summary>
         /// 登录界面

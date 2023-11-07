@@ -6,9 +6,6 @@ using UnityEngine;
 
 namespace HotfixBusiness.UI
 {
-	/// <summary>
-	/// Please modify the description.
-	/// </summary>
 	public partial class UIMainForm : UIFixBaseForm
 	{
 		protected override void OnInit(object userData) {

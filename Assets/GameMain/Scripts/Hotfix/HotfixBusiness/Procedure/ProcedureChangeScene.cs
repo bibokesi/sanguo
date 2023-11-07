@@ -27,9 +27,7 @@ namespace HotfixBusiness.Procedure
             GameEntry.Event.Subscribe(LoadSceneUpdateEventArgs.EventId, OnHandleLoadSceneUpdate);
             GameEntry.Event.Subscribe(LoadSceneDependencyAssetEventArgs.EventId, OnHandleLoadSceneDependencyAsset);
 
-            //m_UIFormSerialId = GameEntry.UI.OpenUIForm(ConstantUI.UIFormId.UILoadingSceneForm, this);
-            Logger.Debug<ProcedureChangeScene>($"ProcedureChangeScene OnEnter {m_UIFormSerialId}");
-
+            m_UIFormSerialId = GameEntry.UI.OpenUIForm(ConstantUI.UIFormId.UILoadingForm, this);
         }
 
         protected override void OnUpdate(ProcedureOwner procedureOwner, float elapseSeconds, float realElapseSeconds)
@@ -37,7 +35,6 @@ namespace HotfixBusiness.Procedure
             base.OnUpdate(procedureOwner, elapseSeconds, realElapseSeconds);
             if (m_LoadSceneComplete)
             {
-                //procedureOwner.SetData<VarInt16>("levelId", (short)m_NextLevelId);
                 ChangeState(procedureOwner, GameEntry.GetProcedureByName(m_NextProcedure).GetType());
             }
         }
@@ -51,7 +48,6 @@ namespace HotfixBusiness.Procedure
             GameEntry.Event.Unsubscribe(LoadSceneUpdateEventArgs.EventId, OnHandleLoadSceneUpdate);
             GameEntry.Event.Unsubscribe(LoadSceneDependencyAssetEventArgs.EventId, OnHandleLoadSceneDependencyAsset);
 
-            Logger.Debug<ProcedureChangeScene>($"ProcedureChangeScene OnLeave {m_UIFormSerialId}");
             if (m_UIFormSerialId != 0 && GameEntry.UI.HasUIForm((int)m_UIFormSerialId))
             {
                 GameEntry.UI.CloseUIForm((int)m_UIFormSerialId);

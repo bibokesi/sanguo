@@ -1,14 +1,10 @@
-﻿
-using HotfixFramework;
+﻿using HotfixFramework;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 namespace HotfixBusiness.UI
 {
-	/// <summary>
-	/// Please modify the description.
-	/// </summary>
 	public partial class UIFightForm : UIFixBaseForm
 	{
 		protected override void OnInit(object userData) {

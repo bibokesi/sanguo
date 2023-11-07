@@ -660,7 +660,6 @@ public class ComponentAutoBindToolInspector : Editor
                 else
                     sw.WriteLine("\nnamespace PleaseAmendNamespace\n{");
     
-                sw.WriteLine($"\t/// <summary>\n\t/// Please modify the description.\n\t/// </summary>");
                 sw.WriteLine("\tpublic partial class " + className + " : UIFixBaseForm\n\t{");
     
                 #region OnInit
