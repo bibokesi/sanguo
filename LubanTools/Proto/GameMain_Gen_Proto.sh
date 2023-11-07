@@ -4,7 +4,7 @@ cd ${CURRENT_DIR}
 WORKSPACE=..
 echo =================start gen proto code=================
 pb_path=pb_message
-out_path=../../Assets/GameMain/Scripts/Hotfix/HotfixBusiness/Proto
+out_path=../../Assets/GameMain/Scripts/Hotfix/HotfixCommon/Proto
 rm -f $out_path/*
 for file in $pb_path/*
 do
@@ -17,7 +17,7 @@ done
 echo =================end gen proto code=================
 GEN_PROTOBUFRESOLVER=${WORKSPACE}/Tools/ProtobufResolver/ProtobufResolver.dll
 INPUT_DATA_DIR=${CURRENT_DIR}/pb_message
-OUTEVENTPATH=${WORKSPACE}/../Assets/GameMain/Scripts/HotFix/HotfixBusiness/Definition/Constant
+OUTEVENTPATH=${WORKSPACE}/../Assets/GameMain/Scripts/HotFix/HotFixCommon/Definition/Constant
 dotnet ${GEN_PROTOBUFRESOLVER} --input_data_dir ${INPUT_DATA_DIR} --output_proto_dir ${OUTEVENTPATH}
 echo =================end gen proto event=================
 read -p "Press any key to continue..."

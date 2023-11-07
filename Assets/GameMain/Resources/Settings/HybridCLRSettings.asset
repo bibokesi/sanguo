@@ -19,6 +19,10 @@ MonoBehaviour:
     Assembly: HotfixFramework.dll
   - AssetGroupName: BaseAssets
     Assembly: HotfixBusiness.dll
+  - AssetGroupName: BaseAssets
+    Assembly: HotfixFramework.dll
+  - AssetGroupName: 
+    Assembly: HotfixCommon.dll
   AOTMetaAssemblies:
   - Assembly-CSharp-firstpass.dll
   - Assembly-CSharp.dll
