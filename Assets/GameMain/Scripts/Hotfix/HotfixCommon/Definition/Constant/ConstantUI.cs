@@ -81,6 +81,7 @@ public static class ConstantUI
 
     private static Dictionary<UIFormId, UIFormInfo> uiForms = new Dictionary<UIFormId, UIFormInfo>()
     {
+        {UIFormId.UIDemoListForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UIDemoListForm",UIGroupName.Popup,false,true)},
         {UIFormId.UIDialogForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UIDialogForm",UIGroupName.Popup,false,true)},
         {UIFormId.UITipsForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UITipsForm",UIGroupName.Popup,true,false)},
         {UIFormId.UILoadingForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UILoadingForm",UIGroupName.Loading,false,true)},
@@ -123,24 +124,29 @@ public static class ConstantUI
     /// 界面编号。
     /// </summary>
     public enum UIFormId
-    {       
+    {
         /// <summary>
-        /// 弹出框。
+        /// 测试界面
         /// </summary>
-        UIDialogForm = 1,
+        UIDemoListForm = 1,
 
         /// <summary>
-        /// 提示框。
+        /// 弹出框
+        /// </summary>
+        UIDialogForm,
+
+        /// <summary>
+        /// 提示框
         /// </summary>
         UITipsForm,
 
         /// <summary>
-        /// 业务逻辑加载界面。
+        /// 业务逻辑加载界面
         /// </summary>
         UILoadingForm,
 
         /// <summary>
-        /// 遮罩界面。
+        /// 遮罩界面
         /// </summary>
         UIMaskForm,
 

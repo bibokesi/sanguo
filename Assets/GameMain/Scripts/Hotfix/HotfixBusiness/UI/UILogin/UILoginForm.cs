@@ -39,24 +39,26 @@ namespace HotfixBusiness.UI
         }
 		private void Button_RegisterEvent(){
 
-            UIDialogParams dialogParams = new UIDialogParams();
-            dialogParams.Mode = 2;
-            dialogParams.ConfirmText = "确定";
-            dialogParams.CancelText = "取消";
-            dialogParams.OnClickConfirm = delegate (object o)
-            {
-                GameEntry.UI.OpenTips("123");
-            };
-            dialogParams.OnClickCancel = delegate (object o)
-            {
-                GameEntry.UI.OpenTips("321");
-            };
-            dialogParams.OnClickBackground = delegate (object o)
-            {
-                GameEntry.UI.OpenTips("222");
-            };
-            dialogParams.Message = $"333";
-            GameEntry.UI.OpenDialog(dialogParams);
+            GameEntry.UI.OpenUIForm(ConstantUI.GetUIFormInfo<UIDemoListForm>());
+
+            //UIDialogParams dialogParams = new UIDialogParams();
+            //dialogParams.Mode = 2;
+            //dialogParams.ConfirmText = "确定";
+            //dialogParams.CancelText = "取消";
+            //dialogParams.OnClickConfirm = delegate (object o)
+            //{
+            //    GameEntry.UI.OpenTips("123");
+            //};
+            //dialogParams.OnClickCancel = delegate (object o)
+            //{
+            //    GameEntry.UI.OpenTips("321");
+            //};
+            //dialogParams.OnClickBackground = delegate (object o)
+            //{
+            //    GameEntry.UI.OpenTips("222");
+            //};
+            //dialogParams.Message = $"333";
+            //GameEntry.UI.OpenDialog(dialogParams);
         }
         /*--------------------Auto generate footer.Do not add anything below the footer!------------*/
     }
