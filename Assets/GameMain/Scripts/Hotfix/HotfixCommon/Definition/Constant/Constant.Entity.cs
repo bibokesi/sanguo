@@ -7,6 +7,7 @@ public static partial class Constant
     public static class EntityGroup
     {
         public const string UIEntity = "UIEntity";
+        public const string RoleEntity = "RoleEntity";
     }
 }
 

@@ -70,48 +70,5 @@ public static partial class AssetUtility
         {
             return string.Format("Assets/GameMain/BaseAssets/UI/UITexture/{0}.renderTexture", textureName);
         }
-
-        /// <summary>
-        /// 获取精灵资源
-        /// </summary>
-        /// <param name="groupName"></param>
-        /// <param name="spriteName"></param>
-        /// <returns></returns>
-        public static string GetSpritePath(string groupName, string spriteName)
-        {
-            return $"Assets/GameMain/{groupName}/UI/UISprite/{spriteName}.png";
-        }
-
-        /// <summary>
-        /// 获取精灵资源收集器
-        /// </summary>
-        /// <param name="groupName"></param>
-        /// <param name="collectionName"></param>
-        /// <returns></returns>
-        public static string GetSpriteCollectionPath(string groupName,string collectionName)
-        {
-            return $"Assets/GameMain/{groupName}/UI/UIAtlasCollection/{collectionName}.asset";
-        }
-
-        /// <summary>
-        /// 获取大图
-        /// </summary>
-        /// <param name="groupName"></param>
-        /// <param name="textureName"></param>
-        /// <returns></returns>
-        public static string GetTexturePath(string groupName,string textureName)
-        {
-            return $"Assets/GameMain/{groupName}/UI/UITexture/{textureName}.png";
-        }
-
-        /// <summary>
-        /// 获取大图
-        /// </summary>
-        /// <param name="iconName"></param>
-        /// <returns></returns>
-        public static string GetRenderTexturePath(string groupName, string textureName)
-        {
-            return $"Assets/GameMain/{groupName}/UI/UITexture/{textureName}.renderTexture";
-        }
     }
 }

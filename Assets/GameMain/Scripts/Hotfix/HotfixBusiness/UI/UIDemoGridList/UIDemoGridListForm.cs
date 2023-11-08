@@ -77,10 +77,10 @@ namespace HotfixBusiness.UI
                 itemScript.SetClickCallBack(OnListViewItemClicked);
                 itemScript.SetItemData(index);
             }
-            string groupName = Constant.Procedure.FindAssetGroup(GameEntry.Procedure.CurrentProcedure.GetType().FullName);
-            string collectionPath = AssetUtility.UI.GetSpriteCollectionPath(groupName, "SelectMode");
-            string spriteBgPath = AssetUtility.UI.GetSpritePath(groupName, $"SelectMode/{itemData.bg}");
-            string spriteIconPath = AssetUtility.UI.GetSpritePath(groupName, $"SelectMode/{itemData.icon}");
+
+            string collectionPath = AssetUtility.UI.GetSpriteCollectionPath("SelectMode");
+            string spriteBgPath = AssetUtility.UI.GetSpritePath($"SelectMode/{itemData.bg}");
+            string spriteIconPath = AssetUtility.UI.GetSpritePath($"SelectMode/{itemData.icon}");
 
             itemScript.mBgImg.SetSprite(collectionPath, spriteBgPath);
             itemScript.mIconImg.SetSprite(collectionPath, spriteIconPath);

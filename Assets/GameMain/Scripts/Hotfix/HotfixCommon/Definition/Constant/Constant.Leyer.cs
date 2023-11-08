@@ -23,6 +23,12 @@ public static partial class Constant
         public static readonly int UILayerId = LayerMask.NameToLayer(UILayerName);
 
         /// <summary>
+        /// Ground层
+        /// </summary>
+        public const string GroundLayerName = "Ground";
+        public static readonly int GroundLayerId = LayerMask.NameToLayer(GroundLayerName);
+
+        /// <summary>
         /// UIModel层
         /// </summary>
         public const string UIModelLayerName = "UIModel";

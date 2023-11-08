@@ -2,8 +2,8 @@
 <UnityGameFramework>
   <ResourceCollection>
     <Resources>
-      <Resource Name="BaseAssets/Entity/Character/Blade_girl" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
-      <Resource Name="BaseAssets/Entity/UIModel/Ball_Machine" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
+      <Resource Name="BaseAssets/Entity/RoleEntity/Blade_girl" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
+      <Resource Name="BaseAssets/Entity/UIEntity/Ball_Machine" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/Fonts" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/Prefabs" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/Scenes/Fight" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
@@ -39,7 +39,7 @@
       <Asset Guid="17ec5b8f543c59345bc1257ec50c7228" ResourceName="BaseAssets/Scenes/Login" />
       <Asset Guid="18c562febc6780b428cdf121c09416b8" ResourceName="BaseAssets/UI/UISprite/SelectMode" />
       <Asset Guid="19d1f77867b631b4e8af112eb72e9daf" ResourceName="BaseAssets/Sounds/UISound/ui_click_button" />
-      <Asset Guid="1a3ec063b469b9942b3c8a182e51d640" ResourceName="BaseAssets/Entity/Character/Blade_girl" />
+      <Asset Guid="1a3ec063b469b9942b3c8a182e51d640" ResourceName="BaseAssets/Entity/RoleEntity/Blade_girl" />
       <Asset Guid="1b2c03b8f7cf2004a8cceb6334fa0d34" ResourceName="BaseAssets/UI/UIAtlas/Common" />
       <Asset Guid="286e4df74e44d33448b6dd82f9a8ec62" ResourceName="BaseAssets/UI/UISprite/Others" />
       <Asset Guid="29eab42364b975b418a947276f06e238" ResourceName="BaseAssets/UI/UIAtlasCollection/SelectMode" />
@@ -73,7 +73,7 @@
       <Asset Guid="e41de5d16c3cfa04da3d39b8aebad451" ResourceName="BaseAssets/UI/UIForm/UIDialog/UIDialogForm" />
       <Asset Guid="f39bc09b6db44c64c84b9e131ad8fb16" ResourceName="BaseAssets/UI/UIForm/UIDemoGridList/UIDemoGridListForm" />
       <Asset Guid="f3ab0d53e9c425d4da9724fab4bfd7d9" ResourceName="BaseAssets/Prefabs" />
-      <Asset Guid="f6c4890c8f316b54e99fe1ad0a90f53a" ResourceName="BaseAssets/Entity/UIModel/Ball_Machine" />
+      <Asset Guid="f6c4890c8f316b54e99fe1ad0a90f53a" ResourceName="BaseAssets/Entity/UIEntity/Ball_Machine" />
       <Asset Guid="f9612d2ea47890742846a458b552127a" ResourceName="BaseAssets/Fonts" />
       <Asset Guid="fb08855e4c34fc04891f62f0cf3225da" ResourceName="BaseAssets/UI/UIForm/UIMask/UIMaskForm" />
       <Asset Guid="fd37abb59100e0e4d82cad5a0bb9fb23" ResourceName="BaseAssets/Scenes/Fight" />
