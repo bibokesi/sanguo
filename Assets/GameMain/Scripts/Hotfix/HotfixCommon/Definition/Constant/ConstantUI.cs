@@ -82,6 +82,7 @@ public static class ConstantUI
     private static Dictionary<UIFormId, UIFormInfo> uiForms = new Dictionary<UIFormId, UIFormInfo>()
     {
         {UIFormId.UIDemoListForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UIDemoListForm",UIGroupName.Popup,false,true)},
+        {UIFormId.UIDemoGridListForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UIDemoGridListForm",UIGroupName.Popup,false,true)},
         {UIFormId.UIDialogForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UIDialogForm",UIGroupName.Popup,false,true)},
         {UIFormId.UITipsForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UITipsForm",UIGroupName.Popup,true,false)},
         {UIFormId.UILoadingForm, new UIFormInfo(UIFormType.Alone,"BaseAssets","UILoadingForm",UIGroupName.Loading,false,true)},
@@ -129,6 +130,11 @@ public static class ConstantUI
         /// 测试界面
         /// </summary>
         UIDemoListForm = 1,
+
+        /// <summary>
+        /// 测试界面
+        /// </summary>
+        UIDemoGridListForm,
 
         /// <summary>
         /// 弹出框

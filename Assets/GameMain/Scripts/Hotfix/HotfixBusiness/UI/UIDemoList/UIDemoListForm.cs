@@ -92,8 +92,6 @@ namespace HotfixBusiness.UI
 
         void OnListViewItemClicked(int index)
         {
-            //打开 选择角色页面
-            //如何传递参数 index
             GameEntry.UI.OpenTips(index.ToString());
         }
 

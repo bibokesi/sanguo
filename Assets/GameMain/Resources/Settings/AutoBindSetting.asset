@@ -73,10 +73,6 @@ MonoBehaviour:
     FullName: UGUISpriteAnimation
   - Prefixe: LoopGridView
     FullName: LoopGridView
-  - Prefixe: LoopGridView
-    FullName: LoopGridView
-  - Prefixe: LoopListView2
-    FullName: LoopListView2
   - Prefixe: LoopListView2
     FullName: LoopListView2
   - Prefixe: VariableJoystick

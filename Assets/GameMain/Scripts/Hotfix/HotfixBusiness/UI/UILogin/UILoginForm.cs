@@ -39,7 +39,7 @@ namespace HotfixBusiness.UI
         }
 		private void Button_RegisterEvent(){
 
-            GameEntry.UI.OpenUIForm(ConstantUI.GetUIFormInfo<UIDemoListForm>());
+            GameEntry.UI.OpenUIForm(ConstantUI.GetUIFormInfo<UIDemoGridListForm>());
 
             //UIDialogParams dialogParams = new UIDialogParams();
             //dialogParams.Mode = 2;

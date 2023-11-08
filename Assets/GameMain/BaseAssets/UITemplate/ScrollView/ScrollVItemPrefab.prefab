@@ -122,9 +122,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_ButtonUISounds:
-  - ButtonSoundAssetType: 0
-    ButtonSoundType: 2
+  - ButtonSoundType: 2
     ButtonUISoundName: ui_click_button
+    ButtonUISoundAssetGroup: BaseAssets
   m_CanClick: 1
   m_CanDoubleClick: 0
   m_DoubleClickIntervalTime: 0.5
@@ -135,6 +135,24 @@ MonoBehaviour:
   m_ResponseOnceByPress: 0
   m_LongPressDurationTime: 1
   onPress:
+    m_PersistentCalls:
+      m_Calls: []
+  onClickLeft:
+    m_PersistentCalls:
+      m_Calls: []
+  onClickRight:
+    m_PersistentCalls:
+      m_Calls: []
+  onDoubleClickLeft:
+    m_PersistentCalls:
+      m_Calls: []
+  onDoubleClickRight:
+    m_PersistentCalls:
+      m_Calls: []
+  onPressLeft:
+    m_PersistentCalls:
+      m_Calls: []
+  onPressRight:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &2886711499731496212
@@ -190,6 +208,6 @@ MonoBehaviour:
   BindDatas: []
   m_ClassName: ScrollVItemPrefab
   m_Namespace: HotfixBusiness.UI
-  m_ComCodePath: Deer/Scripts/HotFix/HotFixBusiness/UI/BindComponents
-  m_MountCodePath: Deer/Scripts/HotFix/HotFixBusiness/UI
+  m_ComCodePath: GameMain/Scripts/Hotfix/HotfixBusiness/UI/BindComponents
+  m_MountCodePath: GameMain/Scripts/Hotfix/HotfixBusiness/UI
   m_BindComs: []
