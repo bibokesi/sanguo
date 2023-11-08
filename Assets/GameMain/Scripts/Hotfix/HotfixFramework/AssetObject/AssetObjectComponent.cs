@@ -126,7 +126,7 @@ namespace HotfixFramework
             {
                 AssetObjectInfo assetObjectInfo = AssetObjectInfo.Create(nLoadSerial, strPath, strShowName);
                 m_AssetObjectBeingLoaded.Add(nLoadSerial, strPath);
-                GameEntry.Resource.LoadAsset(strPath, assetType, Constant.AssetPriority.SceneUnit, m_LoadAssetCallbacks, assetObjectInfo);
+                GameEntry.Resource.LoadAsset(strPath, assetType, Constant.AssetPriority.SceneAsset, m_LoadAssetCallbacks, assetObjectInfo);
             }
             else
             {

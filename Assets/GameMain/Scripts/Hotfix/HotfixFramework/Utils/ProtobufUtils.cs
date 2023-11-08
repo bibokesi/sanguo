@@ -5,8 +5,6 @@ using Google.Protobuf;
 
 public class ProtobufUtils 
 {
-
-		
     public static void ToStream(object message, MemoryStream stream)
     {
         ((IMessage) message).WriteTo(stream);
@@ -63,6 +61,7 @@ public class ProtobufUtils
         iSupportInitialize.EndInit();
         return message;
     }
+
     /// <summary>
     /// 序列化protobuf
     /// </summary>
@@ -72,6 +71,7 @@ public class ProtobufUtils
     {
         return ((IMessage)message).ToByteArray();
     }
+
     /// <summary>
     /// 反序列化protobuf
     /// </summary>
@@ -84,6 +84,7 @@ public class ProtobufUtils
         msg = (T)msg.Descriptor.Parser.ParseFrom(dataBytes);
         return msg;
     }
+
     public static int GetHighOrder(int cmdMerge)
     {
         return cmdMerge >> 16;

@@ -32,7 +32,7 @@ namespace HotfixBusiness.Procedure
             GameEntry.Event.Subscribe(LoadSceneDependencyAssetEventArgs.EventId, OnHandleLoadSceneDependencyAsset);
             GameEntry.Event.Subscribe(LoadSceneCompleteEventArgs.EventId, OnHandleLoadCompleteSuccess);
 
-            m_UIFormSerialId = GameEntry.UI.OpenUIForm(ConstantUI.UIFormId.UILoadingForm, this);
+            m_UIFormSerialId = GameEntry.UI.OpenUIForm(ConstUI.UIFormId.UILoadingForm, this);
         }
 
         protected override void OnUpdate(ProcedureOwner procedureOwner, float elapseSeconds, float realElapseSeconds)
@@ -65,12 +65,11 @@ namespace HotfixBusiness.Procedure
         void OnStartLoadScene()
         {
             UnloadAllResources();
-            bool isJumpScene = Constant.Procedure.IsJumpScene(m_NextProcedure);
-            if (isJumpScene)
+            bool needChangeScene = Constant.Procedure.NeedChangeScene(m_NextProcedure);
+            if (needChangeScene)
             {
-                string groupName = Constant.Procedure.FindAssetGroup(m_NextProcedure);
                 string sceneName = Constant.Procedure.FindSceneName(m_NextProcedure);
-                string scenePath = AssetUtility.Scene.GetSceneAsset(groupName, sceneName);
+                string scenePath = AssetUtility.Scene.GetSceneAsset(sceneName);
                 GameEntry.Scene.LoadScene(scenePath, Constant.AssetPriority.SceneAsset);
             }
         }

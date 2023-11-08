@@ -146,7 +146,7 @@ public static class SoundComponentExtension
         playSoundParams.FadeInSeconds = m_FadeVolumeDuration;
         playSoundParams.SpatialBlend = config.SpatialBlend;
         var soundAssetName = AssetUtility.Sound.GetMusicSoundAsset(config.GroupName, config.SoundName);
-        m_MusicSerialId = soundComponent.PlaySound(soundAssetName, Constant.SoundGroup.MusicSound, Constant.AssetPriority.MusicAsset,
+        m_MusicSerialId = soundComponent.PlaySound(soundAssetName, Constant.SoundGroup.MusicSound, Constant.AssetPriority.SoundAsset,
             playSoundParams, null, userData);
         return m_MusicSerialId;
     }
@@ -207,7 +207,7 @@ public static class SoundComponentExtension
         playSoundParams.VolumeInSoundGroup = config.SoundVolume;
         playSoundParams.SpatialBlend = config.SpatialBlend;
         return soundComponent.PlaySound(AssetUtility.Sound.GetUISoundAsset(config.GroupName, config.SoundName), Constant.SoundGroup.UISound,
-            Constant.AssetPriority.UISoundAsset, playSoundParams, userData);
+            Constant.AssetPriority.SoundAsset, playSoundParams, userData);
     }
 
     /// <summary>
@@ -297,7 +297,7 @@ public static class SoundComponentExtension
 
         soundGroup.Mute = mute;
 
-        GameEntry.Setting.SetBool(Utility.Text.Format(Constant.Setting.SoundGroupMuted, soundGroupName), mute);
+        GameEntry.Setting.SetBool(Utility.Text.Format(Constant.Setting.SoundMuted, soundGroupName), mute);
         GameEntry.Setting.Save();
     }
 
@@ -348,7 +348,7 @@ public static class SoundComponentExtension
 
         soundGroup.Volume = volume;
 
-        GameEntry.Setting.SetFloat(Utility.Text.Format(Constant.Setting.SoundGroupVolume, soundGroupName), volume);
+        GameEntry.Setting.SetFloat(Utility.Text.Format(Constant.Setting.SoundVolume, soundGroupName), volume);
         GameEntry.Setting.Save();
     }
 }

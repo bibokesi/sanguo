@@ -24,9 +24,9 @@ public static class UIExtension
         return GameEntry.UI.GetInstanceRoot().GetComponent<Canvas>();
     }
 
-    public static bool HasUIForm(this UIComponent uiComponent, ConstantUI.UIFormId uiFormId, string uiGroupName = null)
+    public static bool HasUIForm(this UIComponent uiComponent, ConstUI.UIFormId uiFormId, string uiGroupName = null)
     {
-        var uiFormInfo = ConstantUI.GetUIFormInfo(uiFormId);
+        var uiFormInfo = ConstUI.GetUIFormInfo(uiFormId);
         if (uiFormInfo == null)
         {
             return false;
@@ -47,9 +47,9 @@ public static class UIExtension
         return uiGroup.HasUIForm(assetName);
     }
 
-    public static UIBaseForm GetUIForm(this UIComponent uiComponent, ConstantUI.UIFormId uiFormId, string uiGroupName = null)
+    public static UIBaseForm GetUIForm(this UIComponent uiComponent, ConstUI.UIFormId uiFormId, string uiGroupName = null)
     {
-        var uiFormInfo = ConstantUI.GetUIFormInfo(uiFormId);
+        var uiFormInfo = ConstUI.GetUIFormInfo(uiFormId);
         if (uiFormInfo == null)
         {
             return null;
@@ -90,12 +90,12 @@ public static class UIExtension
         uiComponent.CloseUIForm(uiForm.UIForm);
     }
 
-    public static int OpenUIForm(this UIComponent uiComponent, ConstantUI.UIFormId uiFormId, object userData = null)
+    public static int OpenUIForm(this UIComponent uiComponent, ConstUI.UIFormId uiFormId, object userData = null)
     {
-        return uiComponent.OpenUIForm(ConstantUI.GetUIFormInfo(uiFormId), userData);
+        return uiComponent.OpenUIForm(ConstUI.GetUIFormInfo(uiFormId), userData);
     }
 
-    public static int OpenUIForm(this UIComponent uiComponent, ConstantUI.UIFormInfo uiFormInfo, object userData = null)
+    public static int OpenUIForm(this UIComponent uiComponent, ConstUI.UIFormInfo uiFormInfo, object userData = null)
     {
         if (uiFormInfo == null)
         {
@@ -103,19 +103,7 @@ public static class UIExtension
             return 0;
         }
 
-        string assetName = string.Empty;
-        switch (uiFormInfo.FormType)
-        {
-            case ConstantUI.UIFormType.Alone:
-                assetName = AssetUtility.UI.GetUIFormAsset(uiFormInfo);
-                break;
-            case ConstantUI.UIFormType.Sub:
-                assetName = AssetUtility.UI.GetUISubFormAsset(uiFormInfo);
-                break;
-            case ConstantUI.UIFormType.ComSub:
-                assetName = AssetUtility.UI.GetUIComSubFormAsset(uiFormInfo);
-                break;
-        }
+        string assetName = AssetUtility.UI.GetUIFormAsset(uiFormInfo);
         if (!uiFormInfo.AllowMultiInstance)
         {
             if (uiComponent.IsLoadingUIForm(assetName))
@@ -147,7 +135,7 @@ public static class UIExtension
         info.param2 = color ?? Color.white;
         info.param3 = openBg;
 
-        uIComponent.OpenUIForm(ConstantUI.UIFormId.UITipsForm, info);
+        uIComponent.OpenUIForm(ConstUI.UIFormId.UITipsForm, info);
     }
 
     //  UIDialogParams dialogParams = new UIDialogParams();
@@ -170,12 +158,12 @@ public static class UIExtension
     //  GameEntry.UI.OpenDialog(dialogParams);
     public static void OpenDialog(this UIComponent uiComponent, UIDialogParams dialogParams)
     {
-        uiComponent.OpenUIForm(ConstantUI.UIFormId.UIDialogForm, dialogParams);
+        uiComponent.OpenUIForm(ConstUI.UIFormId.UIDialogForm, dialogParams);
     }
 
     public static void OpenUILoadingForm(this UIComponent uiComponent)
     {
-        var uiFormInfo = ConstantUI.GetUIFormInfo(ConstantUI.UIFormId.UILoadingForm);
+        var uiFormInfo = ConstUI.GetUIFormInfo(ConstUI.UIFormId.UILoadingForm);
         if (uiFormInfo == null)
         {
             return;
@@ -213,7 +201,7 @@ public static class UIExtension
 
     public static void OpenUIMaskForm(this UIComponent uiComponent, int timeOut = 10, Action onTimeOut = null)
     {
-        var uiFormInfo = ConstantUI.GetUIFormInfo(ConstantUI.UIFormId.UIMaskForm);
+        var uiFormInfo = ConstUI.GetUIFormInfo(ConstUI.UIFormId.UIMaskForm);
         if (uiFormInfo == null)
         {
             return;

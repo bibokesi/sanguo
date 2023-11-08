@@ -11,6 +11,22 @@ public static partial class AssetUtility
     /// </summary>
     public static class UI
     {
+        /// <summary>
+        /// 获取界面路径
+        /// </summary>
+        /// <param name="uiFormInfo"></param>
+        /// <returns></returns>
+        public static string GetUIFormAsset(ConstUI.UIFormInfo uiFormInfo)
+        {
+            string assetName = uiFormInfo.AssetName;
+            return Utility.Text.Format("Assets/GameMain/BaseAssets/UI/UIForm/{0}/{1}.prefab", assetName.Replace("Form", ""), assetName);
+        }
+
+        /// <summary>
+        /// 获取界面路径
+        /// </summary>
+        /// <param name="assetName"></param>
+        /// <returns></returns>
         public static string GetUIFormAsset(string assetName)
         {
             return Utility.Text.Format("Assets/GameMain/BaseAssets/UI/UIForm/{0}/{1}.prefab", assetName.Replace("UIForm", ""), assetName);
@@ -55,35 +71,8 @@ public static partial class AssetUtility
             return string.Format("Assets/GameMain/BaseAssets/UI/UITexture/{0}.renderTexture", textureName);
         }
 
-        public static string GetUIFormAsset(ConstantUI.UIFormInfo  uiFormInfo)
-        {
-            string moduleName = uiFormInfo.ModuleName;
-            string assetName = uiFormInfo.AssetName;
-            return Utility.Text.Format("Assets/GameMain/{0}/UI/UIForm/{1}/{2}.prefab", moduleName,assetName.Replace("Form",""), assetName);
-        }
-
-        public static string GetUISubFormAsset(ConstantUI.UIFormInfo  uiFormInfo)
-        {
-            string moduleName = uiFormInfo.ModuleName;
-            string assetName = uiFormInfo.AssetName;
-            string[] args = assetName.Split('_');
-            if (args is { Length: > 1 })
-            {
-                return Utility.Text.Format("Assets/GameMain/{0}/UI/UIForm/{1}/{2}.prefab", moduleName,args[0], assetName);
-            }
-            Logger.Error("UISubForm prefab wrong name.It should be [UIxxx_xxxSubForm]");
-            return string.Empty;
-        }
-
-        public static string GetUIComSubFormAsset(ConstantUI.UIFormInfo  uiFormInfo)
-        {
-            string moduleName = uiFormInfo.ModuleName;
-            string assetName = uiFormInfo.AssetName;
-            return Utility.Text.Format("Assets/GameMain/{0}/UI/UIForm/UISub/{1}.prefab", moduleName, assetName);
-        }
-
         /// <summary>
-        /// 获取精灵资源名称
+        /// 获取精灵资源
         /// </summary>
         /// <param name="groupName"></param>
         /// <param name="spriteName"></param>

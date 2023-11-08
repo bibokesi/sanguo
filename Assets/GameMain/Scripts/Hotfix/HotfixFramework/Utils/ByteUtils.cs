@@ -26,7 +26,6 @@ public static class ByteUtils
 		}
 		return stringBuilder.ToString();
 	}
-
 	public static string ToHex(this byte[] bytes, int offset, int count)
 	{
 		StringBuilder stringBuilder = new StringBuilder();
@@ -36,17 +35,14 @@ public static class ByteUtils
 		}
 		return stringBuilder.ToString();
 	}
-
 	public static string ToStr(this byte[] bytes)
 	{
 		return Encoding.Default.GetString(bytes);
 	}
-
 	public static string ToStr(this byte[] bytes, int index, int count)
 	{
 		return Encoding.Default.GetString(bytes, index, count);
 	}
-
 	public static string Utf8ToStr(this byte[] bytes)
 	{
 		return Encoding.UTF8.GetString(bytes);
@@ -64,7 +60,6 @@ public static class ByteUtils
 		bytes[offset + 2] = (byte)((num & 0xff0000) >> 16);
 		bytes[offset + 3] = (byte)((num & 0xff000000) >> 24);
 	}
-
 	public static void WriteTo(this byte[] bytes, int offset, int num)
 	{
 		bytes[offset] = (byte)(num & 0xff);
@@ -79,10 +74,12 @@ public static class ByteUtils
 		bytes[offset + 1] = (byte)((num & 0xff0000) >> 16);
 		bytes[offset] = (byte)((num & 0xff000000) >> 24);
 	}
+
 	public static int ReadToJava(this byte[] bytes, int offset)
 	{
 		return (bytes[offset] & 255) << 24 | (bytes[offset + 1] & 255) << 16 | (bytes[offset + 2] & 255) << 8 | bytes[offset + 3] & 255;
 	}
+
 	public static void WriteTo(this byte[] bytes, int offset, byte num)
 	{
 		bytes[offset] = num;

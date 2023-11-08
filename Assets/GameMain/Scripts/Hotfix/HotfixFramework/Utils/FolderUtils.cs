@@ -40,6 +40,7 @@ public class FolderUtils
 		}
 		return true;
 	}
+
 	/// <summary>
 	/// 拷贝文件夹
 	/// </summary>

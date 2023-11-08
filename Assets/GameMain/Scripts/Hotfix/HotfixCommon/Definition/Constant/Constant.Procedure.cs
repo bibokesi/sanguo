@@ -10,30 +10,27 @@ public static partial class Constant
     {
         public string ProcedureName { get; }
 
-        public bool IsCheckAsset { get; }
+        public bool NeedCheckAsset { get; }
 
-        public bool IsJumpScene { get; }
+        public bool NeedChangeScene { get; }
 
         public string GroupName { get; }
 
         public string SceneName { get; }
 
-        public ProcedureInfo(string procedureName, bool isCheck, bool isJumpScene, string groupName, string sceneName)
+        public ProcedureInfo(string procedureName, bool needCheck, bool needChangeScene, string groupName, string sceneName)
         {
             ProcedureName = procedureName;
-            IsCheckAsset = isCheck;
-            IsJumpScene = isJumpScene;
+            NeedCheckAsset = needCheck;
+            NeedChangeScene = needChangeScene;
             GroupName = groupName;
             SceneName = sceneName;            
         }
     }
 
-    /// <summary>
-    /// 游戏流程
-    /// </summary>
     public static class Procedure
     {
-        public const string ProcedureReset = "HotfixBusiness.Procedure.ProcedureReset";
+        public const string ProcedureExcessive = "HotfixBusiness.Procedure.ProcedureExcessive";
         public const string ProcedureLogin = "HotfixBusiness.Procedure.ProcedureLogin";
         public const string ProcedureMain = "HotfixBusiness.Procedure.ProcedureMain";
         public const string ProcedureFight = "HotfixBusiness.Procedure.ProcedureFight";
@@ -45,22 +42,22 @@ public static partial class Constant
             {ProcedureFight,new ProcedureInfo(ProcedureFight,true,true,"BaseAssets","Fight")},
         };
 
-        public static bool IsJumpScene(string procedureName)
+        public static bool NeedChangeScene(string procedureName)
         {
             if (ProcedureInfos.ContainsKey(procedureName))
             {
                 var  info = ProcedureInfos[procedureName];
-                return info.IsJumpScene;
+                return info.NeedChangeScene;
             }
             return false;
         }
 
-        public static bool IsCheckAsset(string procedureName)
+        public static bool NeedCheckAsset(string procedureName)
         {
             if (ProcedureInfos.ContainsKey(procedureName))
             {
                 var  info = ProcedureInfos[procedureName];
-                return info.IsCheckAsset;
+                return info.NeedCheckAsset;
             }
             return false;
         }

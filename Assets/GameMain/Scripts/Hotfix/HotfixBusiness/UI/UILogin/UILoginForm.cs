@@ -27,7 +27,8 @@ namespace HotfixBusiness.UI
 
         }
 
-		private void Button_LoginEvent(){
+		private void Button_LoginEvent()
+        {
             //GameEntry.UI.OpenTips(m_InputField_UserName.text + "  " + m_InputField_PassWord.text);
             //         GameEntry.Sound.StopMusic((int)SceneEnum.Login);
 
@@ -37,9 +38,12 @@ namespace HotfixBusiness.UI
                 procedureBase.ChangeStateByType(procedureBase.ProcedureOwner, typeof(ProcedureCheckAssets));
             }
         }
-		private void Button_RegisterEvent(){
+		private void Button_RegisterEvent()
+        {
 
-            GameEntry.UI.OpenUIForm(ConstantUI.GetUIFormInfo<UIDemoGridListForm>());
+            //GameEntry.UI.OpenUIForm(ConstUI.GetUIFormInfo<UIDemoListForm>());
+            //GameEntry.UI.OpenUIForm(ConstUI.GetUIFormInfo<UIDemoGridListForm>());
+            GameEntry.UI.OpenUIForm(ConstUI.GetUIFormInfo<UIDemoEntityForm>());
 
             //UIDialogParams dialogParams = new UIDialogParams();
             //dialogParams.Mode = 2;

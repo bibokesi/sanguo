@@ -267,7 +267,7 @@ public partial class GameEntry
         transform.localScale = Vector3.one;
         uIManager.SetUIFormHelper(uiFormHelper);
 
-        foreach (var item in ConstantUI.UIGroups)
+        foreach (var item in ConstUI.UIGroups)
         {
             UI.AddUIGroup(item.Key.ToString(), item.Value, false);
         }

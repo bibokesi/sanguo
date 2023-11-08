@@ -9,7 +9,7 @@ namespace GameMain
     {
         public static void LoadSceneEx(this SceneComponent sceneComponent,string sceneName, int priority, object userData) 
         {
-            string sceneFullName = AssetUtility.Scene.GetTempSceneAsset(sceneName);
+            string sceneFullName = AssetUtility.Scene.GetSceneAsset(sceneName);
             sceneComponent.LoadScene(sceneFullName, priority, userData);
         }
     }

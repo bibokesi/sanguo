@@ -86,11 +86,11 @@ namespace HotfixBusiness.Procedure
             GameEntry.Setting.SetString("nextProcedure",m_NextProcedure);
             if (m_IsResetProcedure)
             {
-                GameEntry.ResetProcedure(Constant.Procedure.ProcedureReset);
+                GameEntry.ResetProcedure(Constant.Procedure.ProcedureExcessive);
             }
             else
             {
-                ChangeState<ProcedureReset>(m_ProcedureOwner);
+                ChangeState<ProcedureExcessive>(m_ProcedureOwner);
             }
         }
 
@@ -154,8 +154,8 @@ namespace HotfixBusiness.Procedure
             }
             else
             {
-                bool isCheckAsset = Constant.Procedure.IsCheckAsset(m_NextProcedure);
-                if (!isCheckAsset)
+                bool needCheckAsset = Constant.Procedure.NeedCheckAsset(m_NextProcedure);
+                if (!needCheckAsset)
                 {
                     OnNoticeUpdate();
                     return;
