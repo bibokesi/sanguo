@@ -13,7 +13,7 @@ namespace GameMain.Editor
         {
             var text = CreateComponent<TextMeshProUGUI>("Text");
             text.raycastTarget = false;
-            text.font = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>($"Assets/GameMain/BaseAssets/Font/{FrameworkSettingsUtils.FrameworkSettings.DefaultFont}.asset"); // 默认字体  
+            text.font = AssetDatabase.LoadAssetAtPath<TMP_FontAsset>($"Assets/GameMain/BaseAssets/Fonts/{FrameworkSettingsUtils.FrameworkSettings.DefaultFont}.asset"); // 默认字体  
             text.color = Color.black;
             text.text = "New Text";
             return text;

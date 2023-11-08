@@ -14,21 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rules:
   - valid: 1
-    name: BaseAssets/Prefab
+    name: BaseAssets/Prefabs
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/Prefab
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Prefabs
     loadType: 0
     packed: 1
     filterType: 0
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/Font
+    name: BaseAssets/Fonts
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/Font
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Fonts
     loadType: 0
     packed: 1
     filterType: 0
@@ -84,52 +84,62 @@ MonoBehaviour:
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/Sound/BattleSound
+    name: BaseAssets/Sounds/BattleSound
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sound/BattleSound
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sounds/BattleSound
     loadType: 0
     packed: 1
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/Sound/CommonSound
+    name: BaseAssets/Sounds/CommonSound
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sound/CommonSound
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sounds/CommonSound
     loadType: 0
     packed: 1
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/Sound/MusicSound
+    name: BaseAssets/Sounds/MusicSound
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sound/MusicSound
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sounds/MusicSound
     loadType: 0
     packed: 1
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/Sound/UISound
+    name: BaseAssets/Sounds/UISound
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sound/UISound
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Sounds/UISound
     loadType: 0
     packed: 1
     filterType: 1
     searchPatterns: '*.*'
   - valid: 1
-    name: BaseAssets/Scene
+    name: BaseAssets/Scenes
     variant: 
     fileSystem: 
     groups: BaseAssets
-    assetsDirectoryPath: Assets/GameMain/BaseAssets/Scene
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Scenes
     loadType: 0
     packed: 1
     filterType: 1
+    searchPatterns: '*.*'
+  - valid: 1
+    name: BaseAssets/Entity
+    variant: 
+    fileSystem: 
+    groups: BaseAssets
+    assetsDirectoryPath: Assets/GameMain/BaseAssets/Entity
+    loadType: 0
+    packed: 1
+    filterType: 3
     searchPatterns: '*.*'

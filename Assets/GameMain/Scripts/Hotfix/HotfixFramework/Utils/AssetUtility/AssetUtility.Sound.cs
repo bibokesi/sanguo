@@ -6,22 +6,22 @@ public static partial class AssetUtility
     {
         public static string GetMusicSoundAsset(string groupName,string assetName)
         {
-            return $"Assets/GameMain/BaseAssets/Sound/{groupName}/{assetName}.mp3";
+            return $"Assets/GameMain/BaseAssets/Sounds/{groupName}/{assetName}.mp3";
         }
 
         public static string GetUISoundAsset(string groupName,string assetName)
         {
-            return $"Assets/GameMain/BaseAssets/Sound/{groupName}/{assetName}.wav";
+            return $"Assets/GameMain/BaseAssets/Sounds/{groupName}/{assetName}.wav";
         }
 
         public static string GetCommonSoundAsset(string groupName,string assetName)
         {
-            return $"Assets/GameMain/BaseAssets/Sound/{groupName}/{assetName}.wav";
+            return $"Assets/GameMain/BaseAssets/Sounds/{groupName}/{assetName}.wav";
         }
 
         public static string GetBattleSoundAsset(string groupName, string assetName)
         {
-            return $"Assets/GameMain/BaseAssets/Sound/{groupName}/{assetName}.wav";
+            return $"Assets/GameMain/BaseAssets/Sounds/{groupName}/{assetName}.wav";
         }
     }
 }

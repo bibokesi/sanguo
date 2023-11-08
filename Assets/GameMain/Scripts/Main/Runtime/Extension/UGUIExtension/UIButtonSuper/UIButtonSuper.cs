@@ -244,7 +244,7 @@ public class UIButtonSuper : Button, IBeginDragHandler,IDragHandler,IEndDragHand
         playSoundParams.Loop = false;
         playSoundParams.VolumeInSoundGroup = 1;
         playSoundParams.SpatialBlend = 0;
-        string soundPath = $"Assets/GameMain/{buttonSound.ButtonUISoundAssetGroup}/Sound/{soundGroup}/{buttonSound.ButtonUISoundName}.wav";
+        string soundPath = $"Assets/GameMain/{buttonSound.ButtonUISoundAssetGroup}/Sounds/{soundGroup}/{buttonSound.ButtonUISoundName}.wav";
         int audioId = GameEntryMain.Sound.PlaySound(soundPath, soundGroup, 50, playSoundParams);
     }
 

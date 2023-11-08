@@ -47,7 +47,7 @@ namespace HotfixBusiness.Procedure
         private float m_LastUpdateTime = 0;
         private List<UpdateInfoData> m_UpdateInfoDatas = new List<UpdateInfoData>();
         private List<string> m_HotUpdateAsm;
-        private bool m_IsResetProcedure;
+        private bool m_IsExcessive;
 
         private Dictionary<ResourcesType, UpdateResourceInfo> m_UpdateResourceInfos = new();
 
@@ -63,7 +63,7 @@ namespace HotfixBusiness.Procedure
             m_UpdateResourceInfos.Add(ResourcesType.Assemblies, new UpdateResourceInfo(ResourcesType.Assemblies, false, false,false,0,0));
             
             m_UpdateTotalZipLength = 0;
-            m_IsResetProcedure = false;
+            m_IsExcessive = false;
             
             OnStartLoadAsset();
             GameEntry.Event.Subscribe(ResourceUpdateStartEventArgs.EventId, OnResourceUpdateStart);
@@ -84,7 +84,7 @@ namespace HotfixBusiness.Procedure
             }
             GameEntry.UI.GetUIInitForm().OpenLoading(false);
             GameEntry.Setting.SetString("nextProcedure",m_NextProcedure);
-            if (m_IsResetProcedure)
+            if (m_IsExcessive)
             {
                 GameEntry.ResetProcedure(Constant.Procedure.ProcedureExcessive);
             }
@@ -259,7 +259,7 @@ namespace HotfixBusiness.Procedure
                     if (hotUpdateDllName == $"{asm.GetName().Name}.dll")
                     {
                         hotfixAssemblies.Add(asm);
-                        m_IsResetProcedure = true;
+                        m_IsExcessive = true;
                         GameEntry.AddHotfixAssemblys(asm);
                         if (hotfixAssemblies.Count == m_HotUpdateAsm.Count)
                         {
@@ -334,7 +334,7 @@ namespace HotfixBusiness.Procedure
                         foreach (var item in assemblies)
                         {
                             var asm = Assembly.Load(item.Value);
-                            m_IsResetProcedure = true;
+                            m_IsExcessive = true;
                             GameEntry.AddHotfixAssemblys(asm);
                         }
                         UpdateResourceInfo updateResourceInfo = GetUpdateResourceInfo(ResourcesType.Assemblies);

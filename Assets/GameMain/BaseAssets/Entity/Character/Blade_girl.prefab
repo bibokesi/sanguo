@@ -718,7 +718,7 @@ GameObject:
   - component: {fileID: 1454417670058194100}
   - component: {fileID: 626689084639939472}
   m_Layer: 0
-  m_Name: Character
+  m_Name: Blade_girl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

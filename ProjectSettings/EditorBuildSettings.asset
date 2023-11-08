@@ -9,13 +9,13 @@ EditorBuildSettings:
     path: Assets/GameMain/Launcher.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
-    path: Assets/GameMain/BaseAssets/Scene/Login.unity
+    path: Assets/GameMain/BaseAssets/Scenes/Login.unity
     guid: 17ec5b8f543c59345bc1257ec50c7228
   - enabled: 1
-    path: Assets/GameMain/BaseAssets/Scene/Main.unity
+    path: Assets/GameMain/BaseAssets/Scenes/Main.unity
     guid: 319a4051d4f4d5d4f80ae9a13c311ce7
   - enabled: 1
-    path: Assets/GameMain/BaseAssets/Scene/Fight.unity
+    path: Assets/GameMain/BaseAssets/Scenes/Fight.unity
     guid: 24f9961372fb6c2439df9fbc7f4c0f79
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: a12e277844498e846bbd553b8750bb9e, type: 2}

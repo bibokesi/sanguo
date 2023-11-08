@@ -15,7 +15,7 @@ public static partial class AssetUtility
         /// <returns></returns>
         public static string GetSceneAsset(string sceneName)
         {
-            return Utility.Text.Format("Assets/GameMain/BaseAssets/Scene/{0}.unity", sceneName);
+            return Utility.Text.Format("Assets/GameMain/BaseAssets/Scenes/{0}.unity", sceneName);
         }
     }
 
