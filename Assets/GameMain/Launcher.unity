@@ -201,6 +201,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameFramework
       objectReference: {fileID: 0}
+    - target: {fileID: 1263591742998408244, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_Name
+      value: LubanConfig
+      objectReference: {fileID: 0}
     - target: {fileID: 1263591743036565580, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
       propertyPath: m_FillAmount
       value: 0
