@@ -7,6 +7,7 @@ using GameFramework.WebRequest;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityGameFramework.Runtime;
+using Utility = UnityEngine.Networking.Utility;
 
 /// <summary>
 /// Web请求
@@ -105,7 +106,7 @@ public class CustomWebRequestAgentHelper : WebRequestAgentHelperBase, IDisposabl
         }
 
         string jsonData = GameFramework.Utility.Converter.GetString(postData);
-        m_UnityWebRequest = UnityWebRequest.PostWwwForm(webRequestUri, jsonData);
+        m_UnityWebRequest = UnityWebRequest.Post(webRequestUri, jsonData);
         WWWFormInfo wwwFormInfo = (WWWFormInfo)userData;
         if (wwwFormInfo.UserData != null && wwwFormInfo.UserData is Dictionary<string, string> headers)
         {
