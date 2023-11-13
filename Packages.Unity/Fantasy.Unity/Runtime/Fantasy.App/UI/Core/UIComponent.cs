@@ -157,7 +157,7 @@ namespace Fantasy.Core
                     canvas.renderMode = RenderMode.ScreenSpaceCamera;
                     canvas.worldCamera = Camera;
                     canvas.sortingOrder = i;
-                    canvas.vertexColorAlwaysGammaSpace = true;
+                    //canvas.vertexColorAlwaysGammaSpace = true;
                     var canvasScaler = layer.AddComponent<CanvasScaler>();
                     canvasScaler.uiScaleMode = scaleMode;
                     canvasScaler.screenMatchMode = screenMatchMode;
