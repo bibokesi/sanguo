@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root ClientVersion="0.0.0.19">
+  <FileVersion name="common_tbglobalconfig.bytes" nameWithoutExtension="common_tbglobalconfig" file="common_tbglobalconfig.bytes" hashCode="1015977411" size="1" extension=".bytes" />
+  <FileVersion name="error_tbcodeinfo.bytes" nameWithoutExtension="error_tbcodeinfo" file="error_tbcodeinfo.bytes" hashCode="1206425328" size="1" extension=".bytes" />
+  <FileVersion name="error_tberrorinfo.bytes" nameWithoutExtension="error_tberrorinfo" file="error_tberrorinfo.bytes" hashCode="1305182174" size="3" extension=".bytes" />
+  <FileVersion name="gamemain_tbentitydata.bytes" nameWithoutExtension="gamemain_tbentitydata" file="gamemain_tbentitydata.bytes" hashCode="-715206569" size="1" extension=".bytes" />
+  <FileVersion name="gamemain_tblanguage_config.bytes" nameWithoutExtension="gamemain_tblanguage_config" file="gamemain_tblanguage_config.bytes" hashCode="-720622714" size="1" extension=".bytes" />
+  <FileVersion name="gamemain_tbleveldata.bytes" nameWithoutExtension="gamemain_tbleveldata" file="gamemain_tbleveldata.bytes" hashCode="-910028059" size="1" extension=".bytes" />
+  <FileVersion name="gamemain_tbplayerdata_character.bytes" nameWithoutExtension="gamemain_tbplayerdata_character" file="gamemain_tbplayerdata_character.bytes" hashCode="-1570251998" size="1" extension=".bytes" />
+  <FileVersion name="gamemain_tbsounds_config.bytes" nameWithoutExtension="gamemain_tbsounds_config" file="gamemain_tbsounds_config.bytes" hashCode="-19466266" size="1" extension=".bytes" />
+  <FileVersion name="gamemain_tbuidata_character.bytes" nameWithoutExtension="gamemain_tbuidata_character" file="gamemain_tbuidata_character.bytes" hashCode="1168510396" size="1" extension=".bytes" />
+  <FileVersion name="gamemain_tbuidata_gamemode.bytes" nameWithoutExtension="gamemain_tbuidata_gamemode" file="gamemain_tbuidata_gamemode.bytes" hashCode="-1885148188" size="1" extension=".bytes" />
+  <FileVersion name="gamemain_tbuidata_race.bytes" nameWithoutExtension="gamemain_tbuidata_race" file="gamemain_tbuidata_race.bytes" hashCode="1658508769" size="1" extension=".bytes" />
+</Root>
