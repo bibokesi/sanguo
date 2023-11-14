@@ -110,7 +110,7 @@ MonoBehaviour:
   - UnityEngine.XRModule.dll
   - UnityGameFramework.Runtime.dll
   CompressionHelperTypeName: UnityGameFramework.Runtime.DefaultCompressionHelper
-  LogicMainDllName: HotfixFramework.dll
+  LogicMainDllName: Hotfix.dll
   AssemblyAssetExtension: .bytes
   HybridCLRDataPath: HybridCLRData
   HybridCLRAssemblyPath: HybridCLRAssemblies
