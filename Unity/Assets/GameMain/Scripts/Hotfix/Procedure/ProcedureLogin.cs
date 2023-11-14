@@ -25,6 +25,9 @@ namespace Hotfix.Procedure
 
             // 播放背景音乐
             GameEntry.Sound.PlayMusic((int)SceneEnum.Login);
+
+            // 网络初始化
+            GameEntry.Fantasy.Init();
         }
 
         protected override void OnLeave(ProcedureOwner procedureOwner, bool isShutdown)

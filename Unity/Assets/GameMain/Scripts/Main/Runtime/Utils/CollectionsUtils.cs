@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-public static class TypeUtils
+public static class CollectionsUtils
 {
     /// <summary>
     ///     判断是否是List类型

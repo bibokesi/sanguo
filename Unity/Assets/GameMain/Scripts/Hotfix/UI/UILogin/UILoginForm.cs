@@ -42,7 +42,7 @@ namespace Hotfix.UI
 
             //GameEntry.UI.OpenUIForm(ConstUI.GetUIFormInfo<UIDemoListForm>());
             //GameEntry.UI.OpenUIForm(ConstUI.GetUIFormInfo<UIDemoGridListForm>());
-            GameEntry.UI.OpenUIForm(ConstUI.GetUIFormInfo<UIDemoEntityForm>());
+            //GameEntry.UI.OpenUIForm(ConstUI.GetUIFormInfo<UIDemoEntityForm>());
 
             //UIDialogParams dialogParams = new UIDialogParams();
             //dialogParams.Mode = 2;
@@ -62,6 +62,8 @@ namespace Hotfix.UI
             //};
             //dialogParams.Message = $"333";
             //GameEntry.UI.OpenDialog(dialogParams);
+
+            GameEntry.Fantasy.ConnectServer();
         }
         /*--------------------Auto generate footer.Do not add anything below the footer!------------*/
     }

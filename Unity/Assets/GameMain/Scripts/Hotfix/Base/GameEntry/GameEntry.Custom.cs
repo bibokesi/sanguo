@@ -24,8 +24,8 @@ public partial class GameEntry
     public static CameraComponent Camera => _camera ??= UnityGameFramework.Runtime.GameEntry.GetComponent<CameraComponent>();
     private static CameraComponent _camera;
 
-    public static NetConnectorComponent NetConnector => _netConnector ??= UnityGameFramework.Runtime.GameEntry.GetComponent<NetConnectorComponent>();
-    private static NetConnectorComponent _netConnector;
+    public static FantasyComponent Fantasy => _fantasy ??= UnityGameFramework.Runtime.GameEntry.GetComponent<FantasyComponent>();
+    private static FantasyComponent _fantasy;
 
     public static ConfigComponent Config => _config ??= UnityGameFramework.Runtime.GameEntry.GetComponent<ConfigComponent>();
     private static ConfigComponent _config;

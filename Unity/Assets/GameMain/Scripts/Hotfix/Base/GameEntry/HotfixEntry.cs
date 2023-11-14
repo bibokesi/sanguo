@@ -6,7 +6,7 @@ using UnityEngine;
 /// <summary>
 /// 业务入口
 /// </summary>
-public static class GameEnterMain
+public static class HotfixEntry
 {
     public static void Entrance(object[] objects) 
     {

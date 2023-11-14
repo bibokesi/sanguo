@@ -164,19 +164,19 @@ namespace Main.Runtime.Procedure
         {
             if (null == m_MainLogicAssembly)
             {
-                Logger.Fatal<ProcedureLoadAssembly>("Main logic assembly missing.");
+                Logger.Fatal<ProcedureLoadAssembly>("Hotfix assembly missing.");
                 return;
             }
-            var appType = m_MainLogicAssembly.GetType("GameEnterMain");
+            var appType = m_MainLogicAssembly.GetType("HotfixEntry");
             if (null == appType)
             {
-                Logger.Fatal<ProcedureLoadAssembly>("Main logic type 'GameEnterMain' missing.");
+                Logger.Fatal<ProcedureLoadAssembly>("Hotfix type 'HotfixEntry' missing.");
                 return;
             }
             var entryMethod = appType.GetMethod("Entrance");
             if (null == entryMethod)
             {
-                Logger.Fatal<ProcedureLoadAssembly>("Main logic entry method 'Entrance' missing.");
+                Logger.Fatal<ProcedureLoadAssembly>("Hotfix entry method 'Entrance' missing.");
                 return;
             }
             object[] objects = new object[] { new object[] { m_HotfixAssemblys } };
