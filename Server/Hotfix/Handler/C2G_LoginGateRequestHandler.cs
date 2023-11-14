@@ -15,8 +15,8 @@ public class C2G_LoginGateRequestHandler : MessageRPC<C2G_LoginGateRequest,G2C_L
         // 缓存玩家PlayerId
         sessionPlayer.playerId = 123433;
 
-        var db = session.Scene.World.DateBase;
-        await db.Save(sessionPlayer);
+       // var db = session.Scene.World.DateBase;
+       // await db.Save(sessionPlayer);
 
 
         Log.Debug($"<--收到请求登录网关的消息");
