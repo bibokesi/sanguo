@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   autoCopyAssembly: 1
   uiGenerateSavePath: 
-  hotUpdatePath: test/
+  hotUpdatePath: HybridCLRData/HotUpdateDlls
   hotUpdateAssemblyDefinitions: []
