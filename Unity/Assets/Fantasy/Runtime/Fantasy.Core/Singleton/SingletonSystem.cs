@@ -62,7 +62,7 @@ namespace Fantasy.Helper
             }
 
             Task.WaitAll(task.ToArray());
-            // Log.Info($"assembly:{assemblyName} load Singleton count:{count}");
+            // FLog.Info($"assembly:{assemblyName} load Singleton count:{count}");
         }
 
         private static void UnLoad(Queue<ISingleton> singletons)
@@ -75,7 +75,7 @@ namespace Fantasy.Helper
                 }
                 catch (Exception e)
                 {
-                    Log.Error(e);
+                    FLog.Error(e);
                 }
             }
         }
@@ -90,7 +90,7 @@ namespace Fantasy.Helper
             // var count = singletons.Count;
             UnLoad(singletons);
             Singletons.RemoveKey(assemblyName);
-            // Log.Info($"assembly:{assemblyName} Unload Singleton count:{count}");
+            // FLog.Info($"assembly:{assemblyName} Unload Singleton count:{count}");
         }
 
         /// <summary>
@@ -117,7 +117,7 @@ namespace Fantasy.Helper
                 }
                 catch (Exception e)
                 {
-                    Log.Error(e);
+                    FLog.Error(e);
                 }
             }
         }

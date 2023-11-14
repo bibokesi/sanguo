@@ -183,7 +183,7 @@ namespace Fantasy.Core.Network
         {
             if (!_messageHandlers.TryGetValue(type, out var messageHandler))
             {
-                Log.Warning($"Scene:{session.Scene.Id} Found Unhandled Message: {message.GetType()}");
+                FLog.Warning($"Scene:{session.Scene.Id} Found Unhandled Message: {message.GetType()}");
                 return;
             }
             // 调用消息处理器的Handle方法并启动协程执行处理逻辑
@@ -204,7 +204,7 @@ namespace Fantasy.Core.Network
         {
             if (!_routeMessageHandlers.TryGetValue(type, out var routeMessageHandler))
             {
-                Log.Warning($"Scene:{session.Scene.Id} Found Unhandled RouteMessage: {message.GetType()}");
+                FLog.Warning($"Scene:{session.Scene.Id} Found Unhandled RouteMessage: {message.GetType()}");
 
                 if (message is IRouteRequest request)
                 {

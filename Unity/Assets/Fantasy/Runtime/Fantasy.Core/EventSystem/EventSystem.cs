@@ -109,7 +109,7 @@ namespace Fantasy
                 }
                 catch (Exception e)
                 {
-                    Log.Error(e);
+                    FLog.Error(e);
                 }
             }
         }
@@ -135,7 +135,7 @@ namespace Fantasy
                 }
                 catch (Exception e)
                 {
-                    Log.Error(e);
+                    FLog.Error(e);
                 }
             }
 

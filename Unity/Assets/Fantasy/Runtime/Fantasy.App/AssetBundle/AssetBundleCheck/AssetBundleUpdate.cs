@@ -53,14 +53,14 @@ namespace Fantasy.Unity
             try
             {
                 var remoteVersionMD5Url = $"{_remotePath}/{Define.VersionMD5Name}";
-                Log.Debug(remoteVersionMD5Url);
+                FLog.Debug(remoteVersionMD5Url);
                 _remoteVersionMD5 = await _download.DownloadText(remoteVersionMD5Url);
             
                 if (_remoteVersionMD5 == null)
                 {
                     // 执行到这里一般都是无法访问到目标服务器导致的、但也有可能是目标服务器没有这个文件
                     // 一般不会出现这样的低级错误吧NotFoundVersionMD5
-                    Log.Error($"Not Found VersionMD5");
+                    FLog.Error($"Not Found VersionMD5");
                     return AssetBundleUpdateState.ConnectFailed;
                 }
 
@@ -74,7 +74,7 @@ namespace Fantasy.Unity
             }
             catch (Exception e)
             {
-                Log.Error(e);
+                FLog.Error(e);
                 return AssetBundleUpdateState.ConnectFailed;
             }
         }
@@ -88,7 +88,7 @@ namespace Fantasy.Unity
 
                 if (remoteVersionName == null)
                 {
-                    Log.Error($"Not Found VersionName");
+                    FLog.Error($"Not Found VersionName");
                     return AssetBundleUpdateState.ConnectFailed;
                 }
 
@@ -141,7 +141,7 @@ namespace Fantasy.Unity
             }
             catch (Exception e)
             {
-                Log.Error(e);
+                FLog.Error(e);
                 return AssetBundleUpdateState.ConnectFailed;
             }
             
@@ -167,7 +167,7 @@ namespace Fantasy.Unity
                 {
                     foreach (var assetBundleVersion in _updateFiles)
                     {
-                        Log.Error($"AssetBundle name: {assetBundleVersion.Name} cannot be updated normally");
+                        FLog.Error($"AssetBundle name: {assetBundleVersion.Name} cannot be updated normally");
                     }
                     
                     return AssetBundleUpdateState.ConnectFailed;
@@ -180,7 +180,7 @@ namespace Fantasy.Unity
             }
             catch (Exception e)
             {
-                Log.Error(e);
+                FLog.Error(e);
                 return AssetBundleUpdateState.ConnectFailed;;
             }
         }
@@ -191,7 +191,7 @@ namespace Fantasy.Unity
 
             if (downloadByte == null || downloadByte.Length == 0)
             {
-                Log.Error($"DownloadAssetBundle fail AssetBundle:{assetBundleVersion.Name}");
+                FLog.Error($"DownloadAssetBundle fail AssetBundle:{assetBundleVersion.Name}");
                 return;
             }
             

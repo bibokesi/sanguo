@@ -47,7 +47,7 @@
 //         
 //         public async FTask<bool> StartAsync()
 //         {
-//             Log.Debug($"热更资源存放路径:{Define.RemoteAssetBundlePath}");
+//             FLog.Debug($"热更资源存放路径:{Define.RemoteAssetBundlePath}");
 //             
 //             _platformName = GetPlatform();
 //             _localVersionName = $"{Define.RemoteAssetBundlePath}/{Define.VersionName}";
@@ -89,7 +89,7 @@
 //
 //                 if (localVersionMD5Text == remoteVersionMD5)
 //                 {
-//                     Log.Debug("The client's resources are already up to date and do not need to be updated");
+//                     FLog.Debug("The client's resources are already up to date and do not need to be updated");
 //                     // 对比MD5发现一致、不需要下载任何东西到客户端
 //                     return true;
 //                 }
@@ -185,7 +185,7 @@
 //
 //             if (downloadByte == null || downloadByte.Length == 0)
 //             {
-//                 Log.Error($"DownloadAssetBundle fail AssetBundle:{assetBundleVersion.Name}");
+//                 FLog.Error($"DownloadAssetBundle fail AssetBundle:{assetBundleVersion.Name}");
 //                 return;
 //             }
 //             

@@ -82,7 +82,7 @@ namespace Fantasy.Core
 
             if (type == null)
             {
-                Log.Error($"not find {fullName} in assembly");
+                FLog.Error($"not find {fullName} in assembly");
                 return null;
             }
             

@@ -99,7 +99,7 @@ namespace Fantasy
 
                             if (action == null)
                             {
-                                Log.Error($"timer {timer.ToJson()}");
+                                FLog.Error($"timer {timer.ToJson()}");
                                 break;
                             }
 
@@ -113,7 +113,7 @@ namespace Fantasy
 
                             if (action == null)
                             {
-                                Log.Error($"timer {timer.ToJson()}");
+                                FLog.Error($"timer {timer.ToJson()}");
                                 break;
                             }
 
@@ -125,7 +125,7 @@ namespace Fantasy
             }
             catch (Exception e)
             {
-                Log.Error(e);
+                FLog.Error(e);
             }
         }
         
@@ -293,7 +293,7 @@ namespace Fantasy
         {
             if (tillTime < _now())
             {
-                Log.Error($"new once time too small tillTime:{tillTime} Now:{_now()}");
+                FLog.Error($"new once time too small tillTime:{tillTime} Now:{_now()}");
             }
 
             var timer = TimerAction.Create();

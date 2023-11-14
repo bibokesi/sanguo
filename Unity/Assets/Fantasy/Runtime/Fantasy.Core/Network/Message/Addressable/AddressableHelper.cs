@@ -43,7 +43,7 @@ namespace Fantasy.Core.Network
                 });
             if (response.ErrorCode != 0)
             {
-                Log.Error($"AddAddressable error is {response.ErrorCode}");
+                FLog.Error($"AddAddressable error is {response.ErrorCode}");
             }
         }
 
@@ -69,7 +69,7 @@ namespace Fantasy.Core.Network
                 return response.RouteId;
             }
 
-            Log.Error($"GetAddressable error is {response.ErrorCode} addressableId:{addressableId}");
+            FLog.Error($"GetAddressable error is {response.ErrorCode} addressableId:{addressableId}");
             return 0;
         }
         
@@ -88,7 +88,7 @@ namespace Fantasy.Core.Network
                 });
             if (response.ErrorCode != 0)
             {
-                Log.Error($"RemoveAddressable error is {response.ErrorCode}");
+                FLog.Error($"RemoveAddressable error is {response.ErrorCode}");
             }
         }
 
@@ -108,7 +108,7 @@ namespace Fantasy.Core.Network
             
             if (response.ErrorCode != 0)
             {
-                Log.Error($"RemoveAddressable error is {response.ErrorCode}");
+                FLog.Error($"RemoveAddressable error is {response.ErrorCode}");
             }
         }
 
@@ -128,7 +128,7 @@ namespace Fantasy.Core.Network
             
             if (response.ErrorCode != 0)
             {
-                Log.Error($"LockAddressable error is {response.ErrorCode}");
+                FLog.Error($"LockAddressable error is {response.ErrorCode}");
             }
         }
 
@@ -152,7 +152,7 @@ namespace Fantasy.Core.Network
 
             if (response.ErrorCode != 0)
             {
-                Log.Error($"UnLockAddressable error is {response.ErrorCode}");
+                FLog.Error($"UnLockAddressable error is {response.ErrorCode}");
             }
         }
     }

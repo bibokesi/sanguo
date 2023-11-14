@@ -129,7 +129,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif
@@ -155,7 +155,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif
@@ -178,7 +178,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif
@@ -195,7 +195,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif
@@ -285,7 +285,7 @@ namespace Fantasy.Core.Network
                             
                             if (messageLength <= 0)
                             {
-                                Log.Warning($"KCP Server KcpHeader.Data  messageLength <= 0");
+                                FLog.Warning($"KCP Server KcpHeader.Data  messageLength <= 0");
                                 break;
                             }
 
@@ -301,7 +301,7 @@ namespace Fantasy.Core.Network
                         }
                         case KcpHeader.Disconnect:
                         {
-                            // Log.Debug("KcpHeader.Disconnect");
+                            // FLog.Debug("KcpHeader.Disconnect");
                             RemoveChannel(channelId);
                             break;
                         }
@@ -309,7 +309,7 @@ namespace Fantasy.Core.Network
                 }
                 catch (Exception e)
                 {
-                    Log.Error(e);
+                    FLog.Error(e);
                 }
             }
         }
@@ -327,7 +327,7 @@ namespace Fantasy.Core.Network
             channel = null;
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return false;
             }
 #endif
@@ -338,14 +338,14 @@ namespace Fantasy.Core.Network
 
             if (remoteEndPoint != null && !remoteEndPoint.Equals(channel.RemoteEndPoint))
             {
-                Log.Error($"KCPNetworkChannel syn address diff: {channelId} {channel.RemoteEndPoint} {remoteEndPoint}");
+                FLog.Error($"KCPNetworkChannel syn address diff: {channelId} {channel.RemoteEndPoint} {remoteEndPoint}");
                 return false;
             }
 
             _pendingConnection.Remove(channelId);
             _pendingConnectionTimer.RemoveValue(channel.CreateTime + 10 * 1000, channelId);
 #if NETDEBUG
-            Log.Debug($"KCPServerNetwork _pendingConnection:{_pendingConnection.Count} _pendingConnectionTimer:{_pendingConnectionTimer.Count}");
+            FLog.Debug($"KCPServerNetwork _pendingConnection:{_pendingConnection.Count} _pendingConnectionTimer:{_pendingConnectionTimer.Count}");
 #endif
             return true;
         }
@@ -359,7 +359,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif
@@ -371,7 +371,7 @@ namespace Fantasy.Core.Network
             if (_connectionChannel.Remove(channelId, out var channel))
             {
 #if NETDEBUG
-                Log.Debug($"KCPServerNetwork _connectionChannel:{_connectionChannel.Count}");
+                FLog.Debug($"KCPServerNetwork _connectionChannel:{_connectionChannel.Count}");
 #endif
                 channel.Dispose();
                 return;
@@ -391,7 +391,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif
@@ -450,7 +450,7 @@ namespace Fantasy.Core.Network
                     }
                     catch (Exception e)
                     {
-                        Log.Error(e);
+                        FLog.Error(e);
                     }
 
                     if (channelKcp != null)
@@ -502,7 +502,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif

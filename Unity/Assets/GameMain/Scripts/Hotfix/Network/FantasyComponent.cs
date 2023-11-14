@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using GameMain;
-//using Pb.Message;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 using Fantasy.Core.Network;
@@ -57,13 +56,13 @@ public partial class FantasyComponent : GameFrameworkComponent
     private void OnRealmConnectFail()
     {
         IsConnect = false;
-        //Log.Error("无法连接到服务器");
+        Log.Error("无法连接到服务器");
     }
 
     private void OnRealmConnectDisconect()
     {
         IsConnect = false;
-        //Log.Error("断开连接");
+        Log.Error("断开连接");
     }
 
     private void OnGateConnectSuccess()
@@ -72,7 +71,7 @@ public partial class FantasyComponent : GameFrameworkComponent
         // 挂载心跳组件，设置每隔3000毫秒发送一次心跳给服务器
         // 只需要给客户端保持连接的服务器挂心跳
         Gate.Session.AddComponent<SessionHeartbeatComponent>().Start(3000);
-        //Log.Debug("已连接到网关服务器");
+        Log.Debug("已连接到网关服务器");
 
         GateTest().Coroutine();
     }
@@ -80,13 +79,13 @@ public partial class FantasyComponent : GameFrameworkComponent
     private void OnGateConnectFail()
     {
         IsConnect = false;
-        //Log.Error("无法连接到服务器");
+        Log.Error("无法连接到服务器");
     }
 
     private void OnGateConnectDisconect()
     {
         IsConnect = false;
-        //Log.Error("断开连接");
+        Log.Error("断开连接");
     }
 
     private async FTask RealmTest()

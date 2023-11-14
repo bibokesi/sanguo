@@ -57,7 +57,7 @@ namespace Fantasy.Core
             if (_waitCoroutineLocks.Count >= 100)
             {
                 // 当等待队列超过100个、表示这个协程锁可能有问题、打印一个警告方便排查错误
-                Log.Warning($"too much waitCoroutineLock CoroutineLockQueueType:{CoroutineLockQueueType.Name} Key:{Key} Count: {_waitCoroutineLocks.Count} ");
+                FLog.Warning($"too much waitCoroutineLock CoroutineLockQueueType:{CoroutineLockQueueType.Name} Key:{Key} Count: {_waitCoroutineLocks.Count} ");
             }
 #endif
             var waitCoroutineLock = WaitCoroutineLock.Create(this, tag, time);

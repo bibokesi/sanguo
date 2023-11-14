@@ -72,7 +72,7 @@ namespace Fantasy.Core.Network
                         
                         if (!session.RequestCallback.TryGetValue(packInfo.RpcId, out var action))
                         {
-                            Log.Error($"not found rpc {packInfo.RpcId}, response message: {aResponse.GetType().Name}");
+                            FLog.Error($"not found rpc {packInfo.RpcId}, response message: {aResponse.GetType().Name}");
                             return;
                         }
                         
@@ -85,7 +85,7 @@ namespace Fantasy.Core.Network
             }
             catch (Exception e)
             {
-                Log.Error($"NetworkMessageScheduler error messageProtocolCode:{packInfo.ProtocolCode} messageType:{messageType} SessionId {session.Id} IsDispose {session.IsDisposed} {e}");
+                FLog.Error($"NetworkMessageScheduler error messageProtocolCode:{packInfo.ProtocolCode} messageType:{messageType} SessionId {session.Id} IsDispose {session.IsDisposed} {e}");
             }
             finally
             {
@@ -141,7 +141,7 @@ namespace Fantasy.Core.Network
             }
             catch (Exception e)
             {
-                Log.Error($"NetworkMessageScheduler error messageProtocolCode:{protocolCode} messageType:{messageType} SessionId {session.Id} IsDispose {session.IsDisposed} {e}");
+                FLog.Error($"NetworkMessageScheduler error messageProtocolCode:{protocolCode} messageType:{messageType} SessionId {session.Id} IsDispose {session.IsDisposed} {e}");
             }
         }
 

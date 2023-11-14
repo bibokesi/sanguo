@@ -36,7 +36,7 @@ namespace Fantasy.Core
                     }
                     else
                     {
-                        Log.Error(UnityWebRequest.error);
+                        FLog.Error(UnityWebRequest.error);
                         task.SetResult(null);
                     }
                 }

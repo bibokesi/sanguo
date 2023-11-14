@@ -318,13 +318,13 @@ namespace Fantasy
         {
             if (this == component)
             {
-                Log.Error("Cannot add oneself to one's own components");
+                FLog.Error("Cannot add oneself to one's own components");
                 return;
             }
             
             if (component.IsDisposed)
             {
-                Log.Error($"component is Disposed {component.GetType().FullName}");
+                FLog.Error($"component is Disposed {component.GetType().FullName}");
                 return;
             }
             
@@ -347,7 +347,7 @@ namespace Fantasy
 #if FANTASY_NET
                 if (component is ISupportedSingleCollection && component.Id != Id)
                 {
-                    Log.Error($"component type :{component.GetType().FullName} for implementing ISupportedSingleCollection, it is required that the Id must be the same as the parent");
+                    FLog.Error($"component type :{component.GetType().FullName} for implementing ISupportedSingleCollection, it is required that the Id must be the same as the parent");
                 }
 #endif
                 if (_tree == null)
@@ -356,7 +356,7 @@ namespace Fantasy
                 }
                 else if(_tree.ContainsKey(type))
                 {
-                    Log.Error($"type:{type.FullName} If you want to add multiple components of the same type, please implement IMultiEntity");
+                    FLog.Error($"type:{type.FullName} If you want to add multiple components of the same type, please implement IMultiEntity");
                     return;
                 }
                 
@@ -666,7 +666,7 @@ namespace Fantasy
                     Entities.Remove(RuntimeId);
                 }
 
-                Log.Error(e);
+                FLog.Error(e);
             }
         }
 

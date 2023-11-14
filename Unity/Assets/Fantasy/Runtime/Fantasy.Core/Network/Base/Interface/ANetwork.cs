@@ -137,7 +137,7 @@ namespace Fantasy.Core.Network
             // 检查是否在正确的网络线程中
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return null;
             }
 #endif
@@ -163,7 +163,7 @@ namespace Fantasy.Core.Network
             // 检查是否在正确的网络线程中
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return null;
             }
 #endif

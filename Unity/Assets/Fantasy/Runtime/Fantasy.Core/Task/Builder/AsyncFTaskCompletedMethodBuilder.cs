@@ -38,7 +38,7 @@ namespace Fantasy
         [DebuggerHidden]
         public void SetException(Exception exception)
         {
-            Log.Error(exception);
+            FLog.Error(exception);
             // ExceptionDispatchInfo.Capture(exception).Throw();
         }
 

@@ -98,7 +98,7 @@ namespace Fantasy
                 {
                     var pathLine = matches.Groups[1].Value;
 
-                    if (!pathLine.Contains("Log.cs") && 
+                    if (!pathLine.Contains("FLog.cs") && 
                         !pathLine.Contains("UnityLog.cs"))
                     {
                         var splitIndex = pathLine.LastIndexOf(":", StringComparison.Ordinal);

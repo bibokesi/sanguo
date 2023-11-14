@@ -99,7 +99,7 @@ namespace Fantasy
             }
             catch (Exception e)
             {
-                Log.Error($"{type.Name} Error {e}");
+                FLog.Error($"{type.Name} Error {e}");
             }
         }
 
@@ -123,7 +123,7 @@ namespace Fantasy
             }
             catch (Exception e)
             {
-                Log.Error($"{type.Name} Error {e}");
+                FLog.Error($"{type.Name} Error {e}");
             }
         }
 
@@ -147,7 +147,7 @@ namespace Fantasy
             }
             catch (Exception e)
             {
-                Log.Error($"{type.Name} Error {e}");
+                FLog.Error($"{type.Name} Error {e}");
             }
         }
 
@@ -197,7 +197,7 @@ namespace Fantasy
                 }
                 catch (Exception e)
                 {
-                    Log.Error($"{type} Error {e}");
+                    FLog.Error($"{type} Error {e}");
                 }
             }
         }

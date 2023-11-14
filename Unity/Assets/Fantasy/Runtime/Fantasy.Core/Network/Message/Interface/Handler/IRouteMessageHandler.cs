@@ -52,13 +52,13 @@ namespace Fantasy.Core.Network
         {
             if (routeMessage is not TMessage ruteMessage)
             {
-                Log.Error($"Message type conversion error: {routeMessage.GetType().FullName} to {typeof(TMessage).Name}");
+                FLog.Error($"Message type conversion error: {routeMessage.GetType().FullName} to {typeof(TMessage).Name}");
                 return;
             }
 
             if (entity is not TEntity tEntity)
             {
-                Log.Error($"Route type conversion error: {entity.GetType().Name} to {nameof(TEntity)}");
+                FLog.Error($"Route type conversion error: {entity.GetType().Name} to {nameof(TEntity)}");
                 return;
             }
 
@@ -73,7 +73,7 @@ namespace Fantasy.Core.Network
                     scene = entity.Scene;
                 }
                 
-                Log.Error($"SceneWorld:{session.Scene.World.Id} ServerConfigId:{scene.Server?.Id} SceneType:{scene.SceneType} EntityId {tEntity.Id} : Error {e}");
+                FLog.Error($"SceneWorld:{session.Scene.World.Id} ServerConfigId:{scene.Server?.Id} SceneType:{scene.SceneType} EntityId {tEntity.Id} : Error {e}");
             }
         }
 
@@ -115,13 +115,13 @@ namespace Fantasy.Core.Network
         {
             if (routeMessage is not TRouteRequest tRouteRequest)
             {
-                Log.Error($"Message type conversion error: {routeMessage.GetType().FullName} to {typeof(TRouteRequest).Name}");
+                FLog.Error($"Message type conversion error: {routeMessage.GetType().FullName} to {typeof(TRouteRequest).Name}");
                 return;
             }
 
             if (entity is not TEntity tEntity)
             {
-                Log.Error($"Route type conversion error: {entity.GetType().Name} to {nameof(TEntity)}");
+                FLog.Error($"Route type conversion error: {entity.GetType().Name} to {nameof(TEntity)}");
                 return;
             }
             
@@ -156,7 +156,7 @@ namespace Fantasy.Core.Network
                     scene = entity.Scene;
                 }
                 
-                Log.Error($"SceneWorld:{session.Scene.World?.Id} ServerConfigId:{scene.Server?.Id} SceneType:{scene.SceneType} EntityId {tEntity.Id} : Error {e}");
+                FLog.Error($"SceneWorld:{session.Scene.World?.Id} ServerConfigId:{scene.Server?.Id} SceneType:{scene.SceneType} EntityId {tEntity.Id} : Error {e}");
                 response.ErrorCode = CoreErrorCode.ErrRpcFail;
             }
             finally
@@ -203,13 +203,13 @@ namespace Fantasy.Core.Network
         {
             if (routeMessage is not TMessage ruteMessage)
             {
-                Log.Error($"Message type conversion error: {routeMessage.GetType().FullName} to {typeof(TMessage).Name}");
+                FLog.Error($"Message type conversion error: {routeMessage.GetType().FullName} to {typeof(TMessage).Name}");
                 return;
             }
 
             if (entity is not TEntity tEntity)
             {
-                Log.Error($"Route type conversion error: {entity.GetType().Name} to {nameof(TEntity)}");
+                FLog.Error($"Route type conversion error: {entity.GetType().Name} to {nameof(TEntity)}");
                 return;
             }
 
@@ -224,7 +224,7 @@ namespace Fantasy.Core.Network
                     scene = entity.Scene;
                 }
                 
-                Log.Error($"SceneWorld:{session.Scene?.World?.Id} ServerConfigId:{scene.Server?.Id} SceneType:{scene.SceneType} EntityId {tEntity.Id} : Error {e}");
+                FLog.Error($"SceneWorld:{session.Scene?.World?.Id} ServerConfigId:{scene.Server?.Id} SceneType:{scene.SceneType} EntityId {tEntity.Id} : Error {e}");
             }
             finally
             {
@@ -268,13 +268,13 @@ namespace Fantasy.Core.Network
         {
             if (routeMessage is not TRouteRequest tRouteRequest)
             {
-                Log.Error($"Message type conversion error: {routeMessage.GetType().FullName} to {typeof(TRouteRequest).Name}");
+                FLog.Error($"Message type conversion error: {routeMessage.GetType().FullName} to {typeof(TRouteRequest).Name}");
                 return;
             }
 
             if (entity is not TEntity tEntity)
             {
-                Log.Error($"Route type conversion error: {entity.GetType().Name} to {nameof(TEntity)}");
+                FLog.Error($"Route type conversion error: {entity.GetType().Name} to {nameof(TEntity)}");
                 return;
             }
             
@@ -309,7 +309,7 @@ namespace Fantasy.Core.Network
                     scene = entity.Scene;
                 }
                 
-                Log.Error($"SceneWorld:{session.Scene.World?.Id} ServerConfigId:{scene.Server?.Id} SceneType:{scene.SceneType} EntityId {tEntity.Id} : Error {e}");
+                FLog.Error($"SceneWorld:{session.Scene.World?.Id} ServerConfigId:{scene.Server?.Id} SceneType:{scene.SceneType} EntityId {tEntity.Id} : Error {e}");
                 response.ErrorCode = CoreErrorCode.ErrRpcFail;
             }
             finally

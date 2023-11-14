@@ -105,7 +105,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif
@@ -133,7 +133,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif
@@ -156,7 +156,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif
@@ -175,7 +175,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif
@@ -186,7 +186,7 @@ namespace Fantasy.Core.Network
 
             if (asyncEventArgs.SocketError != SocketError.Success)
             {
-                Log.Error($"Socket Accept Error: {_acceptAsync.SocketError}");
+                FLog.Error($"Socket Accept Error: {_acceptAsync.SocketError}");
                 return;
             }
 
@@ -216,7 +216,7 @@ namespace Fantasy.Core.Network
             }
             catch (Exception e)
             {
-                Log.Error(e);
+                FLog.Error(e);
             }
             finally
             {
@@ -233,7 +233,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif
@@ -242,7 +242,7 @@ namespace Fantasy.Core.Network
                 return;
             }
 #if NETDEBUG
-            Log.Debug($"TCPServerNetwork _connectionChannel:{_connectionChannel.Count}");
+            FLog.Debug($"TCPServerNetwork _connectionChannel:{_connectionChannel.Count}");
 #endif
             if (channel.IsDisposed)
             {

@@ -41,7 +41,7 @@ public class SingleCollection : Singleton<SingleCollection>
 
             if (customAttributes.Length == 0)
             {
-                Log.Error($"type {type.FullName} Implemented the interface of ISingleCollection, requiring the implementation of SingleCollectionAttribute");
+                FLog.Error($"type {type.FullName} Implemented the interface of ISingleCollection, requiring the implementation of SingleCollectionAttribute");
                 continue;
             }
 

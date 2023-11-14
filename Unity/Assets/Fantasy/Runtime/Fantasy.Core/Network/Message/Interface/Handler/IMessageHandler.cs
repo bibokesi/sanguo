@@ -55,7 +55,7 @@ namespace Fantasy.Core.Network
             }
             catch (Exception e)
             {
-                Log.Error(e);
+                FLog.Error(e);
             }
         }
 
@@ -94,7 +94,7 @@ namespace Fantasy.Core.Network
         {
             if (message is not TRequest request)
             {
-                Log.Error($"消息类型转换错误: {message.GetType().Name} to {typeof(TRequest).Name}");
+                FLog.Error($"消息类型转换错误: {message.GetType().Name} to {typeof(TRequest).Name}");
                 return;
             }
             
@@ -124,7 +124,7 @@ namespace Fantasy.Core.Network
             }
             catch (Exception e)
             {
-                Log.Error(e);
+                FLog.Error(e);
                 response.ErrorCode = CoreErrorCode.ErrRpcFail;
             }
             finally

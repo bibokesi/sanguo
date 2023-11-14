@@ -16,7 +16,7 @@ namespace Fantasy.Core
 
             if (UIComponent.Root == null)
             {
-                Log.Error("We need to create a GameObject named Fantasy and set it to DontDestroyOnLoad");
+                FLog.Error("We need to create a GameObject named Fantasy and set it to DontDestroyOnLoad");
             }
         }
     }
@@ -184,7 +184,7 @@ namespace Fantasy.Core
             {
                 if (string.IsNullOrEmpty(ui.AssetName) || string.IsNullOrEmpty(ui.BundleName))
                 {
-                    Log.Error($"ui.AssetName or ui.BundleName is null");
+                    FLog.Error($"ui.AssetName or ui.BundleName is null");
                     return default;
                 }
                 
@@ -210,7 +210,7 @@ namespace Fantasy.Core
             {
                 LayerDictionary[(int)layer].Remove(ui.Id, false);
                 ui.Dispose();
-                Log.Error(e);
+                FLog.Error(e);
             }
             
             return ui;
@@ -224,7 +224,7 @@ namespace Fantasy.Core
             {
                 if (string.IsNullOrEmpty(ui.AssetName) || string.IsNullOrEmpty(ui.BundleName))
                 {
-                    Log.Error($"ui.AssetName or ui.BundleName is null");
+                    FLog.Error($"ui.AssetName or ui.BundleName is null");
                     return default;
                 }
 
@@ -251,7 +251,7 @@ namespace Fantasy.Core
                 // 失败的时候要在对应层里移除掉、不然会产生内存泄露
                 LayerDictionary[(int)layer].Remove(ui.Id, false);
                 ui.Dispose();
-                Log.Error(e);
+                FLog.Error(e);
             }
             
             return ui;

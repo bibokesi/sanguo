@@ -6,11 +6,11 @@ namespace Fantasy
     /// <summary>
     /// 提供日志记录功能的静态类。
     /// </summary>
-    public static class Log
+    public static class FLog
     {
         private static readonly ILog LogCore;
 
-        static Log()
+        static FLog()
         {
 #if FANTASY_NET
             LogCore = new NLog("Server");

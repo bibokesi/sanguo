@@ -28,13 +28,13 @@ namespace Fantasy.Core.Network
                 case NetworkProtocolType.KCP:
                 {
                     Network = new KCPServerNetwork(Scene, networkTarget, address);
-                    Log.Info($"NetworkProtocol:KCP IPEndPoint:{address}");
+                    FLog.Info($"NetworkProtocol:KCP IPEndPoint:{address}");
                     return;
                 }
                 case NetworkProtocolType.TCP:
                 {
                     Network = new TCPServerNetwork(Scene, networkTarget, address);
-                    Log.Info($"NetworkProtocol:TCP IPEndPoint:{address}");
+                    FLog.Info($"NetworkProtocol:TCP IPEndPoint:{address}");
                     return;
                 }
                 default:

@@ -68,7 +68,7 @@ namespace Fantasy.Core.Network
 
                         if (addressableRouteComponent == null)
                         {
-                            Log.Error("Session does not have an AddressableRouteComponent component");
+                            FLog.Error("Session does not have an AddressableRouteComponent component");
                             return;
                         }
 
@@ -100,13 +100,13 @@ namespace Fantasy.Core.Network
 
                         if (routeComponent == null)
                         {
-                            Log.Error("Session does not have an routeComponent component");
+                            FLog.Error("Session does not have an routeComponent component");
                             return;
                         }
 
                         if (!routeComponent.TryGetRouteId(packInfo.RouteTypeCode, out var routeId))
                         {
-                            Log.Error($"RouteComponent cannot find RouteId with RouteTypeCode {packInfo.RouteTypeCode}");
+                            FLog.Error($"RouteComponent cannot find RouteId with RouteTypeCode {packInfo.RouteTypeCode}");
                             return;
                         }
 
@@ -137,7 +137,7 @@ namespace Fantasy.Core.Network
             }
             catch (Exception e)
             {
-                Log.Error(e);
+                FLog.Error(e);
                 return;
             }
             finally

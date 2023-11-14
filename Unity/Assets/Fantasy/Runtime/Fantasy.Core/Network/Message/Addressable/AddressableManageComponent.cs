@@ -29,11 +29,11 @@ namespace Fantasy.Core.Network
                 }
                 
                 _addressable[addressableId] = routeId;
-                Log.Debug($"AddressableManageComponent Add addressableId:{addressableId} routeId:{routeId}");
+                FLog.Debug($"AddressableManageComponent Add addressableId:{addressableId} routeId:{routeId}");
             }
             catch (Exception e)
             {
-                Log.Error(e);
+                FLog.Error(e);
             }
             finally
             {
@@ -64,7 +64,7 @@ namespace Fantasy.Core.Network
             using (await _addressableLock.Lock(addressableId))
             {
                 _addressable.Remove(addressableId);
-                Log.Debug($"Addressable Remove addressableId: {addressableId} _addressable:{_addressable.Count}");
+                FLog.Debug($"Addressable Remove addressableId: {addressableId} _addressable:{_addressable.Count}");
             }
         }
 
@@ -88,7 +88,7 @@ namespace Fantasy.Core.Network
         {
             if (!_locks.Remove(addressableId, out var coroutineLock))
             {
-                Log.Error($"Addressable unlock not found addressableId: {addressableId} Source:{source}");
+                FLog.Error($"Addressable unlock not found addressableId: {addressableId} Source:{source}");
                 return;
             }
 
@@ -100,7 +100,7 @@ namespace Fantasy.Core.Network
             }
 
             coroutineLock.Dispose();
-            Log.Debug($"Addressable UnLock key: {addressableId} oldAddressableId : {oldAddressableId} routeId: {routeId}  Source:{source}");
+            FLog.Debug($"Addressable UnLock key: {addressableId} oldAddressableId : {oldAddressableId} routeId: {routeId}  Source:{source}");
         }
     }
 }

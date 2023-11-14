@@ -108,7 +108,7 @@ namespace Fantasy.Core.Network
             }
             catch (Exception e)
             {
-                Log.Error($"InnerMessageSchedulerHandler error messageProtocolCode:{packInfo.ProtocolCode} messageType:{messageType} {e}");
+                FLog.Error($"InnerMessageSchedulerHandler error messageProtocolCode:{packInfo.ProtocolCode} messageType:{messageType} {e}");
             }
             finally
             {
@@ -211,7 +211,7 @@ namespace Fantasy.Core.Network
             }
             catch (Exception e)
             {
-                Log.Error($"InnerMessageSchedulerHandler error messageProtocolCode:{protocolCode} messageType:{messageType} {e}");
+                FLog.Error($"InnerMessageSchedulerHandler error messageProtocolCode:{protocolCode} messageType:{messageType} {e}");
             }
         }
     }

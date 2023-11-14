@@ -43,7 +43,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif
@@ -65,7 +65,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif
@@ -99,7 +99,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif
@@ -122,7 +122,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif
@@ -166,7 +166,7 @@ namespace Fantasy.Core.Network
                 }
                 catch (Exception e)
                 {
-                    Log.Error(e);
+                    FLog.Error(e);
                 }
             }
         }
@@ -176,7 +176,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif
@@ -199,7 +199,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif
@@ -225,7 +225,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif
@@ -250,7 +250,7 @@ namespace Fantasy.Core.Network
                 }
                 catch (Exception e)
                 {
-                    Log.Error(e);
+                    FLog.Error(e);
                 }
             }
         }
@@ -260,7 +260,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif
@@ -310,12 +310,12 @@ namespace Fantasy.Core.Network
                 }
                 catch (ScanException e)
                 {
-                    Log.Debug($"RemoteAddress:{RemoteEndPoint} \n{e}");
+                    FLog.Debug($"RemoteAddress:{RemoteEndPoint} \n{e}");
                     Dispose();
                 }
                 catch (Exception e)
                 {
-                    Log.Error($"RemoteAddress:{RemoteEndPoint} \n{e}");
+                    FLog.Error($"RemoteAddress:{RemoteEndPoint} \n{e}");
                     Dispose();
                 }
             }
@@ -326,7 +326,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif

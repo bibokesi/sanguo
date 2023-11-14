@@ -44,7 +44,7 @@ namespace Fantasy.Core.Network
             }
 
 #if FANTASY_DEVELOP
-            Log.Debug($"AddressableMessageComponent Register addressableId:{AddressableId} RouteId:{Parent.RuntimeId}");
+            FLog.Debug($"AddressableMessageComponent Register addressableId:{AddressableId} RouteId:{Parent.RuntimeId}");
 #endif
             return AddressableHelper.AddAddressable(Scene, AddressableId, Parent.RuntimeId, isLock);
         }
@@ -55,7 +55,7 @@ namespace Fantasy.Core.Network
         public FTask Lock()
         {
 #if FANTASY_DEVELOP
-            Log.Debug($"AddressableMessageComponent Lock {Parent.Id}");
+            FLog.Debug($"AddressableMessageComponent Lock {Parent.Id}");
 #endif
             return AddressableHelper.LockAddressable(Scene, Parent.Id);
         }
@@ -67,7 +67,7 @@ namespace Fantasy.Core.Network
         public FTask UnLock(string source)
         {
 #if FANTASY_DEVELOP
-            Log.Debug($"AddressableMessageComponent UnLock {Parent.Id} {Parent.RuntimeId}");
+            FLog.Debug($"AddressableMessageComponent UnLock {Parent.Id} {Parent.RuntimeId}");
 #endif
             return AddressableHelper.UnLockAddressable(Scene, Parent.Id, Parent.RuntimeId, source);
         }

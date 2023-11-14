@@ -58,7 +58,7 @@ namespace Fantasy.Core
         { 
             if (audioLayer <= (int)AudioLayer.Max)
             {
-                Log.Error($"AudioLayer:{audioLayer} cannot be less than or equal to AudioLayer.Max:{(int)AudioLayer.Max}");
+                FLog.Error($"AudioLayer:{audioLayer} cannot be less than or equal to AudioLayer.Max:{(int)AudioLayer.Max}");
                 return null;
             }
 
@@ -77,7 +77,7 @@ namespace Fantasy.Core
             {
                 audioComponent.Dispose();
                 audioComponent = null;
-                Log.Error(e);
+                FLog.Error(e);
             }
             
             return audioComponent;
@@ -109,7 +109,7 @@ namespace Fantasy.Core
             {
                 audioComponent.Dispose();
                 audioComponent = null;
-                Log.Error(e);
+                FLog.Error(e);
             }
             
             return audioComponent;

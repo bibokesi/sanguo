@@ -108,7 +108,7 @@ public sealed class AddressableRouteComponent : Entity
                     {
                         if (++failCount > 20)
                         {
-                            Log.Error($"AddressableComponent.Call failCount > 20 route send message fail, routeId: {_routeId} AddressableRouteComponent:{Id}");
+                            FLog.Error($"AddressableComponent.Call failCount > 20 route send message fail, routeId: {_routeId} AddressableRouteComponent:{Id}");
                             return iRouteResponse;
                         }
 
@@ -174,7 +174,7 @@ public sealed class AddressableRouteComponent : Entity
                     {
                         if (++failCount > 20)
                         {
-                            Log.Error($"AddressableRouteComponent.Call failCount > 20 route send message fail, routeId: {_routeId} AddressableRouteComponent:{Id}");
+                            FLog.Error($"AddressableRouteComponent.Call failCount > 20 route send message fail, routeId: {_routeId} AddressableRouteComponent:{Id}");
                             return iRouteResponse;
                         }
 

@@ -57,13 +57,13 @@ public sealed class OnNetworkMessageUpdateCheckTimeout : TimerHandler<MessageHel
                         var response = MessageDispatcherSystem.Instance.CreateResponse(iRequest, CoreErrorCode.ErrRpcFail);
                         responseRpcId = routeMessageSender.RpcId;
                         MessageHelper.ResponseHandler(responseRpcId, response);
-                        Log.Warning($"timeout rpcId:{rpcId} responseRpcId:{responseRpcId} {iRequest.ToJson()}");
+                        FLog.Warning($"timeout rpcId:{rpcId} responseRpcId:{responseRpcId} {iRequest.ToJson()}");
                         break;
                     }
                     default:
                     {
                         // 处理不支持的请求类型。
-                        Log.Error(routeMessageSender.Request != null
+                        FLog.Error(routeMessageSender.Request != null
                             ? $"Unsupported protocol type {routeMessageSender.Request.GetType()} rpcId:{rpcId}"
                             : $"Unsupported protocol type:{routeMessageSender.MessageType.FullName} rpcId:{rpcId}");
 
@@ -74,7 +74,7 @@ public sealed class OnNetworkMessageUpdateCheckTimeout : TimerHandler<MessageHel
             }
             catch (Exception e)
             {
-                Log.Error($"responseRpcId:{responseRpcId} routeMessageSender.RpcId:{routeMessageSender.RpcId} {e}");
+                FLog.Error($"responseRpcId:{responseRpcId} routeMessageSender.RpcId:{routeMessageSender.RpcId} {e}");
             }
         }
 

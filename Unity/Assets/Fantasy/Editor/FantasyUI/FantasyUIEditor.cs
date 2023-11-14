@@ -238,7 +238,7 @@ namespace Fantasy.Core.Editor
             using var entityStreamWriter = new StreamWriter(combinePath);
             entityStreamWriter.Write(sb.ToString());
             AssetDatabase.Refresh();
-            Log.Debug($"代码生成位置:{combinePath}");
+            FLog.Debug($"代码生成位置:{combinePath}");
         }
     }
 }

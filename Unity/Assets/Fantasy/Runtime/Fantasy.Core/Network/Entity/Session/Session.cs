@@ -205,7 +205,7 @@ namespace Fantasy.Core.Network
             // 从会话字典中移除会话
             Sessions.Remove(id);
 #if NETDEBUG
-            Log.Debug($"Sessions Dispose Count:{Sessions.Count}");
+            FLog.Debug($"Sessions Dispose Count:{Sessions.Count}");
 #endif
         }
 
@@ -313,7 +313,7 @@ namespace Fantasy.Core.Network
                 // 如果解析失败，只有一种可能，那就是有人恶意发包。
                 // 所以这里强制关闭了当前连接。不让对方一直发包。
                 Dispose();
-                Log.Error(e);
+                FLog.Error(e);
             }
         }
 

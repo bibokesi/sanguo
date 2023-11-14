@@ -196,7 +196,7 @@ V1.5 [2021-01-07]
 - MirrorTransport: large send/recv window size defaults to avoid high latencies caused
   by packets not being processed fast enough
 - MirrorTransport: show MaxSend/ReceiveRate in debug gui
-- MirrorTransport: don't Log.Info to console in headless mode if debug log is disabled
+- MirrorTransport: don't FLog.Info to console in headless mode if debug log is disabled
 
 V1.4 [2020-11-27]
 - fix: OnCheckEnabled added. KcpConnection message processing while loop can now
@@ -207,7 +207,7 @@ V1.4 [2020-11-27]
 - perf: Mirror KcpTransport: CongestionControl disabled by default (turbo mode)
 
 V1.3 [2020-11-17]
-- Log.Info/Warning/Error so logging doesn't depend on UnityEngine anymore
+- FLog.Info/Warning/Error so logging doesn't depend on UnityEngine anymore
 - fix: Server.Tick catches SocketException which happens if Android client is killed
 - MirrorTransport: debugLog option added that can be checked in Unity Inspector
 - Utils.Clamp so Kcp.cs doesn't depend on UnityEngine

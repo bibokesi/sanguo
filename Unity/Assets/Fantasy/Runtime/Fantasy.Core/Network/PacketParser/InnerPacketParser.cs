@@ -91,7 +91,7 @@ public sealed class InnerPackInfo : APackInfo
             }
             default:
             {
-                Log.Error($"protocolCode:{ProtocolCode} Does not support processing protocol");
+                FLog.Error($"protocolCode:{ProtocolCode} Does not support processing protocol");
                 return null;
             }
         }
@@ -184,7 +184,7 @@ public sealed class InnerPacketParser : APacketParser
             {
                 // 在发生异常时，释放 packInfo 并记录日志
                 packInfo?.Dispose();
-                Log.Error(e);
+                FLog.Error(e);
                 return false;
             }
         }

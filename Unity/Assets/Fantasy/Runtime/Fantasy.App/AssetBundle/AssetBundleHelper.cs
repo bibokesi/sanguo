@@ -28,7 +28,7 @@ namespace Fantasy.Helper
         /// </summary>
         public static async FTask Initialize()
         {
-            Log.Debug($"热更资源存放路径:{Define.RemoteAssetBundlePath}");
+            FLog.Debug($"热更资源存放路径:{Define.RemoteAssetBundlePath}");
             
             try
             {
@@ -60,7 +60,7 @@ namespace Fantasy.Helper
             }
             catch (Exception e)
             {
-                Log.Error(e);
+                FLog.Error(e);
             }
         }
 
@@ -164,7 +164,7 @@ namespace Fantasy.Helper
 
             if (!File.Exists(assetBundlePath))
             {
-                Log.Error($"AssetBundle not found:{assetBundleName} {assetBundlePath}");
+                FLog.Error($"AssetBundle not found:{assetBundleName} {assetBundlePath}");
                 return;
             }
 
@@ -213,7 +213,7 @@ namespace Fantasy.Helper
 
                 if (!File.Exists(assetBundlePath))
                 {
-                    Log.Error($"AssetBundle not found:{assetBundleName} {assetBundlePath}");
+                    FLog.Error($"AssetBundle not found:{assetBundleName} {assetBundlePath}");
                     return;
                 }
 
@@ -293,7 +293,7 @@ namespace Fantasy.Helper
             AssetBundles.Remove(assetBundleName);
             Resources.Remove(assetBundleName);
             assetBundleInfo.Destroy(unload);
-            // Log.Debug($"UnloadOneBundle assetBundleName:{assetBundleName} AssetBundles:{AssetBundles.Count} Resources:{Resources.Count}");
+            // FLog.Debug($"UnloadOneBundle assetBundleName:{assetBundleName} AssetBundles:{AssetBundles.Count} Resources:{Resources.Count}");
         }
 
         private static async FTask UnloadOneBundleAsync(string assetBundleName, bool unload)
@@ -358,7 +358,7 @@ namespace Fantasy.Helper
                 return;
             }
 
-            Log.Error($"assets bundle not found:{assetBundleName}");
+            FLog.Error($"assets bundle not found:{assetBundleName}");
         }
 #endif
         #endregion

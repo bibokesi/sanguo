@@ -494,7 +494,7 @@ public sealed class MongoDataBase : IDateBase
     {
         if (entity == null)
         {
-            Log.Error($"save entity is null: {typeof(T).Name}");
+            FLog.Error($"save entity is null: {typeof(T).Name}");
             return;
         }
 
@@ -518,7 +518,7 @@ public sealed class MongoDataBase : IDateBase
     {
         if (entity == null)
         {
-            Log.Error($"save entity is null: {typeof(T).Name}");
+            FLog.Error($"save entity is null: {typeof(T).Name}");
 
             return;
         }
@@ -542,7 +542,7 @@ public sealed class MongoDataBase : IDateBase
     {
         if (entity == null)
         {
-            Log.Error($"save entity is null: {typeof(T).Name}");
+            FLog.Error($"save entity is null: {typeof(T).Name}");
 
             return;
         }
@@ -564,7 +564,7 @@ public sealed class MongoDataBase : IDateBase
     {
         if (entities == null)
         {
-            Log.Error("save entity is null");
+            FLog.Error("save entity is null");
             return;
         }
 
@@ -581,7 +581,7 @@ public sealed class MongoDataBase : IDateBase
                 }
                 catch (Exception e)
                 {
-                    Log.Error($"Save List Entity Error: {clone.GetType().Name} {clone}\n{e}");
+                    FLog.Error($"Save List Entity Error: {clone.GetType().Name} {clone}\n{e}");
                 }
             }
         }

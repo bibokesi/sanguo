@@ -56,7 +56,7 @@ public static class MessageHelper
     {
         if (entityId == 0)
         {
-            Log.Error($"SendInnerRoute appId == 0");
+            FLog.Error($"SendInnerRoute appId == 0");
             return;
         }
 
@@ -76,7 +76,7 @@ public static class MessageHelper
     {
         if (entityId == 0)
         {
-            Log.Error($"SendInnerRoute appId == 0");
+            FLog.Error($"SendInnerRoute appId == 0");
             return;
         }
 
@@ -95,7 +95,7 @@ public static class MessageHelper
     {
         if (routeIdCollection.Count <= 0)
         {
-            Log.Error($"SendInnerRoute routeId.Count <= 0");
+            FLog.Error($"SendInnerRoute routeId.Count <= 0");
             return;
         }
 
@@ -130,7 +130,7 @@ public static class MessageHelper
     {
         if (entityId == 0)
         {
-            Log.Error($"CallInnerRoute appId == 0");
+            FLog.Error($"CallInnerRoute appId == 0");
             return null;
         }
 
@@ -154,7 +154,7 @@ public static class MessageHelper
     {
         if (entityId == 0)
         {
-            Log.Error($"CallInnerRoute appId == 0");
+            FLog.Error($"CallInnerRoute appId == 0");
             return null;
         }
         
@@ -178,7 +178,7 @@ public static class MessageHelper
     {
         if (entityId == 0)
         {
-            Log.Error($"CallInnerRoute appId == 0");
+            FLog.Error($"CallInnerRoute appId == 0");
             return null;
         }
         
@@ -248,7 +248,7 @@ public static class MessageHelper
                         // 如果连续失败次数超过阈值，记录错误并返回响应
                         if (++failCount > 20)
                         {
-                            Log.Error($"AddressableComponent.Call failCount > 20 route send message fail, routeId: {addressableRouteId} AddressableMessageComponent:{addressableId}");
+                            FLog.Error($"AddressableComponent.Call failCount > 20 route send message fail, routeId: {addressableRouteId} AddressableMessageComponent:{addressableId}");
                             return iRouteResponse;
                         }
 
@@ -260,7 +260,7 @@ public static class MessageHelper
                     case CoreErrorCode.ErrRouteTimeout:
                     {
                         // 如果响应为路由超时错误，记录错误并返回响应
-                        Log.Error($"CallAddressableRoute ErrorCode.ErrRouteTimeout Error:{iRouteResponse.ErrorCode} Message:{request}");
+                        FLog.Error($"CallAddressableRoute ErrorCode.ErrRouteTimeout Error:{iRouteResponse.ErrorCode} Message:{request}");
                         return iRouteResponse;
                     }
                     default:
@@ -293,7 +293,7 @@ public static class MessageHelper
             return true;
         }
 
-        Log.Error($"Link error code:{response.ErrorCode}");
+        FLog.Error($"Link error code:{response.ErrorCode}");
         return false;
     }
 
@@ -316,7 +316,7 @@ public static class MessageHelper
             return true;
         }
 
-        Log.Error($"Link error code:{response.ErrorCode}");
+        FLog.Error($"Link error code:{response.ErrorCode}");
         return false;
     }
 
@@ -331,7 +331,7 @@ public static class MessageHelper
 
         if (linkEntityComponent == null)
         {
-            Log.Error($"SendToClient not found  LinkEntityComponent or LinkEntityComponent.LinkGateSessionRuntimeId");
+            FLog.Error($"SendToClient not found  LinkEntityComponent or LinkEntityComponent.LinkGateSessionRuntimeId");
         }
 
         SendInnerRoute(entity.Scene, linkEntityComponent.LinkGateSessionRuntimeId, message);

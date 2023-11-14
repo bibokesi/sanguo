@@ -112,7 +112,7 @@ namespace Fantasy.Core.Network
                     _messageCache = null;
                 }
 #if NETDEBUG
-                Log.Debug($"KCPClientNetwork ConnectionPtrChannel:{ConnectionPtrChannel.Count}");
+                FLog.Debug($"KCPClientNetwork ConnectionPtrChannel:{ConnectionPtrChannel.Count}");
 #endif
                 _updateTimer.Clear();
                 _updateTimeOutTime.Clear();
@@ -215,7 +215,7 @@ namespace Fantasy.Core.Network
                     
                     if (receiveLength > _rawReceiveBuffer.Length)
                     {
-                        Log.Error($"KCP ClientConnection: message of size {receiveLength} does not fit into buffer of size {_rawReceiveBuffer.Length}. The excess was silently dropped. Disconnecting.");
+                        FLog.Error($"KCP ClientConnection: message of size {receiveLength} does not fit into buffer of size {_rawReceiveBuffer.Length}. The excess was silently dropped. Disconnecting.");
                         Dispose();
                         return;
                     }
@@ -295,7 +295,7 @@ namespace Fantasy.Core.Network
                             
                             if (messageLength <= 0)
                             {
-                                Log.Warning($"KCPClient KcpHeader.Data  messageLength <= 0");
+                                FLog.Warning($"KCPClient KcpHeader.Data  messageLength <= 0");
                                 break;
                             }
 
@@ -326,7 +326,7 @@ namespace Fantasy.Core.Network
                 catch (SocketException) { }
                 catch (Exception e)
                 {
-                    Log.Error(e);
+                    FLog.Error(e);
                 }
             }
         }
@@ -340,7 +340,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif
@@ -350,7 +350,7 @@ namespace Fantasy.Core.Network
 
             if (waitSendSize > _maxSndWnd)
             {
-                Log.Warning($"ERR_KcpWaitSendSizeTooLarge {waitSendSize} > {_maxSndWnd}");
+                FLog.Warning($"ERR_KcpWaitSendSizeTooLarge {waitSendSize} > {_maxSndWnd}");
                 Dispose();
                 return;
             }
@@ -373,7 +373,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif
@@ -398,7 +398,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
         if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif
@@ -415,7 +415,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif
@@ -438,7 +438,7 @@ namespace Fantasy.Core.Network
             }
             catch (Exception e)
             {
-                Log.Error(e);
+                FLog.Error(e);
             }
         }
 
@@ -447,7 +447,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif
@@ -485,7 +485,7 @@ namespace Fantasy.Core.Network
 
                     if (receiveCount != peekSize)
                     {
-                        Log.Error($"receiveCount != peekSize receiveCount:{receiveCount} peekSize:{peekSize}");
+                        FLog.Error($"receiveCount != peekSize receiveCount:{receiveCount} peekSize:{peekSize}");
                         break;
                     }
 
@@ -506,7 +506,7 @@ namespace Fantasy.Core.Network
                 }
                 catch (Exception e)
                 {
-                    Log.Error(e);
+                    FLog.Error(e);
                 }
             }
         }
@@ -552,7 +552,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif
@@ -578,7 +578,7 @@ namespace Fantasy.Core.Network
 #if FANTASY_DEVELOP
             if (NetworkThread.Instance.ManagedThreadId != Thread.CurrentThread.ManagedThreadId)
             {
-                Log.Error("not in NetworkThread!");
+                FLog.Error("not in NetworkThread!");
                 return;
             }
 #endif
@@ -590,7 +590,7 @@ namespace Fantasy.Core.Network
             }
             catch (Exception e)
             {
-                Log.Error(e);
+                FLog.Error(e);
             }
                 
             AddToUpdate(_kcp.Check(nowTime));

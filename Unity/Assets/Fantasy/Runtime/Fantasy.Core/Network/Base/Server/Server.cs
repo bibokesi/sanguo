@@ -133,7 +133,7 @@ namespace Fantasy
             clientNetworkComponent.Initialize(AppDefine.InnerNetwork, NetworkTarget.Inner);
             clientNetworkComponent.Connect(ipEndPoint, null, () =>
             {
-                Log.Error($"Unable to connect to the target server sourceServerId:{Id} targetServerId:{targetServerId}");
+                FLog.Error($"Unable to connect to the target server sourceServerId:{Id} targetServerId:{targetServerId}");
             }, null);
             _sessions.Add(targetServerId, new ConnectInfo(clientNetworkComponent.Session, clientNetworkComponent));
             return clientNetworkComponent.Session;
@@ -167,7 +167,7 @@ namespace Fantasy
             
             if (serverConfigInfo == null)
             {
-                Log.Error($"not found server by Id:{serverConfigId}");
+                FLog.Error($"not found server by Id:{serverConfigId}");
                 return;
             }
 
@@ -175,13 +175,13 @@ namespace Fantasy
 
             if (machineConfigInfo == null)
             {
-                Log.Error($"not found machine by Id:{serverConfigInfo.MachineId}");
+                FLog.Error($"not found machine by Id:{serverConfigInfo.MachineId}");
                 return;
             }
             
             var sceneInfos = Scene.GetSceneInfoByServerConfigId(serverConfigId);
             await Create(serverConfigId, machineConfigInfo.InnerBindIP, serverConfigInfo.InnerPort, machineConfigInfo.OuterBindIP, sceneInfos);
-            Log.Debug($"ServerId:{serverConfigId} is start complete");
+            FLog.Debug($"ServerId:{serverConfigId} is start complete");
         }
 
         /// <summary>

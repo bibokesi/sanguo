@@ -33,7 +33,7 @@ namespace Fantasy.Core.Network
 
                         if (!session.RequestCallback.TryGetValue(packInfo.RpcId, out var action))
                         {
-                            Log.Error($"not found rpc {packInfo.RpcId}, response message: {aResponse.GetType().Name}");
+                            FLog.Error($"not found rpc {packInfo.RpcId}, response message: {aResponse.GetType().Name}");
                             return;
                         }
 
@@ -51,7 +51,7 @@ namespace Fantasy.Core.Network
             }
             catch (Exception e)
             {
-                Log.Error(e);
+                FLog.Error(e);
                 return;
             }
             finally

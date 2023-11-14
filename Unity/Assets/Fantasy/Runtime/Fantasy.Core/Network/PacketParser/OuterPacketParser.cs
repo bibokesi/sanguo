@@ -144,7 +144,7 @@ namespace Fantasy.Core.Network
                 catch (Exception e)
                 {
                     packInfo?.Dispose();
-                    Log.Error(e);
+                    FLog.Error(e);
                     return false;
                 }
             }
@@ -193,7 +193,7 @@ namespace Fantasy.Core.Network
             catch (Exception e)
             {
                 packInfo?.Dispose();
-                Log.Error(e);
+                FLog.Error(e);
                 return false;
             }
         }
