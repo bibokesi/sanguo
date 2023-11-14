@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using GameMain;
-using Pb.Message;
+//using Pb.Message;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
@@ -57,54 +57,54 @@ public partial class NetConnectorComponent : GameFrameworkComponent
 
     public void SetHeartBeatInterval(string channelName,float heartBeatInterval)
     {
-        INetworkChannel networkChannel = null;
-        m_ListNetworkChannel.TryGetValue(channelName, out networkChannel);
-        if (networkChannel != null)
-        {
-            networkChannel.HeartBeatInterval = heartBeatInterval;
-        }
+        //INetworkChannel networkChannel = null;
+        //m_ListNetworkChannel.TryGetValue(channelName, out networkChannel);
+        //if (networkChannel != null)
+        //{
+        //    networkChannel.HeartBeatInterval = heartBeatInterval;
+        //}
     }
 
     public void Send(string channelName, ushort nProtocolId, byte[] v)
     {
-        INetworkChannel networkChannel = null;
-        m_ListNetworkChannel.TryGetValue(channelName, out networkChannel);
-        if (networkChannel != null)
-        {
-            CSProtoPacket csProtoPacket = ReferencePool.Acquire<CSProtoPacket>();
-            //csProtoPacket.protoId = nProtocolId;
-            csProtoPacket.protoBody = v;
-            networkChannel.Send(csProtoPacket);
-        }
-        else
-        {
-            Log.Error($"channelName:{0},is nono", channelName);
-        }
+        //INetworkChannel networkChannel = null;
+        //m_ListNetworkChannel.TryGetValue(channelName, out networkChannel);
+        //if (networkChannel != null)
+        //{
+        //    CSProtoPacket csProtoPacket = ReferencePool.Acquire<CSProtoPacket>();
+        //    //csProtoPacket.protoId = nProtocolId;
+        //    csProtoPacket.protoBody = v;
+        //    networkChannel.Send(csProtoPacket);
+        //}
+        //else
+        //{
+        //    Log.Error($"channelName:{0},is nono", channelName);
+        //}
     }
     public void Send(string channelName, int cmdMerge, byte[] v)
     {
-        m_ListNetworkChannel.TryGetValue(channelName, out var networkChannel);
-        if (networkChannel != null)
-        {
-            CSProtoPacket csProtoPacket = ReferencePool.Acquire<CSProtoPacket>();
-            ExternalMessage external = new ExternalMessage
-            {
-                CmdCode = 1,
-                CmdMerge = cmdMerge,
-                ProtocolSwitch = 0,
-                Data = Google.Protobuf.ByteString.CopyFrom(v)
-            };
-            csProtoPacket.protoBody = ProtobufUtils.Serialize(external);
-            networkChannel.Send(csProtoPacket);
-            Logger.ColorInfo(ColorType.yellowgreen, $"发送{ProtobufUtils.GetHighOrder(cmdMerge)}_{ProtobufUtils.GetLowOrder(cmdMerge)}消息Id:{cmdMerge}");
-        }
-        else
-        {
-            Logger.Error($"channelName:{channelName},is null");
-        }
+        //m_ListNetworkChannel.TryGetValue(channelName, out var networkChannel);
+        //if (networkChannel != null)
+        //{
+        //    CSProtoPacket csProtoPacket = ReferencePool.Acquire<CSProtoPacket>();
+        //    ExternalMessage external = new ExternalMessage
+        //    {
+        //        CmdCode = 1,
+        //        CmdMerge = cmdMerge,
+        //        ProtocolSwitch = 0,
+        //        Data = Google.Protobuf.ByteString.CopyFrom(v)
+        //    };
+        //    csProtoPacket.protoBody = ProtobufUtils.Serialize(external);
+        //    networkChannel.Send(csProtoPacket);
+        //    Logger.ColorInfo(ColorType.yellowgreen, $"发送{ProtobufUtils.GetHighOrder(cmdMerge)}_{ProtobufUtils.GetLowOrder(cmdMerge)}消息Id:{cmdMerge}");
+        //}
+        //else
+        //{
+        //    Logger.Error($"channelName:{channelName},is null");
+        //}
     }
     public void Send(int cmdMerge, object message , string channelName = "Default")
     {
-        Send(channelName,cmdMerge,ProtobufUtils.Serialize(message));
+      //  Send(channelName,cmdMerge,ProtobufUtils.Serialize(message));
     }
 }

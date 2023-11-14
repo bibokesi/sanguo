@@ -6,10 +6,10 @@ using UnityEngine;
 using UnityEngine.Scripting;
 using System.IO;
 using Bright.Serialization;
-using Google.Protobuf.Collections;
+//using Google.Protobuf.Collections;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
-using Google.Protobuf;
+//using Google.Protobuf;
 
 [assembly: Preserve]
 enum IntEnum : int
@@ -68,8 +68,8 @@ public class RefTypes : MonoBehaviour
         Debug.Log(b);
         byte[] bytes = new byte[]{0,1};
         Debug.Log(bytes);
-        ByteString bytestr = ByteString.CopyFrom(bytes);
-        Debug.Log(bytestr.Length);
+        //ByteString bytestr = ByteString.CopyFrom(bytes);
+        //Debug.Log(bytestr.Length);
         ByteBuf buf = new ByteBuf(bytes);
         Queue<Int64> queueInt = new Queue<long>();
         queueInt.Enqueue(10);
@@ -228,10 +228,10 @@ public class RefTypes : MonoBehaviour
     {
         var o = new object[]
         {
-            new MapField<int, int>(),
-            new MapField<int,int>.Codec(default, default, default),
-            new MapField<string, object>(),
-            new MapField<string, object>.Codec(default, default, default),
+            //new MapField<int, int>(),
+            //new MapField<int,int>.Codec(default, default, default),
+            //new MapField<string, object>(),
+            //new MapField<string, object>.Codec(default, default, default),
         };
     }
 

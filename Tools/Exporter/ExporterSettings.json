@@ -12,10 +12,10 @@
             "Value": "../../Server/Hotfix/Generate/NetworkProtocol/",
             "Comment": "ProtoBuf生成到服务端的文件夹位置"
         },
-        "ProtoBufClientDirectory": {
-            "Value": "../../Unity/Assets/Scripts/Hotfix/Generate/NetworkProtocol/",
+      "ProtoBufClientDirectory": {
+            "Value": "../../Unity/Assets/GameMain/Scripts/Hotfix/HotfixCommon/NetworkProtocol/",
             "Comment": "ProtoBuf生成到客户端的文件夹位置"
-        },
+      },
         "ExcelProgramPath": {
             "Value": "../../Config/Excel/",
             "Comment": "Excel文件夹的根目录"

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
-using Pb.Message;
+//using Pb.Message;
 using GameFramework;
 using GameFramework.Event;
 using GameFramework.Network;
-using Google.Protobuf;
+//using Google.Protobuf;
 using UnityGameFramework.Runtime;
 
 public class NetworkChannelHelper : INetworkChannelHelper, IReference
@@ -41,35 +41,35 @@ public class NetworkChannelHelper : INetworkChannelHelper, IReference
         m_CachedByte = new byte[PacketHeaderLength];
         m_NetworkChannel = networkChannel;
         // 反射注册包和包处理函数。
-        Type packetBaseType = typeof(SCPacketBase);
-        Type packetHandlerBaseType = typeof(PacketHandlerBase);
+       // Type packetBaseType = typeof(SCPacketBase);
+      //  Type packetHandlerBaseType = typeof(PacketHandlerBase);
         Assembly assembly = Assembly.GetExecutingAssembly();
         Type[] types = assembly.GetTypes();
-        for (int i = 0; i < types.Length; i++)
-        {
-            if (!types[i].IsClass || types[i].IsAbstract)
-            {
-                continue;
-            }
+        //for (int i = 0; i < types.Length; i++)
+        //{
+        //    if (!types[i].IsClass || types[i].IsAbstract)
+        //    {
+        //        continue;
+        //    }
 
-            if (types[i].BaseType == packetBaseType)
-            {
-                PacketBase packetBase = (PacketBase)Activator.CreateInstance(types[i]);
-                Type packetType = GetServerToClientPacketType(packetBase.Id);
-                if (packetType != null)
-                {
-                    Log.Warning("Already exist packet type '{0}', check '{1}' or '{2}'?.", packetBase.Id.ToString(), packetType.Name, packetBase.GetType().Name);
-                    continue;
-                }
+        //    if (types[i].BaseType == packetBaseType)
+        //    {
+        //        PacketBase packetBase = (PacketBase)Activator.CreateInstance(types[i]);
+        //        Type packetType = GetServerToClientPacketType(packetBase.Id);
+        //        if (packetType != null)
+        //        {
+        //            Log.Warning("Already exist packet type '{0}', check '{1}' or '{2}'?.", packetBase.Id.ToString(), packetType.Name, packetBase.GetType().Name);
+        //            continue;
+        //        }
 
-                m_ServerToClientPacketTypes.Add(packetBase.Id, types[i]);
-            }
-            else if (types[i].BaseType == packetHandlerBaseType)
-            {
-                IPacketHandler packetHandler = (IPacketHandler)Activator.CreateInstance(types[i]);
-                m_NetworkChannel.RegisterHandler(packetHandler);
-            }
-        }
+        //        m_ServerToClientPacketTypes.Add(packetBase.Id, types[i]);
+        //    }
+        //    else if (types[i].BaseType == packetHandlerBaseType)
+        //    {
+        //        IPacketHandler packetHandler = (IPacketHandler)Activator.CreateInstance(types[i]);
+        //        m_NetworkChannel.RegisterHandler(packetHandler);
+        //    }
+        //}
 
         GameEntry.Event.Subscribe(UnityGameFramework.Runtime.NetworkConnectedEventArgs.EventId, OnNetworkConnected);
         GameEntry.Event.Subscribe(UnityGameFramework.Runtime.NetworkClosedEventArgs.EventId, OnNetworkClosed);
@@ -107,13 +107,13 @@ public class NetworkChannelHelper : INetworkChannelHelper, IReference
     /// <returns>是否发送心跳消息包成功。</returns>
     public bool SendHeartBeat()
     {
-        ExternalMessage external = new ExternalMessage();
-        external.CmdCode = 0;
-        external.ProtocolSwitch = 0;
-        external.CmdMerge = 0;
-        GameMain.CSProtoPacket csProtoPacket = ReferencePool.Acquire<GameMain.CSProtoPacket>();
-        csProtoPacket.protoBody = ProtobufUtils.Serialize(external);
-        m_NetworkChannel.Send(csProtoPacket);
+        //ExternalMessage external = new ExternalMessage();
+        //external.CmdCode = 0;
+        //external.ProtocolSwitch = 0;
+        //external.CmdMerge = 0;
+        //GameMain.CSProtoPacket csProtoPacket = ReferencePool.Acquire<GameMain.CSProtoPacket>();
+        //csProtoPacket.protoBody = ProtobufUtils.Serialize(external);
+        //m_NetworkChannel.Send(csProtoPacket);
         return true;
     }
 
@@ -126,26 +126,26 @@ public class NetworkChannelHelper : INetworkChannelHelper, IReference
     /// <returns>是否序列化成功。</returns>
     public bool Serialize<T>(T packet, Stream destination) where T : Packet
     {
-        GameMain.CSProtoPacket packetImpl = packet as GameMain.CSProtoPacket;
-        if (packetImpl == null)
-        {
-            Log.Warning("Packet is invalid.");
-            return false;
-        }
-        if (packetImpl.PacketType != PacketType.ClientToServer)
-        {
-            Log.Warning("Send packet invalid.");
-            return false;
-        }
-        m_CachedStream.Seek(0, SeekOrigin.Begin);
-        m_CachedStream.SetLength(0);
-        Array.Clear(m_CachedByte, 0, m_CachedByte.Length);
-        m_CachedByte.WriteToJava(0, packetImpl.protoBody.Length);
-        //m_Cached.WriteTo(MessageOpcodeIndex, (short)packetHeader.Id);
-        m_CachedStream.Write(m_CachedByte, 0, m_CachedByte.Length);
-        m_CachedStream.Write(packetImpl.protoBody, 0, packetImpl.protoBody.Length);
-        m_CachedStream.WriteTo(destination);
-        ReferencePool.Release(packetImpl);
+        //GameMain.CSProtoPacket packetImpl = packet as GameMain.CSProtoPacket;
+        //if (packetImpl == null)
+        //{
+        //    Log.Warning("Packet is invalid.");
+        //    return false;
+        //}
+        //if (packetImpl.PacketType != PacketType.ClientToServer)
+        //{
+        //    Log.Warning("Send packet invalid.");
+        //    return false;
+        //}
+        //m_CachedStream.Seek(0, SeekOrigin.Begin);
+        //m_CachedStream.SetLength(0);
+        //Array.Clear(m_CachedByte, 0, m_CachedByte.Length);
+        //m_CachedByte.WriteToJava(0, packetImpl.protoBody.Length);
+        ////m_Cached.WriteTo(MessageOpcodeIndex, (short)packetHeader.Id);
+        //m_CachedStream.Write(m_CachedByte, 0, m_CachedByte.Length);
+        //m_CachedStream.Write(packetImpl.protoBody, 0, packetImpl.protoBody.Length);
+        //m_CachedStream.WriteTo(destination);
+        //ReferencePool.Release(packetImpl);
         return true;
     }
 
@@ -160,16 +160,16 @@ public class NetworkChannelHelper : INetworkChannelHelper, IReference
     {
         // 注意：此函数并不在主线程调用！
         customErrorData = null;
-        PacketHeader packetHeader = ReferencePool.Acquire<PacketHeader>();
-        if (source is MemoryStream memoryStream)
-        {
-            //packetSize 由 消息包的长度
-            byte[] bytes = memoryStream.GetBuffer();
-            int packetSize = ByteUtils.ReadToJava(bytes, 0);
-            packetHeader.PacketLength = packetSize;
-            //Logger.ColorInfo(ColorType.blue, $"消息头长度：{packetSize}");
-            return packetHeader;
-        }
+        //PacketHeader packetHeader = ReferencePool.Acquire<PacketHeader>();
+        //if (source is MemoryStream memoryStream)
+        //{
+        //    //packetSize 由 消息包的长度
+        //    byte[] bytes = memoryStream.GetBuffer();
+        //    int packetSize = ByteUtils.ReadToJava(bytes, 0);
+        //    packetHeader.PacketLength = packetSize;
+        //    //Logger.ColorInfo(ColorType.blue, $"消息头长度：{packetSize}");
+        //    return packetHeader;
+        //}
         return null;
     }
 
@@ -185,27 +185,27 @@ public class NetworkChannelHelper : INetworkChannelHelper, IReference
         // 注意：此函数并不在主线程调用！
         customErrorData = null;
 
-        PacketHeader scPacketHeader = packetHeader as PacketHeader;
-        if (scPacketHeader == null)
-        {
-            Log.Warning("Packet header is invalid.");
-            return null;
-        }
-        GameMain.SCProtoPacket scProtoPacket = ReferencePool.Acquire<GameMain.SCProtoPacket>();
-        if (scPacketHeader.IsValid)
-        {
-            if (source is MemoryStream memoryStream)
-            {
-                //scProtoPacket.protoId = scPacketHeader.Id;
-                scProtoPacket.protoBody = memoryStream.ToArray();
-            }
-        }
-        else
-        {
-            Log.Warning("Packet header is invalid.");
-        }
-        ReferencePool.Release(scPacketHeader);
-        return scProtoPacket;
+        //PacketHeader scPacketHeader = packetHeader as PacketHeader;
+        //if (scPacketHeader == null)
+        //{
+        //    Log.Warning("Packet header is invalid.");
+        //    return null;
+        //}
+        //GameMain.SCProtoPacket scProtoPacket = ReferencePool.Acquire<GameMain.SCProtoPacket>();
+        //if (scPacketHeader.IsValid)
+        //{
+        //    if (source is MemoryStream memoryStream)
+        //    {
+        //        //scProtoPacket.protoId = scPacketHeader.Id;
+        //        scProtoPacket.protoBody = memoryStream.ToArray();
+        //    }
+        //}
+        //else
+        //{
+        //    Log.Warning("Packet header is invalid.");
+        //}
+        //ReferencePool.Release(scPacketHeader);
+        return null;
     }
 
     private Type GetServerToClientPacketType(int id)
