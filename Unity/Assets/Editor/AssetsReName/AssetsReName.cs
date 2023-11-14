@@ -188,7 +188,7 @@ namespace GameMain.Editor
 
         #region /*——GUI——*/
 
-        [MenuItem("GameMainTools/Asset/Asset ReName _&#_1")]
+        [MenuItem("CustomTools/Asset/Asset ReName _&#_1")]
         public static void NewWindow_AssetsReName()
         {
             GetWindow<AssetsReName>(true, "资源重命名");

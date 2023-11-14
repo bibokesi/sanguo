@@ -1,0 +1,28 @@
+{
+    "name": "Hotfix",
+    "rootNamespace": "",
+    "references": [
+        "GUID:43b47c7afe53ff144af0a914f0f30bb6",
+        "GUID:a2d8a19598eca814496b089021d08d60",
+        "GUID:363c5eb08ff8e6a439b85e37b8c20d96",
+        "GUID:8a65ae8b988044e388dbfab2a622a48c",
+        "GUID:d8b63aba1907145bea998dd612889d6b",
+        "GUID:1fa870703d1928149882949ff9440a9a",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:7293c580bc63d384882dc455bb093e64",
+        "GUID:efa45043feb7e4147a305b73b5cea642",
+        "GUID:4307f53044263cf4b835bd812fc161a4",
+        "GUID:15fc0a57446b3144c949da3e2b9737a9",
+        "GUID:e16a851ff45a46b42918f227b09bf21e"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

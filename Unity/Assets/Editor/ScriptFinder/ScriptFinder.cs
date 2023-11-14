@@ -51,7 +51,7 @@ namespace ScriptFinder
                 public const string HeaderShouldRecurse         = "Recurse Dependencies (Warning: Very Slow)";
                 public const string HeaderTargetObjectField     = "Select Target Script";
 
-                public const string WindowPath = "GameMainTools/Asset/ScriptFinder";
+                public const string WindowPath = "CustomTools/Asset/ScriptFinder";
                 public const string WindowTitle = "ScriptFinder";
             }
             public struct LayoutOptions

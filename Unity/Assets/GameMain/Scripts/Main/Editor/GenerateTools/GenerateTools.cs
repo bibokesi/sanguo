@@ -7,7 +7,7 @@ using UnityEngine;
 /// </summary>
 public static class GenerateTools
 {
-    //[MenuItem("GameMainTools/GenerateTools/GenerateProtobuf")]
+    //[MenuItem("CustomTools/GenerateTools/GenerateProtobuf")]
 	private static void GenProtoTools() 
 	{
 #if UNITY_EDITOR_WIN
@@ -28,7 +28,7 @@ public static class GenerateTools
 		UnityEngine.Debug.Log(strOutput);
 #endif
 	}
-	[MenuItem("GameMainTools/GenerateTools/GenerateConfig")]
+	[MenuItem("CustomTools/GenerateTools/GenerateConfig")]
 	private static void GenConfigToStreamingAssets()
 	{
 #if UNITY_EDITOR_WIN

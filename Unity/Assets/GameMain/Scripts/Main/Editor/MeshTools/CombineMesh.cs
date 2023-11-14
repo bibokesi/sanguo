@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class CombineMesh : Editor
 {
-    [MenuItem("GameMainTools/MeshTools/CombineMesh")]
+    [MenuItem("CustomTools/MeshTools/CombineMesh")]
     public static void EditorTest()
     {
         CombineMesh1();

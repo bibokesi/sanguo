@@ -17,7 +17,7 @@ MonoBehaviour:
   m_MountCodePath: GameMain/Scripts/Hotfix/HotfixBusiness/UI
   m_MountScriptListAssemblys:
   - Main.Runtime
-  - HotfixBusiness
+  - Hotfix
   m_RulePrefixes:
   - Prefixe: Transform
     FullName: Transform

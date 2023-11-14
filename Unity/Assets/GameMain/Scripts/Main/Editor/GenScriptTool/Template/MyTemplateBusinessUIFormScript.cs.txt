@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
-namespace HotfixBusiness.UI 
+namespace Hotfix.UI 
 {
     public partial class MyTemplateScript : UIFixBaseForm
     {

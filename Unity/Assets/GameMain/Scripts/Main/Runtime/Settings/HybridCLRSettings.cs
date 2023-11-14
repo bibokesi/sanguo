@@ -44,7 +44,7 @@ public class HybridCLRSettings:ScriptableObject
     /// <summary>
     /// Dll of main business logic assembly
     /// </summary>
-    public string LogicMainDllName = "HotfixFramework.dll";
+    public string LogicMainDllName = "Hotfix.dll";
 
     /// <summary>
     /// 程序集文本资产打包Asset后缀名

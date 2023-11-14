@@ -4,11 +4,11 @@ WORKSPACE=..
 GEN_CLIENT=${WORKSPACE}/Tools/Luban.ClientServer/Luban.ClientServer.dll
 CONF_ROOT=${WORKSPACE}/DesignerConfigs
 
-OUTPUT_CODE_PATH=${WORKSPACE}/../Assets/GameMain/Scripts/HotFix/HotFixCommon/LubanConfig
+OUTPUT_CODE_PATH=${WORKSPACE}/../Assets/GameMain/Scripts/HotFix/Generate/LubanConfig
 OUTPUT_DATA_PATH=${WORKSPACE}/GenerateDatas/LubanConfig/Datas
 
 #OUTPUT_DATA_PATH=/Users/admin/Documents/elfsland/LubanTools/GenerateDatas/LubanConfig
-#OUTPUT_CODE_PATH=/Users/admin/Documents/elfsland/Assets/GameMain/Scripts/HotFix/HotFixCommon/LubanConfig
+#OUTPUT_CODE_PATH=/Users/admin/Documents/elfsland/Assets/GameMain/Scripts/HotFix/LubanConfig
 dotnet ${GEN_CLIENT} -h 127.0.0.1 -j cfg --\
  -d ${CONF_ROOT}/Defines/__root__.xml \
  --input_data_dir ${CONF_ROOT}/Datas \

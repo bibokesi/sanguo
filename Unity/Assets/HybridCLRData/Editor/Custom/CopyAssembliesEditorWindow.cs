@@ -14,7 +14,7 @@ public class CopyAssembliesEditorWindow : EditorWindow
     private float m_Width = 100f;
     
 
-    [MenuItem("GameMainTools/Builder/Assemblies Builder", priority = 101)]
+    [MenuItem("CustomTools/Builder/Assemblies Builder", priority = 101)]
     public static void OpenWindow()
     {
         CopyAssembliesEditorWindow window = GetWindow<CopyAssembliesEditorWindow>("构建程序集");
@@ -103,7 +103,7 @@ public class CopyAssembliesEditorWindow : EditorWindow
                 }
             }
             GUILayout.EndHorizontal();*/
-            EditorGUILayout.LabelField("Compression Helper"+"[GameMainTools/Settings/GameMain HybridCLR Settings]:");
+            EditorGUILayout.LabelField("Compression Helper"+"[CustomTools/Settings/GameMain HybridCLR Settings]:");
             EditorGUILayout.LabelField(FrameworkSettingsUtils.HybridCLRSettings.CompressionHelperTypeName);
             GUILayout.Space(10);
             GUILayout.Space(10);

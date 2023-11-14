@@ -5,7 +5,7 @@ using UnityEditor;
 
 public class GameObjectEdtior : MonoBehaviour
 {
-    // [MenuItem("GameMainTools/GameObjectEdtior/切换物体显隐状态 #A")]
+    // [MenuItem("CustomTools/GameObjectEdtior/切换物体显隐状态 #A")]
     static void SetObjActive()
     {
         GameObject[] selectObjs = Selection.gameObjects;
@@ -36,7 +36,7 @@ public class GameObjectEdtior : MonoBehaviour
     }
 
 
-    // [MenuItem("GameMainTools/GameObjectEdtior/删除物体 %#d", false, 11)]
+    // [MenuItem("CustomTools/GameObjectEdtior/删除物体 %#d", false, 11)]
     static void MyDeleteObject()
     {
         foreach (Object o in Selection.objects)
@@ -48,7 +48,7 @@ public class GameObjectEdtior : MonoBehaviour
     }
 
     //快捷键控制保存Prefab Shift + S
-    // [MenuItem("GameMainTools/GameObjectEdtior/Apply GameObject #S")]
+    // [MenuItem("CustomTools/GameObjectEdtior/Apply GameObject #S")]
     [System.Obsolete]
     public static void ApplyPrefab()
     {
