@@ -7,7 +7,7 @@ using UnityEngine;
 /// </summary>
 public static class GenerateTools
 {
-    [MenuItem("GameMainTools/GenerateTools/GenerateProtobuf")]
+    //[MenuItem("GameMainTools/GenerateTools/GenerateProtobuf")]
 	private static void GenProtoTools() 
 	{
 #if UNITY_EDITOR_WIN

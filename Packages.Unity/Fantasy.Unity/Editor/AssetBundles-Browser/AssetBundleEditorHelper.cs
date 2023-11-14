@@ -11,7 +11,7 @@ namespace AssetBundleBrowser
 {
     public static class AssetBundleEditorHelper
     {
-        [MenuItem("Fantasy/AssetBundle/SetUIName")]
+        [MenuItem("GameMainTools/Fantasy/AssetBundle/SetUIName")]
         static void SetAllName()
         {
             var dir = new DirectoryInfo("Assets/Bundles/UI");
@@ -27,7 +27,7 @@ namespace AssetBundleBrowser
             Debug.Log($"UI文件夹所有AssetBundleName设置完成 共:{directoryInfos.Length}个");
         }
         
-        [MenuItem("Fantasy/AssetBundle/SetABName")]
+        [MenuItem("GameMainTools/Fantasy/AssetBundle/SetABName")]
         [MenuItem("Assets/SetABName", false, priority = 0)]
         static void SetName(MenuCommand menuCommand)
         {
@@ -40,7 +40,7 @@ namespace AssetBundleBrowser
             }
         }
 
-        [MenuItem("Fantasy/AssetBundle/CopyToStreamingAssets")]
+        [MenuItem("GameMainTools/Fantasy/AssetBundle/CopyToStreamingAssets")]
         [MenuItem("Assets/CopyToStreamingAssets", false, priority = 1)]
         static void CopyToStreamingAssets(MenuCommand menuCommand)
         {

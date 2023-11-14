@@ -11,10 +11,10 @@ public static class OpenFolder
         Application.OpenURL($"file://{Application.dataPath}/../LubanTools/DesignerConfigs");
     }
     
-    [MenuItem("GameMainTools/OpenFolder/Proto")]
+    [MenuItem("GameMainTools/OpenFolder/ProtoFiles")]
     public static void OpenProto()
     {
-        Application.OpenURL($"file://{Application.dataPath}/../LubanTools/Proto");
+        Application.OpenURL($"file://{Application.dataPath}/../../Config/ProtoBuf");
     }
     
     [MenuItem("GameMainTools/OpenFolder/Assemblies")]
