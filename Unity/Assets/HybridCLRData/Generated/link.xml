@@ -19,7 +19,7 @@
     <type fullname="DG.Tweening.TweenCallback" preserve="all" />
     <type fullname="DG.Tweening.TweenSettingsExtensions" preserve="all" />
   </assembly>
-  <assembly fullname="Fantasy.Unity">
+  <assembly fullname="Fantasy">
     <type fullname="Fantasy.AProto" preserve="all" />
     <type fullname="Fantasy.AsyncFTaskMethodBuilder" preserve="all" />
     <type fullname="Fantasy.Core.Network.IAddressableRouteMessage" preserve="all" />

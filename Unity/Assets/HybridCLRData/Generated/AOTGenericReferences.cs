@@ -7,7 +7,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	{
 		"CatJson.dll",
 		"DOTween.dll",
-		"Fantasy.Unity.dll",
+		"Fantasy.dll",
 		"GameFramework.dll",
 		"Main.Runtime.dll",
 		"System.Core.dll",

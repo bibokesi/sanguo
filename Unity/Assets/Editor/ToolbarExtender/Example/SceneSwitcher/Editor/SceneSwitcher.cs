@@ -18,21 +18,21 @@ namespace UnityToolbarExtender.Examples
 		static GUIStyle ButtonGuiStyle;
 		static void OnToolbarGUI()
 		{
-			if (null == ButtonGuiStyle)
-			{
-				ButtonGuiStyle = new GUIStyle(ButtonStyleName)
-				{
-					padding = new RectOffset(2, 8, 2, 2),
-					alignment = TextAnchor.MiddleCenter,
-					//imagePosition = ImagePosition.ImageAbove,
-					fontStyle = FontStyle.Bold
-				};
-			}
-			GUILayout.FlexibleSpace();
-			if(GUILayout.Button(new GUIContent("Launcher",EditorGUIUtility.FindTexture("PlayButton"), $"Start Scene Launcher"), ButtonGuiStyle))
-			{
-				SceneHelper.StartScene(SceneName1);
-			}
+			//if (null == ButtonGuiStyle)
+			//{
+			//	ButtonGuiStyle = new GUIStyle(ButtonStyleName)
+			//	{
+			//		padding = new RectOffset(2, 8, 2, 2),
+			//		alignment = TextAnchor.MiddleCenter,
+			//		//imagePosition = ImagePosition.ImageAbove,
+			//		fontStyle = FontStyle.Bold
+			//	};
+			//}
+			//GUILayout.FlexibleSpace();
+			//if(GUILayout.Button(new GUIContent("Launcher",EditorGUIUtility.FindTexture("PlayButton"), $"Start Scene Launcher"), ButtonGuiStyle))
+			//{
+			//	SceneHelper.StartScene(SceneName1);
+			//}
 		}
 	}
 	static class SceneHelper
