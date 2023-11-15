@@ -17,7 +17,7 @@ public class FileSize
     private static List<string> DirList = new List<string>();
     private static bool isShowSize = true;
  
-    [MenuItem("CustomTools/FileSize")]
+    [MenuItem("Others/FileSize")]
     private static void OpenPlaySize()
     {
         isShowSize = !isShowSize;

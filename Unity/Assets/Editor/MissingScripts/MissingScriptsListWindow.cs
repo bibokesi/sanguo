@@ -25,7 +25,7 @@ namespace plyoung
 
 		// ------------------------------------------------------------------------------------------------------------------
 
-		[MenuItem("CustomTools/Asset/Missing Scripts Finder")]
+		[MenuItem("Others/Asset/Missing Scripts Finder")]
 		private static void ShowWindow()
 		{
 			GetWindow<MissingScriptsListWindow>(true, "Missing Scripts", true);

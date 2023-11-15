@@ -54,7 +54,7 @@ public static class BuildEventHandlerLuban
             }
         }
     }
-    //[MenuItem("CustomTools/Test")]
+    //[MenuItem("Others/Test")]
     private static void CopyPackageFile()
     {
         Dictionary<string, ConfigInfo> m_Configs ;

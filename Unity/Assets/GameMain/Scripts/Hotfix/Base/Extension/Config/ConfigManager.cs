@@ -46,7 +46,7 @@ public class ConfigManager : MonoBehaviour
                 }
                 catch (Exception e)
                 {
-                    throw new GameFrameworkException($"请先执行菜单[CustomTools/GenerateTools/GenerateConfig]生成Config表版本文件！,error: {e}");
+                    throw new GameFrameworkException($"请先执行菜单[Others/GenerateTools/GenerateConfig]生成Config表版本文件！,error: {e}");
                 }
             }
             if (m_Configs[fileName] == null)

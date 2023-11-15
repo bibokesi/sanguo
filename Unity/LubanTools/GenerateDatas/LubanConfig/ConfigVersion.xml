@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Root ClientVersion="0.0.0.17">
+<Root ClientVersion="0.0.0.18">
   <FileVersion name="common_tbglobalconfig.bytes" nameWithoutExtension="common_tbglobalconfig" file="common_tbglobalconfig.bytes" hashCode="1015977411" size="1" extension=".bytes" />
   <FileVersion name="custom_tbentitydata.bytes" nameWithoutExtension="custom_tbentitydata" file="custom_tbentitydata.bytes" hashCode="-715206569" size="1" extension=".bytes" />
   <FileVersion name="custom_tblanguage_config.bytes" nameWithoutExtension="custom_tblanguage_config" file="custom_tblanguage_config.bytes" hashCode="-720622714" size="1" extension=".bytes" />

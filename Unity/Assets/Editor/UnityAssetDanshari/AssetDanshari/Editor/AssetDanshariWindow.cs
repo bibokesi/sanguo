@@ -6,7 +6,7 @@ namespace AssetDanshari
 {
     public class AssetDanshariWindow : EditorWindow
     {
-        [MenuItem("CustomTools/Asset/Find Asset Reference")]
+        [MenuItem("Others/Asset/Find Asset Reference")]
         static void ShowWindow()
         {
             GetWindow<AssetDanshariWindow>();

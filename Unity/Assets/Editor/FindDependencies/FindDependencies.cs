@@ -311,7 +311,7 @@ namespace Baiting
         /// <summary>
         ///     打开窗口
         /// </summary>
-        [MenuItem("CustomTools/Asset/Find Texture Reference", false, 0)]
+        [MenuItem("Others/Asset/Find Texture Reference", false, 0)]
         public static void OpenWindows()
         {
             var windows = GetWindow<FindDependencies>("查找依赖项");
