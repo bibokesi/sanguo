@@ -13,9 +13,9 @@ global.json
 HybridCLRData/
 AssetBundles/
 UserSettings/
-/Demo/Client/Unity/*.sln
-/Demo/Client/Unity/*.csproj
-/Demo/Client/Unity/*.blob
+/Unity/*.sln
+/Unity/*.csproj
+
 
 # Other
 .idea
@@ -27,8 +27,6 @@ UserSettings/
 .idea
 .vs
 .vsconfig
-*.csproj
-*.sln
 *.suo
 Library
 Logs
