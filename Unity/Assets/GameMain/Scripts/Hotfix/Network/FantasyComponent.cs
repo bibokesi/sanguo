@@ -56,13 +56,13 @@ public partial class FantasyComponent : GameFrameworkComponent
     private void OnRealmConnectFail()
     {
         IsConnect = false;
-        Log.Error("无法连接到服务器");
+        
     }
 
     private void OnRealmConnectDisconect()
     {
         IsConnect = false;
-        Log.Error("断开连接");
+
     }
 
     private void OnGateConnectSuccess()
@@ -71,7 +71,7 @@ public partial class FantasyComponent : GameFrameworkComponent
         // 挂载心跳组件，设置每隔3000毫秒发送一次心跳给服务器
         // 只需要给客户端保持连接的服务器挂心跳
         Gate.Session.AddComponent<SessionHeartbeatComponent>().Start(3000);
-        Log.Debug("已连接到网关服务器");
+
 
         GateTest().Coroutine();
     }
@@ -79,13 +79,13 @@ public partial class FantasyComponent : GameFrameworkComponent
     private void OnGateConnectFail()
     {
         IsConnect = false;
-        Log.Error("无法连接到服务器");
+
     }
 
     private void OnGateConnectDisconect()
     {
         IsConnect = false;
-        Log.Error("断开连接");
+      //  Log.Error("断开连接");
     }
 
     private async FTask RealmTest()
@@ -96,7 +96,7 @@ public partial class FantasyComponent : GameFrameworkComponent
             UserName = "test",
             Password = ""
         });
-        Debug.Log(register.Message);
+       // Debug.Log(register.Message);
 
         // 登录realm账号
         R2C_LoginResponse loginRealm = (R2C_LoginResponse)await Realm.Session.Call(new C2R_LoginRequest()
@@ -104,7 +104,7 @@ public partial class FantasyComponent : GameFrameworkComponent
             UserName = "test",
             Password = ""
         });
-        Debug.Log(loginRealm.Message);
+      //  Debug.Log(loginRealm.Message);
     }
     private async FTask GateTest()
     {
@@ -114,21 +114,21 @@ public partial class FantasyComponent : GameFrameworkComponent
         {
             Message = "请求登录网关"
         });
-        Debug.Log(loginGate.Message);
-        Debug.Log(loginGate.ErrorCode.ToString());
+       // Debug.Log(loginGate.Message);
+      //  Debug.Log(loginGate.ErrorCode.ToString());
 
         // 创建角色请求
         G2C_CreateCharacterResponse create = (G2C_CreateCharacterResponse)await Gate.Session.Call(new C2G_CreateCharacterRequest()
         {
             Message = "请求创建角色"
         });
-        Debug.Log(create.Message);
+      //  Debug.Log(create.Message);
 
         // 进入地图请求
         G2C_EnterMapResponse enter = (G2C_EnterMapResponse)await Gate.Session.Call(new C2G_EnterMapRequest()
         {
             Message = "请求进入地图"
         });
-        Debug.Log(enter.Message);
+      //  Debug.Log(enter.Message);
     }
 }

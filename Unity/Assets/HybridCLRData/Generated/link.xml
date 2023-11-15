@@ -19,7 +19,7 @@
     <type fullname="DG.Tweening.TweenCallback" preserve="all" />
     <type fullname="DG.Tweening.TweenSettingsExtensions" preserve="all" />
   </assembly>
-  <assembly fullname="Fantasy">
+  <assembly fullname="Fantasy.Unity">
     <type fullname="Fantasy.AProto" preserve="all" />
     <type fullname="Fantasy.AsyncFTaskMethodBuilder" preserve="all" />
     <type fullname="Fantasy.Core.Network.IAddressableRouteMessage" preserve="all" />
@@ -40,8 +40,6 @@
     <type fullname="Fantasy.FTaskCompleted" preserve="all" />
     <type fullname="Fantasy.FTask`1" preserve="all" />
     <type fullname="Fantasy.Helper.AssemblyManager" preserve="all" />
-    <type fullname="Fantasy.Helper.JsonHelper" preserve="all" />
-    <type fullname="Fantasy.Log" preserve="all" />
     <type fullname="Fantasy.Model.SessionHeartbeatComponent" preserve="all" />
     <type fullname="Fantasy.Scene" preserve="all" />
     <type fullname="ProtoBuf.ProtoContractAttribute" preserve="all" />
@@ -397,7 +395,6 @@
     <type fullname="System.TimeSpan" preserve="all" />
     <type fullname="System.TimeZoneInfo" preserve="all" />
     <type fullname="System.Type" preserve="all" />
-    <type fullname="System.UInt32" preserve="all" />
     <type fullname="System.ValueType" preserve="all" />
   </assembly>
 </linker>
