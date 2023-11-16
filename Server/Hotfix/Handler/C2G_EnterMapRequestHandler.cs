@@ -27,7 +27,7 @@ public class C2G_EnterMapRequestHandler : MessageRPC<C2G_EnterMapRequest,G2C_Ent
 
         // 缓存玩家AddressableId
         sessionPlayer.AddressableId = result.AddressableId;
-        
+
         Log.Debug($"<--收到进入地图的请求");
         response.Message = "-->进入地图成功";
     }

@@ -7,7 +7,7 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 	{
 		"CatJson.dll",
 		"DOTween.dll",
-		"Fantasy.dll",
+		"Fantasy.Unity.dll",
 		"GameFramework.dll",
 		"Main.Runtime.dll",
 		"System.Core.dll",
@@ -532,7 +532,6 @@ public class AOTGenericReferences : UnityEngine.MonoBehaviour
 		// object Fantasy.Entity.AddComponent<object>()
 		// object Fantasy.Entity.Create<object>(uint,bool)
 		// object Fantasy.Entity.Rent<object>(System.Type)
-		// string Fantasy.Helper.JsonHelper.ToJson<object>(object)
 		// System.Void GameFramework.Fsm.Fsm<object>.ChangeState<object>()
 		// System.Void GameFramework.Fsm.FsmState<object>.ChangeState<object>(GameFramework.Fsm.IFsm<object>)
 		// object GameFramework.Fsm.IFsm<object>.GetData<object>(string)

@@ -7,6 +7,9 @@ using Fantasy.Core.Network;
 namespace Fantasy
 {	
 	/// <summary>
+	///  -------------------------------- 登录服 --------------------------------------------
+	/// </summary>
+	/// <summary>
 	///  注册账号
 	/// </summary>
 	[ProtoContract]
@@ -52,6 +55,9 @@ namespace Fantasy
 		[ProtoMember(1)]
 		public string Message { get; set; }
 	}
+	/// <summary>
+	///  -------------------------------- 网关服 - 网关消息（网关与客户端通信） --------------------------------------------
+	/// </summary>
 	/// <summary>
 	///  登录网关
 	/// </summary>
@@ -123,6 +129,23 @@ namespace Fantasy
 		/// repeated Character Characters = 4;
 		///</summary>
 	}
+	[ProtoContract]
+	public partial class C2G_TestMessage : AProto, IMessage
+	{
+		public uint OpCode() { return OuterOpcode.C2G_TestMessage; }
+		[ProtoMember(1)]
+		public string Message { get; set; }
+	}
+	[ProtoContract]
+	public partial class G2C_TestPushMessage : AProto, IMessage
+	{
+		public uint OpCode() { return OuterOpcode.G2C_TestPushMessage; }
+		[ProtoMember(1)]
+		public string Message { get; set; }
+	}
+	/// <summary>
+	///  -------------------------------- 网关服 - 路由消息（各进程Scene通信） --------------------------------------------
+	/// </summary>
 	/// <summary>
 	///  进入地图
 	/// </summary>
@@ -154,6 +177,9 @@ namespace Fantasy
 		/// Unit Unit = 3;
 		///</summary>
 	}
+	/// <summary>
+	///  -------------------------------- 网关服 - 寻址消息（非网关Scene与客户端通信） --------------------------------------------
+	/// </summary>
 	/// <summary>
 	///  退出地图
 	/// </summary>

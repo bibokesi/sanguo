@@ -12,6 +12,8 @@ namespace Fantasy
 		 public const int G2C_CreateCharacterResponse = 160000004;
 		 public const int C2G_EnterMapRequest = 110000005;
 		 public const int G2C_EnterMapResponse = 160000005;
+		 public const int C2G_TestMessage = 100000001;
+		 public const int G2C_TestPushMessage = 100000002;
 		 public const int G2M_CreateUnitRequest = 200000001;
 		 public const int M2G_CreateUnitResponse = 250000001;
 		 public const int C2M_ExitRequest = 200000002;

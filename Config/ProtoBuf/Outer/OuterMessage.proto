@@ -1,6 +1,7 @@
 syntax = "proto3";
 package Fantasy.Network.Message;
 
+/// -------------------------------- 登录服 --------------------------------------------
 /// 注册账号
 message C2R_RegisterRequest // IRequest,R2C_RegisterResponse
 {
@@ -21,6 +22,8 @@ message R2C_LoginResponse // IResponse
 {
 	string Message = 1;
 }
+
+/// -------------------------------- 网关服 - 网关消息（网关与客户端通信） --------------------------------------------
 /// 登录网关
 message C2G_LoginGateRequest // IRequest,G2C_LoginGateResponse
 {
@@ -51,6 +54,20 @@ message G2C_EnterMapResponse // IResponse
 	string Message = 1;
 	//repeated Character Characters = 4;
 }
+
+// 测试消息，非RPC，注释要用IMessage
+message C2G_TestMessage // IMessage
+{
+	string Message = 1;
+}
+
+// 测试推送消息，注释要用IMessage
+message G2C_TestPushMessage // IMessage
+{
+	string Message = 1;
+}
+
+/// -------------------------------- 网关服 - 路由消息（各进程Scene通信） --------------------------------------------
 /// 进入地图
 message G2M_CreateUnitRequest // IRouteRequest,M2G_CreateUnitResponse
 {
@@ -65,6 +82,8 @@ message M2G_CreateUnitResponse // IRouteResponse
 	//Unit Unit = 3;
 }
 
+
+/// -------------------------------- 网关服 - 寻址消息（非网关Scene与客户端通信） --------------------------------------------
 /// 退出地图
 message C2M_ExitRequest // IAddressableRouteRequest,M2C_ExitResponse
 {

@@ -17,7 +17,8 @@ public partial class FantasyComponent : GameFrameworkComponent
 {
     public Scene Realm;
     public Scene Gate;
-    public bool IsConnect;
+    public bool IsRealmConnect;
+    public bool IsGateConnect;
 
     // 这个对应的是AssemblyCSharp工程、也就是unity默认的工程
     public const int AssemblyCSharp = 1;
@@ -41,51 +42,56 @@ public partial class FantasyComponent : GameFrameworkComponent
         // 外网访问的是SceneConfig配置文件中配置的Gate 20000端口,Realm 20001端口
         // networkProtocolType:网络协议类型
         // 这里要使用与后端SceneConfig配置文件中配置的NetworkProtocolType类型一样才能建立连接
-        Realm.CreateSession("127.0.0.1:20001", NetworkProtocolType.KCP, OnRealmConnectSuccess, OnRealmConnectFail, OnRealmConnectDisconect, 3000);
+        Realm.CreateSession("127.0.0.1:20001", NetworkProtocolType.KCP, OnRealmConnectSuccessed, OnRealmConnectFailed, OnRealmConnectDisconected, 3000);
 
         // 建立与网关的连接，只有与网关的连接才需要挂心跳
-        Gate.CreateSession("127.0.0.1:20000", NetworkProtocolType.KCP, OnGateConnectSuccess, OnGateConnectFail, OnGateConnectDisconect, 3000);
+        Gate.CreateSession("127.0.0.1:20000", NetworkProtocolType.KCP, OnGateConnectSuccessed, OnGateConnectFailed, OnGateConnectDisconected, 3000);
     }
 
-    private void OnRealmConnectSuccess()
+    private void OnRealmConnectSuccessed()
     {
-        //Log.Debug("已连接到Realm服务器");
+        UnityGameFramework.Runtime.Log.Info("Realm连接成功");
+        IsRealmConnect = true;
         RealmTest().Coroutine();
     }
 
-    private void OnRealmConnectFail()
+    private void OnRealmConnectFailed()
     {
-        IsConnect = false;
+        UnityGameFramework.Runtime.Log.Info("Realm连接失败");
+        IsRealmConnect = false;
         
     }
 
-    private void OnRealmConnectDisconect()
+    private void OnRealmConnectDisconected()
     {
-        IsConnect = false;
-
+        UnityGameFramework.Runtime.Log.Info("Realm连接断开");
+        IsRealmConnect = false;
     }
 
-    private void OnGateConnectSuccess()
+    private void OnGateConnectSuccessed()
     {
-        IsConnect = true;
+        UnityGameFramework.Runtime.Log.Info("Gate连接成功");
+        IsGateConnect = true;
         // 挂载心跳组件，设置每隔3000毫秒发送一次心跳给服务器
         // 只需要给客户端保持连接的服务器挂心跳
         Gate.Session.AddComponent<SessionHeartbeatComponent>().Start(3000);
 
+        // 测试非RPC消息和服务器推送消息
+        MessageTest();
 
         GateTest().Coroutine();
     }
 
-    private void OnGateConnectFail()
+    private void OnGateConnectFailed()
     {
-        IsConnect = false;
-
+        UnityGameFramework.Runtime.Log.Error("Gate连接失败");
+        IsGateConnect = false;
     }
 
-    private void OnGateConnectDisconect()
+    private void OnGateConnectDisconected()
     {
-        IsConnect = false;
-      //  Log.Error("断开连接");
+        UnityGameFramework.Runtime.Log.Error("Gate连接断开");
+        IsGateConnect = false;
     }
 
     private async FTask RealmTest()
@@ -96,7 +102,7 @@ public partial class FantasyComponent : GameFrameworkComponent
             UserName = "test",
             Password = ""
         });
-       // Debug.Log(register.Message);
+        UnityGameFramework.Runtime.Log.Info(register.Message);
 
         // 登录realm账号
         R2C_LoginResponse loginRealm = (R2C_LoginResponse)await Realm.Session.Call(new C2R_LoginRequest()
@@ -104,8 +110,9 @@ public partial class FantasyComponent : GameFrameworkComponent
             UserName = "test",
             Password = ""
         });
-      //  Debug.Log(loginRealm.Message);
+        UnityGameFramework.Runtime.Log.Info(loginRealm.Message);
     }
+
     private async FTask GateTest()
     {
         // 登录网关
@@ -114,21 +121,32 @@ public partial class FantasyComponent : GameFrameworkComponent
         {
             Message = "请求登录网关"
         });
-       // Debug.Log(loginGate.Message);
-      //  Debug.Log(loginGate.ErrorCode.ToString());
+        UnityGameFramework.Runtime.Log.Info(loginGate.Message);
+        UnityGameFramework.Runtime.Log.Info(loginGate.ErrorCode.ToString());
 
         // 创建角色请求
         G2C_CreateCharacterResponse create = (G2C_CreateCharacterResponse)await Gate.Session.Call(new C2G_CreateCharacterRequest()
         {
             Message = "请求创建角色"
         });
-      //  Debug.Log(create.Message);
+        UnityGameFramework.Runtime.Log.Info(create.Message);
 
         // 进入地图请求
         G2C_EnterMapResponse enter = (G2C_EnterMapResponse)await Gate.Session.Call(new C2G_EnterMapRequest()
         {
             Message = "请求进入地图"
         });
-      //  Debug.Log(enter.Message);
+        UnityGameFramework.Runtime.Log.Info(enter.Message);
     }
+
+    // 测试非RPC消息
+    private void MessageTest()
+    {
+        Gate.Session.Send(new C2G_TestMessage()
+        {
+            Message = "测试非RPC消息"
+        });
+    }
+
+
 }

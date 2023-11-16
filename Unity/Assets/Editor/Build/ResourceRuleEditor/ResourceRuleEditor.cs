@@ -29,7 +29,7 @@ namespace UGFExtensions.Editor.ResourceTools
         private string m_SourceAssetExceptLabelFilter = "l:ResourceExclusive";
         private string[] m_SourceAssetExceptLabelFilterGUIDArray;
         
-        [MenuItem("Game Framework/Resource Tools/Resource Rule Editor", false, 41)]
+        [MenuItem("Build Tools/Resource Rule Editor", false, 41)]
         static void Open()
         {
             ResourceRuleEditor window = GetWindow<ResourceRuleEditor>(true, "Resource Rule Editor", true);
