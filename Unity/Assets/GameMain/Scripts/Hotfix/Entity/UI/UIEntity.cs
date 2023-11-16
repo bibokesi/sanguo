@@ -2,30 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Hotfix.Entity
+
+/// <summary>
+/// 用于UI显示的实体
+/// </summary>
+public class UIEntity : EntityLogicBase
 {
-    /// <summary>
-    /// 用于UI显示的实体
-    /// </summary>
-    public class UIEntity : EntityLogicBase
+    UIEntityData m_Data;
+    public UIEntityData Data { get { return m_Data; } private set { m_Data = value; } }
+
+    public float RotateSpeed = 30;
+
+    protected override void OnShow(object userData)
     {
-        UIEntityData m_Data;
-        public UIEntityData Data { get { return m_Data; } private set { m_Data = value; } }
+        base.OnShow(userData);
 
-        public float RotateSpeed = 30;
+        Data = (UIEntityData)userData;
+        CachedTransform.position = Data.Position;
+        CachedTransform.localScale = Data.Scale;
 
-        protected override void OnShow(object userData)
-        {
-            base.OnShow(userData);
-
-            Data = (UIEntityData)userData;
-            CachedTransform.position = Data.Position;
-            CachedTransform.localScale = Data.Scale;
-
-        }
-        private void Update()
-        {
-            CachedTransform.Rotate(Vector3.up * Time.deltaTime * RotateSpeed);
-        }
+    }
+    private void Update()
+    {
+        CachedTransform.Rotate(Vector3.up * Time.deltaTime * RotateSpeed);
     }
 }

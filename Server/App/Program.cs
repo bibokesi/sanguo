@@ -1,6 +1,7 @@
 ﻿using Fantasy;
 using Fantasy.Helper;
 using Fantasy.Hotfix;
+using Fantasy.Hotfix.Base;
 
 try
 {
@@ -36,8 +37,13 @@ try
     Entry.Start().Coroutine();
     for (;;)
     {
+        // 让出CPU时间片给其他进程使用
         Thread.Sleep(1);
+
+        // 执行其他线程投递到主线程的逻辑、一般都是其他线程同步到主线程使用的
         ThreadSynchronizationContext.Main.Update();
+
+        //执行所有继承IUpdateSingleton类的Update方法
         SingletonSystem.Update();
     }
 }

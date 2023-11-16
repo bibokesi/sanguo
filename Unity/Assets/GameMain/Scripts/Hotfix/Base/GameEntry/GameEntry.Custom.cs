@@ -7,7 +7,6 @@ using Main.Runtime.Procedure;
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-using Hotfix;
 using UGFExtensions.SpriteCollection;
 using UGFExtensions.Texture;
 using UnityEngine;

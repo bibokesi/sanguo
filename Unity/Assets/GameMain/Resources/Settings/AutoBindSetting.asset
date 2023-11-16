@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 089caf30d869f954eb91eb065677f71c, type: 3}
   m_Name: AutoBindSetting
   m_EditorClassIdentifier: 
-  m_Namespace: Hotfix.UI
+  m_Namespace: 
   m_ComCodePath: GameMain/Scripts/Hotfix/UI/BindComponents
   m_MountCodePath: GameMain/Scripts/Hotfix/UI
   m_MountScriptListAssemblys:

@@ -24,10 +24,14 @@ IRequest + IResponse：双向，RPC，C2G + G2C
 后端接收xxxHandler : MessageRPC<xxxRequest, xxxResponse>
 
 
+
+
 （路由消息：网关服 + 其他Scene服）
 IRouteRequest + IRouteResponse，双向，G2M + M2G
 请求都是MessageHelper.CallInnerRoute(...)
 响应都是xxxHandler : RouteRPC<xxxRequest, xxxResponse>
+
+
 
 */
 
@@ -53,6 +57,9 @@ public partial class FantasyComponent : GameFrameworkComponent
         // 把当前工程的程序集装载到框架中、这样框架才会正常的操作
         // 装载后例如网络协议等一些框架提供的功能就可以使用了
         Fantasy.Helper.AssemblyManager.Load(AssemblyCSharp, GetType().Assembly);
+
+        // 连接服务器
+        ConnectServer();
     }
 
     // 连接服务器
@@ -62,24 +69,22 @@ public partial class FantasyComponent : GameFrameworkComponent
         // 外网访问的是SceneConfig配置文件中配置的Gate 20000端口,Realm 20001端口
         // networkProtocolType:网络协议类型
         // 这里要使用与后端SceneConfig配置文件中配置的NetworkProtocolType类型一样才能建立连接
-        Realm.CreateSession("127.0.0.1:20000", NetworkProtocolType.KCP, OnRealmConnectSuccessed, OnRealmConnectFailed, OnRealmConnectDisconected, 3000);
+        Realm.CreateSession("127.0.0.1:20000", NetworkProtocolType.KCP, OnRealmConnectSuccessed, OnRealmConnectFailed, OnRealmConnectDisconected, 5000);
 
         // 建立与网关的连接，只有与网关的连接才需要挂心跳
-        Gate.CreateSession("127.0.0.1:20001", NetworkProtocolType.KCP, OnGateConnectSuccessed, OnGateConnectFailed, OnGateConnectDisconected, 3000);
+        Gate.CreateSession("127.0.0.1:20001", NetworkProtocolType.KCP, OnGateConnectSuccessed, OnGateConnectFailed, OnGateConnectDisconected, 5000);
     }
 
     private void OnRealmConnectSuccessed()
     {
         UnityGameFramework.Runtime.Log.Info("Realm连接成功");
         IsRealmConnect = true;
-        RealmTest().Coroutine();
     }
 
     private void OnRealmConnectFailed()
     {
         UnityGameFramework.Runtime.Log.Info("Realm连接失败");
         IsRealmConnect = false;
-        
     }
 
     private void OnRealmConnectDisconected()
@@ -97,9 +102,7 @@ public partial class FantasyComponent : GameFrameworkComponent
         Gate.Session.AddComponent<SessionHeartbeatComponent>().Start(3000);
 
         // 测试非RPC消息和服务器推送消息
-        MessageTest();
-
-        GateTest().Coroutine();
+        //MessageTest();
     }
 
     private void OnGateConnectFailed()

@@ -3,42 +3,40 @@ using GameFramework.ObjectPool;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace Hotfix
+
+public class AssetInstanceObject : ObjectBase
 {
-    public class AssetInstanceObject : ObjectBase
+    private object m_AssetObject;
+
+    public AssetInstanceObject()
     {
-        private object m_AssetObject;
+        m_AssetObject = null;
+    }
 
-        public AssetInstanceObject()
+
+    public static AssetInstanceObject Create(string name, object unityObjectAsset, object uiFormInstance)
+    {
+        if (unityObjectAsset == null)
         {
-            m_AssetObject = null;
+            throw new GameFrameworkException("Asset is invalid.");
         }
 
+        AssetInstanceObject unityAssetObject = ReferencePool.Acquire<AssetInstanceObject>();
+        unityAssetObject.Initialize(name, uiFormInstance);
+        unityAssetObject.m_AssetObject = unityObjectAsset;
+        return unityAssetObject;
+    }
 
-        public static AssetInstanceObject Create(string name, object unityObjectAsset, object uiFormInstance)
-        {
-            if (unityObjectAsset == null)
-            {
-                throw new GameFrameworkException("Asset is invalid.");
-            }
+    public override void Clear()
+    {
+        base.Clear();
+        m_AssetObject = null;
 
-            AssetInstanceObject unityAssetObject = ReferencePool.Acquire<AssetInstanceObject>();
-            unityAssetObject.Initialize(name, uiFormInstance);
-            unityAssetObject.m_AssetObject = unityObjectAsset;
-            return unityAssetObject;
-        }
+    }
 
-        public override void Clear()
-        {
-            base.Clear();
-            m_AssetObject = null;
-
-        }
-
-        protected override void Release(bool isShutdown)
-        {
-            GameEntry.Resource.UnloadAsset(m_AssetObject);
-            UnityEngine.Object.Destroy((Object)Target);
-        }
+    protected override void Release(bool isShutdown)
+    {
+        GameEntry.Resource.UnloadAsset(m_AssetObject);
+        UnityEngine.Object.Destroy((Object)Target);
     }
 }

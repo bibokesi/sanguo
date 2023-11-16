@@ -648,8 +648,7 @@ public class ComponentAutoBindToolInspector : Editor
             using (StreamWriter sw = new StreamWriter(filePath))
             {
                 sw.WriteLine(GetFileHead());
-    
-                sw.WriteLine("using Hotfix;");
+ 
                 sw.WriteLine("using System.Collections;");
                 sw.WriteLine("using System.Collections.Generic;");
                 sw.WriteLine("using UnityEngine;");

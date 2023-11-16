@@ -1,5 +1,6 @@
 using Fantasy.Core.Network;
-namespace Fantasy.Hotfix;
+
+namespace Fantasy.Hotfix.Base;
 
 /// <summary>
 /// 当Scene创建时需要干什么
@@ -16,23 +17,23 @@ public class OnCreateScene : AsyncEventSystem<Fantasy.OnCreateScene>
         switch (scene.SceneType)
         {
             case SceneType.Addressable:
-            {
-                // 挂载管理Address地址组件
-                scene.AddComponent<AddressableManageComponent>();
-                break;
-            }
+                {
+                    // 挂载管理Address地址组件
+                    scene.AddComponent<AddressableManageComponent>();
+                    break;
+                }
             case SceneType.Gate:
-            {
-                break;
-            }
+                {
+                    break;
+                }
             case SceneType.Map:
-            {
-                // 挂UnitComponent组件，存取unit
-                scene.AddComponent<UnitComponent>();
-                break;
-            }
+                {
+                    // 挂UnitComponent组件，存取unit
+                    scene.AddComponent<UnitComponent>();
+                    break;
+                }
         }
-        
+
 
         await FTask.CompletedTask;
     }
