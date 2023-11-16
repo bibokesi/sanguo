@@ -1,6 +1,8 @@
 using Fantasy;
 using UnityEngine;
 
+namespace Fantasy.Hotfix;
+
 public static class MessageInfoHelper
 {
     public static Vector3 Vector3(MoveInfo moveInfo)

@@ -62,10 +62,10 @@ public partial class FantasyComponent : GameFrameworkComponent
         // 外网访问的是SceneConfig配置文件中配置的Gate 20000端口,Realm 20001端口
         // networkProtocolType:网络协议类型
         // 这里要使用与后端SceneConfig配置文件中配置的NetworkProtocolType类型一样才能建立连接
-        Realm.CreateSession("127.0.0.1:20001", NetworkProtocolType.KCP, OnRealmConnectSuccessed, OnRealmConnectFailed, OnRealmConnectDisconected, 3000);
+        Realm.CreateSession("127.0.0.1:20000", NetworkProtocolType.KCP, OnRealmConnectSuccessed, OnRealmConnectFailed, OnRealmConnectDisconected, 3000);
 
         // 建立与网关的连接，只有与网关的连接才需要挂心跳
-        Gate.CreateSession("127.0.0.1:20000", NetworkProtocolType.KCP, OnGateConnectSuccessed, OnGateConnectFailed, OnGateConnectDisconected, 3000);
+        Gate.CreateSession("127.0.0.1:20001", NetworkProtocolType.KCP, OnGateConnectSuccessed, OnGateConnectFailed, OnGateConnectDisconected, 3000);
     }
 
     private void OnRealmConnectSuccessed()

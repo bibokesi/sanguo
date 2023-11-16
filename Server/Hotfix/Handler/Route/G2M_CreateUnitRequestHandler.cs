@@ -1,5 +1,6 @@
 using Fantasy.Core.Network;
 using Fantasy;
+using Fantasy.Hotfix;
 
 public class G2M_CreateUnitRequestHandler : RouteRPC<Scene,G2M_CreateUnitRequest,M2G_CreateUnitResponse>
 {

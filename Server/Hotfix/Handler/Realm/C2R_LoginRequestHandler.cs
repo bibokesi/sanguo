@@ -2,8 +2,6 @@ using Fantasy.Core.Network;
 using Fantasy.Helper;
 using Fantasy;
 
-namespace Fantasy.Hotfix.Handler.Realm;
-
 public class C2R_LoginRequestHandler : MessageRPC<C2R_LoginRequest, R2C_LoginResponse>
 {
     protected override async FTask Run(Session session, C2R_LoginRequest request, R2C_LoginResponse response, Action reply)

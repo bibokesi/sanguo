@@ -1,6 +1,8 @@
 using Fantasy.Helper;
 using Fantasy;
 
+namespace Fantasy.Hotfix;
+
 public static class SceneHelper
 {
     public static long GetSceneEntityId(uint routeId)

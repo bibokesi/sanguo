@@ -1,6 +1,7 @@
 using Fantasy.Core.Network;
 using Fantasy.Helper;
 using Fantasy;
+using Fantasy.Hotfix;
 
 public class C2G_EnterMapRequestHandler : MessageRPC<C2G_EnterMapRequest,G2C_EnterMapResponse>
 {

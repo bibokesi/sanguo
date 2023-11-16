@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Fantasy;
 using Fantasy.Helper;
 using UnityEngine;
+using Fantasy.Hotfix;
 
 public class MoveComponent : Entity 
 {
