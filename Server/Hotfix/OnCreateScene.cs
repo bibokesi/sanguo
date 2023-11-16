@@ -1,5 +1,4 @@
 using Fantasy.Core.Network;
-using BestGame;
 namespace Fantasy.Hotfix;
 
 /// <summary>

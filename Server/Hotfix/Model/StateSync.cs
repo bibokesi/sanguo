@@ -3,8 +3,6 @@ using Fantasy.Core.Network;
 using Fantasy.DataStructure;
 using Fantasy.Helper;
 
-namespace BestGame;
-
 public class StateSync : Entity 
 {
     //public IMessage Message;

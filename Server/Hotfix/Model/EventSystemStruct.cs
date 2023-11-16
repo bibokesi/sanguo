@@ -1,7 +1,6 @@
 using Fantasy;
 using UnityEngine;
 
-namespace BestGame;
 public class EventSystemStruct
 {
     public struct StartMove

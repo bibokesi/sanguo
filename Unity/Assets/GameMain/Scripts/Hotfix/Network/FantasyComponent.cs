@@ -11,6 +11,26 @@ using Fantasy;
 using System.Reflection;
 using Fantasy.Model;
 
+
+/* 
+
+（普通消息：网关服 + 客户端）
+IMessage：单向，非RPC，C2G / G2C
+前后端发送都是session.Send(...)
+前后端接收都是xxxHandler : Message<xxxMessage>
+
+IRequest + IResponse：双向，RPC，C2G + G2C
+前端请求session.Call(...)
+后端接收xxxHandler : MessageRPC<xxxRequest, xxxResponse>
+
+
+（路由消息：网关服 + 其他Scene服）
+IRouteRequest + IRouteResponse，双向，G2M + M2G
+请求都是MessageHelper.CallInnerRoute(...)
+响应都是xxxHandler : RouteRPC<xxxRequest, xxxResponse>
+
+*/
+
 [DisallowMultipleComponent]
 [AddComponentMenu("GameMain/FantasyComponent")]
 public partial class FantasyComponent : GameFrameworkComponent

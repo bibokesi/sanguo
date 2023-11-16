@@ -4,8 +4,6 @@ using Fantasy;
 using Fantasy.Helper;
 using UnityEngine;
 
-namespace BestGame;
-
 public class MoveComponent : Entity 
 {
     /// 测试练习，这里不在服务器上做位置的计算与寻路验证

@@ -1,6 +1,4 @@
 using Fantasy;
-
-namespace BestGame;
 public class UnitComponent : Entity 
 {
     /// unit容器

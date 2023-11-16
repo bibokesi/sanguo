@@ -1,8 +1,6 @@
 using Fantasy.Helper;
 using Fantasy;
 
-namespace BestGame;
-
 public static class SceneHelper
 {
     public static long GetSceneEntityId(uint routeId)

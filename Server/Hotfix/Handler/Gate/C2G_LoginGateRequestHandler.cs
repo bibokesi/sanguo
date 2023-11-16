@@ -2,8 +2,6 @@ using Fantasy.Core.Network;
 using Fantasy.Helper;
 using Fantasy;
 
-namespace BestGame;
-
 public class C2G_LoginGateRequestHandler : MessageRPC<C2G_LoginGateRequest,G2C_LoginGateResponse>
 {
     protected override async FTask Run(Session session, C2G_LoginGateRequest request, G2C_LoginGateResponse response, Action reply)

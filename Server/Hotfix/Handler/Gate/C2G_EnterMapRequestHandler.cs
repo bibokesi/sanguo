@@ -2,14 +2,12 @@ using Fantasy.Core.Network;
 using Fantasy.Helper;
 using Fantasy;
 
-namespace BestGame;
-
 public class C2G_EnterMapRequestHandler : MessageRPC<C2G_EnterMapRequest,G2C_EnterMapResponse>
 {
     protected override async FTask Run(Session session, C2G_EnterMapRequest request, G2C_EnterMapResponse response, Action reply)
     {
         var sessionPlayer = session.GetComponent<SessionPlayerComponent>();
-
+        Log.Info(session.RuntimeId.ToString());
         // 向map请求创建unit
         var entityId = SceneHelper.GetSceneEntityId(3072);
         var result = (M2G_CreateUnitResponse)await MessageHelper.CallInnerRoute(session.Scene,entityId,

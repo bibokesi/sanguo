@@ -1,8 +1,6 @@
 using Fantasy.Core.Network;
 using Fantasy;
 
-namespace BestGame;
-
 public class G2M_CreateUnitRequestHandler : RouteRPC<Scene,G2M_CreateUnitRequest,M2G_CreateUnitResponse>
 {
     protected override async FTask Run(Scene scene,G2M_CreateUnitRequest request, M2G_CreateUnitResponse response, Action reply)

@@ -3,8 +3,6 @@ using Fantasy.Core.Network;
 using Fantasy.DataStructure;
 using Fantasy.Helper;
 
-namespace BestGame;
-
 public class StartMoveEventHanlder : EventSystem<EventSystemStruct.StartMove>
 {
     public override void Handler(EventSystemStruct.StartMove self)

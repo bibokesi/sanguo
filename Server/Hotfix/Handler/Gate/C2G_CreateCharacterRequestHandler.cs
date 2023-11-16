@@ -2,8 +2,6 @@ using Fantasy.Core.Network;
 using Fantasy.Helper;
 using Fantasy;
 
-namespace BestGame;
-
 public class CreateCharacterRequestHandler : MessageRPC<C2G_CreateCharacterRequest,G2C_CreateCharacterResponse>
 {
     protected override async FTask Run(Session session, C2G_CreateCharacterRequest request, G2C_CreateCharacterResponse response, Action reply)

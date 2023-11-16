@@ -1,6 +1,5 @@
 using Fantasy;
 
-namespace BestGame;
 public class Unit : Entity
 {
     /// 存入网关连接SessionRuntimeId

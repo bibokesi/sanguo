@@ -2,8 +2,6 @@ using Fantasy.Core.Network;
 using Fantasy.Helper;
 using Fantasy;
 
-namespace BestGame;
-
 public class C2M_MoveMessageHandler : Addressable<Unit,C2M_MoveMessage>
 {
     protected override async FTask Run(Unit unit, C2M_MoveMessage message)
