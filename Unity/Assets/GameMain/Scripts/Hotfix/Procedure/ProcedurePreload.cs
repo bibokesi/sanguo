@@ -1,10 +1,6 @@
-using GameFramework.Resource;
-using Main.Runtime.Procedure;
+using Main.Runtime;
 using System.Collections.Generic;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
-using UnityEngine;
-using System.Collections;
-using Main.Runtime;
 using UnityGameFramework.Runtime;
 
 

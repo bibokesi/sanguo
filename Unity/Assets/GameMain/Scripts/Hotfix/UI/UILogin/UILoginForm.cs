@@ -1,4 +1,4 @@
-﻿using Main.Runtime.Procedure;
+﻿using Main.Runtime;
 using UnityGameFramework.Runtime;
 
 public partial class UILoginForm : UIFixBaseForm

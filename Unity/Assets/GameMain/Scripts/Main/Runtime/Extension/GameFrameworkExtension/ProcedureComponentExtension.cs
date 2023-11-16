@@ -2,8 +2,8 @@
 using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 
-namespace GameMain
-{
+namespace Main.Runtime
+{ 
     public static class ProcedureComponentExtension
     {
         private static Type m_LastProcedure;

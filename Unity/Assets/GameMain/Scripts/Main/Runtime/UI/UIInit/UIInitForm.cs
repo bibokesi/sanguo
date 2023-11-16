@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Main.Runtime.UI
+namespace Main.Runtime
 {
     public partial class UIInitForm : UIBaseForm
     {

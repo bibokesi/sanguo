@@ -1,8 +1,6 @@
 using GameFramework;
 using GameFramework.UI;
-using Main.Runtime.Procedure;
 using System.Collections;
-using Main.Runtime.UI;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityGameFramework.Runtime;

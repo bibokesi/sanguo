@@ -3,7 +3,6 @@ using GameFramework;
 using GameFramework.Resource;
 using GameFramework.UI;
 using Main.Runtime;
-using Main.Runtime.Procedure;
 using System;
 using System.Collections.Generic;
 using System.Reflection;

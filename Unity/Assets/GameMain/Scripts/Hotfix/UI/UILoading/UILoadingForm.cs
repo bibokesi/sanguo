@@ -1,5 +1,4 @@
-﻿using Main.Runtime.Procedure;
-using UnityGameFramework.Runtime;
+﻿using Main.Runtime;
 
 public partial class UILoadingForm : UIFixBaseForm
 {

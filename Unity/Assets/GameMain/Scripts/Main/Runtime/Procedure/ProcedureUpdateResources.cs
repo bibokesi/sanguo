@@ -1,6 +1,5 @@
 using GameFramework;
 using GameFramework.Event;
-using Main.Runtime.UI;
 using System;
 using System.Collections.Generic;
 using GameFramework.Resource;
@@ -12,7 +11,7 @@ using ResourceUpdateFailureEventArgs = UnityGameFramework.Runtime.ResourceUpdate
 using ResourceUpdateStartEventArgs = UnityGameFramework.Runtime.ResourceUpdateStartEventArgs;
 using ResourceUpdateSuccessEventArgs = UnityGameFramework.Runtime.ResourceUpdateSuccessEventArgs;
 
-namespace Main.Runtime.Procedure
+namespace Main.Runtime
 {
     public enum UpdateStateType
     {

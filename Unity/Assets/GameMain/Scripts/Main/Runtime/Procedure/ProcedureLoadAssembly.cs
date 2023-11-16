@@ -27,7 +27,7 @@ enum LoadImageErrorCode
 };
 
 
-namespace Main.Runtime.Procedure
+namespace Main.Runtime
 {
     public class ProcedureLoadAssembly : ProcedureBase
     {

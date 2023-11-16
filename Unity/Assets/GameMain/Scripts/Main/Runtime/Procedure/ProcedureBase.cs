@@ -1,7 +1,7 @@
 using System;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 
-namespace Main.Runtime.Procedure
+namespace Main.Runtime
 {
     public abstract class ProcedureBase : GameFramework.Procedure.ProcedureBase
     {

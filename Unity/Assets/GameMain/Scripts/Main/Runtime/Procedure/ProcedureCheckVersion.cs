@@ -3,14 +3,13 @@ using System.Collections.Generic;
 using GameFramework;
 using GameFramework.Event;
 using GameFramework.Resource;
-using Main.Runtime.UI;
 using System.IO;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 using Version = GameFramework.Version;
 
-namespace Main.Runtime.Procedure
+namespace Main.Runtime
 {
 
     public class CheckVersionInfo

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityGameFramework.Runtime;
 
-namespace Main.Runtime.UI 
+namespace Main.Runtime
 {
     public partial class MyTemplateScript : UIBaseForm
     {

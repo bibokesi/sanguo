@@ -1,22 +1,18 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using System.Reflection;
 using GameFramework;
 using GameFramework.Event;
 using GameFramework.Resource;
 using Main.Runtime;
-using Main.Runtime.Procedure;
 using UnityEngine;
-using UnityEngine.Networking;
 using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 using ResourceUpdateChangedEventArgs = UnityGameFramework.Runtime.ResourceUpdateChangedEventArgs;
 using ResourceUpdateFailureEventArgs = UnityGameFramework.Runtime.ResourceUpdateFailureEventArgs;
 using ResourceUpdateStartEventArgs = UnityGameFramework.Runtime.ResourceUpdateStartEventArgs;
 using ResourceUpdateSuccessEventArgs = UnityGameFramework.Runtime.ResourceUpdateSuccessEventArgs;
-using Utility = GameFramework.Utility;
+
 
 
 public class UpdateInfoData

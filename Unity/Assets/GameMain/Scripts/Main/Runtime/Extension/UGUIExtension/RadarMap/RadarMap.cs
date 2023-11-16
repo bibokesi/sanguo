@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Main.Runtime.UI
+namespace Main.Runtime
 {
     /// <summary>
     /// Radar map with image.

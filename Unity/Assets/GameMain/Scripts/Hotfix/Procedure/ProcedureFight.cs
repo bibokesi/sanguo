@@ -1,6 +1,4 @@
-using GameFramework;
-using Main.Runtime.Procedure;
-using UnityGameFramework.Runtime;
+using Main.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 
 public class ProcedureFight : ProcedureBase

@@ -2,7 +2,7 @@ using GameFramework.Resource;
 using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
 
-namespace Main.Runtime.Procedure
+namespace Main.Runtime
 {
     public class ProcedureSplash : ProcedureBase
     {
