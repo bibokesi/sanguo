@@ -10,10 +10,10 @@ using System.Collections.Generic;
 #pragma warning disable CS8625
 #pragma warning disable CS8603
 
-namespace Fantasy
+namespace Fantasy.Hotfix.Generate.ConfigTable
 {
     [ProtoContract]
-    public sealed partial class SceneConfigData :  AProto, IConfigTable, IDisposable
+    public sealed partial class SceneConfigData : AProto, IConfigTable, IDisposable
     {
         [ProtoMember(1)]
         public List<SceneConfig> List { get; set; } = new List<SceneConfig>();
@@ -23,7 +23,7 @@ namespace Fantasy
 
         public static SceneConfigData Instance
         {
-            get { return _instance ??= ConfigTableManage.Load<SceneConfigData>(); } 
+            get { return _instance ??= ConfigTableManage.Load<SceneConfigData>(); }
             private set => _instance = value;
         }
 
@@ -33,23 +33,23 @@ namespace Fantasy
             {
                 return _configs[id];
             }
-    
+
             if (check)
             {
                 throw new Exception($"SceneConfig not find {id} Id");
             }
-            
+
             return null;
         }
         public bool TryGet(uint id, out SceneConfig config)
         {
             config = null;
-            
+
             if (!_configs.ContainsKey(id))
             {
                 return false;
             }
-                
+
             config = _configs[id];
             return true;
         }
@@ -61,34 +61,34 @@ namespace Fantasy
                 _configs.Add(config.Id, config);
                 config.AfterDeserialization();
             }
-    
+
             base.AfterDeserialization();
         }
-        
+
         public void Dispose()
         {
             Instance = null;
         }
     }
-    
+
     [ProtoContract]
     public sealed partial class SceneConfig : AProto
     {
-		[ProtoMember(1, IsRequired  = true)]
-		public uint Id { get; set; } // ID
-		[ProtoMember(2, IsRequired  = true)]
-		public long EntityId { get; set; } // 路由Id
-		[ProtoMember(3, IsRequired  = true)]
-		public uint ServerConfigId { get; set; } // ServerId
-		[ProtoMember(4, IsRequired  = true)]
-		public uint WorldId { get; set; } // 世界Id
-		[ProtoMember(5, IsRequired  = true)]
-		public string SceneType { get; set; } // Scene类型
-		[ProtoMember(6, IsRequired  = true)]
-		public string SceneSubType { get; set; } // Scene子类型
-		[ProtoMember(7, IsRequired  = true)]
-		public string NetworkProtocol { get; set; } // 协议类型
-		[ProtoMember(8, IsRequired  = true)]
-		public int OuterPort { get; set; } // 外网端口        		     
-    } 
-}   
+        [ProtoMember(1, IsRequired = true)]
+        public uint Id { get; set; } // ID
+        [ProtoMember(2, IsRequired = true)]
+        public long EntityId { get; set; } // 路由Id
+        [ProtoMember(3, IsRequired = true)]
+        public uint ServerConfigId { get; set; } // ServerId
+        [ProtoMember(4, IsRequired = true)]
+        public uint WorldId { get; set; } // 世界Id
+        [ProtoMember(5, IsRequired = true)]
+        public string SceneType { get; set; } // Scene类型
+        [ProtoMember(6, IsRequired = true)]
+        public string SceneSubType { get; set; } // Scene子类型
+        [ProtoMember(7, IsRequired = true)]
+        public string NetworkProtocol { get; set; } // 协议类型
+        [ProtoMember(8, IsRequired = true)]
+        public int OuterPort { get; set; } // 外网端口        		     
+    }
+}

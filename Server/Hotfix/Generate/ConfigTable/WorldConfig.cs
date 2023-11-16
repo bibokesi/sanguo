@@ -10,10 +10,10 @@ using System.Collections.Generic;
 #pragma warning disable CS8625
 #pragma warning disable CS8603
 
-namespace Fantasy
+namespace Fantasy.Hotfix.Generate.ConfigTable
 {
     [ProtoContract]
-    public sealed partial class WorldConfigData :  AProto, IConfigTable, IDisposable
+    public sealed partial class WorldConfigData : AProto, IConfigTable, IDisposable
     {
         [ProtoMember(1)]
         public List<WorldConfig> List { get; set; } = new List<WorldConfig>();
@@ -23,7 +23,7 @@ namespace Fantasy
 
         public static WorldConfigData Instance
         {
-            get { return _instance ??= ConfigTableManage.Load<WorldConfigData>(); } 
+            get { return _instance ??= ConfigTableManage.Load<WorldConfigData>(); }
             private set => _instance = value;
         }
 
@@ -33,23 +33,23 @@ namespace Fantasy
             {
                 return _configs[id];
             }
-    
+
             if (check)
             {
                 throw new Exception($"WorldConfig not find {id} Id");
             }
-            
+
             return null;
         }
         public bool TryGet(uint id, out WorldConfig config)
         {
             config = null;
-            
+
             if (!_configs.ContainsKey(id))
             {
                 return false;
             }
-                
+
             config = _configs[id];
             return true;
         }
@@ -61,30 +61,30 @@ namespace Fantasy
                 _configs.Add(config.Id, config);
                 config.AfterDeserialization();
             }
-    
+
             base.AfterDeserialization();
         }
-        
+
         public void Dispose()
         {
             Instance = null;
         }
     }
-    
+
     [ProtoContract]
     public sealed partial class WorldConfig : AProto
     {
-		[ProtoMember(1, IsRequired  = true)]
-		public uint Id { get; set; } // Id
-		[ProtoMember(2, IsRequired  = true)]
-		public string WorldName { get; set; } // 名称
-		[ProtoMember(3, IsRequired  = true)]
-		public string DbConnection { get; set; } // 连接字符串
-		[ProtoMember(4, IsRequired  = true)]
-		public string DbName { get; set; } // 数据库名称
-		[ProtoMember(5, IsRequired  = true)]
-		public string DbType { get; set; } // 数据库类型
-		[ProtoMember(6, IsRequired  = true)]
-		public bool IsGameWorld { get; set; } // 是否游戏服        		     
-    } 
-}   
+        [ProtoMember(1, IsRequired = true)]
+        public uint Id { get; set; } // Id
+        [ProtoMember(2, IsRequired = true)]
+        public string WorldName { get; set; } // 名称
+        [ProtoMember(3, IsRequired = true)]
+        public string DbConnection { get; set; } // 连接字符串
+        [ProtoMember(4, IsRequired = true)]
+        public string DbName { get; set; } // 数据库名称
+        [ProtoMember(5, IsRequired = true)]
+        public string DbType { get; set; } // 数据库类型
+        [ProtoMember(6, IsRequired = true)]
+        public bool IsGameWorld { get; set; } // 是否游戏服        		     
+    }
+}

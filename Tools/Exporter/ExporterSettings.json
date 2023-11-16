@@ -25,11 +25,11 @@
             "Comment": "Excel的Version文件位置、这个文件用于记录每次导出对比是否需要再次导出的文件"
         },
         "ExcelServerFileDirectory": {
-            "Value": "../../Server/Hotfix/Generate/ConfigTable/Entity/",
+            "Value": "../../Server/Hotfix/Generate/ConfigTable/",
             "Comment": "Excel生成的代码文件、在服务端文件夹位置"
         },
         "ExcelClientFileDirectory": {
-            "Value": "../../Unity/Assets/GameMain/Scripts/Hotfix/Generate/ConfigTable/Entity/",
+            "Value": "../../Unity/Assets/GameMain/Scripts/Hotfix/Generate/ConfigTable/",
             "Comment": "Excel生成的代码文件、在客户端文件夹位置"
         },
         "ExcelServerBinaryDirectory": {

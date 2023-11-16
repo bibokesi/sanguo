@@ -10,10 +10,10 @@ using System.Collections.Generic;
 #pragma warning disable CS8625
 #pragma warning disable CS8603
 
-namespace Fantasy
+namespace Fantasy.Hotfix.Generate.ConfigTable
 {
     [ProtoContract]
-    public sealed partial class ServerConfigData :  AProto, IConfigTable, IDisposable
+    public sealed partial class ServerConfigData : AProto, IConfigTable, IDisposable
     {
         [ProtoMember(1)]
         public List<ServerConfig> List { get; set; } = new List<ServerConfig>();
@@ -23,7 +23,7 @@ namespace Fantasy
 
         public static ServerConfigData Instance
         {
-            get { return _instance ??= ConfigTableManage.Load<ServerConfigData>(); } 
+            get { return _instance ??= ConfigTableManage.Load<ServerConfigData>(); }
             private set => _instance = value;
         }
 
@@ -33,23 +33,23 @@ namespace Fantasy
             {
                 return _configs[id];
             }
-    
+
             if (check)
             {
                 throw new Exception($"ServerConfig not find {id} Id");
             }
-            
+
             return null;
         }
         public bool TryGet(uint id, out ServerConfig config)
         {
             config = null;
-            
+
             if (!_configs.ContainsKey(id))
             {
                 return false;
             }
-                
+
             config = _configs[id];
             return true;
         }
@@ -61,26 +61,26 @@ namespace Fantasy
                 _configs.Add(config.Id, config);
                 config.AfterDeserialization();
             }
-    
+
             base.AfterDeserialization();
         }
-        
+
         public void Dispose()
         {
             Instance = null;
         }
     }
-    
+
     [ProtoContract]
     public sealed partial class ServerConfig : AProto
     {
-		[ProtoMember(1, IsRequired  = true)]
-		public uint Id { get; set; } // 路由Id
-		[ProtoMember(2, IsRequired  = true)]
-		public uint MachineId { get; set; } // 机器ID
-		[ProtoMember(3, IsRequired  = true)]
-		public int InnerPort { get; set; } // 内网端口
-		[ProtoMember(4, IsRequired  = true)]
-		public bool ReleaseMode { get; set; } // Release下运行        		     
-    } 
-}   
+        [ProtoMember(1, IsRequired = true)]
+        public uint Id { get; set; } // 路由Id
+        [ProtoMember(2, IsRequired = true)]
+        public uint MachineId { get; set; } // 机器ID
+        [ProtoMember(3, IsRequired = true)]
+        public int InnerPort { get; set; } // 内网端口
+        [ProtoMember(4, IsRequired = true)]
+        public bool ReleaseMode { get; set; } // Release下运行        		     
+    }
+}

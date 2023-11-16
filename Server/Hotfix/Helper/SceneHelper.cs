@@ -1,5 +1,5 @@
 using Fantasy.Helper;
-using Fantasy;
+using Fantasy.Hotfix.Generate.ConfigTable;
 
 namespace Fantasy.Hotfix;
 

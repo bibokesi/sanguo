@@ -10,10 +10,10 @@ using System.Collections.Generic;
 #pragma warning disable CS8625
 #pragma warning disable CS8603
 
-namespace Fantasy
+namespace Fantasy.Hotfix.Generate.ConfigTable
 {
     [ProtoContract]
-    public sealed partial class MachineConfigData :  AProto, IConfigTable, IDisposable
+    public sealed partial class MachineConfigData : AProto, IConfigTable, IDisposable
     {
         [ProtoMember(1)]
         public List<MachineConfig> List { get; set; } = new List<MachineConfig>();
@@ -23,7 +23,7 @@ namespace Fantasy
 
         public static MachineConfigData Instance
         {
-            get { return _instance ??= ConfigTableManage.Load<MachineConfigData>(); } 
+            get { return _instance ??= ConfigTableManage.Load<MachineConfigData>(); }
             private set => _instance = value;
         }
 
@@ -33,23 +33,23 @@ namespace Fantasy
             {
                 return _configs[id];
             }
-    
+
             if (check)
             {
                 throw new Exception($"MachineConfig not find {id} Id");
             }
-            
+
             return null;
         }
         public bool TryGet(uint id, out MachineConfig config)
         {
             config = null;
-            
+
             if (!_configs.ContainsKey(id))
             {
                 return false;
             }
-                
+
             config = _configs[id];
             return true;
         }
@@ -61,28 +61,28 @@ namespace Fantasy
                 _configs.Add(config.Id, config);
                 config.AfterDeserialization();
             }
-    
+
             base.AfterDeserialization();
         }
-        
+
         public void Dispose()
         {
             Instance = null;
         }
     }
-    
+
     [ProtoContract]
     public sealed partial class MachineConfig : AProto
     {
-		[ProtoMember(1, IsRequired  = true)]
-		public uint Id { get; set; } // Id
-		[ProtoMember(2, IsRequired  = true)]
-		public string OuterIP { get; set; } // 外网IP
-		[ProtoMember(3, IsRequired  = true)]
-		public string OuterBindIP { get; set; } // 外网绑定IP
-		[ProtoMember(4, IsRequired  = true)]
-		public string InnerBindIP { get; set; } // 内网绑定IP
-		[ProtoMember(5, IsRequired  = true)]
-		public int ManagementPort { get; set; } // 管理端口        		     
-    } 
-}   
+        [ProtoMember(1, IsRequired = true)]
+        public uint Id { get; set; } // Id
+        [ProtoMember(2, IsRequired = true)]
+        public string OuterIP { get; set; } // 外网IP
+        [ProtoMember(3, IsRequired = true)]
+        public string OuterBindIP { get; set; } // 外网绑定IP
+        [ProtoMember(4, IsRequired = true)]
+        public string InnerBindIP { get; set; } // 内网绑定IP
+        [ProtoMember(5, IsRequired = true)]
+        public int ManagementPort { get; set; } // 管理端口        		     
+    }
+}
