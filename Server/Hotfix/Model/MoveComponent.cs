@@ -1,9 +1,7 @@
-using System;
-using System.Collections.Generic;
 using Fantasy;
 using Fantasy.Helper;
 using UnityEngine;
-using Fantasy.Hotfix;
+
 
 public class MoveComponent : Entity 
 {
@@ -21,11 +19,11 @@ public class MoveComponent : Entity
 
     public async FTask MoveToAndSendAsync(MoveInfo moveInfo)
     {
-        var unit = (Unit)Parent;
+        var playerEntity = (PlayerEntity)Parent;
         // 计算移动距离与时间,略角度计算
         float dis = 0;
         float speed = 3;
-        Vector3 p0 = MessageInfoHelper.Vector3(unit.moveInfo);
+        Vector3 p0 = MessageInfoHelper.Vector3(playerEntity.moveInfo);
         Vector3 p1 = MessageInfoHelper.Vector3(moveInfo);
         dis = Vector3.Distance(p0, p1);
 
@@ -33,18 +31,18 @@ public class MoveComponent : Entity
 
         // 发事件给移动同步组件，收集移动状态
         EventSystem.Instance.Publish(new EventSystemStruct.StartMove{
-            unit = unit, moveInfo = moveInfo
+            playerEntity = playerEntity, moveInfo = moveInfo
         });
 
-        // 服务器上unit的位置移动计算
-        InnerMoveToAsync(unit,moveInfo,speed).Coroutine();
+        // 服务器上playerEntity的位置移动计算
+        InnerMoveToAsync(playerEntity,moveInfo,speed).Coroutine();
         await FTask.CompletedTask;
     }
 
-    public async FTask InnerMoveToAsync(Unit unit, MoveInfo moveInfo, float speed)
+    public async FTask InnerMoveToAsync(PlayerEntity playerEntity, MoveInfo moveInfo, float speed)
     {
         // 测试练习，略插值计算过程...
-        unit.moveInfo = moveInfo;
+        playerEntity.moveInfo = moveInfo;
 
         await FTask.CompletedTask;
     }

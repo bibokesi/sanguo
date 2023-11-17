@@ -1,7 +1,6 @@
 ﻿using Fantasy;
 using Fantasy.Helper;
 using Fantasy.Hotfix;
-using Fantasy.Hotfix.Base;
 
 try
 {

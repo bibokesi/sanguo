@@ -117,51 +117,6 @@ public partial class FantasyComponent : GameFrameworkComponent
         IsGateConnect = false;
     }
 
-    //private async FTask RealmTest()
-    //{
-    //    // 请求realm验证
-    //    R2C_RegisterResponse register = (R2C_RegisterResponse)await Realm.Session.Call(new C2R_RegisterRequest()
-    //    {
-    //        UserName = "test",
-    //        Password = ""
-    //    });
-    //    UnityGameFramework.Runtime.Log.Info(register.Message);
-
-    //    // 登录realm账号
-    //    R2C_LoginResponse loginRealm = (R2C_LoginResponse)await Realm.Session.Call(new C2R_LoginRequest()
-    //    {
-    //        UserName = "test",
-    //        Password = ""
-    //    });
-    //    UnityGameFramework.Runtime.Log.Info(loginRealm.Message);
-    //}
-
-    //private async FTask GateTest()
-    //{
-    //    // 登录网关
-    //    // 登录网关后创建角色，或者加载角色列表，选择角色进入游戏地图
-    //    G2C_LoginGateResponse loginGate = (G2C_LoginGateResponse)await Gate.Session.Call(new C2G_LoginGateRequest()
-    //    {
-    //        Message = "请求登录网关"
-    //    });
-    //    UnityGameFramework.Runtime.Log.Info(loginGate.Message);
-    //    UnityGameFramework.Runtime.Log.Info(loginGate.ErrorCode.ToString());
-
-    //    // 创建角色请求
-    //    G2C_CreateCharacterResponse create = (G2C_CreateCharacterResponse)await Gate.Session.Call(new C2G_CreateCharacterRequest()
-    //    {
-    //        Message = "请求创建角色"
-    //    });
-    //    UnityGameFramework.Runtime.Log.Info(create.Message);
-
-    //    // 进入地图请求
-    //    G2C_EnterMapResponse enter = (G2C_EnterMapResponse)await Gate.Session.Call(new C2G_EnterMapRequest()
-    //    {
-    //        Message = "请求进入地图"
-    //    });
-    //    UnityGameFramework.Runtime.Log.Info(enter.Message);
-    //}
-
     // 测试非RPC消息
     private void MessageTest()
     {
@@ -170,6 +125,4 @@ public partial class FantasyComponent : GameFrameworkComponent
             Message = "测试非RPC消息"
         });
     }
-
-
 }

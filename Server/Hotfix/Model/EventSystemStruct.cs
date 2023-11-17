@@ -5,11 +5,11 @@ public class EventSystemStruct
 {
     public struct StartMove
     {
-        public Unit unit;
+        public PlayerEntity playerEntity;
         public MoveInfo moveInfo;
         public StartMove()
         {
-            unit = null;
+            playerEntity = null;
             moveInfo = null;
         }
     }

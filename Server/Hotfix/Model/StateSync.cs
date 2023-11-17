@@ -1,7 +1,6 @@
 using Fantasy;
 using Fantasy.Core.Network;
 using Fantasy.DataStructure;
-using Fantasy.Helper;
 
 public class StateSync : Entity 
 {
@@ -43,9 +42,9 @@ public class StateSync : Entity
     public void SendMessage(IMessage message)
     {
         
-        var unit = (Unit)Parent;
+        var playerEntity = (PlayerEntity)Parent;
         /// 向玩家发送状态数据
-        MessageHelper.SendInnerRoute(unit.Scene,unit.SessionRuntimeId,
+        MessageHelper.SendInnerRoute(playerEntity.Scene,playerEntity.SessionRuntimeId,
             (IRouteMessage)message
         );
     }

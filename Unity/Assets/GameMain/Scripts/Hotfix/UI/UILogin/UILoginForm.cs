@@ -63,7 +63,7 @@ public partial class UILoginForm : UIFixBaseForm
         G2C_RegisterResponse response = (G2C_RegisterResponse)await GameEntry.Fantasy.Gate.Session.Call(new C2G_RegisterRequest()
         {
             UserName = username,
-            Password = password
+            PassWord = password
         });
         if (response.ErrorCode != 0)
         {
@@ -82,13 +82,17 @@ public partial class UILoginForm : UIFixBaseForm
         G2C_LoginResponse response = (G2C_LoginResponse)await GameEntry.Fantasy.Gate.Session.Call(new C2G_LoginRequest()
         {
             UserName = username,
-            Password = password
+            PassWord = password
         });
         if (response.ErrorCode != 0)
         {
             if (response.ErrorCode == 1)
             {
                 GameEntry.UI.OpenTips("用户名不存在");
+            }
+            else if (response.ErrorCode == 2)
+            {
+                GameEntry.UI.OpenTips("账号或密码错误");
             }
             return;
         }

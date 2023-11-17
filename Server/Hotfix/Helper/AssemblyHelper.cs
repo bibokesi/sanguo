@@ -1,9 +1,6 @@
 using Fantasy.Helper;
 #pragma warning disable CS8603
 
-namespace Fantasy.Hotfix;
-
-
 public static class AssemblyHelper
 {
     public static void Initialize()

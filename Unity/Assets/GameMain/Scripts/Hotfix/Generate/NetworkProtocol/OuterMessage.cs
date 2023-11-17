@@ -21,7 +21,7 @@ namespace Fantasy
 		[ProtoMember(1)]
 		public string UserName { get; set; }
 		[ProtoMember(2)]
-		public string Password { get; set; }
+		public string PassWord { get; set; }
 	}
 	[ProtoContract]
 	public partial class R2C_RegisterResponse : AProto, IResponse
@@ -44,7 +44,7 @@ namespace Fantasy
 		[ProtoMember(1)]
 		public string UserName { get; set; }
 		[ProtoMember(2)]
-		public string Password { get; set; }
+		public string PassWord { get; set; }
 	}
 	[ProtoContract]
 	public partial class R2C_LoginResponse : AProto, IResponse
@@ -70,7 +70,7 @@ namespace Fantasy
 		[ProtoMember(1)]
 		public string UserName { get; set; }
 		[ProtoMember(2)]
-		public string Password { get; set; }
+		public string PassWord { get; set; }
 	}
 	[ProtoContract]
 	public partial class G2C_RegisterResponse : AProto, IResponse
@@ -93,7 +93,7 @@ namespace Fantasy
 		[ProtoMember(1)]
 		public string UserName { get; set; }
 		[ProtoMember(2)]
-		public string Password { get; set; }
+		public string PassWord { get; set; }
 	}
 	[ProtoContract]
 	public partial class G2C_LoginResponse : AProto, IResponse
@@ -113,10 +113,8 @@ namespace Fantasy
 		[ProtoIgnore]
 		public G2C_EnterMapResponse ResponseType { get; set; }
 		public uint OpCode() { return OuterOpcode.C2G_EnterMapRequest; }
-		[ProtoMember(1)]
-		public string Message { get; set; }
 		[ProtoMember(2)]
-		public long CharacterId { get; set; }
+		public long PlayerId { get; set; }
 	}
 	[ProtoContract]
 	public partial class G2C_EnterMapResponse : AProto, IResponse
@@ -125,10 +123,7 @@ namespace Fantasy
 		[ProtoMember(91, IsRequired = true)]
 		public uint ErrorCode { get; set; }
 		[ProtoMember(1)]
-		public string Message { get; set; }
-		///<summary>
-		/// repeated Character Characters = 4;
-		///</summary>
+		public long PlayerId { get; set; }
 	}
 	[ProtoContract]
 	public partial class C2G_TestMessage : AProto, IMessage
@@ -151,32 +146,25 @@ namespace Fantasy
 	///  进入地图
 	/// </summary>
 	[ProtoContract]
-	public partial class G2M_CreateUnitRequest : AProto, IRouteRequest
+	public partial class G2Map_CreatePlayerRequest : AProto, IRouteRequest
 	{
 		[ProtoIgnore]
-		public M2G_CreateUnitResponse ResponseType { get; set; }
-		public uint OpCode() { return OuterOpcode.G2M_CreateUnitRequest; }
+		public Map2G_CreatePlayerResponse ResponseType { get; set; }
+		public uint OpCode() { return OuterOpcode.G2Map_CreatePlayerRequest; }
 		public long RouteTypeOpCode() { return CoreRouteType.Route; }
 		[ProtoMember(1)]
-		public string Message { get; set; }
-		[ProtoMember(2)]
 		public long PlayerId { get; set; }
-		[ProtoMember(3)]
+		[ProtoMember(2)]
 		public long SessionRuntimeId { get; set; }
 	}
 	[ProtoContract]
-	public partial class M2G_CreateUnitResponse : AProto, IRouteResponse
+	public partial class Map2G_CreatePlayerResponse : AProto, IRouteResponse
 	{
-		public uint OpCode() { return OuterOpcode.M2G_CreateUnitResponse; }
+		public uint OpCode() { return OuterOpcode.Map2G_CreatePlayerResponse; }
 		[ProtoMember(91, IsRequired = true)]
 		public uint ErrorCode { get; set; }
 		[ProtoMember(1)]
-		public string Message { get; set; }
-		[ProtoMember(2)]
 		public long AddressableId { get; set; }
-		///<summary>
-		/// Unit Unit = 3;
-		///</summary>
 	}
 	/// <summary>
 	///  -------------------------------- 网关服 - 寻址消息（非网关Scene与客户端通信） --------------------------------------------
@@ -185,19 +173,19 @@ namespace Fantasy
 	///  退出地图
 	/// </summary>
 	[ProtoContract]
-	public partial class C2M_ExitRequest : AProto, IAddressableRouteRequest
+	public partial class C2Map_ExitRequest : AProto, IAddressableRouteRequest
 	{
 		[ProtoIgnore]
-		public M2C_ExitResponse ResponseType { get; set; }
-		public uint OpCode() { return OuterOpcode.C2M_ExitRequest; }
+		public Map2C_ExitResponse ResponseType { get; set; }
+		public uint OpCode() { return OuterOpcode.C2Map_ExitRequest; }
 		public long RouteTypeOpCode() { return CoreRouteType.Addressable; }
 		[ProtoMember(1)]
 		public string Message { get; set; }
 	}
 	[ProtoContract]
-	public partial class M2C_ExitResponse : AProto, IAddressableRouteResponse
+	public partial class Map2C_ExitResponse : AProto, IAddressableRouteResponse
 	{
-		public uint OpCode() { return OuterOpcode.M2C_ExitResponse; }
+		public uint OpCode() { return OuterOpcode.Map2C_ExitResponse; }
 		[ProtoMember(91, IsRequired = true)]
 		public uint ErrorCode { get; set; }
 		[ProtoMember(1)]
@@ -230,9 +218,9 @@ namespace Fantasy
 	///  移动操作
 	/// </summary>
 	[ProtoContract]
-	public partial class C2M_MoveMessage : AProto, IAddressableRouteMessage
+	public partial class C2Map_MoveMessage : AProto, IAddressableRouteMessage
 	{
-		public uint OpCode() { return OuterOpcode.C2M_MoveMessage; }
+		public uint OpCode() { return OuterOpcode.C2Map_MoveMessage; }
 		public long RouteTypeOpCode() { return CoreRouteType.Addressable; }
 		[ProtoMember(1)]
 		public MoveInfo MoveInfo { get; set; }
@@ -241,9 +229,9 @@ namespace Fantasy
 	///  核心状态同步
 	/// </summary>
 	[ProtoContract]
-	public partial class M2C_MoveBroadcast : AProto, IAddressableRouteMessage
+	public partial class Map2C_MoveBroadcast : AProto, IAddressableRouteMessage
 	{
-		public uint OpCode() { return OuterOpcode.M2C_MoveBroadcast; }
+		public uint OpCode() { return OuterOpcode.Map2C_MoveBroadcast; }
 		public long RouteTypeOpCode() { return CoreRouteType.Addressable; }
 		[ProtoMember(1)]
 		public List<MoveInfo> Moves = new List<MoveInfo>();

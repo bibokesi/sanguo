@@ -1,6 +1,5 @@
 using Fantasy.Core.Network;
-
-namespace Fantasy.Hotfix.Base;
+using Fantasy;
 
 /// <summary>
 /// 当Scene创建时需要干什么
@@ -28,8 +27,8 @@ public class OnCreateScene : AsyncEventSystem<Fantasy.OnCreateScene>
                 }
             case SceneType.Map:
                 {
-                    // 挂UnitComponent组件，存取unit
-                    scene.AddComponent<UnitComponent>();
+                    // 挂PlayerManager组件，存取playerEntity
+                    scene.AddComponent<PlayerManager>();
                     break;
                 }
         }

@@ -35,4 +35,17 @@ public class PlayerManager : Singleton<PlayerManager>, BaseManager
 
         PlayerList[serverPlayerId] = playerEntityData;
     }
+
+    public long GetOwnerId()
+    {
+        foreach (var item in PlayerList)
+        {
+            if (item.Value.IsOwner)
+            {
+                return item.Key;
+            }
+        }
+
+        return 0;
+    }
 }

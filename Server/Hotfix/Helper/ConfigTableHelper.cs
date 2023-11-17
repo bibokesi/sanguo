@@ -1,9 +1,8 @@
 using Fantasy.Core;
 using Fantasy.Core.DataBase;
 using Fantasy.Hotfix.Generate.ConfigTable;
+using Fantasy;
 #pragma warning disable CS8603
-
-namespace Fantasy.Hotfix;
 
 public static class ConfigTableHelper
 {

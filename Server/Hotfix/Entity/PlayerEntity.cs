@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Fantasy.Hotfix;
+﻿using Fantasy;
 
 // Id：服务端全局唯一、客户端进程唯一、创建时生成的、并且不会再改变一般用于数据的的ID
 // RuntineId：服务端金局唯一、客户端进程唯一、创建时生成的、会再Deserialize后改变、同样用来表示Entity在服务器的网络位置、通过这个ID可以知道Entity在网络中什么位置
@@ -14,23 +8,25 @@ namespace Fantasy.Hotfix;
 
 public class PlayerEntity : Entity
 {
-    /// 玩家playerId
+    // 玩家playerId
     public long PlayerId;
 
-    /// 在网关缓存一个AddressableId
+    // 在网关缓存一个AddressableId
     public long AddressableId;
 
-    public string UserName;
-    public string PassWord;
-    public long CreateTime;
+    // 存入网关连接SessionRuntimeId
+    public long SessionRuntimeId;
 
+    // 存入MoveInfo
+    public MoveInfo moveInfo;
+
+    // 数据清洗
     public override void Dispose()
     {
         PlayerId = 0;
         AddressableId = 0;
-        UserName = "";
-        PassWord = "";
-        CreateTime = 0;
+        SessionRuntimeId = 0;
+        moveInfo = null;
 
         base.Dispose();
     }
@@ -78,13 +74,5 @@ public class PlayerEntityDeserializeSystem : DeserializeSystem<PlayerEntity>
     }
 }
 
-// 扩展方式，数据逻辑分离
-public static class PlayerEntitySystem
-{ 
-    public static void Add(this PlayerEntity self)
-    {
-
-    }
-}
 
 

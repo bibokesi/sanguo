@@ -1,4 +1,4 @@
-namespace Fantasy.Hotfix.Base;
+using Fantasy;
 
 public static class Entry
 {

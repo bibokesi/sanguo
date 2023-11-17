@@ -6,7 +6,7 @@ package Fantasy.Network.Message;
 message C2R_RegisterRequest // IRequest,R2C_RegisterResponse
 {
 	string UserName = 1;
-	string Password = 2;
+	string PassWord = 2;
 }
 message R2C_RegisterResponse // IResponse
 {
@@ -16,7 +16,7 @@ message R2C_RegisterResponse // IResponse
 message C2R_LoginRequest // IRequest,R2C_LoginResponse
 {
 	string UserName = 1;
-	string Password = 2;
+	string PassWord = 2;
 }
 message R2C_LoginResponse // IResponse
 {
@@ -29,7 +29,7 @@ message R2C_LoginResponse // IResponse
 message C2G_RegisterRequest // IRequest,G2C_RegisterResponse
 {
 	string UserName = 1;
-	string Password = 2;
+	string PassWord = 2;
 }
 message G2C_RegisterResponse // IResponse
 {
@@ -40,24 +40,21 @@ message G2C_RegisterResponse // IResponse
 message C2G_LoginRequest // IRequest,G2C_LoginResponse
 {
 	string UserName = 1;
-	string Password = 2;
+	string PassWord = 2;
 }
 message G2C_LoginResponse // IResponse
 {
 	int64 PlayerId = 1;
 }
 
-
 /// 进入地图
 message C2G_EnterMapRequest // IRequest,G2C_EnterMapResponse
 {
-	string Message = 1;
-	int64 CharacterId = 2;
+	int64 PlayerId = 2;
 }
 message G2C_EnterMapResponse // IResponse
 {
-	string Message = 1;
-	//repeated Character Characters = 4;
+	int64 PlayerId = 1;
 }
 
 // 测试消息，非RPC，注释要用IMessage
@@ -74,27 +71,24 @@ message G2C_TestPushMessage // IMessage
 
 /// -------------------------------- 网关服 - 路由消息（各进程Scene通信） --------------------------------------------
 /// 进入地图
-message G2M_CreateUnitRequest // IRouteRequest,M2G_CreateUnitResponse
+message G2Map_CreatePlayerRequest // IRouteRequest,Map2G_CreatePlayerResponse
 {
-	string Message = 1;
-	int64 PlayerId = 2;
-	int64 SessionRuntimeId = 3;
+	int64 PlayerId = 1;
+	int64 SessionRuntimeId = 2;
 }
-message M2G_CreateUnitResponse // IRouteResponse
+message Map2G_CreatePlayerResponse // IRouteResponse
 {
-	string Message = 1;
-	int64 AddressableId = 2;
-	//Unit Unit = 3;
+	int64 AddressableId = 1;
 }
 
 
 /// -------------------------------- 网关服 - 寻址消息（非网关Scene与客户端通信） --------------------------------------------
 /// 退出地图
-message C2M_ExitRequest // IAddressableRouteRequest,M2C_ExitResponse
+message C2Map_ExitRequest // IAddressableRouteRequest,Map2C_ExitResponse
 {
 	string Message = 1;
 } 
-message M2C_ExitResponse // IAddressableRouteResponse
+message Map2C_ExitResponse // IAddressableRouteResponse
 {
 	string Message = 1;
 }
@@ -111,13 +105,13 @@ message MoveInfo
 	int64 MoveEndTime = 8;
 }
 /// 移动操作
-message C2M_MoveMessage // IAddressableRouteMessage
+message C2Map_MoveMessage // IAddressableRouteMessage
 {
 	MoveInfo MoveInfo = 1;
 }
 /// 核心状态同步
 
-message M2C_MoveBroadcast // IAddressableRouteMessage
+message Map2C_MoveBroadcast // IAddressableRouteMessage
 {
 	repeated MoveInfo Moves = 1;
 }

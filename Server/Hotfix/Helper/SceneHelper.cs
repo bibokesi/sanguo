@@ -1,7 +1,6 @@
 using Fantasy.Helper;
 using Fantasy.Hotfix.Generate.ConfigTable;
-
-namespace Fantasy.Hotfix;
+using Fantasy;
 
 public static class SceneHelper
 {
