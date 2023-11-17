@@ -1,7 +1,7 @@
 ﻿
 public class StateController
 {
-    public HeroEntity Owner
+    public PlayerEntity Owner
     {
         get;
         set;
@@ -25,7 +25,7 @@ public class StateController
             m_CurrentState.OnUpdate(elapseSeconds, realElapseSeconds);
     }
 
-    public StateController(HeroEntity entityLogicBase)
+    public StateController(PlayerEntity entityLogicBase)
     {
         Owner = entityLogicBase;
     }

@@ -13,7 +13,7 @@ public class ProcedureLogin : ProcedureBase
         base.OnEnter(procedureOwner);
 
         // 初始化所有信息管理器
-        ModuleHelper.Instance.OnInit();
+        ModuleManagerHelper.Instance.OnInit();
 
         // 打开界面
         ShowSceneForm(true);
@@ -30,7 +30,7 @@ public class ProcedureLogin : ProcedureBase
         base.OnLeave(procedureOwner, isShutdown);
 
         //清理所有信息管理器
-        //ModuleHelper.GetInstance()?.OnClear();
+        //ModuleManagerHelper.GetInstance()?.OnClear();
 
         ShowSceneForm(false);            
     }

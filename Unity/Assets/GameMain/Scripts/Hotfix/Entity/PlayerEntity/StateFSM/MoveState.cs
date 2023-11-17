@@ -99,7 +99,7 @@ public class MoveState : State
     /// <summary>
     /// 目标
     /// </summary>
-    protected HeroEntity m_Target;
+    protected PlayerEntity m_Target;
     /// <summary>
     /// 距离目标停止距离
     /// </summary>
@@ -107,7 +107,7 @@ public class MoveState : State
     /// <summary>
     /// 到达目标停止回调
     /// </summary>
-    protected Action<HeroEntity, object> m_ReachCallback;
+    protected Action<PlayerEntity, object> m_ReachCallback;
 
     /// <summary>
     /// 移动路径点的索引号
@@ -136,7 +136,7 @@ public class MoveState : State
                         m_MovePos = (Vector3)messengerInfo.param2;
                         break;
                     case MoveType.MoveToTarget:
-                        m_Target = (HeroEntity)messengerInfo.param2;
+                        m_Target = (PlayerEntity)messengerInfo.param2;
                         break;
                     case MoveType.MoveToDir:
                         m_MoveDir = (Vector3)messengerInfo.param2;
@@ -184,7 +184,7 @@ public class MoveState : State
                     m_StopDis = StopDis;
                 }
             }
-            m_ReachCallback = (Action<HeroEntity, object>)messengerInfo.param5;
+            m_ReachCallback = (Action<PlayerEntity, object>)messengerInfo.param5;
         }
     }
 
@@ -371,13 +371,13 @@ public class MoveState : State
             case MoveMode.Null:
                 break;
             case MoveMode.Forward:
-                speed = m_StateController.Owner.HeroEntityData.WalkSpeed;
+                speed = m_StateController.Owner.PlayerEntityData.WalkSpeed;
                 break;
             case MoveMode.ForwardRun:
-                speed = m_StateController.Owner.HeroEntityData.RunSpeed;
+                speed = m_StateController.Owner.PlayerEntityData.RunSpeed;
                 break;
             case MoveMode.Back:
-                speed = m_StateController.Owner.HeroEntityData.BackMoveSpeed;
+                speed = m_StateController.Owner.PlayerEntityData.BackMoveSpeed;
                 break;
             default:
                 break;

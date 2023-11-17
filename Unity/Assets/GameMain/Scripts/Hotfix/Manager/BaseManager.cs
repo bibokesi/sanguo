@@ -1,4 +1,4 @@
-public interface BaseModuleManager
+public interface BaseManager
 {
     public void OnInit();
 

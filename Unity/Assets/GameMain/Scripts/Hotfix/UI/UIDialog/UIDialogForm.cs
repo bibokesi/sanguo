@@ -4,15 +4,13 @@ public partial class UIDialogForm : UIFixBaseForm
 {
 	private UIDialogParams m_DialogParams;
 	protected override void OnInit(object userData) {
-			base.OnInit(userData);
-			GetBindComponents(gameObject);
+		base.OnInit(userData);
+		GetBindComponents(gameObject);
 
-/*--------------------Auto generate start button listener.Do not modify!--------------------*/
-			m_Btn_bg.onClick.AddListener(Btn_bgEvent);
-			m_Btn_Sure.onClick.AddListener(Btn_SureEvent);
-			m_Btn_Cancel.onClick.AddListener(Btn_CancelEvent);
-			m_Btn_Other.onClick.AddListener(Btn_OtherEvent);
-/*--------------------Auto generate end button listener.Do not modify!----------------------*/
+		m_Btn_bg.onClick.AddListener(Btn_bgEvent);
+		m_Btn_Sure.onClick.AddListener(Btn_SureEvent);
+		m_Btn_Cancel.onClick.AddListener(Btn_CancelEvent);
+		m_Btn_Other.onClick.AddListener(Btn_OtherEvent);
 	}
 
 	protected override void OnOpen(object userData)
@@ -57,5 +55,4 @@ public partial class UIDialogForm : UIFixBaseForm
 		m_DialogParams.OnClickOther?.Invoke(m_DialogParams.UserData);
 		Close();
 	}
-/*--------------------Auto generate footer.Do not add anything below the footer!------------*/
 }

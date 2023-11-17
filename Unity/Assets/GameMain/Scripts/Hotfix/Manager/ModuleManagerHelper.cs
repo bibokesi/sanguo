@@ -1,20 +1,18 @@
 using System;
 using System.Collections.Generic;
 
-public class ModuleHelper : SingletonMono<ModuleHelper>
+public class ModuleManagerHelper : SingletonMono<ModuleManagerHelper>
 {
-    public static AccountManager AccountMgr => _AccountMgr ??= AccountManager.Instance;
-    private static AccountManager _AccountMgr;
-    public static RoleManager RoleMgr => _RoleMgr ??= RoleManager.Instance;
-    private static RoleManager _RoleMgr;
+
+    public static PlayerManager RoleMgr => _RoleMgr ??= PlayerManager.Instance;
+    private static PlayerManager _RoleMgr;
 
 
-    private List<BaseModuleManager> m_AllModuleManagers = new();
+    private List<BaseManager> m_AllModuleManagers = new();
 
     protected override void Awake()
     {
         base.Awake();
-        m_AllModuleManagers.Add(AccountMgr);
         m_AllModuleManagers.Add(RoleMgr);
     }
 

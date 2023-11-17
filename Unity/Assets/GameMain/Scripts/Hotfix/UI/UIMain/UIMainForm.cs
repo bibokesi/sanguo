@@ -4,12 +4,10 @@ using UnityGameFramework.Runtime;
 public partial class UIMainForm : UIFixBaseForm
 {
 	protected override void OnInit(object userData) {
-			base.OnInit(userData);
-			GetBindComponents(gameObject);
+		base.OnInit(userData);
+		GetBindComponents(gameObject);
 
-/*--------------------Auto generate start button listener.Do not modify!--------------------*/
 		m_Button_Text.onClick.AddListener(Button_TextEvent);
-/*--------------------Auto generate end button listener.Do not modify!----------------------*/
 	}
 
 	private void Button_TextEvent(){
@@ -19,6 +17,5 @@ public partial class UIMainForm : UIFixBaseForm
             procedureBase.ChangeStateByType(procedureBase.ProcedureOwner, typeof(ProcedureCheckAssets));
         }
     }
-    /*--------------------Auto generate footer.Do not add anything below the footer!------------*/
 }
 

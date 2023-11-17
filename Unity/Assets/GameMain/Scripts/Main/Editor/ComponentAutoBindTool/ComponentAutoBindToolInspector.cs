@@ -630,9 +630,9 @@ public class ComponentAutoBindToolInspector : Editor
             Directory.CreateDirectory(codePath);
         }
 
-        string btnStart =   "/*--------------------Auto generate start button listener.Do not modify!--------------------*/";
-        string btnEnd =     "/*--------------------Auto generate end button listener.Do not modify!----------------------*/";
-        string scriptEnd =  "/*--------------------Auto generate footer.Do not add anything below the footer!------------*/";
+        string btnStart =   "";
+        string btnEnd =     "";
+        string scriptEnd =  "";
         string scriptEndK = "\t}\n}";
         Dictionary<string, string> clickFuncDict = new Dictionary<string, string>();
         for (int i = 0; i < m_Target.BindDatas.Count; i++)
@@ -662,7 +662,7 @@ public class ComponentAutoBindToolInspector : Editor
                 sw.WriteLine("\tpublic partial class " + className + " : UIFixBaseForm\n\t{");
     
                 #region OnInit
-                sw.WriteLine("\t\tprotected override void OnInit(object userData) {\n\t\t\t base.OnInit(userData);\n\t\t\t GetBindComponents(gameObject);\n");         //   OnInit
+                sw.WriteLine("\t\tprotected override void OnInit(object userData) {\n\t\t\tbase.OnInit(userData);\n\t\t\tGetBindComponents(gameObject);\n");         //   OnInit
                 sw.WriteLine(btnStart);
                 foreach (var clickFunc in clickFuncDict)
                 {

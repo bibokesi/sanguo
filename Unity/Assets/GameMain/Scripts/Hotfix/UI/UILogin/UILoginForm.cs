@@ -1,31 +1,32 @@
-﻿using dnlib.DotNet;
+﻿
 using Fantasy;
 using Fantasy.Core.Network;
 using Main.Runtime;
 using UnityGameFramework.Runtime;
 
+
 public partial class UILoginForm : UIFixBaseForm
 {
 	protected override void OnInit(object userData) {
-			base.OnInit(userData);
-			GetBindComponents(gameObject);
+		base.OnInit(userData);
+		GetBindComponents(gameObject);
 
-/*--------------------Auto generate start button listener.Do not modify!--------------------*/
 		m_Button_Login.onClick.AddListener(Button_LoginEvent);
 		m_Button_Register.onClick.AddListener(Button_RegisterEvent);
+		m_Button_Enter.onClick.AddListener(Button_EnterEvent);
 
         Show();
 
-        /*--------------------Auto generate end button listener.Do not modify!----------------------*/
-    }
-
+	}
     private void Show()
     {
+        m_Transform_LoginPanel.gameObject.SetActive(true);
+        m_Transform_EnterPanel.gameObject.SetActive(false);
         m_InputField_UserName.text = GameEntry.Setting.GetString(Const.Setting.UserName);
         m_InputField_PassWord.text = GameEntry.Setting.GetString(Const.Setting.PassWord);
     }
 
-	private void Button_RegisterEvent()
+    private void Button_RegisterEvent()
     {
         if (m_InputField_UserName.text == "")
         {
@@ -57,7 +58,6 @@ public partial class UILoginForm : UIFixBaseForm
         Login(m_InputField_UserName.text, m_InputField_PassWord.text).Coroutine();
     }
 
-    // 注册realm账号
     public async FTask Register(string username, string password)
     {
         G2C_RegisterResponse response = (G2C_RegisterResponse)await GameEntry.Fantasy.Gate.Session.Call(new C2G_RegisterRequest()
@@ -77,7 +77,6 @@ public partial class UILoginForm : UIFixBaseForm
         GameEntry.UI.OpenTips("注册成功");
     }
 
-    // 登录realm账号
     public async FTask Login(string username, string password)
     {
         G2C_LoginResponse response = (G2C_LoginResponse)await GameEntry.Fantasy.Gate.Session.Call(new C2G_LoginRequest()
@@ -94,11 +93,21 @@ public partial class UILoginForm : UIFixBaseForm
             return;
         }
 
+        // 存档
         GameEntry.UI.OpenTips("登录成功");
         GameEntry.Setting.SetString(Const.Setting.UserName, m_InputField_UserName.text);
         GameEntry.Setting.SetString(Const.Setting.PassWord, m_InputField_PassWord.text);
         GameEntry.Setting.Save();
 
+        // 缓存数据
+        PlayerManager.Instance.AddPlayer(response.PlayerId, m_InputField_UserName.text, m_InputField_PassWord.text, true);
+
+        m_Transform_LoginPanel.gameObject.SetActive(false);
+        m_Transform_EnterPanel.gameObject.SetActive(true);
+    }
+
+    private void Button_EnterEvent()
+    {
         if (GameEntry.Procedure.CurrentProcedure is ProcedureBase procedureBase)
         {
             procedureBase.ProcedureOwner.SetData<VarString>("nextProcedure", Const.Procedure.ProcedureMain);
@@ -138,7 +147,5 @@ public partial class UILoginForm : UIFixBaseForm
         //dialogParams.Message = $"333";
         //GameEntry.UI.OpenDialog(dialogParams);
     }
-
-    /*--------------------Auto generate footer.Do not add anything below the footer!------------*/
 }
 

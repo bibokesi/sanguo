@@ -12,9 +12,7 @@ public partial class UIDemoGridListForm : UIFixBaseForm
         base.OnInit(userData);
         GetBindComponents(gameObject);
 
-        /*--------------------Auto generate start button listener.Do not modify!--------------------*/
         m_Button_Back.onClick.AddListener(Button_BackEvent);
-        /*--------------------Auto generate end button listener.Do not modify!----------------------*/
 
         //获取数据, 设置ListView
         m_DataList = new List<UIDemoGridItemData>();
@@ -87,8 +85,6 @@ public partial class UIDemoGridListForm : UIFixBaseForm
         return item;
     }
 
-      
-
     void OnListViewItemClicked(int index)
     {
         GameEntry.UI.OpenTips(index.ToString());
@@ -98,6 +94,5 @@ public partial class UIDemoGridListForm : UIFixBaseForm
     {
         Close();
     }
-    /*--------------------Auto generate footer.Do not add anything below the footer!------------*/
 }
 

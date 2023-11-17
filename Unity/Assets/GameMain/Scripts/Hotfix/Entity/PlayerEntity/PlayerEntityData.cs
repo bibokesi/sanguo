@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-public class HeroEntityData : EntityData
+public class PlayerEntityData : EntityData
 {
     public float ConstantSpeed { get; set; } = 0;
     public bool UnUseGravity { get; set; } = true;
@@ -17,7 +17,13 @@ public class HeroEntityData : EntityData
     public int InitAIStateId = 0;
 
     public float Radius = 0.5f;
-    public HeroEntityData(int entityId, int typeId, string groupName, string assetName) : base(entityId, typeId, groupName, assetName)
+
+
+    public long serverPlayerId = 0;
+    public string username = string.Empty;
+    public string password = string.Empty;
+
+    public PlayerEntityData(int entityId, int typeId, string groupName, string assetName) : base(entityId, typeId, groupName, assetName)
     {
 
     }

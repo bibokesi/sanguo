@@ -2,7 +2,7 @@
 <UnityGameFramework>
   <ResourceCollection>
     <Resources>
-      <Resource Name="BaseAssets/Entity/RoleEntity/Blade_girl" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
+      <Resource Name="BaseAssets/Entity/PlayerEntity/Blade_girl" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/Entity/UIEntity/Ball_Machine" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/Fonts" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
       <Resource Name="BaseAssets/Prefabs" LoadType="0" Packed="True" ResourceGroups="BaseAssets" />
@@ -39,7 +39,7 @@
       <Asset Guid="17ec5b8f543c59345bc1257ec50c7228" ResourceName="BaseAssets/Scenes/Login" />
       <Asset Guid="18c562febc6780b428cdf121c09416b8" ResourceName="BaseAssets/UI/UISprite/SelectMode" />
       <Asset Guid="19d1f77867b631b4e8af112eb72e9daf" ResourceName="BaseAssets/Sounds/UISound/ui_click_button" />
-      <Asset Guid="1a3ec063b469b9942b3c8a182e51d640" ResourceName="BaseAssets/Entity/RoleEntity/Blade_girl" />
+      <Asset Guid="1a3ec063b469b9942b3c8a182e51d640" ResourceName="BaseAssets/Entity/PlayerEntity/Blade_girl" />
       <Asset Guid="1b2c03b8f7cf2004a8cceb6334fa0d34" ResourceName="BaseAssets/UI/UIAtlas/Common" />
       <Asset Guid="24f9961372fb6c2439df9fbc7f4c0f79" ResourceName="BaseAssets/Scenes/Fight" />
       <Asset Guid="286e4df74e44d33448b6dd82f9a8ec62" ResourceName="BaseAssets/UI/UISprite/Others" />

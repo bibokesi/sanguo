@@ -7,7 +7,7 @@ using UnityEngine;
 /// </summary>
 public class RoleControllerManager
 {
-    private HeroEntity m_Owner;
+    private PlayerEntity m_Owner;
     /// <summary>
     /// 是否在地面上
     /// </summary>
@@ -43,16 +43,16 @@ public class RoleControllerManager
     /// </summary>
     public float ConstantSpeed { get; set; }
 
-    public RoleControllerManager(HeroEntity owner, CharacterController characterController)
+    public RoleControllerManager(PlayerEntity owner, CharacterController characterController)
     {
         m_Owner = owner;
         m_CharacterController = characterController;
-        ConstantSpeed = m_Owner.HeroEntityData.ConstantSpeed;
+        ConstantSpeed = m_Owner.PlayerEntityData.ConstantSpeed;
     }
 
     public void Update(float elapseSeconds, float realElapseSeconds)
     {
-        if (!m_Owner.HeroEntityData.UnUseGravity)
+        if (!m_Owner.PlayerEntityData.UnUseGravity)
         {
             UpdateGravity(elapseSeconds);
         }

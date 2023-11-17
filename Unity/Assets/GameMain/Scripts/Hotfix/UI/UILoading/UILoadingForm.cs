@@ -11,11 +11,7 @@ public partial class UILoadingForm : UIFixBaseForm
 
         m_curProgress = 0;
         m_loadComplete = false;
-
-/*--------------------Auto generate start button listener.Do not modify!--------------------*/
-        /*--------------------Auto generate end button listener.Do not modify!----------------------*/
     }
-
 
     public void OnRefreshLoadingProgress(float curProgress, float totalProgress, string tips = "")
     {
@@ -36,7 +32,5 @@ public partial class UILoadingForm : UIFixBaseForm
         }
         OnRefreshLoadingProgress(m_curProgress, 100, m_curProgress.ToString() + "%");
     }
-
-    /*--------------------Auto generate footer.Do not add anything below the footer!------------*/
 }
 

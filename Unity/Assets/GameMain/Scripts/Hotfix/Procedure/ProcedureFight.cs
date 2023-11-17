@@ -47,9 +47,9 @@ public class ProcedureFight : ProcedureBase
 
     void ShowEntity()
     {
-        HeroEntityData characterData = new HeroEntityData(GameEntry.Entity.GenEntityId(), 1, Const.EntityGroup.RoleEntity, "Blade_girl");
-        characterData.Position = new UnityEngine.Vector3(142, 2, 68);
-        characterData.IsOwner = true;
-        GameEntry.Entity.ShowEntity(typeof(HeroEntity), Const.EntityGroup.RoleEntity, 1, characterData);
+        PlayerEntityData playerEntityData = new PlayerEntityData(GameEntry.Entity.GenEntityId(), 1, Const.EntityGroup.PlayerEntity, "Blade_girl");
+        playerEntityData.Position = new UnityEngine.Vector3(142, 2, 68);
+        playerEntityData.IsOwner = true;
+        GameEntry.Entity.ShowEntity(typeof(PlayerEntity), Const.EntityGroup.PlayerEntity, 1, playerEntityData);
     }
 }

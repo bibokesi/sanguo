@@ -7,12 +7,10 @@ public partial class UIDemoListForm : UIFixBaseForm
     List<UIDemoItemData> m_DataList = null;
 
     protected override void OnInit(object userData) {
-			base.OnInit(userData);
-			GetBindComponents(gameObject);
+		base.OnInit(userData);
+		GetBindComponents(gameObject);
 
-/*--------------------Auto generate start button listener.Do not modify!--------------------*/
-		m_Button_Back.onClick.AddListener(Button_BackEvent);
-        /*--------------------Auto generate end button listener.Do not modify!----------------------*/
+    	m_Button_Back.onClick.AddListener(Button_BackEvent);
 
         //获取数据, 设置ListView
         m_DataList = new List<UIDemoItemData>();
@@ -95,6 +93,5 @@ public partial class UIDemoListForm : UIFixBaseForm
     {
         Close();
     }
-    /*--------------------Auto generate footer.Do not add anything below the footer!------------*/
 }
 

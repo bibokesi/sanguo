@@ -4,14 +4,12 @@ using System;
 using UnityEngine;
 
 
-public partial class HeroEntity : EntityLogicBase
+public partial class PlayerEntity : EntityLogicBase
 {
-    public EntityEnum EntityType = EntityEnum.Player;
-
     private bool m_isMoveing = false;
 
-    private HeroEntityData m_CharacterData;
-    public HeroEntityData HeroEntityData { get { return m_CharacterData; } private set { m_CharacterData = value; } }
+    private PlayerEntityData m_CharacterData;
+    public PlayerEntityData PlayerEntityData { get { return m_CharacterData; } private set { m_CharacterData = value; } }
 
     public GameObject CharacterModel { get; private set; }
     public Animator Animator { get; private set; }
@@ -22,8 +20,8 @@ public partial class HeroEntity : EntityLogicBase
     public MoveState MoveState { get; set; }
     public JumpState JumpState { get; set; }
 
-    private HeroEntity m_MyCurrentTarget;
-    public HeroEntity MyCurrentTarget
+    private PlayerEntity m_MyCurrentTarget;
+    public PlayerEntity MyCurrentTarget
     {
         get { return m_MyCurrentTarget; }
         set
@@ -118,9 +116,9 @@ public partial class HeroEntity : EntityLogicBase
     {
         base.OnShow(userData);
 
-        HeroEntityData = (HeroEntityData)userData;
-        if (HeroEntityData == null) { Logger.Error("characterData is invalid."); return; }
-        CachedTransform.position = HeroEntityData.Position;
+        PlayerEntityData = (PlayerEntityData)userData;
+        if (PlayerEntityData == null) { Logger.Error("playerEntityData is invalid."); return; }
+        CachedTransform.position = PlayerEntityData.Position;
         CharacterModel = CachedTransform.Find("Model").gameObject;
         Animator = CharacterModel.GetComponent<Animator>();
         CharacterController controller = CachedTransform.GetComponent<CharacterController>();
@@ -133,7 +131,7 @@ public partial class HeroEntity : EntityLogicBase
         GameEntry.Messenger.RegisterEvent(EventName.EVENT_CS_GAME_MOVE_DIRECTION, OnHandleMoveDirectionCallback);
         GameEntry.Messenger.RegisterEvent(EventName.EVENT_CS_GAME_MOVE_END, OnHandleMoveEndCallback);
         GameEntry.Messenger.RegisterEvent(EventName.EVENT_CS_GAME_START_JUMP, OnHandleJumpCallback);
-        HeroEntityData entityData = userData as HeroEntityData;
+        PlayerEntityData entityData = userData as PlayerEntityData;
         if (entityData == null)
             return;
         if (entityData.IsOwner)
@@ -182,7 +180,7 @@ public partial class HeroEntity : EntityLogicBase
                 eulerY = freeRotation.eulerAngles.y;
             }
             Vector3 euler = new Vector3(0, eulerY, 0);
-            CachedTransform.rotation = Quaternion.Slerp(CachedTransform.rotation, Quaternion.Euler(euler), Time.deltaTime * HeroEntityData.TurningSpeed);
+            CachedTransform.rotation = Quaternion.Slerp(CachedTransform.rotation, Quaternion.Euler(euler), Time.deltaTime * PlayerEntityData.TurningSpeed);
         }
     }
 
@@ -257,7 +255,7 @@ public partial class HeroEntity : EntityLogicBase
             MoveState.SetParam(messengerInfo1);
             StateController.OnChangeState(MoveState);
         }
-        if (HeroEntityData.JumpCanMove)
+        if (PlayerEntityData.JumpCanMove)
         {
             //RoleControllerManager.OnMove();
         }
@@ -283,7 +281,7 @@ public partial class HeroEntity : EntityLogicBase
             return null;
         }
         SetMoveMode(MoveState.MoveMode == MoveMode.ForwardRun ? MoveMode.JumpRun : MoveMode.Jump);
-        RoleControllerManager.CharacterGravitySpeed = HeroEntityData.JumpPower;
+        RoleControllerManager.CharacterGravitySpeed = PlayerEntityData.JumpPower;
         StateController.OnChangeState(JumpState);
         return null;
     }

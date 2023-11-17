@@ -4,11 +4,8 @@ using UnityEngine;
 public partial class UITipsForm : UIFixBaseForm
 {
 	protected override void OnInit(object userData) {
-			base.OnInit(userData);
-			GetBindComponents(gameObject);
-
-/*--------------------Auto generate start button listener.Do not modify!--------------------*/
-/*--------------------Auto generate end button listener.Do not modify!----------------------*/
+		base.OnInit(userData);
+		GetBindComponents(gameObject);
 	}
 
 	protected override void OnOpen(object userData)
@@ -29,5 +26,4 @@ public partial class UITipsForm : UIFixBaseForm
 		m_Img_bg.enabled = isOpenBg;
 		m_Img_bg.transform.DOMoveY(3, 1f).OnComplete(Close);
 	}
-	/*--------------------Auto generate footer.Do not add anything below the footer!------------*/
 }
