@@ -125,7 +125,7 @@ public class AssetObjectComponent : GameFrameworkComponent
         {
             AssetObjectInfo assetObjectInfo = AssetObjectInfo.Create(nLoadSerial, strPath, strShowName);
             m_AssetObjectBeingLoaded.Add(nLoadSerial, strPath);
-            GameEntry.Resource.LoadAsset(strPath, assetType, Constant.AssetPriority.SceneAsset, m_LoadAssetCallbacks, assetObjectInfo);
+            GameEntry.Resource.LoadAsset(strPath, assetType, Const.AssetPriority.SceneAsset, m_LoadAssetCallbacks, assetObjectInfo);
         }
         else
         {
@@ -143,7 +143,7 @@ public class AssetObjectComponent : GameFrameworkComponent
         {
             AssetObjectInfo assetObjectInfo = AssetObjectInfo.Create(nLoadSerial, strPath, strShowName,true);
             m_AssetObjectBeingLoaded.Add(nLoadSerial, strPath);
-            //GameEntry.Resource.LoadAsset(strPath, assetType, Constant.AssetPriority.SceneUnit, m_LoadAssetCallbacks, assetObjectInfo);
+            //GameEntry.Resource.LoadAsset(strPath, assetType, Const.AssetPriority.SceneUnit, m_LoadAssetCallbacks, assetObjectInfo);
             StartCoroutine(IELoadBundle(assetObjectInfo));
         }
         else

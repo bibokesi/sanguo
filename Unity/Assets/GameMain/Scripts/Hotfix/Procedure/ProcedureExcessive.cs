@@ -16,7 +16,7 @@ public class ProcedureExcessive : ProcedureBase
             Logger.Error<ProcedureExcessive>("m_NextProcedure is Null");
             return;
         }
-        bool needChangeScene = Constant.Procedure.NeedChangeScene(m_NextProcedure);
+        bool needChangeScene = Const.Procedure.NeedChangeScene(m_NextProcedure);
         if (needChangeScene)
         {
             m_ProcedureOwner.SetData<VarString>("nextProcedure", m_NextProcedure);

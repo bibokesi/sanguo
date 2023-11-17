@@ -30,7 +30,7 @@ namespace Fantasy
 		[ProtoMember(91, IsRequired = true)]
 		public uint ErrorCode { get; set; }
 		[ProtoMember(1)]
-		public string Message { get; set; }
+		public long PlayerId { get; set; }
 	}
 	/// <summary>
 	///  登录账号
@@ -53,55 +53,56 @@ namespace Fantasy
 		[ProtoMember(91, IsRequired = true)]
 		public uint ErrorCode { get; set; }
 		[ProtoMember(1)]
-		public string Message { get; set; }
+		public long PlayerId { get; set; }
 	}
 	/// <summary>
 	///  -------------------------------- 网关服 - 网关消息（网关与客户端通信） --------------------------------------------
 	/// </summary>
 	/// <summary>
-	///  登录网关
+	///  注册账号
 	/// </summary>
 	[ProtoContract]
-	public partial class C2G_LoginGateRequest : AProto, IRequest
+	public partial class C2G_RegisterRequest : AProto, IRequest
 	{
 		[ProtoIgnore]
-		public G2C_LoginGateResponse ResponseType { get; set; }
-		public uint OpCode() { return OuterOpcode.C2G_LoginGateRequest; }
+		public G2C_RegisterResponse ResponseType { get; set; }
+		public uint OpCode() { return OuterOpcode.C2G_RegisterRequest; }
 		[ProtoMember(1)]
-		public string Message { get; set; }
+		public string UserName { get; set; }
+		[ProtoMember(2)]
+		public string Password { get; set; }
 	}
 	[ProtoContract]
-	public partial class G2C_LoginGateResponse : AProto, IResponse
+	public partial class G2C_RegisterResponse : AProto, IResponse
 	{
-		public uint OpCode() { return OuterOpcode.G2C_LoginGateResponse; }
+		public uint OpCode() { return OuterOpcode.G2C_RegisterResponse; }
 		[ProtoMember(91, IsRequired = true)]
 		public uint ErrorCode { get; set; }
 		[ProtoMember(1)]
-		public string Message { get; set; }
+		public long PlayerId { get; set; }
 	}
 	/// <summary>
-	///  创建角色
+	///  登录账号
 	/// </summary>
 	[ProtoContract]
-	public partial class C2G_CreateCharacterRequest : AProto, IRequest
+	public partial class C2G_LoginRequest : AProto, IRequest
 	{
 		[ProtoIgnore]
-		public G2C_CreateCharacterResponse ResponseType { get; set; }
-		public uint OpCode() { return OuterOpcode.C2G_CreateCharacterRequest; }
+		public G2C_LoginResponse ResponseType { get; set; }
+		public uint OpCode() { return OuterOpcode.C2G_LoginRequest; }
 		[ProtoMember(1)]
-		public string Message { get; set; }
+		public string UserName { get; set; }
+		[ProtoMember(2)]
+		public string Password { get; set; }
 	}
 	[ProtoContract]
-	public partial class G2C_CreateCharacterResponse : AProto, IResponse
+	public partial class G2C_LoginResponse : AProto, IResponse
 	{
-		public uint OpCode() { return OuterOpcode.G2C_CreateCharacterResponse; }
+		public uint OpCode() { return OuterOpcode.G2C_LoginResponse; }
 		[ProtoMember(91, IsRequired = true)]
 		public uint ErrorCode { get; set; }
 		[ProtoMember(1)]
-		public string Message { get; set; }
-		///<summary>
-		/// Character Character = 2;
-		///</summary>
+		public long PlayerId { get; set; }
 	}
 	/// <summary>
 	///  进入地图

@@ -26,7 +26,7 @@ public class ProcedurePreload : ProcedureBase
         {
             if (GameEntry.Procedure.CurrentProcedure is ProcedureBase procedureBase)
             {
-                procedureBase.ProcedureOwner.SetData<VarString>("nextProcedure", Constant.Procedure.ProcedureLogin);
+                procedureBase.ProcedureOwner.SetData<VarString>("nextProcedure", Const.Procedure.ProcedureLogin);
                 procedureBase.ChangeStateByType(procedureBase.ProcedureOwner, typeof(ProcedureCheckAssets));
             }
         }

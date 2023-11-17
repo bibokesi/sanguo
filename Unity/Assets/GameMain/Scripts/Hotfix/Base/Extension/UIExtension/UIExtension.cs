@@ -117,7 +117,7 @@ public static class UIExtension
             }
         }
         Logger.Debug<UIComponent>("OpenUIForm: " + assetName);
-        return uiComponent.OpenUIForm(assetName, uiFormInfo.UIGroupName.ToString(), Constant.AssetPriority.UIFormAsset, uiFormInfo.PauseCoveredUIForm, userData);
+        return uiComponent.OpenUIForm(assetName, uiFormInfo.UIGroupName.ToString(), Const.AssetPriority.UIFormAsset, uiFormInfo.PauseCoveredUIForm, userData);
     }
 
     /// <summary>

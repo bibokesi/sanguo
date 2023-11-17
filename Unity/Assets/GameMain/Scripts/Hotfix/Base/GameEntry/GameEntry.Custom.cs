@@ -204,7 +204,7 @@ public partial class GameEntry
     }
 
     private static List<Assembly> m_HotfixAssemblys = new List<Assembly>();
-    private static string m_EntranceProcedureTypeName = "Hotfix.Procedure.ProcedurePreload";
+    private static string m_EntranceProcedureTypeName = "ProcedurePreload";
 
     private static void ResetProcedure()
     {

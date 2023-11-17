@@ -125,7 +125,7 @@ public class RoleControllerManager
 #if UNITY_EDITOR
         Debug.DrawLine(startPos, m_Owner.CachedTransform.position, Color.blue);
 #endif
-        return Physics.Raycast(startPos, Vector3.down, 2.1f, 1 << Constant.Leyer.GroundLayerId);
+        return Physics.Raycast(startPos, Vector3.down, 2.1f, 1 << Const.Leyer.GroundLayerId);
     }
     #region 角色运动处理
     /// <summary>

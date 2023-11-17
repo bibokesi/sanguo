@@ -10,7 +10,7 @@ message C2R_RegisterRequest // IRequest,R2C_RegisterResponse
 }
 message R2C_RegisterResponse // IResponse
 {
-	string Message = 1;
+	int64 PlayerId = 1;
 }
 /// 登录账号
 message C2R_LoginRequest // IRequest,R2C_LoginResponse
@@ -20,29 +20,34 @@ message C2R_LoginRequest // IRequest,R2C_LoginResponse
 }
 message R2C_LoginResponse // IResponse
 {
-	string Message = 1;
+	int64 PlayerId = 1;
 }
 
 /// -------------------------------- 网关服 - 网关消息（网关与客户端通信） --------------------------------------------
-/// 登录网关
-message C2G_LoginGateRequest // IRequest,G2C_LoginGateResponse
+
+/// 注册账号
+message C2G_RegisterRequest // IRequest,G2C_RegisterResponse
 {
-	string Message = 1;
+	string UserName = 1;
+	string Password = 2;
 }
-message G2C_LoginGateResponse // IResponse
+message G2C_RegisterResponse // IResponse
 {
-	string Message = 1;
+	int64 PlayerId = 1;
 }
-/// 创建角色
-message C2G_CreateCharacterRequest // IRequest,G2C_CreateCharacterResponse
+
+/// 登录账号
+message C2G_LoginRequest // IRequest,G2C_LoginResponse
 {
-	string Message = 1;
+	string UserName = 1;
+	string Password = 2;
 }
-message G2C_CreateCharacterResponse // IResponse
+message G2C_LoginResponse // IResponse
 {
-	string Message = 1;
-	//Character Character = 2;
+	int64 PlayerId = 1;
 }
+
+
 /// 进入地图
 message C2G_EnterMapRequest // IRequest,G2C_EnterMapResponse
 {

@@ -50,7 +50,7 @@ public class ProcedureCheckAssets : ProcedureBase
     {
         base.OnEnter(procedureOwner);
         m_NextProcedure = procedureOwner.GetData<VarString>("nextProcedure");
-        m_AssetGroupName = Constant.Procedure.FindAssetGroup(m_NextProcedure);
+        m_AssetGroupName = Const.Procedure.FindAssetGroup(m_NextProcedure);
         m_NoticeUpdate = false;
             
         m_UpdateResourceInfos.Clear();
@@ -81,7 +81,7 @@ public class ProcedureCheckAssets : ProcedureBase
         GameEntry.Setting.SetString("nextProcedure",m_NextProcedure);
         if (m_IsExcessive)
         {
-            GameEntry.ResetProcedure(Constant.Procedure.ProcedureExcessive);
+            GameEntry.ResetProcedure(Const.Procedure.ProcedureExcessive);
         }
         else
         {
@@ -149,7 +149,7 @@ public class ProcedureCheckAssets : ProcedureBase
         }
         else
         {
-            bool needCheckAsset = Constant.Procedure.NeedCheckAsset(m_NextProcedure);
+            bool needCheckAsset = Const.Procedure.NeedCheckAsset(m_NextProcedure);
             if (!needCheckAsset)
             {
                 OnNoticeUpdate();

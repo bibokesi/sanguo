@@ -3,9 +3,9 @@ using Fantasy.Helper;
 using Fantasy;
 using Fantasy.Hotfix;
 
-public class C2R_RegisterRequestHandler : MessageRPC<C2R_RegisterRequest, R2C_RegisterResponse>
+public class C2G_RegisterRequestHandler : MessageRPC<C2G_RegisterRequest, G2C_RegisterResponse>
 {
-    protected override async FTask Run(Session session, C2R_RegisterRequest request, R2C_RegisterResponse response, Action reply)
+    protected override async FTask Run(Session session, C2G_RegisterRequest request, G2C_RegisterResponse response, Action reply)
     {
         if (request.UserName == "" || request.Password == "")
         {
@@ -18,7 +18,7 @@ public class C2R_RegisterRequestHandler : MessageRPC<C2R_RegisterRequest, R2C_Re
         {
             // 用户名重复
             response.ErrorCode = 1;
-            await FTask.CompletedTask;
+            return;
         }
 
         var playerEntity = session.AddComponent<PlayerEntity>();
@@ -32,6 +32,9 @@ public class C2R_RegisterRequestHandler : MessageRPC<C2R_RegisterRequest, R2C_Re
         playerEntity.PlayerId = playerEntity.Id;
         playerEntity.UserName = request.UserName;
         playerEntity.PassWord = request.Password;
+
+        var scene = session.Scene;
+        var scene2 = playerEntity.Scene;
         await db.Save(playerEntity);
 
         await FTask.CompletedTask;

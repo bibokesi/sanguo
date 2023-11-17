@@ -15,7 +15,7 @@ public partial class UIFightForm : UIFixBaseForm
 	private void Button_TextEvent(){
         if (GameEntry.Procedure.CurrentProcedure is ProcedureBase procedureBase)
         {
-            procedureBase.ProcedureOwner.SetData<VarString>("nextProcedure", Constant.Procedure.ProcedureMain);
+            procedureBase.ProcedureOwner.SetData<VarString>("nextProcedure", Const.Procedure.ProcedureMain);
             procedureBase.ChangeStateByType(procedureBase.ProcedureOwner, typeof(ProcedureCheckAssets));
         }
     }

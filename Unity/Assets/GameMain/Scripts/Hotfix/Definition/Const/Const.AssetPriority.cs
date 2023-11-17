@@ -2,7 +2,7 @@
 /// <summary>
 /// 游戏常量类
 /// </summary>
-public static partial class Constant
+public static partial class Const
 {
     /// <summary>
     /// 资源优先级常量

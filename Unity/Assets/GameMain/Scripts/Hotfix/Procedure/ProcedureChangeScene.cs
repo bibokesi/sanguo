@@ -58,12 +58,12 @@ public class ProcedureChangeScene : ProcedureBase
     void OnStartLoadScene()
     {
         UnloadAllResources();
-        bool needChangeScene = Constant.Procedure.NeedChangeScene(m_NextProcedure);
+        bool needChangeScene = Const.Procedure.NeedChangeScene(m_NextProcedure);
         if (needChangeScene)
         {
-            string sceneName = Constant.Procedure.FindSceneName(m_NextProcedure);
+            string sceneName = Const.Procedure.FindSceneName(m_NextProcedure);
             string scenePath = AssetUtility.Scene.GetSceneAsset(sceneName);
-            GameEntry.Scene.LoadScene(scenePath, Constant.AssetPriority.SceneAsset);
+            GameEntry.Scene.LoadScene(scenePath, Const.AssetPriority.SceneAsset);
         }
     }
 

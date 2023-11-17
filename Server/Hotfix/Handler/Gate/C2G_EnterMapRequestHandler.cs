@@ -7,14 +7,14 @@ public class C2G_EnterMapRequestHandler : MessageRPC<C2G_EnterMapRequest,G2C_Ent
 {
     protected override async FTask Run(Session session, C2G_EnterMapRequest request, G2C_EnterMapResponse response, Action reply)
     {
-        var sessionPlayer = session.GetComponent<SessionPlayerComponent>();
+        var sessionPlayer = session.GetComponent<PlayerEntity>();
 
         // 向map请求创建unit
         var entityId = SceneHelper.GetSceneEntityId(ServerConfigID.Map);
         var result = (M2G_CreateUnitResponse)await MessageHelper.CallInnerRoute(session.Scene,entityId,
         new G2M_CreateUnitRequest()
         {
-            PlayerId = sessionPlayer.playerId,
+            PlayerId = sessionPlayer.PlayerId,
             SessionRuntimeId = session.RuntimeId,
         });
 

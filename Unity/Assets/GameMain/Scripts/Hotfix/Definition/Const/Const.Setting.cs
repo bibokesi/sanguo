@@ -2,7 +2,7 @@
 /// <summary>
 /// 游戏常量类
 /// </summary>
-public static partial class Constant
+public static partial class Const
 {
     /// <summary>
     /// 资源优先级常量
@@ -17,5 +17,8 @@ public static partial class Constant
         public const string SoundVolume = "Setting.SoundVolume";
         public const string UISoundMuted = "Setting.UISoundMuted";
         public const string UISoundVolume = "Setting.UISoundVolume";
+
+        public const string UserName = "UserName";
+        public const string PassWord = "PassWord";
     }
 }

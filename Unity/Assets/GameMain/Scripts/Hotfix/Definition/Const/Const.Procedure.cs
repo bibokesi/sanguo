@@ -4,7 +4,7 @@
 /// <summary>
 /// 游戏常量类
 /// </summary>
-public static partial class Constant
+public static partial class Const
 {
     public class ProcedureInfo
     {
@@ -30,10 +30,10 @@ public static partial class Constant
 
     public static class Procedure
     {
-        public const string ProcedureExcessive = "Hotfix.Procedure.ProcedureExcessive";
-        public const string ProcedureLogin = "Hotfix.Procedure.ProcedureLogin";
-        public const string ProcedureMain = "Hotfix.Procedure.ProcedureMain";
-        public const string ProcedureFight = "Hotfix.Procedure.ProcedureFight";
+        public const string ProcedureExcessive = "ProcedureExcessive";
+        public const string ProcedureLogin = "ProcedureLogin";
+        public const string ProcedureMain = "ProcedureMain";
+        public const string ProcedureFight = "ProcedureFight";
 
         private static Dictionary<string, ProcedureInfo> ProcedureInfos = new Dictionary<string, ProcedureInfo>()
         {

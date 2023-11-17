@@ -153,6 +153,38 @@ PrefabInstance:
       propertyPath: m_ActiveWindow
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1263591742159171402, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_EntranceProcedureTypeName
+      value: Main.Runtime.ProcedureLauncher
+      objectReference: {fileID: 0}
+    - target: {fileID: 1263591742159171402, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_AvailableProcedureTypeNames.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1263591742159171402, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_AvailableProcedureTypeNames.Array.data[0]
+      value: Main.Runtime.ProcedureCheckVersion
+      objectReference: {fileID: 0}
+    - target: {fileID: 1263591742159171402, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_AvailableProcedureTypeNames.Array.data[1]
+      value: Main.Runtime.ProcedureInitResources
+      objectReference: {fileID: 0}
+    - target: {fileID: 1263591742159171402, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_AvailableProcedureTypeNames.Array.data[2]
+      value: Main.Runtime.ProcedureLauncher
+      objectReference: {fileID: 0}
+    - target: {fileID: 1263591742159171402, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_AvailableProcedureTypeNames.Array.data[3]
+      value: Main.Runtime.ProcedureLoadAssembly
+      objectReference: {fileID: 0}
+    - target: {fileID: 1263591742159171402, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_AvailableProcedureTypeNames.Array.data[4]
+      value: Main.Runtime.ProcedureSplash
+      objectReference: {fileID: 0}
+    - target: {fileID: 1263591742159171402, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
+      propertyPath: m_AvailableProcedureTypeNames.Array.data[5]
+      value: Main.Runtime.ProcedureUpdateResources
+      objectReference: {fileID: 0}
     - target: {fileID: 1263591742330345330, guid: 0c010b67b5d150b45a764cb66e2e007a, type: 3}
       propertyPath: m_IsActive
       value: 1

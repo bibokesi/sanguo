@@ -69,7 +69,7 @@ public partial class FantasyComponent : GameFrameworkComponent
         // 外网访问的是SceneConfig配置文件中配置的Gate 20000端口,Realm 20001端口
         // networkProtocolType:网络协议类型
         // 这里要使用与后端SceneConfig配置文件中配置的NetworkProtocolType类型一样才能建立连接
-        Realm.CreateSession("127.0.0.1:20000", NetworkProtocolType.KCP, OnRealmConnectSuccessed, OnRealmConnectFailed, OnRealmConnectDisconected, 5000);
+        //Realm.CreateSession("127.0.0.1:20000", NetworkProtocolType.KCP, OnRealmConnectSuccessed, OnRealmConnectFailed, OnRealmConnectDisconected, 5000);
 
         // 建立与网关的连接，只有与网关的连接才需要挂心跳
         Gate.CreateSession("127.0.0.1:20001", NetworkProtocolType.KCP, OnGateConnectSuccessed, OnGateConnectFailed, OnGateConnectDisconected, 5000);
@@ -117,50 +117,50 @@ public partial class FantasyComponent : GameFrameworkComponent
         IsGateConnect = false;
     }
 
-    private async FTask RealmTest()
-    {
-        // 请求realm验证
-        R2C_RegisterResponse register = (R2C_RegisterResponse)await Realm.Session.Call(new C2R_RegisterRequest()
-        {
-            UserName = "test",
-            Password = ""
-        });
-        UnityGameFramework.Runtime.Log.Info(register.Message);
+    //private async FTask RealmTest()
+    //{
+    //    // 请求realm验证
+    //    R2C_RegisterResponse register = (R2C_RegisterResponse)await Realm.Session.Call(new C2R_RegisterRequest()
+    //    {
+    //        UserName = "test",
+    //        Password = ""
+    //    });
+    //    UnityGameFramework.Runtime.Log.Info(register.Message);
 
-        // 登录realm账号
-        R2C_LoginResponse loginRealm = (R2C_LoginResponse)await Realm.Session.Call(new C2R_LoginRequest()
-        {
-            UserName = "test",
-            Password = ""
-        });
-        UnityGameFramework.Runtime.Log.Info(loginRealm.Message);
-    }
+    //    // 登录realm账号
+    //    R2C_LoginResponse loginRealm = (R2C_LoginResponse)await Realm.Session.Call(new C2R_LoginRequest()
+    //    {
+    //        UserName = "test",
+    //        Password = ""
+    //    });
+    //    UnityGameFramework.Runtime.Log.Info(loginRealm.Message);
+    //}
 
-    private async FTask GateTest()
-    {
-        // 登录网关
-        // 登录网关后创建角色，或者加载角色列表，选择角色进入游戏地图
-        G2C_LoginGateResponse loginGate = (G2C_LoginGateResponse)await Gate.Session.Call(new C2G_LoginGateRequest()
-        {
-            Message = "请求登录网关"
-        });
-        UnityGameFramework.Runtime.Log.Info(loginGate.Message);
-        UnityGameFramework.Runtime.Log.Info(loginGate.ErrorCode.ToString());
+    //private async FTask GateTest()
+    //{
+    //    // 登录网关
+    //    // 登录网关后创建角色，或者加载角色列表，选择角色进入游戏地图
+    //    G2C_LoginGateResponse loginGate = (G2C_LoginGateResponse)await Gate.Session.Call(new C2G_LoginGateRequest()
+    //    {
+    //        Message = "请求登录网关"
+    //    });
+    //    UnityGameFramework.Runtime.Log.Info(loginGate.Message);
+    //    UnityGameFramework.Runtime.Log.Info(loginGate.ErrorCode.ToString());
 
-        // 创建角色请求
-        G2C_CreateCharacterResponse create = (G2C_CreateCharacterResponse)await Gate.Session.Call(new C2G_CreateCharacterRequest()
-        {
-            Message = "请求创建角色"
-        });
-        UnityGameFramework.Runtime.Log.Info(create.Message);
+    //    // 创建角色请求
+    //    G2C_CreateCharacterResponse create = (G2C_CreateCharacterResponse)await Gate.Session.Call(new C2G_CreateCharacterRequest()
+    //    {
+    //        Message = "请求创建角色"
+    //    });
+    //    UnityGameFramework.Runtime.Log.Info(create.Message);
 
-        // 进入地图请求
-        G2C_EnterMapResponse enter = (G2C_EnterMapResponse)await Gate.Session.Call(new C2G_EnterMapRequest()
-        {
-            Message = "请求进入地图"
-        });
-        UnityGameFramework.Runtime.Log.Info(enter.Message);
-    }
+    //    // 进入地图请求
+    //    G2C_EnterMapResponse enter = (G2C_EnterMapResponse)await Gate.Session.Call(new C2G_EnterMapRequest()
+    //    {
+    //        Message = "请求进入地图"
+    //    });
+    //    UnityGameFramework.Runtime.Log.Info(enter.Message);
+    //}
 
     // 测试非RPC消息
     private void MessageTest()

@@ -12,16 +12,24 @@ namespace Fantasy.Hotfix;
 // Scene：这个组件所属于的Scene
 // Parent：这个组件的上级
 
-public class RoleEntity : Entity
+public class PlayerEntity : Entity
 {
-    public string RoleName;
-    public uint RoleId;
+    /// 玩家playerId
+    public long PlayerId;
+
+    /// 在网关缓存一个AddressableId
+    public long AddressableId;
+
+    public string UserName;
+    public string PassWord;
     public long CreateTime;
 
     public override void Dispose()
     {
-        RoleName = "";
-        RoleId = 0;
+        PlayerId = 0;
+        AddressableId = 0;
+        UserName = "";
+        PassWord = "";
         CreateTime = 0;
 
         base.Dispose();
@@ -37,43 +45,43 @@ public class RoleEntity : Entity
 // 当调用了Entity的Deserialize方法后会执行这个事件
 // 一般用于一些恢复状态的功能、比如buff恢复计时等操作
 
-public class RoleEntityAwakeSystem : AwakeSystem<RoleEntity>
+public class PlayerEntityAwakeSystem : AwakeSystem<PlayerEntity>
 {
-    protected override void Awake(RoleEntity self)
+    protected override void Awake(PlayerEntity self)
     {
-        Log.Info("RoleEntityAwakeSystem");
+        Log.Info("PlayerEntityAwakeSystem");
     }
 }
 
-public class RoleEntityUpdateSystem : UpdateSystem<RoleEntity>
+public class PlayerEntityUpdateSystem : UpdateSystem<PlayerEntity>
 {
-    protected override void Update(RoleEntity self)
+    protected override void Update(PlayerEntity self)
     {
-        Log.Info("RoleEntityUpdateSystem");
+        Log.Info("PlayerEntityUpdateSystem");
     }
 }
 
-public class RoleEntityDestroySystem : DestroySystem<RoleEntity>
+public class PlayerEntityDestroySystem : DestroySystem<PlayerEntity>
 {
-    protected override void Destroy(RoleEntity self)
+    protected override void Destroy(PlayerEntity self)
     {
-        Log.Info("RoleEntityDestroySystem");
+        Log.Info("PlayerEntityDestroySystem");
     }
 }
 
 // 从数据库反序列化
-public class RoleEntityDeserializeSystem : DeserializeSystem<RoleEntity>
+public class PlayerEntityDeserializeSystem : DeserializeSystem<PlayerEntity>
 {
-    protected override void Deserialize(RoleEntity self)
+    protected override void Deserialize(PlayerEntity self)
     {
-        Log.Info("RoleEntityDeserializeSystem");
+        Log.Info("PlayerEntityDeserializeSystem");
     }
 }
 
 // 扩展方式，数据逻辑分离
-public static class RoleEntitySystem
+public static class PlayerEntitySystem
 { 
-    public static void Add(this RoleEntity self)
+    public static void Add(this PlayerEntity self)
     {
 
     }
