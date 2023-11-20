@@ -10,7 +10,7 @@ public class C2Map_MoveMessageHandler : Addressable<PlayerEntity, C2Map_MoveMess
         // 移动停止检测略...
   
         // 调用MoveComponent
-        playerEntity.GetComponent<CmdComponent>().MoveToAsync(message.MoveInfo).Coroutine();
+      //  playerEntity.GetComponent<CmdComponent>().MoveToAsync(message.MoveInfo).Coroutine();
 
         await FTask.CompletedTask;
     }
