@@ -1,7 +1,7 @@
 using Fantasy;
 using UnityEngine;
 
-public class EventSystemStruct
+public class EventStruct
 {
     public struct StartMove
     {

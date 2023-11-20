@@ -16,8 +16,8 @@ public class G2Map_CreatePlayerRequestHandler : RouteRPC<Scene,G2Map_CreatePlaye
         await playerEntity.AddComponent<AddressableMessageComponent>().Register();
 
         // 3、挂移动组件，状态同步组件
-        playerEntity.AddComponent<MoveComponent>();
-        playerEntity.AddComponent<MoveSyncComponent>();
+        playerEntity.AddComponent<CmdComponent>();
+        playerEntity.AddComponent<CmdSyncComponent>();
         response.AddressableId = playerEntity.Id;
 
         Log.Debug($"<--收到创建playerEntity请求");

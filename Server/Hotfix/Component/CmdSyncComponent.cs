@@ -1,11 +1,11 @@
 using Fantasy;
 
-public class StartMoveEventHanlder : EventSystem<EventSystemStruct.StartMove>
+public class StartMoveEventHanlder : EventSystem<EventStruct.StartMove>
 {
-    public override void Handler(EventSystemStruct.StartMove self)
+    public override void Handler(EventStruct.StartMove self)
     {
         var playerEntity = self.playerEntity;
-        MoveSyncComponent moveSyncComponent = playerEntity.GetComponent<MoveSyncComponent>();
+        CmdSyncComponent moveSyncComponent = playerEntity.GetComponent<CmdSyncComponent>();
 
         // 可以加BroadcastWithAoi，略过...
 
@@ -13,9 +13,9 @@ public class StartMoveEventHanlder : EventSystem<EventSystemStruct.StartMove>
     }
 }
 
-public class MoveSyncDestroySystem : DestroySystem<MoveSyncComponent>
+public class MoveSyncDestroySystem : DestroySystem<CmdSyncComponent>
 {
-    protected override void Destroy(MoveSyncComponent self)
+    protected override void Destroy(CmdSyncComponent self)
     {
         self.mDict.Clear();
             
@@ -25,7 +25,7 @@ public class MoveSyncDestroySystem : DestroySystem<MoveSyncComponent>
     }
 }
 
-public class MoveSyncComponent : StateSync 
+public class CmdSyncComponent : StateSync 
 {
     public Map2C_MoveBroadcast Message = new Map2C_MoveBroadcast();
 
